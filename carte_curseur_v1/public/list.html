@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+
+</head>
+<body onload="setBoxValue()">
+
+<!-- le "onload" est nécessaire sinon l'objet est inaccessible
+"the SVG document won't be loaded in the embed by this time, do it
+later" http://www.thescripts.com/forum/thread148389.html
+Avec le curseur, ça n'arrivait pas tout de suite
+-->
+
+<!--<embed src="map_cw1.svg" width="950" height="400" name="world_map" type="image/svg+xml" />
+</embed>  -->
+<embed  width="600" height="400" src="http://localhost/slider/map_cw1.svg" type="image/svg+xml" name='world_map'>
+</embed> <!-- ça, ça marche ! C'est bien lié au serveur -->
+
+
+
+
+<SCRIPT type="text/javascript">
+function setBoxValue() {
+
+var svgobj =document.embeds['world_map'].getSVGDocument().getElementById('lt4.5lg-74rd800');
+
+ svgobj.setAttributeNS(null,'fill','green');
+svgobj.setAttributeNS(null,'visibility','visible');
+
+}
+
+</SCRIPT>
+
+
+</body>
+ </html>

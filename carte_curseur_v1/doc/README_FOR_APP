@@ -1,0 +1,9 @@
+Use this README file to introduce your application and point to useful places in the API for learning more.
+Run "rake appdoc" to generate API documentation for your models and controllers.
+
+
+
+lancer svn à la ligne de commande:
+svnserve -d --foreground -r /home/mk/docs_new/programmation_PRISM/subversion --listen-host=localhost
+
+enlever --foreground pour le laisser en démon en arrière plan
