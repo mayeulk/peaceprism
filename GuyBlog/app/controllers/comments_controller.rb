@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  #before_filter :load_post
+  before_filter :load_post
   
   def load_post
     @post = Post.find(params[:post_id])
@@ -9,7 +9,9 @@ class CommentsController < ApplicationController
   # GET /comments.xml
 
 def index2
-    render :text => "Index2"
+  #    render :inline => "<%= @post.id %>"
+  #    render :texte => "Essai de texte"
+    render :template => 'posts/show'
 end
   
 def index3
