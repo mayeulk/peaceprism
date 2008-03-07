@@ -1,9 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   # map.resources :comments
   # map.connect '', :controller => "post", :action =>index
-  map.root :controller => 'posts'
+  map.root :controller => 'posts', :action => "show" , :id => 1 #affiche le 1er post sur http://localhost:3000/
   map.resources :posts, :has_many => :comments
-  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:post_id'
   
   
   # The priority is based upon order of creation: first created -> highest priority.
