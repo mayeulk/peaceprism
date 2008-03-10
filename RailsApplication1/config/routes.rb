@@ -33,7 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-  #essai19 Netbeans
+  #essai21 kdesvn
   #essai7 kdesvn
 #essai 18 kdesvn
 end
