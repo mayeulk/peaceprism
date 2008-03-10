@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
 #essai 30a kdesvn
 #essai 29b kdesvn
 #essai 29c kdesvn
+#essai 30d netbeans
 #essai 30d kdesvn
 #essai 27A
 #essai 27B
