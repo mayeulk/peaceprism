@@ -9,7 +9,13 @@
 </p>
 
 <!-- completer la vue de show de post en ajoutant les commentaires -->
-
+<% unless @post.comment.empty? %>
+  <h3>Commentaires</h3>
+    <% @post.comments.each do |comment|%>
+    <p><%= h comment.body %></p>
+    <% end %>
+<% end %>
+    
 
 
 
