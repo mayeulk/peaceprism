@@ -1,7 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-#essai
-#essai3
-#essai4
 #essai5 kdesvn
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -36,4 +33,6 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  #essai5
+  #essai6 netbeans
 end
