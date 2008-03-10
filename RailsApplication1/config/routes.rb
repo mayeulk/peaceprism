@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+#essai 27
+#essai 27
+#essai 27
+#essai 27
+#essai 27
+#essai 27
+#essai 27
+#essai 27
 #essai11 netbeans
   # The priority is based upon order of creation: first created -> highest priority.
 
