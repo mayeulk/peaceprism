@@ -35,5 +35,5 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id.:format'
   #essai5
   #essai7 kdesvn
-#essai 12 kdesvn
+#essai 13 kdesvn
 end
