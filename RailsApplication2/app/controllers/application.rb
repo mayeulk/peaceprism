@@ -1,7 +1,7 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 #modif 96
-#modif 97 ajout
+#modif 99 changement
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
 
