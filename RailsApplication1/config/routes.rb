@@ -1,8 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-#essai 28a kdesvn
-#essai 28b kdesvn
-#essai 28c kdesvn
-#essai 28d kdesvn
+#essai 29a kdesvn
+#essai 29b kdesvn
+#essai 29c kdesvn
+#essai 29d kdesvn
 #essai 27A
 #essai 27B
 #essai 27C
