@@ -1,12 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-#essai 28 kdesvn
-#essai 28 kdesvn
-#essai 28 kdesvn
-#essai 28 kdesvn
-#essai 27
-#essai 27
-#essai 27
-#essai 27
+#essai 28a kdesvn
+#essai 28b kdesvn
+#essai 28c kdesvn
+#essai 28d kdesvn
+#essai 27A
+#essai 27B
+#essai 27C
+#essai 27D
 #essai11 netbeans
   # The priority is based upon order of creation: first created -> highest priority.
 
