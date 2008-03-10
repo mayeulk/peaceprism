@@ -33,9 +33,9 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
- #essai25 conflit corrigé
 #essai 26 kdesvn
   #essai21 kdesvn
   #essai7 kdesvn
+ #essai25 conflit corrigé
 #essai 18 kdesvn
 end
