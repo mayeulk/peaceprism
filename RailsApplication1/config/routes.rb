@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
 #essai
 #essai3
 #essai4
+#essai5 kdesvn
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
