@@ -1,0 +1,126 @@
+<% if @browser=="ie" %>
+
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <style>
+  v\:* { behavior: url(#default#vml); }
+  </style>
+
+
+<% else %>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<% end %>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/slider.css"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/carte.css"/>
+<script type="text/ecmascript" src="javascripts/slider/addanevent.js"></script>
+<script type="text/ecmascript" src="javascripts/slider/slider.js"></script>
+<script type="text/ecmascript" src="javascripts/slider/slider-setup.js"></script>
+<script type="text/ecmascript" src="javascripts/donnees_conflits.js"></script>
+<script type="text/ecmascript" src="javascripts/donnees.js"></script>
+<script type="text/ecmascript" src="javascripts/zones_conflits.js"></script>
+<%= javascript_include_tag "prototype" %>
+
+
+<script type="text/ecmascript">
+//pays_survole="lt14lg78rd700"
+function survol_zone(pays_survole) {
+pays_survole=pays_survole
+//document.getElementById("pays").innerHTML=pays
+document.getElementById("pays2").value=pays_survole
+};
+
+
+
+
+function curseurPays(val, box) {
+    var b=document.getElementById('output'+box);
+	val=Math.round(val);
+	b.value=val;
+	//toggle_layer_number(val);
+      }
+var pays= new Array ("Serbia", "Slovenia", "Montenegro", "Croatia", "Macedonia", "Bosnia_and_Herzegovina", "Cyprus_1_", "Luxembourg", "United_Arab_Emirates", "Qatar", "Azerbaijan", "Jordan", "Lebanon", "Netherlands", "Belgium", "Canada", "Greenland_1_", "Papua_New_Guinea", "Cambodia", "Vietnam", "Korea_x002C__Democratic_People_x0027_s_Republic_of", "Korea_x002C__Republic_of", "Mongolia", "Kazakhstan", "Taiwan", "Brunei", "Butan", "Bangladesh", "Afghanistan", "Kyrgyzstan", "Burkina_Faso", "Belize", "Indonesia", "Guatemala", "Dominican_Republic", "Burma", "Laos", "Malaysia", "Cuba", "Tajikistan", "Jamaica", "Thailand", "Nepal", "Uzbekistan", "Malawi", "Turkmenistan", "Puerto_Rico", "Russia_2_", "Sri_Lanka", "Nicaragua", "Madagascar", "Zambia", "El_Salvador", "Honduras", "Haiti", "Costa_Rica", "Panama", "Chile", "Bolivia", "Paraguay", "Uruguay", "Peru", "Brazil", "Mexico", "Kenya", "Tanzania", "Mozambique", "Zaire", "Angola", "Namibia", "Congo", "Cameroon", "Gabon", "Equatorial_Guinea", "Botswana", "Zimbabwe", "Uganda", "Burundi", "Guyana", "Suriname", "French_Guiana", "Ecuador", "Colombia", "Venezuela", "Benin", "Ghana", "Togo", "Guinea", "Liberia", "Sierra_Leone", "Nigeria", "Lesotho", "Swaziland", "Ivory_Coast", "Rwanda", "Western_Sahara", "Niger", "Sudan", "Lybia", "Chad", "Mali", "Mauritania", "Tunisia", "Algeria", "Morocco", "India", "New_Zealand", "Argentina", "United_Kingdom_1_", "United_States_1_", "Italy_1_", "Denmark_1_", "Egypt_1_", "South_Africa", "Finland", "France", "Portugal", "Ireland", "Iceland", "Germany", "Poland", "Australia_1_", "Turkey_1_", "Russia", "Saudi_Arabia", "Slovakia", "Spain_1_", "Israel", "Iraq", "Greece", "Romania", "Bulgaria", "Syria", "Albania", "Switzerland", "Czech_Republic", "Austria", "Kuwait", "Iran", "Estonia", "Latvia", "Hungary", "Pakistan", "Sweden", "Lithuania", "China_1_", "Norway", "Byelarus", "Ukraine", "Moldova", "Georgia", "Armenia", "Oman", "Eritrea", "Central_African_Republic", "Yeman", "Somalia", "Ethiopia", "Guinea-Bissau", "Philippines", "Japan", "Senegal", "Gambia_The");
+</script>
+</head>
+<body>
+
+
+         
+<!--
+ :with => "'id=' + escape(pays_survole)")
+-->
+
+
+
+<%= render :partial => "map_cw1_extrait_"+@browser %>
+<br/>
+<table>
+<tr>
+<td>
+<%= render :partial => "navig" %>
+</td>
+<td>
+
+Pays/zone: <%= text_field_tag :pays2 %>
+
+
+<%= observe_field(:pays2, :frequency => 0.1, 
+         :update => 'pays_old', :url => 
+         { :controller => 'carte', :action=> 'show_over' }, 
+        :with => "'id=' + $('pays2').value") %>
+
+
+<!--
+         :with => "'req=ltlgrd=' + $('pays2').value +'\" and begin<=' + $('output1').value +' and finish >=' + $('output1').value") %>         
+new Form.Element.Observer('pays2', 0.1, function(element, value) {new Ajax.Updater('pays_old',  '/carte/show_over',   {asynchronous:true, evalScripts:true, parameters: 'req=id=\'' + $('pays2').value +  '\'   and ' + $('output1').value  + ' >= begin and finish >=' + $('output1').value})})
+-->
+
+
+      
+
+<span id="pays_old"></span>
+</td>
+</tr>
+</table>
+
+
+
+
+  <form name="hilite_form" action="">
+<!--
+<input id="pays" name="pays" type="text" value=""/>
+-->
+<table style="text-align: center; width: 70%;" border="0">
+<tr>
+<td>1946</td>
+<td>
+	<div class="slider" id="slider01">
+		<div class="left"></div>
+		<div class="right"></div>
+		<img src="images/slider/knob.png" width="20" height="15" />
+	</div>
+</td>
+<td>2003</td>
+</tr>
+</table>
+<!--
+Cliquez sur la bande entre 1946 et 2003 pour déplacer le curseur
+<br/>
+-->
+Année:
+<input id="output1" />    Nombre de pays en guerre civile: <input id="nompays"/>
+<!--
+<input type="button" onClick="animation(1)"></input>
+-->
+
+
+
+</form>
+
+
+</body>
+ </html>
