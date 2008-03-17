@@ -1,9 +1,0 @@
-(in /home/mk/NetBeansProjects/carte_curseur_v1)
-Cannot find gem for Rails =1.1.6:
-    Install the missing gem with 'gem install -v=1.1.6 rails', or
-    change environment.rb to define RAILS_GEM_VERSION with your desired version.
-  
-rake aborted!
-exit
-/home/mk/NetBeansProjects/carte_curseur_v1/Rakefile:4:in `require'
-(See full trace by running task with --trace)
