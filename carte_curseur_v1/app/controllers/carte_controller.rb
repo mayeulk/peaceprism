@@ -1,12 +1,12 @@
 class CarteController < ApplicationController
   def index
     list
-    render :action => 'list'
+    render :action => 'list'#, :content_type => "application/xhtml+xml", :layout => false
   end
 
-  # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
-  verify :method => :post, :only => [ :destroy, :create, :update ],
-         :redirect_to => { :action => :list }
+# GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
+ #verify :method => :post, :only => [ :destroy, :create, :update ],
+#         :redirect_to => { :action => :list }
 
   def list
     # cf. la variable "@headers" dans l'ensemble des fichiers de ivygis et le post
@@ -17,9 +17,10 @@ class CarteController < ApplicationController
     # IE gags on that.  So, we export that content-type only to browsers
     # that explicitly advertise that they support it.
 
-    if (@request.env['HTTP_ACCEPT'].match(/application\/xhtml\+xml/))
-      @headers['Content-Type'] = "application/xhtml+xml; charset=utf-8"
+    if (request.headers['HTTP_ACCEPT'].match(/application\/xhtml\+xml/))
+      response.headers['type'] = "application/xhtml+xml; charset=utf-8"
       @browser="moz"
+      
     else
       @browser="ie"
     end
