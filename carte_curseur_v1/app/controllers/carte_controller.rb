@@ -26,9 +26,9 @@ class CarteController < ApplicationController
     end
   end
 
-  def show
-      @conflitsext = Conflitsext.find(params[:id])
-  end
+#  def show
+#      @conflitsext = Conflitsext.find(params[:id])
+#  end
 
   def show_over
   @id=params[:id]
@@ -38,40 +38,8 @@ class CarteController < ApplicationController
     else
       #bricolage pour éviter une erreur car on a survolé un pays au lieu d'un conflit. FIX IT
       #il faudrait éviter de faire un appel ajax
-      render(:inline =>"<%= @begin1%>") # affiche un partial vide ("")
+    render(:nothing => true) # affiche un partial vide ("")
     end
   end
-
-  def new
-    @conflitsext = Conflitsext.new
-  end
-
-  def create
-    @conflitsext = Conflitsext.new(params[:conflitsext])
-    if @conflitsext.save
-      flash[:notice] = 'Conflitsext was successfully created.'
-      redirect_to :action => 'list'
-    else
-      render :action => 'new'
-    end
-  end
-
-  def edit
-    @conflitsext = Conflitsext.find(params[:id])
-  end
-
-  def update
-    @conflitsext = Conflitsext.find(params[:id])
-    if @conflitsext.update_attributes(params[:conflitsext])
-      flash[:notice] = 'Conflitsext was successfully updated.'
-      redirect_to :action => 'show', :id => @conflitsext
-    else
-      render :action => 'edit'
-    end
-  end
-
-  def destroy
-    Conflitsext.find(params[:id]).destroy
-    redirect_to :action => 'list'
-  end
+ 
 end
