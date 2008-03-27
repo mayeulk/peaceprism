@@ -91,42 +91,42 @@ document.getElementById("resize").src="images/navig/resize.gif";
 
 x_org = 0 //milieu d'origine (x) (bof)
 y_org = 0 //milieu d'origine (y) (bof)
-w_org = 120 //largeur d'origine (???) (sino zoombox incorrecte???!!)
-h_org = 60 //hauteur d'origine
-n_x=-43
-n_y=-11
+w_org = 600 //largeur d'origine (???) (sino zoombox incorrecte???!!)
+h_org = 300 //hauteur d'origine
+n_x=0
+n_y=0
 
 <%else%>
 //x_org = 60 //milieu d'origine (x)
 //y_org = -10 //milieu d'origine (y)
-x_org = 20 //milieu d'origine (x)
-y_org = 15 //milieu d'origine (y)
+x_org = 0 //milieu d'origine (x)
+y_org = 0 //milieu d'origine (y)
 //w_org = 240 //largeur d'origine (???) (sino zoombox incorrecte???!!)
 //h_org = 160 //hauteur d'origine
 //n_x=-130
 //n_y=-80
-w_org=300
-h_org=200
+w_org=3600
+h_org=1800
 <%end%>
 
 function initzoom()
 {<%if @browser=="ie"%>
 x_org = 0 //milieu d'origine (x) (bof)
 y_org = 0 //milieu d'origine (y) (bof)
-w_org = 120 //largeur d'origine (???) (sino zoombox incorrecte???!!)
-h_org = 60 //hauteur d'origine
-n_x=-43
-n_y=-11
+w_org = 600 //largeur d'origine (???) (sino zoombox incorrecte???!!)
+h_org = 300 //hauteur d'origine
+n_x=0
+n_y=0
 document.getElementById("monde").style.left=n_x+"px";
 document.getElementById("monde").style.top=n_y+"px";
 document.getElementById("monde").style.width=w_org+"px";
 document.getElementById("monde").style.height=h_org+"px";
 <%else%>
-document.getElementById("monde").setAttributeNS(null,"viewBox","-130 -85 300 200");
-x_org = 20 //milieu d'origine (x)
-y_org = 15 //milieu d'origine (y)
-w_org=300
-h_org=200
+document.getElementById("monde").setAttributeNS(null,"viewBox","-1800 -900 3600 1800");
+x_org = 0 //milieu d'origine (x)
+y_org = 0 //milieu d'origine (y)
+w_org=3600
+h_org=1800
 
 <%end%>
 }
@@ -183,28 +183,37 @@ document.getElementById("monde").setAttributeNS(null,"viewBox",new_vb);
 
 }
 
+// fonction de Zoom :
 function zoom(facteur)
 {
 //alert(facteur);
 
-
+// en VML, il faut modifier les attributs width et height du groupe "monde"
 <%if @browser=="ie"%>
 w_org=Math.round(w_org*facteur);
 h_org=Math.round(h_org*facteur);
 
 n_x=Math.round(facteur*n_x+(1-facteur)*carte_w/2);
 n_y=Math.round(facteur*n_y+(1-facteur)*carte_h/2);
+//n_x = Math.round(n_x + carte_w/2 + 1/facteur*carte_w)
+//n_y = Math.round(n_y + carte_h/2 + 1/facteur*carte_h)
 
 document.getElementById("monde").style.left=n_x+"px";
 document.getElementById("monde").style.top=n_y+"px";
 document.getElementById("monde").style.width=w_org+"px";
 document.getElementById("monde").style.height=h_org+"px";
+//document.getElementById("monde").coordorigin=n_x+","+n_y;
+//document.getElementById("monde").coordsize=w_org+","+h_org;
 
+// en SVG (pour firefox), il faut modifier les parametres de la viewbox associee au groupe "monde"
 <%else%>
 w_org=w_org/facteur;
 h_org=h_org/facteur;
+//w_org = w_org*facteur;
+//h_org = h_org*facteur;
 n_x=x_org-w_org/2;
 n_y=y_org-h_org/2;
+//n_x=
 new_vb = n_x + " " + n_y + " " + w_org + " " + h_org;
 document.getElementById("monde").setAttributeNS(null,"viewBox",new_vb);
 <%end%>

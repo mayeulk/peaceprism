@@ -102,11 +102,10 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
   
     <tr valign="top">
 
-
       <img id="bascule_volet_navig_img" alt="Fermer" onclick="Effect.toggle(&quot;volet_navig&quot;,'blind',{duration:1.0, scaleX:false , scaleY: true });setTimeout('bascule_volet_navig()',800);" src="/images/navig/fermer0.gif" />
-
       
-      <div id="volet_navig"> <!-- style="position: absolute; top:10; left: 10; z-index=2" -->
+      <div id="volet_navig" >
+	  <!-- style="position: absolute; top:10; left: 10; z-index=2" >-->
       
       <td>
         <%= render :partial => "navig" %>
@@ -141,8 +140,10 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
       </div>
     </tr>
     <tr valign="top">
-      <div id="cadre_carte" class="cadre_carte" style="left:10px; top: 10px; width:600px; height:300px;
-      position: relative; overflow: hidden;   background-color: #B4DAF6; "  >
+    	
+      <div id="cadre_carte" class="cadre_carte" style="left:10px; top: 10px; width:600px; height:300px; overflow: hidden;" >
+      <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  >
+	  -->
       <%= render :partial => "guy_carte_"+@browser %>
       </div>
     </tr>
