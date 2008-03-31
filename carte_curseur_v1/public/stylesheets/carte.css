@@ -11,4 +11,4 @@
 
 .ligne_en_cours {background-color: lightcoral;}
 
-.tableau_donnees {height: 300px; width: 100%; overflow: auto;}
+.tableau_donnees {background-color:#FF6699; height: 300px; width: 100%; overflow: auto;}
