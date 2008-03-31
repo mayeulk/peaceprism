@@ -1,0 +1,109 @@
+<h1>Editing dataset</h1>
+
+<%= error_messages_for :dataset %>
+
+<% form_for(@dataset) do |f| %>
+  <p>
+    <b>Baseid pb</b><br />
+    <%= f.text_field :baseid_pb %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_area :description, :cols => 80, :rows => 4 %>
+  </p>
+
+  <p>
+    <b>Temporaldomain</b><br />
+    <%= f.text_field :temporaldomain %>
+  </p>
+
+  <p>
+    <b>Spatialdomain</b><br />
+    <%= f.text_field :spatialdomain %>
+  </p>
+
+  <p>
+    <b>Typeofevent</b><br />
+    <%= f.text_field :typeofevent %>
+  </p>
+
+  <p>
+    <b>Definitionofevent</b><br />
+    <%= f.text_area :definitionofevent, :cols => 80, :rows => 4 %>
+  </p>
+
+  <p>
+    <b>Violencethreshold</b><br />
+    <%= f.text_field :violencethreshold %>
+  </p>
+
+  <p>
+    <b>Datacoded</b><br />
+    <%= f.text_area :datacoded, :cols => 80, :rows => 4 %>
+  </p>
+
+  <p>
+    <b>Principalresearcher</b><br />
+    <%= f.text_area :principalresearcher, :cols => 80, :rows => 2 %>
+  </p>
+
+  <p>
+    <b>Accesstoinformation</b><br />
+    <%= f.text_area :accesstoinformation, :cols => 80, :rows => 2 %>
+  </p>
+
+  <p>
+    <b>Url</b><br />
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <b>Recherche commencee</b><br />
+    <%= f.check_box :recherche_commencee %>
+  </p>
+
+  <p>
+    <b>Recherche finie</b><br />
+    <%= f.check_box :recherche_finie %>
+  </p>
+
+  <p>
+    <b>Manque info importantes</b><br />
+    <%= f.text_field :manque_info_importantes %>
+  </p>
+
+  <p>
+    <b>Debut</b><br />
+    <%= f.text_field :debut %>
+  </p>
+
+  <p>
+    <b>Fin</b><br />
+    <%= f.text_field :fin %>
+  </p>
+
+  <p>
+    <%= f.submit "Update dataset" %>
+  </p>
+<hr/>
+<% end %>
+
+<h2>Listing <%= @researchers.count %> researcher(s):</h2>
+<% form_for(@dataset, :url => "../../dataset_researchers/update_related_researchers") do |f| %>
+	<%= hidden_field_tag('dataset_id',@dataset.id) %> 
+	<%= render(:partial => "choose_researcher") %>
+	<p>
+	    <%= f.submit "Update related researchers" %>
+	</p>
+<% end %>  
+  
+
+
+<%= link_to 'Show', @dataset %> |
+<%= link_to 'Back', datasets_path %>

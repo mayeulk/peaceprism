@@ -1,0 +1,115 @@
+<p>
+  <b>Baseid pb:</b>
+  <%=h @dataset.baseid_pb %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @dataset.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @dataset.description %>
+</p>
+
+<p>
+  <b>Temporaldomain:</b>
+  <%=h @dataset.temporaldomain %>
+</p>
+
+<p>
+  <b>Spatialdomain:</b>
+  <%=h @dataset.spatialdomain %>
+</p>
+
+<p>
+  <b>Typeofevent:</b>
+  <%=h @dataset.typeofevent %>
+</p>
+
+<p>
+  <b>Definitionofevent:</b>
+  <%=h @dataset.definitionofevent %>
+</p>
+
+<p>
+  <b>Violencethreshold:</b>
+  <%=h @dataset.violencethreshold %>
+</p>
+
+<p>
+  <b>Datacoded:</b>
+  <%=h @dataset.datacoded %>
+</p>
+
+<p>
+  <b>Principalresearcher:</b>
+  <%= auto_link(@dataset.principalresearcher.to_s) %>
+</p>
+
+<p>
+  <b>Accesstoinformation:</b>
+  <%=h @dataset.accesstoinformation %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= auto_link(@dataset.url.to_s) %>
+</p>
+
+<p>
+  <b>Recherche commencee:</b>
+  <%=h @dataset.recherche_commencee %>
+</p>
+
+<p>
+  <b>Recherche finie:</b>
+  <%=h @dataset.recherche_finie %>
+</p>
+
+<p>
+  <b>Manque info importantes:</b>
+  <%=h @dataset.manque_info_importantes %>
+</p>
+
+<p>
+  <b>Debut:</b>
+  <%=h @dataset.debut %>
+</p>
+
+<p>
+  <b>Fin:</b>
+  <%=h @dataset.fin %>
+</p>
+
+
+<h2>Listing <%= @researchers.count %> researcher(s)</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>First name</th>
+    <th>Email</th>
+    <th>Comment</th>
+  </tr>
+
+<% for researcher in @researchers %>
+  <tr>
+    <td><%=h researcher.name %></td>
+    <td><%=h researcher.first_name %></td>
+    <td><%=h researcher.email %></td>
+    <td><%=h researcher.comment %></td>
+    <td><%= link_to 'Show', researcher %></td>
+    <td><%= link_to 'Edit', edit_researcher_path(researcher) %></td>
+    <td><%= link_to 'Destroy', researcher, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+
+<%= link_to 'Edit', edit_dataset_path(@dataset) %> |
+<%= link_to 'Back', datasets_path %>

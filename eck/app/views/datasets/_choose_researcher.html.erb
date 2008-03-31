@@ -1,0 +1,3 @@
+<%= select_tag('researcher_ids[]', options_for_select(@all_researchers.collect {
+|rsrchr| [rsrchr.name, rsrchr.id] },
+@researchers.collect(&:id)), {:multiple=>true, :size=>6}) %>

@@ -1,0 +1,96 @@
+<h1>New dataset</h1>
+
+<%= error_messages_for :dataset %>
+
+<% form_for(@dataset) do |f| %>
+  <p>
+    <b>Baseid pb</b><br />
+    <%= f.text_field :baseid_pb %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <b>Temporaldomain</b><br />
+    <%= f.text_area :temporaldomain %>
+  </p>
+
+  <p>
+    <b>Spatialdomain</b><br />
+    <%= f.text_area :spatialdomain %>
+  </p>
+
+  <p>
+    <b>Typeofevent</b><br />
+    <%= f.text_area :typeofevent %>
+  </p>
+
+  <p>
+    <b>Definitionofevent</b><br />
+    <%= f.text_area :definitionofevent %>
+  </p>
+
+  <p>
+    <b>Violencethreshold</b><br />
+    <%= f.text_area :violencethreshold %>
+  </p>
+
+  <p>
+    <b>Datacoded</b><br />
+    <%= f.text_area :datacoded %>
+  </p>
+
+  <p>
+    <b>Principalresearcher</b><br />
+    <%= f.text_area :principalresearcher %>
+  </p>
+
+  <p>
+    <b>Accesstoinformation</b><br />
+    <%= f.text_area :accesstoinformation %>
+  </p>
+
+  <p>
+    <b>Url</b><br />
+    <%= f.text_area :url %>
+  </p>
+
+  <p>
+    <b>Recherche commencee</b><br />
+    <%= f.check_box :recherche_commencee %>
+  </p>
+
+  <p>
+    <b>Recherche finie</b><br />
+    <%= f.check_box :recherche_finie %>
+  </p>
+
+  <p>
+    <b>Manque info importantes</b><br />
+    <%= f.text_field :manque_info_importantes %>
+  </p>
+
+  <p>
+    <b>Debut</b><br />
+    <%= f.text_field :debut %>
+  </p>
+
+  <p>
+    <b>Fin</b><br />
+    <%= f.text_field :fin %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', datasets_path %>

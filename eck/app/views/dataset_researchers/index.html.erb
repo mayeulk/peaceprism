@@ -1,0 +1,19 @@
+<h1>Listing dataset_researchers</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for dataset_researcher in @dataset_researchers %>
+  <tr>
+  	<td><%= dataset_researcher.dataset_id%>  <%=dataset_researcher.researcher_id %></td>
+    <td><%= link_to 'Show', dataset_researcher %></td>
+    <td><%= link_to 'Edit', edit_dataset_researcher_path(dataset_researcher) %></td>
+    <td><%= link_to 'Destroy', dataset_researcher, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dataset_researcher', new_dataset_researcher_path %>
