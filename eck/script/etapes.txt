@@ -1,0 +1,18 @@
+generate scaffold Dataset baseid_pb:integer name:string description:text temporaldomain:text spatialdomain:text typeofevent:text definitionofevent:text violencethreshold:text datacoded:text principalresearcher:text accesstoinformation:text url:text recherche_commencee:boolean recherche_finie:boolean manque_info_importantes:string debut:string fin:string
+#attention: generate scaffold Database ne marche pas bien: Database un indénombrable.
+
+rake db:migrate VERSION=1
+
+generate scaffold Researcher name:string first_name:string email:string comment:string
+
+generate scaffold Lien dataset_id:integer baseid_pb:integer researcher_id:integer
+
+# pour remettre la base de données à sa valeur dans les fichiers csv:
+rake db:migrate VERSION=0
+rake db:migrate VERSION=1
+#puis aller à la page suivante:
+http://127.0.0.1:3001/datasets/importcsv
+
+# pour lancer le serceur dans une konsole:
+/home/mk/PRISM/eclipse_workspace/essais/script/server production --port=3000 
+# Ctrl-C to shutdown server

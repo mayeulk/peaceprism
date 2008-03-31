@@ -1,0 +1,18 @@
+
+/*
+table {	border-style:solid; 
+		border-width: thin;
+		border-color: black
+}
+*/
+
+th, td {	border-style: solid; 
+		border-width: 1px;
+		width:50%;
+}
+
+td    {	border-color: black;
+}
+
+th    {	border-color: red;
+}

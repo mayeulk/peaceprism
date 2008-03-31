@@ -1,0 +1,54 @@
+<h1>Listing datasets</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+	<th>Name</th>
+    <th>Description</th>
+    <th>Temporal domain</th>
+    <th>Spatial domain</th>
+    <th>Type of event</th>
+    <th>Definition of event</th>
+    <th>Viol. thresh.</th>
+    <th>Datacoded</th>
+    <th>Principal researcher</th>
+    <th>Access to information</th>
+    <th>Url</th>
+    <th>Recherche commencée</th>
+    <th>Recherche finie</th>
+    <th>Manque info. importantes</th>
+    <th>Début</th>
+    <th>Fin</th>
+		<th>Name</th>
+  </tr>
+
+<% for dataset in @datasets %>
+  <tr>
+  	    <td><%=h dataset.id %></td>
+    <td><%=h dataset.name %></td>
+    <td><%=h truncate(dataset.description) %></td>
+    <td><%=h truncate(dataset.temporaldomain) %></td>
+    <td><%=h truncate(dataset.spatialdomain) %></td>
+    <td><%=h truncate(dataset.typeofevent) %></td>
+    <td><%=h truncate(dataset.definitionofevent) %></td>
+    <td><%=h truncate(dataset.violencethreshold) %></td>
+    <td><%=h truncate(dataset.datacoded) %></td>
+    <td><%= auto_link(dataset.principalresearcher.to_s) %></td>
+    <td><%=h truncate(dataset.accesstoinformation) %></td>
+    <td><%= auto_link(dataset.url.to_s) %></td>
+    <td><%=h dataset.recherche_commencee %></td>
+    <td><%=h dataset.recherche_finie %></td>
+    <td><%=h truncate(dataset.manque_info_importantes) %></td>
+    <td><%=h truncate(dataset.debut) %></td>
+    <td><%=h truncate(dataset.fin) %></td>
+    <td><%=h dataset.name %></td>
+    <td><%= link_to 'Show', dataset %></td>
+    <td><%= link_to 'Edit', edit_dataset_path(dataset) %></td>
+    <%#= link_to 'Destroy', dataset, :confirm => 'Are you sure?', :method => :delete %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dataset', new_dataset_path %>

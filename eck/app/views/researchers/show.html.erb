@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @researcher.name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @researcher.first_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @researcher.email %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @researcher.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_researcher_path(@researcher) %> |
+<%= link_to 'Back', researchers_path %>

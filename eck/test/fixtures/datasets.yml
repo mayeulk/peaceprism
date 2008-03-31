@@ -1,0 +1,39 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  baseid_pb: 1
+  name: MyString
+  description: MyText
+  temporaldomain: MyText
+  spatialdomain: MyText
+  typeofevent: MyText
+  definitionofevent: MyText
+  violencethreshold: MyText
+  datacoded: MyText
+  principalresearcher: MyText
+  accesstoinformation: MyText
+  url: MyText
+  recherche_commencee: false
+  recherche_finie: false
+  manque_info_importantes: MyString
+  debut: MyString
+  fin: MyString
+
+two:
+  baseid_pb: 1
+  name: MyString
+  description: MyText
+  temporaldomain: MyText
+  spatialdomain: MyText
+  typeofevent: MyText
+  definitionofevent: MyText
+  violencethreshold: MyText
+  datacoded: MyText
+  principalresearcher: MyText
+  accesstoinformation: MyText
+  url: MyText
+  recherche_commencee: false
+  recherche_finie: false
+  manque_info_importantes: MyString
+  debut: MyString
+  fin: MyString
