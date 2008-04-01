@@ -1,0 +1,67 @@
+<h1>Editing dataset</h1>
+
+<%= error_messages_for :dataset %>
+
+<% form_for(@dataset) do |f| %>
+  <p>
+    <b>Configuration file</b><br />
+    <%= f.text_field :configuration_file %>
+  </p>
+
+  <p>
+    <b>Data file name</b><br />
+    <%= f.text_field :data_file_name %>
+  </p>
+
+  <p>
+    <b>Data set full name</b><br />
+    <%= f.text_field :data_set_full_name %>
+  </p>
+
+  <p>
+    <b>Data set short name</b><br />
+    <%= f.text_field :data_set_short_name %>
+  </p>
+
+  <p>
+    <b>Data set citation</b><br />
+    <%= f.text_area :data_set_citation %>
+  </p>
+
+  <p>
+    <b>Unit of analysis</b><br />
+    <%= f.text_field :unit_of_analysis %>
+  </p>
+
+  <p>
+    <b>First year possible</b><br />
+    <%= f.text_field :first_year_possible %>
+  </p>
+
+  <p>
+    <b>Last year possible</b><br />
+    <%= f.text_field :last_year_possible %>
+  </p>
+
+  <p>
+    <b>Label line in data file</b><br />
+    <%= f.check_box :label_line_in_data_file %>
+  </p>
+
+  <p>
+    <b>Number of variables</b><br />
+    <%= f.text_field :number_of_variables %>
+  </p>
+
+  <p>
+    <b>Number of cases</b><br />
+    <%= f.text_field :number_of_cases %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dataset %> |
+<%= link_to 'Back', datasets_path %>

@@ -1,0 +1,33 @@
+<p>
+  <b>Dataset:</b>
+  <%=h @variable.dataset_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @variable.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @variable.type %>
+</p>
+
+<p>
+  <b>Kind:</b>
+  <%=h @variable.kind %>
+</p>
+
+<p>
+  <b>Reverse:</b>
+  <%=h @variable.reverse %>
+</p>
+
+<p>
+  <b>Missing:</b>
+  <%=h @variable.missing %>
+</p>
+
+
+<%= link_to 'Edit', edit_variable_path(@variable) %> |
+<%= link_to 'Back', variables_path %>

@@ -1,0 +1,40 @@
+<h1>Listing datasets</h1>
+
+<table>
+  <tr>
+    <th>Configuration file</th>
+    <th>Data file name</th>
+    <th>Data set full name</th>
+    <th>Data set short name</th>
+    <th>Data set citation</th>
+    <th>Unit of analysis</th>
+    <th>First year possible</th>
+    <th>Last year possible</th>
+    <th>Label line in data file</th>
+    <th>Number of variables</th>
+    <th>Number of cases</th>
+  </tr>
+
+<% for dataset in @datasets %>
+  <tr>
+    <td><%=h dataset.configuration_file %></td>
+    <td><%=h dataset.data_file_name %></td>
+    <td><%=h dataset.data_set_full_name %></td>
+    <td><%=h dataset.data_set_short_name %></td>
+    <td><%=h dataset.data_set_citation %></td>
+    <td><%=h dataset.unit_of_analysis %></td>
+    <td><%=h dataset.first_year_possible %></td>
+    <td><%=h dataset.last_year_possible %></td>
+    <td><%=h dataset.label_line_in_data_file %></td>
+    <td><%=h dataset.number_of_variables %></td>
+    <td><%=h dataset.number_of_cases %></td>
+    <td><%= link_to 'Show', dataset %></td>
+    <td><%= link_to 'Edit', edit_dataset_path(dataset) %></td>
+    <td><%= link_to 'Destroy', dataset, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dataset', new_dataset_path %>
