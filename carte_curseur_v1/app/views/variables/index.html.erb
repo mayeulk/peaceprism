@@ -1,0 +1,30 @@
+<h1>Listing variables</h1>
+
+<table>
+  <tr>
+    <th>Dataset</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Kind</th>
+    <th>Reverse</th>
+    <th>Missing</th>
+  </tr>
+
+<% for variable in @variables %>
+  <tr>
+    <td><%=h variable.dataset_id %></td>
+    <td><%=h variable.name %></td>
+    <td><%=h variable.type %></td>
+    <td><%=h variable.kind %></td>
+    <td><%=h variable.reverse %></td>
+    <td><%=h variable.missing %></td>
+    <td><%= link_to 'Show', variable %></td>
+    <td><%= link_to 'Edit', edit_variable_path(variable) %></td>
+    <td><%= link_to 'Destroy', variable, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New variable', new_variable_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dataset_id: 1
+  name: MyString
+  type: MyString
+  kind: MyString
+  reverse: MyString
+  missing: MyString
+
+two:
+  dataset_id: 1
+  name: MyString
+  type: MyString
+  kind: MyString
+  reverse: MyString
+  missing: MyString

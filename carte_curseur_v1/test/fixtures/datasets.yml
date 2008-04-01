@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  configuration_file: MyString
+  data_file_name: MyString
+  data_set_full_name: MyString
+  data_set_short_name: MyString
+  data_set_citation: MyText
+  unit_of_analysis: MyString
+  first_year_possible: 1
+  last_year_possible: 1
+  label_line_in_data_file: false
+  number_of_variables: 1
+  number_of_cases: 1
+
+two:
+  configuration_file: MyString
+  data_file_name: MyString
+  data_set_full_name: MyString
+  data_set_short_name: MyString
+  data_set_citation: MyText
+  unit_of_analysis: MyString
+  first_year_possible: 1
+  last_year_possible: 1
+  label_line_in_data_file: false
+  number_of_variables: 1
+  number_of_cases: 1

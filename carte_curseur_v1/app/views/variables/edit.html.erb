@@ -1,0 +1,42 @@
+<h1>Editing variable</h1>
+
+<%= error_messages_for :variable %>
+
+<% form_for(@variable) do |f| %>
+  <p>
+    <b>Dataset</b><br />
+    <%= f.text_field :dataset_id %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Type</b><br />
+    <%= f.text_field :type %>
+  </p>
+
+  <p>
+    <b>Kind</b><br />
+    <%= f.text_field :kind %>
+  </p>
+
+  <p>
+    <b>Reverse</b><br />
+    <%= f.text_field :reverse %>
+  </p>
+
+  <p>
+    <b>Missing</b><br />
+    <%= f.text_field :missing %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @variable %> |
+<%= link_to 'Back', variables_path %>

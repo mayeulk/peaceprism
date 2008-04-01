@@ -1,0 +1,58 @@
+<p>
+  <b>Configuration file:</b>
+  <%=h @dataset.configuration_file %>
+</p>
+
+<p>
+  <b>Data file name:</b>
+  <%=h @dataset.data_file_name %>
+</p>
+
+<p>
+  <b>Data set full name:</b>
+  <%=h @dataset.data_set_full_name %>
+</p>
+
+<p>
+  <b>Data set short name:</b>
+  <%=h @dataset.data_set_short_name %>
+</p>
+
+<p>
+  <b>Data set citation:</b>
+  <%=h @dataset.data_set_citation %>
+</p>
+
+<p>
+  <b>Unit of analysis:</b>
+  <%=h @dataset.unit_of_analysis %>
+</p>
+
+<p>
+  <b>First year possible:</b>
+  <%=h @dataset.first_year_possible %>
+</p>
+
+<p>
+  <b>Last year possible:</b>
+  <%=h @dataset.last_year_possible %>
+</p>
+
+<p>
+  <b>Label line in data file:</b>
+  <%=h @dataset.label_line_in_data_file %>
+</p>
+
+<p>
+  <b>Number of variables:</b>
+  <%=h @dataset.number_of_variables %>
+</p>
+
+<p>
+  <b>Number of cases:</b>
+  <%=h @dataset.number_of_cases %>
+</p>
+
+
+<%= link_to 'Edit', edit_dataset_path(@dataset) %> |
+<%= link_to 'Back', datasets_path %>
