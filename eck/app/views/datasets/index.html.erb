@@ -19,12 +19,16 @@
     <th>Manque info. importantes</th>
     <th>Début</th>
     <th>Fin</th>
-		<th>Name</th>
+	<th>Id</th>
+	<th>Name</th>
+	<th></th>
+	<th></th>
+	<th>Number of linked researchers</th>
   </tr>
 
 <% for dataset in @datasets %>
   <tr>
-  	    <td><%=h dataset.id %></td>
+  	<td><%=h dataset.id %></td>
     <td><%=h dataset.name %></td>
     <td><%=h truncate(dataset.description) %></td>
     <td><%=h truncate(dataset.temporaldomain) %></td>
@@ -41,9 +45,15 @@
     <td><%=h truncate(dataset.manque_info_importantes) %></td>
     <td><%=h truncate(dataset.debut) %></td>
     <td><%=h truncate(dataset.fin) %></td>
-    <td><%=h dataset.name %></td>
+    <td><%=h dataset.id %></td>
+	<td><%=h dataset.name %></td>
     <td><%= link_to 'Show', dataset %></td>
     <td><%= link_to 'Edit', edit_dataset_path(dataset) %></td>
+	<td><%= if dataset.researchers.count > 0 
+				dataset.researchers.count
+			else
+			""
+			end %></td>
     <%#= link_to 'Destroy', dataset, :confirm => 'Are you sure?', :method => :delete %>
   </tr>
 <% end %>
