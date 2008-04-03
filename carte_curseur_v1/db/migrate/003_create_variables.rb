@@ -1,9 +1,10 @@
 class CreateVariables < ActiveRecord::Migration
   def self.up
     create_table :variables do |t|
+      t.integer :var_id
       t.integer :dataset_id
       t.string :name
-      t.string :type
+      t.string :format
       t.string :kind
       t.string :reverse
       t.string :missing
