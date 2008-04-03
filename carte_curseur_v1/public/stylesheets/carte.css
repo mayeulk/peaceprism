@@ -3,7 +3,7 @@
 
 
 
-.cadre_carte {border: 2px solid black;}
+.cadre_carte {border: 2px solid black; background-color:#B4DAF6; overflow: hidden;}
 
 .cadre_carte_rouge {border: 4px dashed red;}
 

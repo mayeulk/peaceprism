@@ -1,26 +1,15 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-slider=new Array();
-slider[1]=new Object();
-slider[1].min=1946;
-slider[1].max=2003;
-slider[1].val=1950;
-slider[1].onchange=setBoxValue;
+
 annee_old =2003 // global variable
 nb_conflits_old = 0
 // Any variable that is initialized inside a function using the var keyword will have a local scope. If a variable is initialized inside a function without var, it will have a global scope. A local variable can have the same name as a global variable.
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-function setBoxValue(val, box) {
+function reInit(val, box) {
 
-    var b=document.getElementById('output'+box);
-	val=Math.round(val);
-	b.value=val;
+    val=Math.round(val);
+	$('choix_annee').innerHTML=val;
 	nb_conflits= (window["AN"+val]).length
-	var c=document.getElementById('nompays');
-	c.value=nb_conflits;
-
-
-
-
+	$('nompays').innerHTML=nb_conflits;
 
 	for (un_conflit=0; un_conflit<nb_conflits_old; un_conflit++){
 		var svgobj = document.getElementById((window["AN"+annee_old])[un_conflit]);

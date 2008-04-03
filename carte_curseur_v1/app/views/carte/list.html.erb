@@ -11,18 +11,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <% end %>
-	<!-- chargement des scripts utilises dans la page -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/slider.css"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/carte.css"/>
-    
-	<script type="text/ecmascript" src="javascripts/slider/addanevent.js"></script>
-    <script type="text/ecmascript" src="javascripts/slider/slider.js"></script>
-    <script type="text/ecmascript" src="javascripts/slider/slider-setup.js"></script>
-    <script type="text/ecmascript" src="javascripts/donnees_conflits.js"></script>
-    <script type="text/ecmascript" src="javascripts/donnees.js"></script>
-    <script type="text/ecmascript" src="javascripts/zones_conflits.js"></script>
-    <%= javascript_include_tag :defaults %>
-		
+	<!-- chargement des scripts utilises dans la page --> 	
+	
+	<script type="text/ecmascript" src="/javascripts/slider/slider_event.js"></script>
+	<!--<script type="text/ecmascript" src="/javascripts/slider/slider-setup.js"></script>
+	<script type="text/ecmascript" src="/javascripts/slider/slider.js"></script>
+	<script type="text/ecmascript" src="/javascripts/slider/addanevent.js"></script>-->
+
+	<!-- normalement on apele juste scriptaculous.js, mais celui-ci ne trouve pas le chemin
+	des autres fichiers (il cherche le 'path' courant, que Rails a du changer),
+	donc on importe tout en dur -->
+    <script type="text/javascript" src="/javascripts/lib/prototype.js"></script> 
+    <script type="text/javascript" src="/javascripts/src/builder.js"></script>
+	<script type="text/javascript" src="/javascripts/src/effects.js"></script>
+	<script type="text/javascript" src="/javascripts/src/controls.js"></script>
+	<script type="text/javascript" src="/javascripts/src/dragdrop.js"></script>
+	<script type="text/javascript" src="/javascripts/src/slider.js"></script>
+	<script type="text/javascript" src="/javascripts/src/sound.js"></script>
+	<script type="text/javascript" src="/javascripts/src/unittest.js"></script>
+
+	<script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script>
+	<script type="text/ecmascript" src="/javascripts/donnees.js"></script>
+	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
+
+	<!-- chargement des feuilles de style -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/slider.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/carte.css"/>
+
+
     <script type="text/ecmascript">      
         old_pays_survole="France"; //var. globale
         function survol_zone(pays_survole) {
@@ -60,7 +76,8 @@
 			else slider[1].val= 1945
 		}
 		//]]>
-    </script>    
+	</script>
+
 </head>
 	
 <body>
@@ -96,15 +113,15 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 <!--grâce au "position:relative;" du div ancêtre, on place ce div par rapport à l'ancêtre  -->
 
 
-
 <!-- titre = remplacer par h1 ? -->
 <div id="titre">CARTE D'AFFICHAGE DES DONNEES SUR LES CONFLITS</div>
 
 <!-- le bouton pour fermer le volet navigation -->
 <img id="bascule_volet_navig_img" alt="Fermer" onclick="Effect.toggle(&quot;volet_navig&quot;,'blind',{duration:1.0, scaleX:false , scaleY: true });setTimeout('bascule_volet_navig()',800);" src="/images/navig/fermer0.gif" />
     
-<!-- un bloc contenant les elements de navigation et resultats d'action sur slider -->  
-<!-- style="position: absolute; top:10; left: 10; z-index=2" >  -->
+<!-- un bloc contenant les elements de navigation et resultats d'action sur slider 
+on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec le z-index)-->  
+
 <div id="volet_navig">	
 	
 	<!-- le pan pour le zoom et al navigation -->
@@ -121,11 +138,11 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
     <br/>
 	
 	<!-- formulaire 3 cases pour afficher les donnees rapides associees au slider -->
-	<form name="hilite_form" action="">
-		Year:
-        <input id="output1" size="3" /> ;
-		<input id="nompays" size="1" style="text-align:right" /> countries in civil war.
-    </form>
+	Year:
+    <span id="choix_annee" size="3"> </span> ;
+	<span id="nompays" size="1" style="text-align:right"> </span>
+	countries in civil war.
+
 	<br/>
 	Country/zone: <%= text_field_tag :pays2 %>
 </div>
@@ -133,27 +150,45 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 
 <!-- un bloc contenant la carte et donc tous ses objets SVG ou VML -->
 <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  > --> 
-<div id="cadre_carte" class="cadre_carte" style="left:10px; top: 10px; width:600px; height:300px; background-color:#B4DAF6; overflow: hidden;" >
+<div id="cadre_carte" class="cadre_carte" style="left:10px; top: 10px; width:600px; height:300px;" >
     <%= render :partial => "guy_carte_"+@browser %>
 </div>
 
 <%= observe_field(:pays2, :frequency => 0.1, 
          :update => 'tabl_donnees', :url => 
          { :controller => 'carte', :action=> 'show_over' }, 
-         :with => "'id=' + $('pays2').value+'&annee='+ $('output1').value") %>
-
+         :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').value") %>
 <br/>
 1946
-<div class="slider" id="slider01">
-    <div class="left"></div>
-    <div class="right"></div>
-    <img src="images/slider/knob.png" width="20" height="15" />
+<!-- Slider avec des valeurs predefinies (annees entre date debut et date de fin du jeu de donnees,
+et deux curseurs pour specifier un debut et eventuellement une fin pour une valeur selectionnee
+l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'instance du slider) -->
+<div id="track_date" style="width:600px;"> 
+    <div id="handle_date_debut"	> </div>
 </div>
 2003
+<script type="text/javascript">
+// <![CDATA[
+<% @deb=1947; @fin=2003 %>
+	var deb = <%= @deb %>;
+	var fin = <%= @fin %>;
+	
+	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @deb %>, <%= @fin %>),values:<%= (@deb..@fin).to_json %>, 
+	   onSlide:function(v){reInit(v,1)},
+	   onChange:function(v){reInit(v,1)}});
+
+//    var sliderDate = new Control.Slider(['handle_date_debut','handle_date_fin'],'track_date',{values: t, range:$R(deb, fin),
+//        onSlide:function(v){$('debug6').innerHTML='slide: '+v.inspect()},
+//        onChange:function(v){$('debug6').innerHTML='changed! '+v.inspect(); setBoxValue(parseInt(v),1)}});
+
+
+// ]]>
+</script>
+
 
 <br/>
-
 <div id="tabl_donnees"></div>
 
 </body>
+
 </html>
