@@ -1,8 +1,4 @@
 
-
-<% #@couleurs=['green','brown','blue','#a700aa']
-%>
-
 <% @couleurs=[
 [0,127,0],    #green
 [152,102,52], #brown
@@ -10,37 +6,40 @@
 [170,0,170]]  #violet
 %>
 
+<div style='height:31px; width:600px; background-color: white;color: white '>
+	<!-- <div style='height:40px; width: 22px; background-color: white;float: left;'></div> -->
+  	<%
+	# @debut_periode=1940
+	# @debut_periode=1946
 
-<div style='height:31px; width:730px; background-color: white;color: white '>
+	@long_curseur=580 #600
+	@long_annee= @long_curseur / (@fin_periode - @debut_periode + 1)
+  	for conflitsext in @conflitsexts  %>
 
- <div style='height:40px; width: 22px; background-color: white;float: left;'></div>
-  <%
-  @debut_periode=1940
-  for conflitsext in @conflitsexts  %>
-  <%=
-    if @debut_periode < conflitsext.begin #mettre un blanc pour les périodes de paix
-"<div style='background-color: white; height:40px; width:"+ ((conflitsext.begin-@debut_periode+1)*9.9).to_s + "px; background-color: white;float: left;'></div>"
-    end
-  %>
-<!--A l'origine, dans le fonction onmouseover ci-après
-    new Effect.Highlight('an<%=conflitsext.begin%>',{duration:1,endcolor:'rgb(255,0,0)'});
--->
-    <div onmouseover="document.getElementById('an<%=conflitsext.begin%>').style.border='2px yellow solid';
-     "
-    onmouseout="document.getElementById('an<%=conflitsext.begin%>').style.border='2px black solid';"
-       title="<%= conflitsext.begin.to_s + '-' +conflitsext.finish.to_s + 
-    '  Intens.='+conflitsext.intensity.to_s +
-    '  Type='+conflitsext.type_of_war.to_s %>"
-    style="overflow:hidden; position:relative; top:<%= 9.0-conflitsext.intensity.to_i*2 %>px;
-    height:<%= conflitsext.intensity.to_i*4+7 %>px;
-    width:<%= (conflitsext.finish-conflitsext.begin+1)*9.8 %>px;
-    background-color:<%= rgbo(@couleurs[conflitsext.type_of_war.to_i-1],conflitsext.intensity.to_f/3) %>;
-    float: left;
-    text-align: center;">
-    <%= conflitsext.intensity%>
-    </div>
-  <% @debut_periode = conflitsext.finish+1
-  end%>
+		<%=
+    	if @debut_periode < conflitsext.begin #mettre un blanc pour les périodes de paix
+			"<div style='background-color: white; height:30px; width:"+ ((conflitsext.begin-@debut_periode)*@long_annee).to_s + "px; background-color: white;float: left;'></div>"
+    	end
+		%>
+		<!--A l'origine, dans le fonction onmouseover ci-après
+    	new Effect.Highlight('an<%=conflitsext.begin%>',{duration:1,endcolor:'rgb(255,0,0)'});
+		-->
+    	<div onmouseover="document.getElementById('an<%=conflitsext.begin%>').style.border='2px yellow solid';
+    	 "
+    	onmouseout="document.getElementById('an<%=conflitsext.begin%>').style.border='2px black solid';"
+       	title="<%= conflitsext.begin.to_s + '-' +conflitsext.finish.to_s + 
+    	'  Intens.='+conflitsext.intensity.to_s +
+    	'  Type='+conflitsext.type_of_war.to_s %>"
+    	style="overflow:hidden; position:relative; top:<%= 9.0-conflitsext.intensity.to_i*2 %>px;
+    	height:<%= conflitsext.intensity.to_i*4+7 %>px;
+    	width:<%= ((conflitsext.finish-conflitsext.begin)+1)*@long_annee %>px;
+    	background-color:<%= rgbo(@couleurs[conflitsext.type_of_war.to_i-1],conflitsext.intensity.to_f/3) %>;
+    	float: left;
+    	text-align: center;">
+    	<%= conflitsext.intensity%>
+    	</div>
+  		<% @debut_periode = conflitsext.finish + 1
+  	end%>
 </div>
 <!--
 # IE6 ne gère pas opacity: mais FF et les autres ne gèrent pas  filter: Alpha(Opacity=XX)
@@ -48,7 +47,7 @@
 -->
 
 
-
+<br/>
 <br/>
 <table>
   <tr>

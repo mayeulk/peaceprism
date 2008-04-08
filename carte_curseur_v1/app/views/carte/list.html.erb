@@ -112,7 +112,8 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 -->
 <!--grâce au "position:relative;" du div ancêtre, on place ce div par rapport à l'ancêtre  -->
 
-
+<% # @debut_periode=1946; @fin_periode=2003
+%>
 <!-- titre = remplacer par h1 ? -->
 <div id="titre">CARTE D'AFFICHAGE DES DONNEES SUR LES CONFLITS</div>
 
@@ -127,17 +128,17 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<!-- le pan pour le zoom et al navigation -->
 	<%= render :partial => "navig" %>
 	
-	<!-- debut du slider ? -->
-	<img  id="navig_on_off" style="position: absolute; top:-10; left: -10;" src="/images/navig/bd.png" 
+	<!-- une croix qui ferme le volet de navigation -->
+	<img  id="navig_on_off" src="/images/navig/bd.png" 
     onclick="document.getElementById(&quot;navig_on_off&quot;).src=&quot;/images/navig/hg.png&quot;"/>
 
 	<!-- boutons de lancement et d'arret du film -->
-    <span onclick="lire_film=1;slider[1].val= 1945;film();">Start movie (1946-2003)</span>
+    <span id="film_play" onclick="lire_film=1;slider[1].val= 1945;film();">Start movie (1946-2003)</span>
     <br/>
-    <span onclick="lire_film=0;">Stop  movie</span>
+    <span id="film_stop" onclick="lire_film=0;">Stop  movie</span>
     <br/>
 	
-	<!-- formulaire 3 cases pour afficher les donnees rapides associees au slider -->
+	<!-- 3 cases pour afficher les donnees rapides associees au slider -->
 	Year:
     <span id="choix_annee" size="3"> </span> ;
 	<span id="nompays" size="1" style="text-align:right"> </span>
@@ -150,37 +151,48 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 
 <!-- un bloc contenant la carte et donc tous ses objets SVG ou VML -->
 <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  > --> 
-<div id="cadre_carte" class="cadre_carte" style="left:10px; top: 10px; width:600px; height:300px;" >
+<div id="cadre_carte" class="cadre_carte">
     <%= render :partial => "guy_carte_"+@browser %>
 </div>
 
 <%= observe_field(:pays2, :frequency => 0.1, 
-         :update => 'tabl_donnees', :url => 
+         :update => 'frise', :url => 
          { :controller => 'carte', :action=> 'show_over' }, 
          :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').value") %>
 <br/>
-1946
+<% 	@long_curseur=580 #600
+	@long_annee= @long_curseur / (@fin_periode - @debut_periode + 1)
+%>
+<div class="date"><%= @debut_periode %></div>
+<div class="fleche" onclick="sliderDate.setValueBy(-1);">&lt;</div>
+
 <!-- Slider avec des valeurs predefinies (annees entre date debut et date de fin du jeu de donnees,
 et deux curseurs pour specifier un debut et eventuellement une fin pour une valeur selectionnee
 l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'instance du slider) -->
-<div id="track_date" style="width:600px;"> 
-    <div id="handle_date_debut"	> </div>
+<div id="slider_frise">	  
+	<div id="slider">		
+		<div id="track_date" style="width:<%= @long_curseur %>px; height:10px;"> 
+    		<div id="handle_date_debut"	style="width:<%= @long_annee %>px; height:20px; background-color:#f00;"> </div>
+		</div>
+		<span id="info_date"></span>				
+	</div>
+	<div id="frise"></div>
 </div>
-2003
+<div class="fleche" onclick="sliderDate.setValueBy(1);">&gt;</div>
+<div class="date"><%= @fin_periode %></div>
+
 <script type="text/javascript">
 // <![CDATA[
-<% @deb=1947; @fin=2003 %>
-	var deb = <%= @deb %>;
-	var fin = <%= @fin %>;
+	var deb = <%= @debut_periode %>;
+	var fin = <%= @fin_periode %>;
 	
-	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @deb %>, <%= @fin %>),values:<%= (@deb..@fin).to_json %>, 
+	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
 	   onSlide:function(v){reInit(v,1)},
 	   onChange:function(v){reInit(v,1)}});
 
-//    var sliderDate = new Control.Slider(['handle_date_debut','handle_date_fin'],'track_date',{values: t, range:$R(deb, fin),
+//    var sliderDate = new Control.Slider('handle_date_debut','track_date',{values: [0, 2, 4, 6, 8, 10], range:$R(0, 10),
 //        onSlide:function(v){$('debug6').innerHTML='slide: '+v.inspect()},
-//        onChange:function(v){$('debug6').innerHTML='changed! '+v.inspect(); setBoxValue(parseInt(v),1)}});
-
+//        onChange:function(v){reInit(v,1)}});
 
 // ]]>
 </script>

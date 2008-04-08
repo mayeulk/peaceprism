@@ -1,4 +1,17 @@
 class CarteController < ApplicationController
+  
+  before_filter :initialise_periode
+  
+  def initialise_periode
+    @debut_periode = 1946
+    @fin_periode = 2003
+  end
+# quand je fais des tests sur les sliders  
+#  def slider
+#    list
+#    render :action => 'slider_test'
+#  end
+  
   def index
     list
     render :action => 'list'#, :content_type => "application/xhtml+xml", :layout => false
@@ -24,6 +37,9 @@ class CarteController < ApplicationController
     else
       @browser="ie"
     end
+    
+    
+    
   end
 
 #  def show
