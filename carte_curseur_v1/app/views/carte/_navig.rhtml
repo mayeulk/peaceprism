@@ -1,7 +1,7 @@
-<!-- flèches de navigation, zoom... -->
+<!-- fleches de navigation, zoom... -->
 
 <script type="text/ecmascript">
-// pré-chargement des images
+// pre-chargement des images
   Img1= new Image(71,13)
   Img1.src = "/images/navig/b-r.gif"
   Img2= new Image(13,13)
@@ -23,30 +23,29 @@
 </script>
 
 
-<table id="navig" style="text-align: left;  background-color: white;" border="0"
- cellpadding="0" cellspacing="0">
+<table id="navig" border="0" cellpadding="0" cellspacing="0">
   <tbody>
-    <tr><td><img id="hg" src="images/navig/hg.gif" onclick="pan(-.1,-.1)"/></td>
-      <td colspan="2"><img id="h"  src="images/navig/h.gif" onclick="pan(0,-.1)"/></td>
-      <td><img id="hd" src="images/navig/hd.gif" onclick="pan(.1,-.1)"/></td>
+    <tr><td><img id="hg" src="/images/navig/hg.gif" onclick="pan(-.1,-.1)"/></td>
+      <td colspan="2"><img id="h"  src="/images/navig/h.gif" onclick="pan(0,-.1)"/></td>
+      <td><img id="hd" src="/images/navig/hd.gif" onclick="pan(.1,-.1)"/></td>
     </tr>
     <tr>
-      <td rowspan="2"><img id="g"  src="images/navig/g.gif" onclick="pan(-.1,0)"/></td>
+      <td rowspan="2"><img id="g"  src="/images/navig/g.gif" onclick="pan(-.1,0)"/></td>
       <td><img align='top'
- src="images/navig/zoomin.gif" onclick="zoom(1.25)"/></td>
-      <td><img align='top' src="images/navig/zoomout.gif" onclick="zoom(1/1.25)"/></td>
-      <td rowspan="2"><img id="d"  src="images/navig/d.gif" onclick="pan(.1,0)"/></td>
+ src="/images/navig/zoomin.gif" onclick="zoom(1.25)"/></td>
+      <td><img align='top' src="/images/navig/zoomout.gif" onclick="zoom(1/1.25)"/></td>
+      <td rowspan="2"><img id="d"  src="/images/navig/d.gif" onclick="pan(.1,0)"/></td>
     </tr>
     <tr>
       <td><img
- src="images/navig/globe.gif" onclick="initzoom()"/></td>
+ src="/images/navig/globe.gif" onclick="initzoom()"/></td>
       <td><img id="resize"
- src="images/navig/resize.gif" onclick="resz()"/></td>
+ src="/images/navig/resize.gif" onclick="resz()"/></td>
     </tr>
     <tr>
-      <td><img id="bg" align='top' src="images/navig/bg.gif" onclick="pan(-.1,.1)"/></td>
-      <td colspan="2"><img id="b" align='top' src="images/navig/b.gif" onclick="pan(0,.1)"/></td>
-      <td><img id="bd" align='top' src="images/navig/bd.gif"  onclick="pan(.1,.1)"/></td>
+      <td><img id="bg" align='top' src="/images/navig/bg.gif" onclick="pan(-.1,.1)"/></td>
+      <td colspan="2"><img id="b" align='top' src="/images/navig/b.gif" onclick="pan(0,.1)"/></td>
+      <td><img id="bd" align='top' src="/images/navig/bd.gif"  onclick="pan(.1,.1)"/></td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +137,7 @@ if (rsz==1) {
 
 carte_w=carte_w+dx*400
 carte_h=carte_h+dy*400
-if (30>carte_w) {carte_w=30}; //ne pas changer la taille si elle est déjà petite
+if (30>carte_w) {carte_w=30}; //ne pas changer la taille si elle est deja� petite
 if (30>carte_h) {carte_h=30};
 
 document.getElementById("cadre_carte").style.width=carte_w+"px";
@@ -158,8 +157,8 @@ document.getElementById("monde").style.top=n_y+"px";
 if (rsz==1) {
 carte_w=carte_w+dx*400;
 carte_h=carte_h+dy*400;
-if (30>carte_w) {carte_w=30}; //ne pas changer la taille si elle est déjà petite
-if (30>carte_h) {carte_h=30}; //NB: "30>" marche mais pas "carte_h inférieur_à 30" car le parseur xml le prend pour une balise  
+if (30>carte_w) {carte_w=30}; //ne pas changer la taille si elle est deja� petite
+if (30>carte_h) {carte_h=30}; //NB: "30>" marche mais pas "carte_h inferieur_a� 30" car le parseur xml le prend pour une balise  
 document.getElementById("monde").setAttributeNS(null,"width",carte_w);
 document.getElementById("monde").setAttributeNS(null,"height",carte_h);
 document.getElementById("cadre_carte").style.width=carte_w+"px";

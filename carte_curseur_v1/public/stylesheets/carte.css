@@ -1,14 +1,55 @@
 
+#titre {
+	height: 50px;
+	}
+
+/* volet navig */
+#volet_navig {}
+
+#navig {
+	text-align: left;  
+	background-color: white;
+}
+
+#navig_on_off {
+	position: absolute; 
+	top: -10px; 
+	left: -10px;
+	}
+
+#film_play {
+	}
+
+#film_stop {	
+}
 
 
+/* carte */
+.cadre_carte {
+	border: 2px solid black;
+	background-color:#B4DAF6; 
+	overflow: hidden;
+	left:10px; 
+	top: 10px; 
+	width:600px; 
+	height:300px;
+	}
 
+.cadre_carte_rouge {
+	border: 4px dashed red;
+	}
+	
+/* tableau donnees */
+.tete_colonne {
+	background-color: lightgray;
+	}
 
-.cadre_carte {border: 2px solid black; background-color:#B4DAF6; overflow: hidden;}
+.ligne_en_cours {
+	background-color: lightcoral;
+	}
 
-.cadre_carte_rouge {border: 4px dashed red;}
-
-.tete_colonne {background-color: lightgray;}
-
-.ligne_en_cours {background-color: lightcoral;}
-
-.tableau_donnees {background-color:#FF6699; height: 300px; width: 100%; overflow: auto;}
+.tableau_donnees {
+	height: 300px; 
+	width: 100%; 
+	overflow: auto;
+	}

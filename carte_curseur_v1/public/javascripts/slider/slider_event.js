@@ -5,10 +5,12 @@ nb_conflits_old = 0
 // Any variable that is initialized inside a function using the var keyword will have a local scope. If a variable is initialized inside a function without var, it will have a global scope. A local variable can have the same name as a global variable.
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 function reInit(val, box) {
-
+	// val est l'annee, renvoyee par le curseur
     val=Math.round(val);
 	$('choix_annee').innerHTML=val;
-	nb_conflits= (window["AN"+val]).length
+	$('info_date').innerHTML=val; 
+	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/,"")) - 15) + 'px';
+	nb_conflits= (window["AN"+val]).length;
 	$('nompays').innerHTML=nb_conflits;
 
 	for (un_conflit=0; un_conflit<nb_conflits_old; un_conflit++){
