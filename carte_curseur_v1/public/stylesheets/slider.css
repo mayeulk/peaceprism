@@ -8,6 +8,10 @@
 	width:10px; 
 	float:left;
 	cursor:pointer;
+	border-style:solid;
+	background-color:#FFFF00;
+	border-color:#FF0000;
+	border-width:1px;
 	}
 div#slider_frise {
 	float:left;
@@ -26,10 +30,21 @@ div#slider {
 	/* width:600px;  doit etre de toute facon dans le code css en ligne dans le html*/
 	height:10px;
 	position:relative;
-	z-index:0;
+	z-index:1;
 	cursor:pointer;
 	}
-
+	
+.repere_slider {
+	position:relative;
+	float:left;
+	background-color:#696969;
+	border-style:solid;
+	border-color: #696969; 
+	height:20px;
+	z-index:0;	
+	width:0px; 
+	border-width:1px;
+}
 #handle_date_debut {
 	opacity:0.5;
 	position:absolute;
@@ -38,18 +53,19 @@ div#slider {
 	/*	width:10px;  doit etre de toute facon dans le code css en ligne dans le html*/
 	height:20px;
 	background-color:#f00;
-	z-index:1;
+	z-index:2;
 	cursor:move;
 	}
 
 #info_date{
-	 position:relative; 
+	 position:absolute; 
 	 left:0px; 
-	 top:-32px; /* position relative au dessus du curseur (taille curseur + taille texte */
+	 top:-28px; /* position relative au dessus du curseur (taille curseur + taille texte */
 	 background-color:#FFFF00;
 	 border-style:solid;
 	 border-color:#FF0000;
 	 border-width:2px;
+	 z-index:2;
 }
 div#frise {
 	height:50px;

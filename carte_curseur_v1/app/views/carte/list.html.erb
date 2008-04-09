@@ -110,10 +110,8 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 <!--
  :with => "'id=' + escape(pays_survole)")
 -->
-<!--grâce au "position:relative;" du div ancêtre, on place ce div par rapport à l'ancêtre  -->
+<!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
 
-<% # @debut_periode=1946; @fin_periode=2003
-%>
 <!-- titre = remplacer par h1 ? -->
 <div id="titre">CARTE D'AFFICHAGE DES DONNEES SUR LES CONFLITS</div>
 
@@ -155,14 +153,18 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
     <%= render :partial => "guy_carte_"+@browser %>
 </div>
 
-<%= observe_field(:pays2, :frequency => 0.1, 
+<%= observe_field(:pays2, :frequency => 0.1, # fonction reflex pour mettre a jour la frise et le tableau
          :update => 'frise', :url => 
          { :controller => 'carte', :action=> 'show_over' }, 
          :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').value") %>
 <br/>
-<% 	@long_curseur=580 #600
-	@long_annee= @long_curseur / (@fin_periode - @debut_periode + 1)
+
+<% 	# initialisation des variables qui vont permettre de formater le slider en fonction des dates du jeu de donnees
+	@long_annee = (600 / (@fin_periode - @debut_periode + 1)).to_i
+	@long_curseur = @long_annee * (@fin_periode - @debut_periode + 1)
 %>
+
+<!-- une date de debut et une fleche gauche pour deplacer le curseur, de meme plus loin pour la droite -->
 <div class="date"><%= @debut_periode %></div>
 <div class="fleche" onclick="sliderDate.setValueBy(-1);">&lt;</div>
 
@@ -170,11 +172,22 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 et deux curseurs pour specifier un debut et eventuellement une fin pour une valeur selectionnee
 l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'instance du slider) -->
 <div id="slider_frise">	  
-	<div id="slider">		
+	<div id="slider">
+		<% @decalage = 1 # un repere des annees%>
+			<% for @an in @debut_periode..@fin_periode %>
+				<% if (@an%5 == 0) %>
+					<%= "<div class='repere_slider' style='left:" + (((@an-@debut_periode)*@long_annee)-@decalage).to_s + "px; border-width:2px;'></div>" %>
+					<% @decalage = @decalage + 4 %>
+				<% else %>
+					<%= "<div class='repere_slider' style='left:" + (((@an-@debut_periode)*@long_annee)-@decalage).to_s + "px;'></div>" %>
+					<% @decalage = @decalage + 2 %>
+				<% end %>
+		<% end %>		
 		<div id="track_date" style="width:<%= @long_curseur %>px; height:10px;"> 
     		<div id="handle_date_debut"	style="width:<%= @long_annee %>px; height:20px; background-color:#f00;"> </div>
+			<span id="info_date"></span>				
 		</div>
-		<span id="info_date"></span>				
+		
 	</div>
 	<div id="frise"></div>
 </div>
@@ -183,17 +196,10 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 
 <script type="text/javascript">
 // <![CDATA[
-	var deb = <%= @debut_periode %>;
-	var fin = <%= @fin_periode %>;
-	
+	// instanciation d'un objet slider attache aux div track_date et handle_date_debut
 	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
 	   onSlide:function(v){reInit(v,1)},
 	   onChange:function(v){reInit(v,1)}});
-
-//    var sliderDate = new Control.Slider('handle_date_debut','track_date',{values: [0, 2, 4, 6, 8, 10], range:$R(0, 10),
-//        onSlide:function(v){$('debug6').innerHTML='slide: '+v.inspect()},
-//        onChange:function(v){reInit(v,1)}});
-
 // ]]>
 </script>
 
