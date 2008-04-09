@@ -7,24 +7,19 @@
 %>
 
 <div style='height:31px; width:600px; background-color: white;color: white '>
-	<!-- <div style='height:40px; width: 22px; background-color: white;float: left;'></div> -->
-  	<%
-	# @debut_periode=1940
-	# @debut_periode=1946
-
-	@long_curseur=580 #600
-	@long_annee= @long_curseur / (@fin_periode - @debut_periode + 1)
+	<%	
+	@long_annee = (600 / (@fin_periode - @debut_periode + 1)).to_i
   	for conflitsext in @conflitsexts  %>
 
 		<%=
-    	if @debut_periode < conflitsext.begin #mettre un blanc pour les périodes de paix
+    	if @debut_periode < conflitsext.begin # mettre un blanc pour les periodes de paix
 			"<div style='background-color: white; height:30px; width:"+ ((conflitsext.begin-@debut_periode)*@long_annee).to_s + "px; background-color: white;float: left;'></div>"
     	end
 		%>
-		<!--A l'origine, dans le fonction onmouseover ci-après
+		<!-- A l'origine, dans le fonction onmouseover ci-apres
     	new Effect.Highlight('an<%=conflitsext.begin%>',{duration:1,endcolor:'rgb(255,0,0)'});
 		-->
-    	<div onmouseover="document.getElementById('an<%=conflitsext.begin%>').style.border='2px yellow solid';
+    	<div onmouseover="document.getElementById('an<%=conflitsext.begin%>').style.border='2px #FFFF00 solid';
     	 "
     	onmouseout="document.getElementById('an<%=conflitsext.begin%>').style.border='2px black solid';"
        	title="<%= conflitsext.begin.to_s + '-' +conflitsext.finish.to_s + 
@@ -42,8 +37,8 @@
   	end%>
 </div>
 <!--
-# IE6 ne gère pas opacity: mais FF et les autres ne gèrent pas  filter: Alpha(Opacity=XX)
-#filter: Alpha(Opacity=<%= conflitsext.intensity.to_f*33.3; %>);
+# IE6 ne gere pas opacity: mais FF et les autres ne gerent pas  filter: Alpha(Opacity=XX)
+# filter: Alpha(Opacity=<%= conflitsext.intensity.to_f*33.3; %>);
 -->
 
 
@@ -84,8 +79,7 @@
     <% for conflitsext in @conflitsexts %>
     <tr id="an<%=conflitsext.begin%>" 
  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
-    style="border:solid black 2px; color: white;
-
+    style="border-style:solid; border-width:2px; border-color:#000000; color: white;
     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
       <% for column in Conflitsext.content_columns %>
       <td style=" border: inherit;">
