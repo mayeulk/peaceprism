@@ -3,6 +3,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :variables
 
   map.resources :datasets
+  map.connect 'data/:dataset_id', :controller => 'data', :action => 'show_dataset'
+  map.connect 'data/:dataset_id/col/:variable_id', :controller => 'data', :action => 'show_column'
+  map.connect 'data/:dataset_id/row/:row_id', :controller => 'data', :action => 'show_row'
+  map.connect 'data/:dataset_id/:variable_id/:row_id', :controller => 'data', :action => 'show_value'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -79,12 +79,15 @@ class DatasetsController < ApplicationController
 
   def import_all_edf
     
-    # liste les fichiers .edf
+    # emplacement des fichiers edf
     @folder='/home/commun/ecole/REC/PRISM/EUGene/a_importer/'
     require 'find'
+    
+    # liste les fichiers .edf
     @edffiles = Array.new
     Find.find(@folder) do |path|
-      if File.basename(path) =~ /\.edf$/ # se termine par ".edf" 
+      # fichiers se terminant par ".edf"
+      if File.basename(path) =~ /\.edf$/  
         @edffiles = @edffiles << File.basename(path, ".edf")
       end
     end
@@ -93,9 +96,11 @@ class DatasetsController < ApplicationController
       @edf_data=edf_to_yaml(@folder, edffile)
       @variables=@edf_data.delete("variables")
       @dataset = Dataset.create({"configuration_file" => edffile}.merge(@edf_data) )
-      dataset_table="dataset_" + @dataset.id.to_s
+      
+      # nom de la table "dataset_#" contenant les donnees
+      @dataset_table="dataset_" + @dataset.id.to_s
       var_n = 1
-      ActiveRecord::Base.connection.create_table(dataset_table, :force => true) do |t|
+      ActiveRecord::Base.connection.create_table(@dataset_table, :force => true) do |t|
         @variables.each do |var|
           case (var[1]) #en fonction du type, cree la colonne 'var1' ou 'var2'... dans la table 'dataset_1'
             when "string" then t.column("var" + var_n.to_s, :string)
@@ -104,8 +109,15 @@ class DatasetsController < ApplicationController
           end
  
           Variable.create({"var_id"=> var_n, "dataset_id" => @dataset.id, "name" => var[0], "format" => var[1],"kind" => var[2], "reverse" => var[3],"missing" => var[4]}) #insère une ligne dans la table 'variables'
+
+          case var[2] # enregistre le numéro de colonne de ces 3 variables spéciales
+            when "identifierccode1" then @dataset.identifierccode1_var = var_n
+            when "identifierccode2" then @dataset.identifierccode1_var = var_n
+            when "identifieryear" then @dataset.identifieryear_var = var_n
+          end
           var_n += 1
         end
+        @dataset.save # enregistre dans la table 'datasets' le numéro de colonne des 1, 2 ou 3 variables spéciales
       end
       
       
@@ -113,6 +125,7 @@ class DatasetsController < ApplicationController
       require 'csv'
       ligne_n = 0
       
+      # lecture des données ligne par ligne
       CSV::Reader.parse(File.open(@folder + @dataset.data_file_name)) do |row|
         if ligne_n == 0
           if @dataset.label_line_in_data_file
@@ -122,11 +135,13 @@ class DatasetsController < ApplicationController
           ligne_n = 1
         end
         
+        # une ligne d'un fichier de donnees .csv
         @ligne=Array.new
         var_n = 0
         
-        @variables.each do |var|
-          if row[var_n].to_s == var[4].to_s or row[var_n].to_s.gsub(/\.| /,"") == "" # la valeur est identique à celle qui code les valeurs manquantes ('missing'), OU il n'y a rien entre les deux virgules dans le fichier csv, OU il y a une combinaison de point(s) et d'espace(s) (EUGene: 1.Within the input data set, a period (“.”) is treated as a missing value code, a blank field is considered missing, and whatever value per variable specified by the user is also considered missing.")  
+        # écriture des données case par case
+        @variables.each do |var| 
+          if row[var_n].to_i == var[4].to_i or row[var_n].to_s.gsub(/\.| /,"") == "" # la valeur est identique à celle qui code les valeurs manquantes ('missing'), OU il n'y a rien entre les deux virgules dans le fichier csv, OU il y a une combinaison de point(s) et d'espace(s) (EUGene: 1.Within the input data set, a period (“.”) is treated as a missing value code, a blank field is considered missing, and whatever value per variable specified by the user is also considered missing.")  
             @ligne[var_n] = "NULL"
           else
             if var[1] == "string"
@@ -138,7 +153,7 @@ class DatasetsController < ApplicationController
           var_n += 1
         end
  
-        ActiveRecord::Base.connection.execute("INSERT INTO " + dataset_table + " VALUES ('" + ligne_n.to_s + "'," + @ligne.join(",") + ") ")
+        ActiveRecord::Base.connection.execute("INSERT INTO " + @dataset_table + " VALUES ('" + ligne_n.to_s + "'," + @ligne.join(",") + ") ")
         ligne_n += 1
       end
       
