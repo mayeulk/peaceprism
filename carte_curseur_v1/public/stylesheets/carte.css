@@ -49,6 +49,7 @@
 	}
 
 .tableau_donnees {
+	clear:both;
 	height: 300px; 
 	width: 100%; 
 	overflow: auto;

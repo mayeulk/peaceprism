@@ -1,12 +1,14 @@
 .date {
 	float:left;
-	width:40px;
-	height:72px;	
+	/* width:40px;
+	height:32px; */
 	}
 
 .fleche {
+	position:relative;
 	width:10px; 
 	float:left;
+	top:-7px;
 	cursor:pointer;
 	border-style:solid;
 	background-color:#FFFF00;
@@ -15,14 +17,13 @@
 	}
 div#slider_frise {
 	float:left;
-	width:630px;
 	/* width:700px; il est preferable que ce bloc s'adapte a la largeur des blocs qu'il contient */	
-	height:100px;
+	/* height:100px; */
 	}
 div#slider {
 	float:left;
 	height:22px;
-	width:600px;
+	/* width:600px; on va laisser la taille s'adapter aux objets contenus (le slider en lui meme) */
 	}
 	
 #track_date {
@@ -30,6 +31,8 @@ div#slider {
 	/* width:600px;  doit etre de toute facon dans le code css en ligne dans le html*/
 	height:10px;
 	position:relative;
+	top:0px;
+	left:0px;
 	z-index:1;
 	cursor:pointer;
 	}
@@ -37,6 +40,7 @@ div#slider {
 .repere_slider {
 	position:relative;
 	float:left;
+	top:-17px;
 	background-color:#696969;
 	border-style:solid;
 	border-color: #696969; 
@@ -44,7 +48,7 @@ div#slider {
 	z-index:0;	
 	width:0px; 
 	border-width:1px;
-}
+	}
 #handle_date_debut {
 	opacity:0.5;
 	position:absolute;
@@ -66,8 +70,9 @@ div#slider {
 	 border-color:#FF0000;
 	 border-width:2px;
 	 z-index:2;
-}
+	}
 div#frise {
-	height:50px;
+	clear:both;
+	/* width:600px; on va laisser la taille s'adapter aux objets contenus (la frise en elle-meme) */
 	}
 

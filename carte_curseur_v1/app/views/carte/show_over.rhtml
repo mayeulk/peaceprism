@@ -6,7 +6,7 @@
 [170,0,170]]  #violet
 %>
 
-<div style='height:31px; width:600px; background-color: white;color: white '>
+<div style='background-color: white;color: white '>
 	<%	
 	@long_annee = (600 / (@fin_periode - @debut_periode + 1)).to_i
   	for conflitsext in @conflitsexts  %>
@@ -41,10 +41,8 @@
 # filter: Alpha(Opacity=<%= conflitsext.intensity.to_f*33.3; %>);
 -->
 
-
 <br/>
-<br/>
-<table>
+<table style="clear:both;">
   <tr>
     <td>
 <b>Legend:</b> 
@@ -68,7 +66,7 @@
   </tr>
 </table>
 
-
+<!--
 <div class="tableau_donnees">
   <table style="border-collapse: separate ; background-color: black;">
     <tr class="tete_colonne">
@@ -89,3 +87,4 @@
     <% end %>
   </table>
 </div>
+-->
