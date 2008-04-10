@@ -57,5 +57,17 @@ class CarteController < ApplicationController
     render(:nothing => true) # affiche un partial vide ("")
     end
   end
+  
+  def tableau
+  @id=params[:id]
+  @annee=params[:annee].to_i
+    if @id.strip.match(/^lt/)
+      @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')     
+    else
+      #bricolage pour éviter une erreur car on a survolé un pays au lieu d'un conflit. FIX IT
+      #il faudrait éviter de faire un appel ajax
+    render(:nothing => true) # affiche un partial vide ("")
+    end
+  end
  
 end
