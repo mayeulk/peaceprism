@@ -3,7 +3,7 @@ class CreateFipsCowCodes < ActiveRecord::Migration
     create_table :fips_cow_codes do |t|
       t.string  :country_name
       t.integer :cowcode
-      t.string  :fipscode
+      t.string  :fips_cntry
       t.integer :contcode
       t.timestamps
     end

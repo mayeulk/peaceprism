@@ -1,0 +1,31 @@
+<h1>New fips_cow_code</h1>
+
+<%= error_messages_for :fips_cow_code %>
+
+<% form_for(@fips_cow_code) do |f| %>
+  <p>
+    <b>Country name</b><br />
+    <%= f.text_field :country_name %>
+  </p>
+
+  <p>
+    <b>Cowcode</b><br />
+    <%= f.text_field :cowcode %>
+  </p>
+
+  <p>
+    <b>Fipscode</b><br />
+    <%= f.text_field :fipscode %>
+  </p>
+
+  <p>
+    <b>Contcode</b><br />
+    <%= f.text_field :contcode %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', fips_cow_codes_path %>

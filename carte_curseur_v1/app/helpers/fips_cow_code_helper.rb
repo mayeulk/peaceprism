@@ -1,0 +1,2 @@
+module FipsCowCodeHelper
+end
