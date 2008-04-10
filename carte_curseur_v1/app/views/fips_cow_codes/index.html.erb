@@ -1,0 +1,26 @@
+<h1>Listing fips_cow_codes</h1>
+
+<table>
+  <tr>
+    <th>Country name</th>
+    <th>Cowcode</th>
+    <th>Fipscode</th>
+    <th>Contcode</th>
+  </tr>
+
+<% for fips_cow_code in @fips_cow_codes %>
+  <tr>
+    <td><%=h fips_cow_code.country_name %></td>
+    <td><%=h fips_cow_code.cowcode %></td>
+    <td><%=h fips_cow_code.fipscode %></td>
+    <td><%=h fips_cow_code.contcode %></td>
+    <td><%= link_to 'Show', fips_cow_code %></td>
+    <td><%= link_to 'Edit', edit_fips_cow_code_path(fips_cow_code) %></td>
+    <td><%= link_to 'Destroy', fips_cow_code, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New fips_cow_code', new_fips_cow_code_path %>

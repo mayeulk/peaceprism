@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  country_name: MyString
+  cowcode: 1
+  fipscode: MyString
+  contcode: 1
+
+two:
+  country_name: MyString
+  cowcode: 1
+  fipscode: MyString
+  contcode: 1

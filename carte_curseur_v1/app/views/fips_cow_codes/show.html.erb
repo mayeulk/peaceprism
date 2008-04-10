@@ -1,0 +1,23 @@
+<p>
+  <b>Country name:</b>
+  <%=h @fips_cow_code.country_name %>
+</p>
+
+<p>
+  <b>Cowcode:</b>
+  <%=h @fips_cow_code.cowcode %>
+</p>
+
+<p>
+  <b>Fipscode:</b>
+  <%=h @fips_cow_code.fipscode %>
+</p>
+
+<p>
+  <b>Contcode:</b>
+  <%=h @fips_cow_code.contcode %>
+</p>
+
+
+<%= link_to 'Edit', edit_fips_cow_code_path(@fips_cow_code) %> |
+<%= link_to 'Back', fips_cow_codes_path %>

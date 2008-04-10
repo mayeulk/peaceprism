@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
 # Could not dump table "buf" because of following StandardError
 #   Unknown type 'geometry' for column 'buffer'
@@ -29,6 +29,21 @@ ActiveRecord::Schema.define(:version => 4) do
     t.string  "territory",   :limit => nil
     t.string  "side_a",      :limit => 128
     t.string  "side_b",      :limit => 128
+  end
+
+  create_table "dataset_1", :force => true do |t|
+    t.integer "var1"
+    t.integer "var2"
+    t.decimal "var3"
+    t.decimal "var4"
+  end
+
+  create_table "dataset_2", :force => true do |t|
+    t.integer "var1"
+    t.decimal "var2"
+    t.decimal "var3"
+    t.decimal "var4"
+    t.integer "var5"
   end
 
   create_table "dataset_3", :force => true do |t|
@@ -78,6 +93,15 @@ ActiveRecord::Schema.define(:version => 4) do
     t.integer  "identifieryear_var"
   end
 
+  create_table "fips_cow_codes", :force => true do |t|
+    t.string   "country_name"
+    t.integer  "cowcode"
+    t.string   "fips_cntry"
+    t.integer  "contcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "geometry_columns", :id => false, :force => true do |t|
     t.string  "f_table_catalog",   :limit => 256, :null => false
     t.string  "f_table_schema",    :limit => 256, :null => false
@@ -119,6 +143,9 @@ ActiveRecord::Schema.define(:version => 4) do
 #   Unknown type 'geometry' for column 'the_geom'
 
 # Could not dump table "world2" because of following StandardError
+#   Unknown type 'geometry' for column 'the_geom'
+
+# Could not dump table "world3" because of following StandardError
 #   Unknown type 'geometry' for column 'the_geom'
 
 end
