@@ -1,6 +1,8 @@
 class FipsCowCodeController < ApplicationController
   def import
-    @fips_cow_file='/home/commun/ecole/REC/PRISM/programmation_PRISM/SIG/diamonds_country_codes.csv'
+    FipsCowCode.delete_all
+    
+    @fips_cow_file=RAILS_ROOT + '/db/diamonds_country_codes.csv'
     require 'csv'
     
     # lecture des données ligne par ligne
@@ -13,14 +15,7 @@ class FipsCowCodeController < ApplicationController
       ligne.save
     end
     
-    #essai bidon d'insertion
-      ligne = FipsCowCode.new
-      ligne.country_name = "DDR"
-      ligne.cowcode = 123
-      ligne.fips_cntry = "DR"
-      ligne.contcode = 2 #code continent
-      ligne.save
-    
+
     
     
     
