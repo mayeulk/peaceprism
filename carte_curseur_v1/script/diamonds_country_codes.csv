@@ -58,12 +58,13 @@ Cote D'Ivoire/Ivory Coast 	437	IV	4
 Croatia 	344	HR	1
 Cuba 	40	CU	5
 Cyprus 	352	CY	1
+Czech Republic 	316	CZ/EZ	1
 Democratic Republic of Congo/Zaire 	490	CG	4
 Denmark 	390	DA	1
 Djibouti 	522	DJ	4
 Dominica 	54	DO	5
 Dominican Republic 	42	DR	5
-East Timor 	860	TT	 3
+East Timor 	-9999	TT	 3
 Ecuador 	130	EC	5
 Egypt 	651	EG	2
 El Salvador 	92	ES	5
@@ -122,7 +123,7 @@ Kenya 	501	KE	4
 Korea, North 	731	KN	3
 Korea, South 	732	KS	3
 Kingman Reef 	-9999	KQ	 3
-Kiribati 	946	KR	 3
+Kiribati 	-9999	KR	 3
 Kuwait 	690	KU	2
 Kyrgyz Republic 	703	KG	3
 Laos 	812	LA	3
@@ -156,7 +157,7 @@ Montserrat 	-9999	MH	 5
 Morocco 	600	MO	4
 Mozambique 	541	MZ	4
 Namibia 	565	WA	4
-Nauru 	970	NR	 3
+Nauru 	-9999	NR	 3
 Nepal 	790	NP	3
 Netherlands 	210	NL	1
 Netherlands Antilles 	-9999	NT	 5
@@ -191,7 +192,7 @@ San Marino 	331	SM	1
 Sao Tome-Principe 	403	TP	4
 Saudi Arabia 	670	SA	2
 Senegal 	433	SG	4
-Serbia 	345	SR	 1
+Serbia 	-9999	SR	 1
 Seychelles 	591	SE	4
 Sierra Leone 	451	SL	4
 Singapore 	830	SN	3
@@ -221,16 +222,17 @@ Tanzania 	510	TZ	4
 Thailand 	800	TH	3
 Togo 	461	TO	4
 Tokelau 	-9999	TL	 3
-Tonga 	955	TN	 3
+Tonga 	-9999	TN	 3
 Trinidad and Tobago 	52	TD	5
 Tromelin Island 	-9999	TE	 4
 Tunisia 	616	TS	4
 Turkey 	640	TU	2
 Turkmenistan 	701	TX	3
 Turks and Caicos Islands 	-9999	TK	 5
-Tuvalu 	947	TV	 3
+Tuvalu 	-9999	TV	 3
 Uganda 	500	UG	4
 Ukraine 	369	UP	1
+United Arab Emirates 	696	AE/TC	2
 United Kingdom 	200	UK	1
 United States of America 	2	US	5
 Uruguay 	165	UY	5
@@ -241,35 +243,3 @@ Venezuela 	101	VE	5
 Vietnam, Dem. Rep. of 	816	VM	3
 Wallis and Futuna 	-9999	WF	 3
 West Bank 	-9999	WE	 2
-Czechoslovakia 	315 	CZ
-Zambia	551	ZA
-Puerto Rico	-9999	RQ
-Zimbabwe	552	ZI
-Marshall Islands	983	RM
-Midway Islands	-9999	MQ
-Johnston Atoll	-9999	JQ
-Howland Island	-9999	HQ
-Guam	-9999	GQ
-Baker Island	-9999	FQ
-Federated States of Micronesia	987	FM
-Jarvis Island	-9999	DQ
-Northern Mariana Islands	-9999	CQ
-American Samoa	990	AQ
-Yugoslavia	345	YO
-Palestine	-9999	PI
-Yemen	679	YM
-Yemen - Nord	678	YN
-United Arab Emirates	696	TC
-United Arab Emirates	696	AE
-Czech Republic	316	EZ
-Yemen - South	680	YS
-Union of Soviet Socialist Republics	365	UR
-Vietnam - North	816	VN
-Vietnam - South	817	VS
-Germany - West	260	GW
-Virgin Islands	-9999	VQ
-Germany - East	265	GE
-Western Sahara	-9999	WI
-Wake Island	-9999	WQ
-Taïwan	713	
-Zanzibar	511	
