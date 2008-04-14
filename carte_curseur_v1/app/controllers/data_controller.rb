@@ -55,8 +55,8 @@ class DataController < ApplicationController
 
   def show_dataset
     @dataset = Dataset.find(params[:dataset_id])
-    @data = ActiveRecord::Base.connection.select_all("SELECT * from dataset_#{@dataset.id} ORDER BY id ASC")
-    render :inline =>    @data.to_json
+    @data = (ActiveRecord::Base.connection.select_all("SELECT * from dataset_#{@dataset.id} ORDER BY id ASC")).to_json
+    render :inline =>    @data
   end
 
 end
