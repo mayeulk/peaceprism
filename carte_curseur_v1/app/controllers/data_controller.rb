@@ -1,8 +1,7 @@
 class DataController < ApplicationController
-#  map.connect 'data/:dataset_id', :controller => 'data', :action => 'show_dataset'
-#  map.connect 'data/:dataset_id/col/:variable_id', :controller => 'data', :action => 'show_column'
-#  map.connect 'data/:dataset_id/row/:row_id', :controller => 'data', :action => 'show_row'
-#  map.connect 'data/:dataset_id/:variable_id/:row_id', :controller => 'data', :action => 'show_value'
+  
+  #  map.connect 'data/:dataset_id/:variable_id/:row_id', :controller => 'data', :action => 'show_value'
+  # un pays, une annee, une variable d'un jeu de donnees
   def show_value 
     @dataset = Dataset.find(params[:dataset_id])
     @variable = Variable.find(params[:variable_id])
@@ -14,6 +13,8 @@ class DataController < ApplicationController
     end
   end
 
+  # un pays, une annee, toutes variables d'un jeu de donnees
+  #  map.connect 'data/:dataset_id/row/:row_id', :controller => 'data', :action => 'show_row'
   def show_row
     @dataset = Dataset.find(params[:dataset_id])
     if params[:row_id].gsub(/[0-9]/,"").length == 0 #il n'y a que des chiffres
@@ -24,7 +25,8 @@ class DataController < ApplicationController
     end
   end
 
- # map.connect 'data/:dataset_id/col/:variable_id', :controller => 'data', :action => 'show_column'
+  # tous pays, toutes annees, une variable d'un jeu de donnees
+  # map.connect 'data/:dataset_id/col/:variable_id', :controller => 'data', :action => 'show_column'
   def show_column
 #    @dataset = Dataset.find(params[:dataset_id])
 #    @variable = Variable.find(params[:variable_id])
@@ -53,6 +55,9 @@ class DataController < ApplicationController
 #    render :inline =>    @annees.to_json
   end
 
+
+  # tous pays, toutes annees, toutes variables d'un jeu de donnees
+  #  map.connect 'data/:dataset_id', :controller => 'data', :action => 'show_dataset'
   def show_dataset
     @dataset = Dataset.find(params[:dataset_id])
     @data = (ActiveRecord::Base.connection.select_all("SELECT * from dataset_#{@dataset.id} ORDER BY id ASC")).to_json
