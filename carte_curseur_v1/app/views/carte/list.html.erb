@@ -30,9 +30,10 @@
 	<script type="text/javascript" src="/javascripts/src/sound.js"></script>
 	<script type="text/javascript" src="/javascripts/src/unittest.js"></script>
 
-	<script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script>
-	<script type="text/ecmascript" src="/javascripts/donnees.js"></script>
-	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
+	<!-- <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script> -->
+	<script type="text/ecmascript" src="/javascripts/src/donnees.js"></script>
+	<!-- <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
+	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script> -->
 
 	<!-- chargement des feuilles de style -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/slider.css"/>
@@ -40,7 +41,7 @@
 
 
     <script type="text/ecmascript">      
-        old_pays_survole="France"; //var. globale
+        old_pays_survole="CZ19461993"; //var. globale
         function survol_zone(pays_survole) {
         	pays_survole=pays_survole;
         	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
@@ -54,7 +55,7 @@
         	b.value=val;
         	//toggle_layer_number(val);
       	}
-      	var pays= new Array ("Serbia", "Slovenia", "Montenegro", "Croatia", "Macedonia", "Bosnia_and_Herzegovina", "Cyprus_1_", "Luxembourg", "United_Arab_Emirates", "Qatar", "Azerbaijan", "Jordan", "Lebanon", "Netherlands", "Belgium", "Canada", "Greenland_1_", "Papua_New_Guinea", "Cambodia", "Vietnam", "Korea_x002C__Democratic_People_x0027_s_Republic_of", "Korea_x002C__Republic_of", "Mongolia", "Kazakhstan", "Taiwan", "Brunei", "Butan", "Bangladesh", "Afghanistan", "Kyrgyzstan", "Burkina_Faso", "Belize", "Indonesia", "Guatemala", "Dominican_Republic", "Burma", "Laos", "Malaysia", "Cuba", "Tajikistan", "Jamaica", "Thailand", "Nepal", "Uzbekistan", "Malawi", "Turkmenistan", "Puerto_Rico", "Russia_2_", "Sri_Lanka", "Nicaragua", "Madagascar", "Zambia", "El_Salvador", "Honduras", "Haiti", "Costa_Rica", "Panama", "Chile", "Bolivia", "Paraguay", "Uruguay", "Peru", "Brazil", "Mexico", "Kenya", "Tanzania", "Mozambique", "Zaire", "Angola", "Namibia", "Congo", "Cameroon", "Gabon", "Equatorial_Guinea", "Botswana", "Zimbabwe", "Uganda", "Burundi", "Guyana", "Suriname", "French_Guiana", "Ecuador", "Colombia", "Venezuela", "Benin", "Ghana", "Togo", "Guinea", "Liberia", "Sierra_Leone", "Nigeria", "Lesotho", "Swaziland", "Ivory_Coast", "Rwanda", "Western_Sahara", "Niger", "Sudan", "Lybia", "Chad", "Mali", "Mauritania", "Tunisia", "Algeria", "Morocco", "India", "New_Zealand", "Argentina", "United_Kingdom_1_", "United_States_1_", "Italy_1_", "Denmark_1_", "Egypt_1_", "South_Africa", "Finland", "France", "Portugal", "Ireland", "Iceland", "Germany", "Poland", "Australia_1_", "Turkey_1_", "Russia", "Saudi_Arabia", "Slovakia", "Spain_1_", "Israel", "Iraq", "Greece", "Romania", "Bulgaria", "Syria", "Albania", "Switzerland", "Czech_Republic", "Austria", "Kuwait", "Iran", "Estonia", "Latvia", "Hungary", "Pakistan", "Sweden", "Lithuania", "China_1_", "Norway", "Byelarus", "Ukraine", "Moldova", "Georgia", "Armenia", "Oman", "Eritrea", "Central_African_Republic", "Yeman", "Somalia", "Ethiopia", "Guinea-Bissau", "Philippines", "Japan", "Senegal", "Gambia_The");
+      	//var pays= new Array ("Serbia", "Slovenia", "Montenegro", "Croatia", "Macedonia", "Bosnia_and_Herzegovina", "Cyprus_1_", "Luxembourg", "United_Arab_Emirates", "Qatar", "Azerbaijan", "Jordan", "Lebanon", "Netherlands", "Belgium", "Canada", "Greenland_1_", "Papua_New_Guinea", "Cambodia", "Vietnam", "Korea_x002C__Democratic_People_x0027_s_Republic_of", "Korea_x002C__Republic_of", "Mongolia", "Kazakhstan", "Taiwan", "Brunei", "Butan", "Bangladesh", "Afghanistan", "Kyrgyzstan", "Burkina_Faso", "Belize", "Indonesia", "Guatemala", "Dominican_Republic", "Burma", "Laos", "Malaysia", "Cuba", "Tajikistan", "Jamaica", "Thailand", "Nepal", "Uzbekistan", "Malawi", "Turkmenistan", "Puerto_Rico", "Russia_2_", "Sri_Lanka", "Nicaragua", "Madagascar", "Zambia", "El_Salvador", "Honduras", "Haiti", "Costa_Rica", "Panama", "Chile", "Bolivia", "Paraguay", "Uruguay", "Peru", "Brazil", "Mexico", "Kenya", "Tanzania", "Mozambique", "Zaire", "Angola", "Namibia", "Congo", "Cameroon", "Gabon", "Equatorial_Guinea", "Botswana", "Zimbabwe", "Uganda", "Burundi", "Guyana", "Suriname", "French_Guiana", "Ecuador", "Colombia", "Venezuela", "Benin", "Ghana", "Togo", "Guinea", "Liberia", "Sierra_Leone", "Nigeria", "Lesotho", "Swaziland", "Ivory_Coast", "Rwanda", "Western_Sahara", "Niger", "Sudan", "Lybia", "Chad", "Mali", "Mauritania", "Tunisia", "Algeria", "Morocco", "India", "New_Zealand", "Argentina", "United_Kingdom_1_", "United_States_1_", "Italy_1_", "Denmark_1_", "Egypt_1_", "South_Africa", "Finland", "France", "Portugal", "Ireland", "Iceland", "Germany", "Poland", "Australia_1_", "Turkey_1_", "Russia", "Saudi_Arabia", "Slovakia", "Spain_1_", "Israel", "Iraq", "Greece", "Romania", "Bulgaria", "Syria", "Albania", "Switzerland", "Czech_Republic", "Austria", "Kuwait", "Iran", "Estonia", "Latvia", "Hungary", "Pakistan", "Sweden", "Lithuania", "China_1_", "Norway", "Byelarus", "Ukraine", "Moldova", "Georgia", "Armenia", "Oman", "Eritrea", "Central_African_Republic", "Yeman", "Somalia", "Ethiopia", "Guinea-Bissau", "Philippines", "Japan", "Senegal", "Gambia_The");
     </script>
     
     
@@ -144,9 +145,15 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 
 	<br/>
 	Country/zone: <%= text_field_tag :pays2 %>
+	<br/>
+	Variable : <%= select_tag "variable", "<option>var1</option><option>var2</option><option>var3</option>" %>
+	<div id="essai"> </div>
 </div>
 
-
+<%= observe_field(:variable, :frequency => 0.1, # fonction reflex pour mettre a jour la frise
+         :update => 'essai', :url => { :controller => 'carte', :action=> 'update_map' }) %>
+		 
+		 
 <!-- un bloc contenant la carte et donc tous ses objets SVG ou VML -->
 <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  > --> 
 <div id="cadre_carte" class="cadre_carte">
