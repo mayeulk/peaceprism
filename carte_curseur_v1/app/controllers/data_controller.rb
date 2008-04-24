@@ -35,6 +35,7 @@ class DataController < ApplicationController
     @dataset = Dataset.find(params[:dataset_id])
     @variable = Variable.find(params[:variable_id])
     @data = ActiveRecord::Base.connection.select_all("SELECT var#{@dataset.identifierccode1_var} as ccode, var#{@dataset.identifieryear_var} as year, var#{@variable.var_id} as data from dataset_#{@dataset.id} ORDER BY var#{@dataset.identifierccode1_var} , var#{@dataset.identifieryear_var} ")
+#    @data = ActiveRecord::Base.connection.select_all("SELECT var#{@dataset.identifierccode1_var} as ccode, var#{@dataset.identifieryear_var} as year, var#{@variable.var_id} as data from dataset_#{@dataset.id}, fip ORDER BY var#{@dataset.identifierccode1_var} , var#{@dataset.identifieryear_var} ")
     @pays = ActiveRecord::Base.connection.select_values("SELECT var#{@dataset.identifierccode1_var} as ccode from dataset_#{@dataset.id} group by var#{@dataset.identifierccode1_var} ORDER BY var#{@dataset.identifierccode1_var} ASC")
     @annees = ActiveRecord::Base.connection.select_values("SELECT var#{@dataset.identifieryear_var} as annee from dataset_#{@dataset.id} group by var#{@dataset.identifieryear_var} ORDER BY var#{@dataset.identifieryear_var} ASC")
     @tableau = Array.new

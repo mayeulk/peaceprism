@@ -32,6 +32,33 @@ function reInit(val, box) {
 	//alert("Après encours/old "+val +" "+annee_old);
 	nb_conflits_old=nb_conflits;
 
+function reInit2(val, box) {
+	// val est l'annee, renvoyee par le curseur
+    val=Math.round(val);
+	$('choix_annee').innerHTML=val;
+	$('info_date').innerHTML=val; 
+	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/,"")) - 15) + 'px';
+	nb_conflits= (window["AN"+val]).length;
+	$('nompays').innerHTML=nb_conflits;
+
+	for (un_conflit=0; un_conflit<nb_conflits_old; un_conflit++){
+		var svgobj = document.getElementById((window["AN"+annee_old])[un_conflit]);
+			document.getElementById((window["AN"+annee_old])[un_conflit]).style.visibility = 'hidden';
+			//if (annee_old == 1988) {alert((window["AN"+annee_old])[un_conflit])};
+	}
+			//alert("old:" + un_conflit_old+" sur " + nb_conflits_old);
+
+	for (un_conflit=0; un_conflit<nb_conflits; un_conflit++){
+		var svgobj = document.getElementById((window["AN"+val])[un_conflit]);
+		//	svgobj.setAttributeNS(null,'fill','green');
+		//svgobj.setAttributeNS(null,'visibility','visible');
+		document.getElementById((window["AN"+val])[un_conflit]).style.visibility = 'visible';
+		//c.value=un_conflit+' '+(window["AN"+val])[un_conflit]; // montre où on en est
+	}
+	//alert(un_conflit+" sur " + nb_conflits);
+	annee_old=val;
+	//alert("Après encours/old "+val +" "+annee_old);
+	nb_conflits_old=nb_conflits;
 
 	//alert( (window["AN"+val]).length);
 	//Appeler une variable nommée par un string : ['nomdevariable'] ou window['nom'+'devariable']
