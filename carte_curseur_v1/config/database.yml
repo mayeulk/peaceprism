@@ -37,5 +37,6 @@ production:
   adapter: postgresql
   database: testgis
   username: postgres
-  password: password
-  host: localhost
+  password: rootpg38000
+  host: 192.168.1.18
+  port: 5433
