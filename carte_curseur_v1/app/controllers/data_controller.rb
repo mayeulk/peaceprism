@@ -27,6 +27,7 @@ class DataController < ApplicationController
 
   # tous pays, toutes annees, une variable d'un jeu de donnees
   # map.connect 'data/:dataset_id/col/:variable_id', :controller => 'data', :action => 'show_column'
+  # http://localhost:3000/data/1/col/8
   def show_column
 #    @dataset = Dataset.find(params[:dataset_id])
 #    @variable = Variable.find(params[:variable_id])
@@ -46,7 +47,7 @@ class DataController < ApplicationController
       end
     end
     
-    for ligne in @data
+    for ligne in @data # pour chaque ligne (annee-pays) du tableau de donnees
 #      @tableau << [ligne['year'], ligne['ccode'], ligne['data']]
       @tableau[ligne['year'].to_i][ligne['ccode'].to_i] = case when ligne['data'] == nil then nil else ligne['data'].to_f end
 #      @tableau[ligne['year'].to_i] = ligne['data']
