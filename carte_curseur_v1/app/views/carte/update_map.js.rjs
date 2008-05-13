@@ -1,0 +1,5 @@
+#page << 'var newvar = document.getElementById((window["old_pays_survole"]));'
+#page << 'var guydou = new Array ("salut","rebonjour");'
+#page << 'var guydou = "machin";'
+#page.replace_html 'essai', 'coucou'
+#page.call('changerDonnees(@tableau)')

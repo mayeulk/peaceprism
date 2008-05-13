@@ -1,0 +1,66 @@
+
+
+Processing CarteController#index (for 127.0.0.1 at 2008-04-30 14:55:20) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+
+
+Processing CarteController#index (for 127.0.0.1 at 2008-04-30 14:55:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+
+
+Errno::ECONNREFUSED (Aucune connexion n'a pu être établie car l'ordinateur cible l'a expressément refusée. - connect(2)):
+    c:/ruby/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/connection.rb:138:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/connection.rb:138:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/connection.rb:138:in `establish_connection'
+    c:/ruby/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/connection.rb:25:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/postgres-compat.rb:23:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/postgres-pr-0.4.0/lib/postgres-pr/postgres-compat.rb:23:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:713:in `connect'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:713:in `connect'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:237:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:23:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:23:in `postgresql_connection'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)

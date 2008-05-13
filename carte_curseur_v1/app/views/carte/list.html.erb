@@ -31,6 +31,7 @@
 	<script type="text/javascript" src="/javascripts/src/unittest.js"></script>
 
 	<!-- <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script> -->
+	<script type="text/javascript" src="/javascripts/src/data_update.js"></script>
 	<script type="text/ecmascript" src="/javascripts/src/donnees.js"></script>
 	<!-- <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script> -->
@@ -150,10 +151,14 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<div id="essai"> </div>
 </div>
 
-<%= observe_field(:variable, :frequency => 0.1, # fonction reflex pour mettre a jour la frise
-         :update => 'essai', :url => { :controller => 'carte', :action=> 'update_map' }) %>
+<%= observe_field 'variable', :frequency => 0.2, # fonction reflex pour mettre a jour la frise
+          :url => { :controller => 'carte', :action=> 'update_map' }, :with => 'variable',
+			:complete => "changerDonnees(request)" %>
 		 
-		 
+		 <!-- <%= observe_field(:variable, :frequency => 0.1, # fonction reflex pour mettre a jour la frise
+          :url => { :controller => 'carte', :action=> 'update_map' }) %>
+		  
+		  :update => 'essai',-->
 <!-- un bloc contenant la carte et donc tous ses objets SVG ou VML -->
 <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  > --> 
 <div id="cadre_carte" class="cadre_carte">
@@ -210,9 +215,15 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 <script type="text/javascript">
 // <![CDATA[
 	// instanciation d'un objet slider attache aux div track_date et handle_date_debut
+	//var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
+	//   onSlide:function(v){reInit(v,1)},
+	//   onChange:function(v){reInit(v,1)}});
+	   
 	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
-	   onSlide:function(v){reInit(v,1)},
-	   onChange:function(v){reInit(v,1)}});
+	   onSlide:function(v){reInit2(v,1)},
+	   onChange:function(v){reInit2(v,1)}});
+
+	   
 // ]]>
 </script>
 
