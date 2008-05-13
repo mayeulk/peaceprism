@@ -131,12 +131,12 @@ class CarteController < ApplicationController
           if ((@data[j].values)[2] == annee2) and ((@data[j].values)[1] == p)
             @tab_temp[p] = ((@data[j]).values)[3]
             j = j + 1
-            if j> #nombre 
-              break
-            end
+#            if j> #nombre 
+#              break
+#            end
           end
-# décommenter lorsqu'on aura un tableau carré, sinon on cherche 
-#(nb_annees x nb_pays) données, alors qu'on en a (nb_annees_pays_irrelevant) de moins
+# decommenter lorsqu'on aura un tableau carre, sinon on cherche 
+#(nb_annees x nb_pays) donnees, alors qu'on en a (nb_annees_pays_irrelevant) de moins
 #          i = i + 1
         end
         tableau_donnees[annee2] = @tab_temp
@@ -186,7 +186,7 @@ class CarteController < ApplicationController
 
 
     # ecriture du fichier de creation des variables en dur, bien sur, apres le systeme me dit
-    # qu'il est pas synchronisé !!!
+    # qu'il est pas synchronisï¿½ !!!
 
     # ouverture du fichier javascript en ecriture
 #    @data2_file=RAILS_ROOT + '/public/javascripts/src/donnees.js'
