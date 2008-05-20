@@ -47,7 +47,7 @@ class CarteController < ApplicationController
       #@vari = params[:variable]
       # recuperation du jeu de donnees choisi et de la variable a cartographier
       # pour l'instant en dur le dataset 1 et la variable 8
-      @dataset = Dataset.find(1)
+      @dataset = Dataset.find(6)
       @variable = Variable.find(8) 
       
       @var_annee = "dataset_#{@dataset.id}.var#{@dataset.identifieryear_var}"
@@ -70,138 +70,122 @@ class CarteController < ApplicationController
         ORDER BY  #{@var_annee},
           world.fips_cntry || world.begin || world.end
         ")
-      
-      # seulement les pays compris dans le jeu de donnees
-      @pays = ActiveRecord::Base.connection.select_values("
-        SELECT world.fips_cntry || world.begin || world.end  as ccode 
-        FROM world, fips_cow_codes, dataset_#{@dataset.id} 
-        WHERE (#{@var_code} = fips_cow_codes.cowcode) 
-          and (fips_cow_codes.fips_cntry = world.fips_cntry) 
-          and (#{@var_annee} >= world.begin 
-          and #{@var_annee} <= world.end) 
-        GROUP BY world.fips_cntry || world.begin || world.end 
-        ORDER BY world.fips_cntry || world.begin || world.end ASC")
-
-      # seulement les annees pouvant etre affichees
-      @annees = ActiveRecord::Base.connection.select_values(
-        "SELECT DISTINCT #{@var_annee} as annee
-        from world, fips_cow_codes, dataset_#{@dataset.id}
-        where #{@var_annee} < 1960
-          and (#{@var_code} = fips_cow_codes.cowcode)
-          and (fips_cow_codes.fips_cntry = world.fips_cntry)
-          and (#{@var_annee} >= world.begin
-          and #{@var_annee} <= world.end)
-        group by #{@var_annee}
-        ORDER BY #{@var_annee} ASC")
-      
+        
       # toutes les annees existantes pour la carte
-      @annees2 = ActiveRecord::Base.connection.select_values(
-        "SELECT annee from annees where annee < 1950 order by annee")
+      @annees2 = ActiveRecord::Base.connection.select_all(
+        "SELECT annee from annees order by annee")
+      
+      tab_annees = Array.new()
+      c = 0
+      for elt in @annees2
+        tab_annees[c] = elt['annee']
+        c = c + 1
+      end
       
       # tous les pays de la carte
-      @pays2 = ActiveRecord::Base.connection.select_values(
+      @pays2 = ActiveRecord::Base.connection.select_all(
         "SELECT world.fips_cntry || world.begin || world.end  as ccode
         from world order by world.fips_cntry || world.begin || world.end")
       
-      @tab = ActiveRecord::Base.connection.select_values(
-        "SELECT distinct annee, world.fips_cntry || world.begin || world.end  as ccode
-        FROM annees, world
-        WHERE annee >= (select min(dataset_1.var5) as min from dataset_1)
-          and annee <= (select max(dataset_1.var5) as max from dataset_1)
-        ORDER BY  annee, world.fips_cntry || world.begin || world.end")
-        
-      @annee_debut = @annees[0].to_i
-      tableau_donnees = Hash.new()
-  #    for annee in @annees
-  #      @tableau_donnees[annee.to_i-@annee_debut] = Array.new()
-  #      @pays.each do |pays|
-  #        @tableau_donnees[annee.to_i-@annee_debut][pays] = "#"
-  #      end
-  #    end
-#      i = 0
-#      for annee in 0..(@annees2.length-1)
+      tab_pays = Array.new()
+      d = 0
+      for eltt in @pays2
+        tab_pays[d] = eltt['ccode']
+        d = d + 1
+      end      
+
+      # recuperation de la table qui repertorie les pays inexistants 
+      @diese = ActiveRecord::Base.connection.select_all("
+        SELECT annee, ccode, diese, manquante FROM diese_null
+        ORDER BY annee, ccode")
+      
+      # pour un souci de proprete, on pourra regrouper les deux boucles en une :
+      # premiere : constitution du tableau de donnees
+      tableau_donnees = Array.new()
+      i = 0
       j = 0
-      for annee2 in @annees2
-        @tab_temp = Hash.new() #une annee, tous les pays
-#        for p in 0..(@pays2.length-1)
-        for p in @pays2
-          @tab_temp[p] = "#"
-#           @tab_temp[p] = @data[i]
-#          @tab_temp[p] = (@data[i])['data']
-          if ((@data[j].values)[2] == annee2) and ((@data[j].values)[1] == p)
-            @tab_temp[p] = ((@data[j]).values)[3]
-            j = j + 1
-#            if j> #nombre 
-#              break
-#            end
-          end
-# decommenter lorsqu'on aura un tableau carre, sinon on cherche 
-#(nb_annees x nb_pays) donnees, alors qu'on en a (nb_annees_pays_irrelevant) de moins
-#          i = i + 1
+      for t in @diese
+        if t['diese'].to_i == 1
+          tableau_donnees[i] = "#"
+        else
+          tableau_donnees[i] = "null"
         end
-        tableau_donnees[annee2] = @tab_temp
-
+        
+        if ((@data[j].values)[2] == t['annee']) and ((@data[j].values)[1] == t['ccode'])
+          tableau_donnees[i] = (@data[j].values)[3]
+          j = j + 1
+        end
+           
+        i=i+1
       end
-
-      render :json => tableau_donnees.to_json
-#      render :json => @data.to_json
-#      for ligne in @data
-#        @tableau[ligne['year'].to_i-@annee_debut][ligne['ccode']] = case when ligne['data'] == nil then nil else ligne['data'].to_f end
-#      end
       
-  #    render :json => @annees.to_json
-
+      # deuxieme : transformation en un hash de tableaux (plus facile pour l'affichage
+      tab_do = Hash.new()
+      com = 0
+      for ann in tab_annees
+        compt = 0
+        ar = Array.new()
+        for pa in tab_pays
+          ar[compt] = tableau_donnees[com]
+          com = com + 1
+          compt = compt + 1
+        end
+        tab_do[ann] = ar
+      end
+        
+      tab_envoi = Hash.new()
       
-#      page.replace 'tatata', {:first=>"truc", :last=>"machin"}
-#      render :update do |page|
-#        for ligne in @data
-#          @tableau[ligne['year'].to_i][ligne['ccode']] = case when ligne['data'] == nil then nil else ligne['data'].to_f end
-#          page.assign 'AN' + ligne['year'], {:ligne['ccode']=>ligne['data'].to_f}
-#        end
-#      end
+      tab_envoi['annees'] = tab_annees
+      tab_envoi['pays'] = tab_pays
+      tab_envoi['data'] = tab_do
+
+      render :json => tab_envoi.to_json
+
       }
     end
-    
-#    @vari = params[:variable]
-    # recuperation du jeu de donnees choisi et de la variable a cartographier
-    # pour l'instant en dur le dataset 1 et la variable 8
-#    @dataset = Dataset.find(1)
-#    @variable = Variable.find(@vari)    
 
-    # constitution du jeu de donnees a afficher, en creant un code pays fips-annees correspondant au code cow pour une date donnee (en accord avec la carte)
-#    @data = ActiveRecord::Base.connection.select_all("SELECT dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var} as ccode1, world.fips_cntry || world.begin || world.end as ccode, dataset_#{@dataset.id}.var#{@dataset.identifieryear_var} as year, dataset_#{@dataset.id}.var#{@variable.var_id} as data from dataset_#{@dataset.id}, fips_cow_codes, world where (dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var} = fips_cow_codes.cowcode) and (fips_cow_codes.fips_cntry = world.fips_cntry) and (dataset_#{@dataset.id}.var#{@dataset.identifieryear_var} >= world.begin and dataset_#{@dataset.id}.var#{@dataset.identifieryear_var} <= world.end) ORDER BY dataset_#{@dataset.id}.var#{@dataset.identifieryear_var}, world.fips_cntry ")
-#    @pays = ActiveRecord::Base.connection.select_values("SELECT world.fips_cntry || world.begin || world.end  as ccode from world, fips_cow_codes, dataset_#{@dataset.id} where (dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var} = fips_cow_codes.cowcode) and (fips_cow_codes.fips_cntry = world.fips_cntry) and (dataset_#{@dataset.id}.var#{@dataset.identifieryear_var} >= world.begin and dataset_#{@dataset.id}.var#{@dataset.identifieryear_var} <= world.end) group by world.fips_cntry || world.begin || world.end ORDER BY world.fips_cntry || world.begin || world.end ASC")
-#    @annees = ActiveRecord::Base.connection.select_values("SELECT var#{@dataset.identifieryear_var} as annee from world, fips_cow_codes, dataset_#{@dataset.id} where (dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var} = fips_cow_codes.cowcode) and (fips_cow_codes.fips_cntry = world.fips_cntry) and (dataset_#{@dataset.id}.var#{@dataset.identifieryear_var} >= world.begin and dataset_#{@dataset.id}.var#{@dataset.identifieryear_var} <= world.end) group by var#{@dataset.identifieryear_var} ORDER BY var#{@dataset.identifieryear_var} ASC")
-#    @tableau = Array.new
-#    for annee in @annees
-#      @tableau[annee.to_i] = Hash.new()
-#      @pays.each do |pays|
-#        @tableau[annee.to_i][pays] = "#"
-#      end
-#    end
-    
-#    render :inline =>    @tableau[1870..2003].to_json + @annees.to_json
-#    render :inline =>    @annees.to_json
+        
+#      
+#      # seulement les pays compris dans le jeu de donnees
+#      @pays = ActiveRecord::Base.connection.select_values("
+#        SELECT world.fips_cntry || world.begin || world.end  as ccode 
+#        FROM world, fips_cow_codes, dataset_#{@dataset.id} 
+#        WHERE (#{@var_code} = fips_cow_codes.cowcode) 
+#          and (fips_cow_codes.fips_cntry = world.fips_cntry) 
+#          and (#{@var_annee} >= world.begin 
+#          and #{@var_annee} <= world.end) 
+#        GROUP BY world.fips_cntry || world.begin || world.end 
+#        ORDER BY world.fips_cntry || world.begin || world.end ASC")
+#
+#      # seulement les annees pouvant etre affichees
+#      @annees = ActiveRecord::Base.connection.select_values(
+#        "SELECT DISTINCT #{@var_annee} as annee
+#        from world, fips_cow_codes, dataset_#{@dataset.id}
+#        where #{@var_annee} < 1960
+#          and (#{@var_code} = fips_cow_codes.cowcode)
+#          and (fips_cow_codes.fips_cntry = world.fips_cntry)
+#          and (#{@var_annee} >= world.begin
+#          and #{@var_annee} <= world.end)
+#        group by #{@var_annee}
+#        ORDER BY #{@var_annee} ASC")
+#      
+      
+#      @tab = ActiveRecord::Base.connection.select_values(
+#        "SELECT distinct annee, world.fips_cntry || world.begin || world.end  as ccode
+#        FROM annees, world
+#        WHERE annee >= (select min(dataset_1.var5) as min from dataset_1)
+#          and annee <= (select max(dataset_1.var5) as max from dataset_1)
+#        ORDER BY  annee, world.fips_cntry || world.begin || world.end")
+#        
+#        
+#      @paysannees = ActiveRecord::Base.connection.select_values(
+#        "SELECT fips_cntry, annee 
+#        FROM world, annees
+#        WHERE annee >= world.begin
+#          and annee <= world.end")
+#          
+#      @annee_debut = @annees[0].to_i
 
-
-
-    # ecriture du fichier de creation des variables en dur, bien sur, apres le systeme me dit
-    # qu'il est pas synchronis� !!!
-
-    # ouverture du fichier javascript en ecriture
-#    @data2_file=RAILS_ROOT + '/public/javascripts/src/donnees.js'
-#    open(@data2_file, 'w') do |f|
-#      for ane in @annees
-#        f.puts 'var AN' + ane + ' = new Array;'
-#        for pay in @pays        
-#          f.puts 'AN' + ane + '["' + pay + '"]="' + (@tableau[ane.to_i][pay]).to_s + '";'
-#        end
-#      end
-#    end
-
-#    render :action => 'update_map'
-#    end
-#    render :text => 'ok'
   end
 #  def show
 #      @conflitsext = Conflitsext.find(params[:id])
