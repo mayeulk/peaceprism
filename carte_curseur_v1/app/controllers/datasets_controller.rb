@@ -78,7 +78,28 @@ class DatasetsController < ApplicationController
   end
 
   def import_all_edf
-    
+    # avant d'importer, faire:
+    #DB:migrate VERSION=1 
+    #DB:migrate VERSION=5
+    #supprimer à la main les dataset_1, dataset_2 etc. dans postgres
+# cela nécessite d'abord de supprimmer les vues suivantes (ou de faire CASADE DELETE)
+#CREATE OR REPLACE VIEW data AS 
+# SELECT dataset_1.var2 AS ccode1, world.fips_cntry, (world.fips_cntry::text || world."begin"::text) || world."end"::text AS ccode, dataset_1.var5 AS annee, dataset_1.var8 AS data
+#   FROM dataset_1, fips_cow_codes, world
+#  WHERE dataset_1.var5 < 2004 AND dataset_1.var2 = fips_cow_codes.cowcode AND fips_cow_codes.fips_cntry::text = world.fips_cntry::text AND dataset_1.var5 >= world."begin" AND dataset_1.var5 <= world."end"
+#  ORDER BY dataset_1.var5, (world.fips_cntry::text || world."begin"::text) || world."end"::text;
+#ALTER TABLE data OWNER TO postgres;
+#
+#CREATE OR REPLACE VIEW tab AS 
+# SELECT DISTINCT annees.annee, world.fips_cntry, (world.fips_cntry::text || world."begin"::text) || world."end"::text AS ccode, world."begin", world."end"
+#   FROM annees, world
+#  WHERE annees.annee >= (( SELECT min(dataset_1.var5) AS min
+#           FROM dataset_1)) AND annees.annee <= (( SELECT max(dataset_1.var5) AS max
+#           FROM dataset_1))
+#  ORDER BY annees.annee, (world.fips_cntry::text || world."begin"::text) || world."end"::text, world.fips_cntry, world."begin", world."end";
+#ALTER TABLE tab OWNER TO postgres;
+    #http://localhost:3000/datasets/import_all_edf
+#recréer les vues
     # emplacement des fichiers edf
     @folder='/home/commun/ecole/REC/PRISM/EUGene/a_importer/'
     require 'find'
