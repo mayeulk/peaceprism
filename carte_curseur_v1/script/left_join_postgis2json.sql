@@ -5,8 +5,8 @@ CREATE OR REPLACE VIEW tab AS (
 SELECT distinct annees.annee, world.fips_cntry || world.begin || world.end  as ccode,
 world.begin, world.end
         FROM annees, world
-        WHERE annee >= (select min(dataset_6.var5) as min from dataset_6)
-          and annee <= (select max(dataset_6.var5) as max from dataset_6)
+        WHERE annee >= 1946 --(select min(dataset_6.var5) as min from dataset_6)
+          and annee <= 2003 --(select max(dataset_6.var5) as max from dataset_6)
         ORDER BY  annee, world.fips_cntry || world.begin || world.end
 );
 
