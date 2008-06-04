@@ -6,6 +6,8 @@ function changerDonnees (request){
 	tab = request.responseText.evalJSON();
 	//tab = eval('(' + request + ')')
 	//$('essai').innerHTML = tab
+
+	//$('essai').innerHTML = tab ;
 	
 	// pour afficher le tableau 2D
 	

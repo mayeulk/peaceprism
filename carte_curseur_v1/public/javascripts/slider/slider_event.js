@@ -46,14 +46,17 @@ function reInit2(val, box){
 	// le tableau de donnees pour la date selectionnee
 	data_year = t_data[val];
 
+	
 	// affichage des donnees sur la carte
 	for (k in t_pays) {
 		var truc = document.getElementById(t_pays[k]);
 		if (data_year[k] == '#') {		// le pays n'existe pas a cette date	
 			truc.setAttribute("visibility", "hidden");
+			//truc.style.visibility = 'hidden';
 		}
 		else {
 			truc.setAttribute("visibility", 'visible');
+			//truc.style.visibility = 'visible';
 			if (data_year[k] == 'null') {	// pas de donnees pour ce pays a cette date
 				truc.setAttribute("fill", "#C3C3C3");
 			}
