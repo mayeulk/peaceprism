@@ -115,6 +115,22 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
  :with => "'id=' + escape(pays_survole)")
 -->
 <!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
+<form>
+<p>color 1 #<input type="text" id="colorfield1" value="FF33FF"/></p>
+<p>color 2 #<input type="text" id="colorfield2" value="CC3366"/></p>
+<p>color 3 #<input type="text" id="colorfield3" value="66FF66"/></p>
+<p>color 4 #<input type="text" id="colorfield4" value="339900"/> <button style="width: 1.5em; height: 1.5em; border: 1px outset #666;" id="colorbox4" class="colorbox"></button></p>
+</form>
+
+<script type="text/javascript">
+// <![CDATA[
+["1", "2", "3"].each(function(idx) {
+  new Control.ColorPicker("colorfield" + idx, { IMAGE_BASE : "/img/" });
+});
+new Control.ColorPicker("colorfield4", { "swatch" : "colorbox4" });
+// ]]>
+</script>
+
 
 
 <!-- titre = remplacer par h1 ? -->
