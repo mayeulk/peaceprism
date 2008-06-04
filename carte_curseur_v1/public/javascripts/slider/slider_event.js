@@ -5,6 +5,8 @@ nb_conflits_old = 0
 tab ="" // il faut définir la variable au chargement pour pouvoir y accéder après modification par AJAX.
 // Any variable that is initialized inside a function using the var keyword will have a local scope. If a variable is initialized inside a function without var, it will have a global scope. A local variable can have the same name as a global variable.
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+// reInit1 est la fonction d'origine, qui pour une date affiche les zones de conflits
+
 function reInit(val, box){
 	// val est l'annee, renvoyee par le curseur
 	val = Math.round(val);
@@ -33,6 +35,9 @@ function reInit(val, box){
 	//alert("AprÃ¨s encours/old "+val +" "+annee_old);
 	nb_conflits_old = nb_conflits;
 }
+
+// fonction reInit2 qui affiche des donnees monadic en 2 classes seulement
+ 
 function reInit2(val, box){
 	// val est l'annee, renvoyee par le curseur
 	val = Math.round(val);
@@ -45,7 +50,9 @@ function reInit2(val, box){
 	var t_data = tab['data'];
 	// le tableau de donnees pour la date selectionnee
 	data_year = t_data[val];
-
+	// recuperation des couleurs choisies
+	coul1 = $('colorfield1').value;
+	coul2 = $('colorfield2').value;
 	
 	// affichage des donnees sur la carte
 	for (k in t_pays) {
@@ -58,14 +65,14 @@ function reInit2(val, box){
 			truc.setAttribute("visibility", 'visible');
 			//truc.style.visibility = 'visible';
 			if (data_year[k] == 'null') {	// pas de donnees pour ce pays a cette date
-				truc.setAttribute("fill", "#C3C3C3");
+				truc.setAttribute("fill", "#C3C3C3"); // en gris
 			}
 			else {
 				if (parseInt(data_year[k]) < 5) {
-					truc.setAttribute("fill", "#FF0000");
+					truc.setAttribute("fill", '#' + coul1);
 				}
 				else {
-					truc.setAttribute("fill", "#0000FF");					
+					truc.setAttribute("fill", '#' + coul2);					
 				}
 			}
 		}
