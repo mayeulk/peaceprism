@@ -29,7 +29,9 @@
 	<script type="text/javascript" src="/javascripts/src/slider.js"></script>
 	<script type="text/javascript" src="/javascripts/src/sound.js"></script>
 	<script type="text/javascript" src="/javascripts/src/unittest.js"></script>
-
+	<script src="/javascripts/src/knallgrau.scriptaculous.js" type="text/javascript"></script>
+	<script src="/javascripts/yahoo.color.js" type="text/javascript"></script>
+  	<script src="/javascripts/colorPicker.js" type="text/javascript"></script>
 	<!-- <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script> -->
 	<script type="text/javascript" src="/javascripts/src/data_update.js"></script>
 	<script type="text/ecmascript" src="/javascripts/src/donnees.js"></script>
@@ -39,7 +41,7 @@
 	<!-- chargement des feuilles de style -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/slider.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/carte.css"/>
-
+	<link rel="stylesheet" type="text/css" href="/stylesheets/colorPicker.css"/>
 
     <script type="text/ecmascript">      
         old_pays_survole="CZ19461993"; //var. globale
@@ -114,6 +116,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 -->
 <!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
 
+
 <!-- titre = remplacer par h1 ? -->
 <div id="titre">CARTE D'AFFICHAGE DES DONNEES SUR LES CONFLITS</div>
 
@@ -147,13 +150,14 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<br/>
 	Country/zone: <%= text_field_tag :pays2 %>
 	<br/>
-	Variable : <%= select_tag "variable", "<option>var1</option><option>var2</option><option>var3</option>" %>
+	Dataset : <%= select_tag "datasets", options_for_select(@dat) %>
+	<div id="liste_var"></div>
 	<div id="essai"> </div>
 </div>
 
-<%= observe_field 'variable', :frequency => 0.2, # fonction reflex pour mettre a jour la frise
-          :url => { :controller => 'carte', :action=> 'update_map' }, :with => 'variable',
-			:complete => "changerDonnees(request)" %>
+<%= observe_field (:datasets, :frequency => 0.2,
+		  :url => { :controller => 'carte', :action => 'refresh_var'},
+		  :update => 'liste_var', :with => "'datas=' + $('datasets').value") %>
 		 
 		 <!-- <%= observe_field(:variable, :frequency => 0.1, # fonction reflex pour mettre a jour la frise
           :url => { :controller => 'carte', :action=> 'update_map' }) %>

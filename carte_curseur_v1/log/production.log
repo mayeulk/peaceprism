@@ -64,3 +64,381 @@ Errno::ECONNREFUSED (Aucune connexion n'a pu être établie car l'ordinateur cible
     -e:2
 
 Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CarteController#index (for 192.168.1.13 at 2008-06-03 18:14:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 2.87400 (0 reqs/sec) | Rendering: 2.34300 (81%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte?]
+
+
+Processing ApplicationController#index (for 192.168.1.13 at 2008-06-03 18:14:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/navig/bd.png" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering C:/GUY/Travaux/Eclipse/carte_curseur_v1/public/404.html (404 Not Found)
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:28) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"23"}
+Completed in 0.08000 (12 reqs/sec) | Rendering: 0.01000 (12%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"16"}
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.01000 (9%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:30) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.06100 (16 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:35) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"15"}
+Completed in 0.09000 (11 reqs/sec) | Rendering: 0.01000 (11%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:36) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.23100 (4 reqs/sec) | Rendering: 0.05100 (22%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:37) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"24"}
+Completed in 0.12000 (8 reqs/sec) | Rendering: 0.01000 (8%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:37) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.82100 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:38) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.40100 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:39) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"16"}
+Completed in 0.37100 (2 reqs/sec) | Rendering: 0.02000 (5%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:39) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"23"}
+Completed in 0.38100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:40) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.59100 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:40) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.48000 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:41) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"19"}
+Completed in 0.39000 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:42) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.46100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:42) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.75100 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:43) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"16"}
+Completed in 0.42000 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:44) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.43000 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:44) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"16"}
+Completed in 0.46100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:45) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.69100 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:46) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.43100 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:46) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"20"}
+Completed in 0.52100 (1 reqs/sec) | Rendering: 0.01000 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:47) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"21"}
+Completed in 0.45100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:48) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.84100 (1 reqs/sec) | Rendering: 0.01000 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:49) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.66100 (1 reqs/sec) | Rendering: 0.30100 (45%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:50) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"23"}
+Completed in 0.49100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:50) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"16"}
+Completed in 0.97100 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:51) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.36000 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:52) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"20"}
+Completed in 0.37100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:52) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.36100 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:53) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"24"}
+Completed in 0.53100 (1 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:54) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"19"}
+Completed in 0.34000 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:54) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.35100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:55) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.41100 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:55) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"20"}
+Completed in 0.76100 (1 reqs/sec) | Rendering: 0.01000 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:56) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.49100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:57) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"23"}
+Completed in 0.34100 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:57) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.37000 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:58) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.40100 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:58) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"24"}
+Completed in 0.29100 (3 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:59) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"16"}
+Completed in 0.34100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:14:59) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.41000 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:15:00) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.60000 (1 reqs/sec) | Rendering: 0.01000 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:15:00) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"20"}
+Completed in 0.80200 (1 reqs/sec) | Rendering: 0.01000 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:15:01) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"16"}
+Completed in 0.31000 (3 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:15:02) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.08100 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:15:38) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"13"}
+Completed in 0.41100 (2 reqs/sec) | Rendering: 0.01000 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:15:39) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.41000 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#update_map (for 192.168.1.13 at 2008-06-03 18:15:49) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"update_map", "controller"=>"carte", "variable"=>"5"}
+Completed in 32.91700 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/update_map]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:19:14) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"18"}
+Completed in 0.47100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#update_map (for 192.168.1.13 at 2008-06-03 18:19:41) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"update_map", "controller"=>"carte", "variable"=>"8"}
+Completed in 22.50200 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/update_map]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:20:24) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"14"}
+Completed in 0.42100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#update_map (for 192.168.1.13 at 2008-06-03 18:20:30) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"update_map", "controller"=>"carte", "variable"=>"5"}
+Completed in 29.68300 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/update_map]
+
+
+Processing CarteController#refresh_var (for 192.168.1.13 at 2008-06-03 18:21:17) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"18"}
+Completed in 0.48100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/refresh_var]
+
+
+Processing CarteController#update_map (for 192.168.1.13 at 2008-06-03 18:23:07) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"update_map", "controller"=>"carte", "variable"=>"16"}
+Completed in 27.51900 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/update_map]
+
+
+Processing CarteController#update_map (for 192.168.1.13 at 2008-06-03 18:23:34) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"update_map", "controller"=>"carte", "variable"=>"8"}
+Completed in 17.14400 (0 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.13/carte/update_map]
