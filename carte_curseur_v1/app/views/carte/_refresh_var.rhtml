@@ -1,5 +1,20 @@
-Variables : + <%= select_tag 'variable', options_for_select(@va) %>
-
+<!-- Variables : + <%= select_tag 'variable', options_for_select(@va) %>
+dataset : <%=@dataset_choisi%>
 <%= observe_field 'variable', :frequency => 0.2, 
           :url => { :controller => 'carte', :action => 'update_map' }, :with => 'variable',
 		  :complete => "changerDonnees(request)" %>
+-->
+
+<!--
+Variables : + <%= select_tag 'variable', options_for_select(@va) %>
+dataset : <%=@dataset_choisi%>
+<%= observe_field 'variable', :frequency => 0.2, 
+          :url => { :controller => 'carte', :action => 'update_map' }, :with => 'variable',
+		  :complete => "changerDonnees(request)" %>
+-->
+Variables : + <%= select_tag 'variable', options_for_select(@va) %>
+<%= observe_field (:variable, :frequency => 0.2,
+		  :url => { :controller => 'carte', :action => 'update_map'},
+		  :update => 'cadre_legende', :with => "'vars=' + $('variable').value") %>
+		  
+		  
