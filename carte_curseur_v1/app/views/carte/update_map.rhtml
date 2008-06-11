@@ -1,0 +1,20 @@
+<script type="text/ecmascript">
+	tab = <%=@tab_envoi%>;
+	// tab = tempp.to_json ;
+    
+</script>
+
+<form>
+	
+<p> type de discretisation : <input type="text" id="typeDisc" value="monadic"/></p>
+<p> classes : <input type="text" id="nbClasses" value="2"/></p>
+<p> color 1#<input type="text" id="colorfield1" value="0000FF"/></p>
+<p> color 2#<input type="text" id="colorfield2" value="FF0000"/></p>
+
+</form>
+
+<script type="text/javascript">
+	new Control.ColorPicker("colorfield1");
+	new Control.ColorPicker("colorfield2");
+
+</script>

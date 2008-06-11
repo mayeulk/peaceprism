@@ -6,7 +6,9 @@ before_filter :initialise_var
     @debut_periode = 1946
     @fin_periode = 2003
     @dataset_choisi = ""
-    @datasets = Dataset.find(:all)
+    @datasets2 = Dataset.find(:all)
+    @datasets = ActiveRecord::Base.connection.select_all(
+    "Select data_set_full_name, id from datasets where id<10 order by id")
     @dat = {}
     for @d in @datasets
      @dat[@d['data_set_full_name']] = @d['id']
@@ -15,7 +17,6 @@ before_filter :initialise_var
   
   def refresh_var
     @dataset_choisi = params[:datas]
-    
     @var_select = ActiveRecord::Base.connection.select_all(
        "SELECT var_id, dataset_id, name, kind from variables 
           where (kind = 'monadic') and format != 'string' and dataset_id = #{@dataset_choisi} order by var_id")
@@ -58,10 +59,10 @@ before_filter :initialise_var
   
   # fonction qui met-a-jour la carte en modifiant le fichier des donnees a afficher
   def update_map
-    respond_to do |wants|
-      wants.json {
+    #respond_to do |wants|
+      #wants.json {
     
-      @variable_choisie = params[:variable]
+      @variable_choisie = params[:vars]
       #@vari = params[:variable]
       # recuperation du jeu de donnees choisi et de la variable a cartographier
       # pour l'instant en dur le dataset 1 et la variable 8
@@ -73,29 +74,29 @@ before_filter :initialise_var
       
       
       
-
-      # toutes les annees existantes pour la carte
-      @annees2 = ActiveRecord::Base.connection.select_all(
-        "SELECT annee from annees order by annee")
-      
-      tab_annees = Array.new()
-      c = 0
-      for elt in @annees2
-        tab_annees[c] = elt['annee']
-        c = c + 1
-      end
-      
-      # tous les pays de la carte
-      @pays2 = ActiveRecord::Base.connection.select_all(
-        "SELECT world.fips_cntry || world.begin || world.end  as ccode
-        from world order by world.fips_cntry || world.begin || world.end")
-      
-      tab_pays = Array.new()
-      d = 0
-      for eltt in @pays2
-        tab_pays[d] = eltt['ccode']
-        d = d + 1
-    end  
+#
+#      # toutes les annees existantes pour la carte
+#      @annees2 = ActiveRecord::Base.connection.select_all(
+#        "SELECT annee from annees order by annee")
+#      
+#      tab_annees = Array.new()
+#      c = 0
+#      for elt in @annees2
+#        tab_annees[c] = elt['annee']
+#        c = c + 1
+#      end
+#      
+#      # tous les pays de la carte
+#      @pays2 = ActiveRecord::Base.connection.select_all(
+#        "SELECT world.fips_cntry || world.begin || world.end  as ccode
+#        from world order by world.fips_cntry || world.begin || world.end")
+#      
+#      tab_pays = Array.new()
+#      d = 0
+#      for eltt in @pays2
+#        tab_pays[d] = eltt['ccode']
+#        d = d + 1
+#    end  
  
 ##########################################################################
 # avec table diese et data et deux boucles : 20 a 30 secondes
@@ -223,21 +224,21 @@ before_filter :initialise_var
 
 ######################################################################
 # avec le fichier json en dur
-      tab_envoi = ""
+      @tab_envoi = ""
 
-      fic = File.open("#{RAILS_ROOT}/public/json/data6-8.json", 'r')
+      fic = File.open("#{RAILS_ROOT}/public/json/data6-" + @variable_choisie + ".json", 'r')
       fic.each_line{|ligne| 
-        tab_envoi = tab_envoi + ligne
+        @tab_envoi = @tab_envoi + ligne
         }
 
 
 #      tab_envoi[0]=6
 #      tab_envoi[1]=8
 
-      render :json => tab_envoi#.to_json
+#      render :json => @tab_envoi#.to_json
 
-      }
-    end
+      #}
+    #end
 
         
 #      
