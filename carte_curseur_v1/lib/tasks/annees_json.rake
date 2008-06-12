@@ -3,9 +3,11 @@ namespace :db do
   desc "Cree les fichiers json pour chaque variable"
   task(:create_fichiers_json => :environment) do
   
-
-  @dataset = Dataset.find(6)
-      @variable = Variable.find(8) 
+for @num_dataset in [6]
+  @dataset = Dataset.find(@num_dataset)
+  @variables = Variable.find(:all, :conditions => "dataset_id = '#{@dataset.id}' AND kind='monadic' ")
+  for @num_variable in [9]#@variables.id
+      @variable = Variable.find(@num_variable) 
       
       @var_annee = "dataset_#{@dataset.id}.var#{@dataset.identifieryear_var}"
       @var_code = "dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var}"
@@ -99,11 +101,11 @@ namespace :db do
 
 
 
-  outfile = File.new("#{RAILS_ROOT}/public/json/essai.json", "w")
+  outfile = File.new("#{RAILS_ROOT}/public/json/data#{@num_dataset}-#{@num_variable}.json", "w")
   outfile.puts tab_envoi.to_json
   outfile.close
-
-        
+    end # fin de la boucle 'variable'
+  end   # fin de la boucle 'dataset'     
         
         
         
