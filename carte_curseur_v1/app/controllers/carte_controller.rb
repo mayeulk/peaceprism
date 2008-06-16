@@ -62,7 +62,9 @@ before_filter :initialise_var
     #respond_to do |wants|
       #wants.json {
     
-      @variable_choisie = params[:vars]
+      #@variable_choisie = params[:vars]
+
+
       #@vari = params[:variable]
       # recuperation du jeu de donnees choisi et de la variable a cartographier
       # pour l'instant en dur le dataset 1 et la variable 8
@@ -224,13 +226,13 @@ before_filter :initialise_var
 
 ######################################################################
 # avec le fichier json en dur
-      @tab_envoi = ""
-
-      fic = File.open("#{RAILS_ROOT}/public/json/data6-" + @variable_choisie + ".json", 'r')
-      fic.each_line{|ligne| 
-        @tab_envoi = @tab_envoi + ligne
-        }
-
+#      @tab_envoi = ""
+#
+#      fic = File.open("#{RAILS_ROOT}/public/json/data6-" + @variable_choisie + ".json", 'r')
+#      fic.each_line{|ligne| 
+#        @tab_envoi = @tab_envoi + ligne
+#        }
+#
 
 #      tab_envoi[0]=6
 #      tab_envoi[1]=8
