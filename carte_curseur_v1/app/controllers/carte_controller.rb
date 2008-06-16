@@ -66,13 +66,13 @@ before_filter :initialise_var
       #@vari = params[:variable]
       # recuperation du jeu de donnees choisi et de la variable a cartographier
       # pour l'instant en dur le dataset 1 et la variable 8
-      @dataset = Dataset.find(6)
-      @variable = Variable.find(8) 
-      
-      @var_annee = "dataset_#{@dataset.id}.var#{@dataset.identifieryear_var}"
-      @var_code = "dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var}"
-      
-      
+#      @dataset = Dataset.find(6)
+#      @variable = Variable.find(8) 
+#      
+#      @var_annee = "dataset_#{@dataset.id}.var#{@dataset.identifieryear_var}"
+#      @var_code = "dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var}"
+#      
+#      
       
 #
 #      # toutes les annees existantes pour la carte
@@ -293,7 +293,7 @@ before_filter :initialise_var
     if @id.strip.match(/^lt/)
       @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')     
     else
-      #bricolage pour éviter une erreur car on a survolé un pays au lieu d'un conflit. FIX IT
+      #bricolage pour éviter une erreur car on a survole un pays au lieu d'un conflit. FIX IT
       #il faudrait éviter de faire un appel ajax
     render(:nothing => true) # affiche un partial vide ("")
     end
@@ -305,8 +305,8 @@ before_filter :initialise_var
     if @id.strip.match(/^lt/)
       @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')     
     else
-      #bricolage pour éviter une erreur car on a survolé un pays au lieu d'un conflit. FIX IT
-      #il faudrait éviter de faire un appel ajax
+      #bricolage pour eviter une erreur car on a survole un pays au lieu d'un conflit. FIX IT
+      #il faudrait eviter de faire un appel ajax
     render(:nothing => true) # affiche un partial vide ("")
     end
   end
