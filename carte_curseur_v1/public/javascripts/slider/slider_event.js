@@ -53,6 +53,8 @@ function reInit2(val, box){
 	// recuperation des couleurs choisies
 	coul1 = $('colorfield1').value;
 	coul2 = $('colorfield2').value;
+	//coul1 = "FF0000"
+	//coul2 = "0000FF"
 	
 	// affichage des donnees sur la carte
 	for (k in t_pays) {

@@ -29,7 +29,7 @@ function request01(f){
 }
 
 
- function requestjson(dataset, variable){
+ function requestjson(dataset1, variable1){
  	var xhr_object = null;
  	
  	if (window.XMLHttpRequest) // Firefox 
@@ -43,13 +43,11 @@ function request01(f){
 			}
 		
 		
-		var filename = 'essai.js';
+		var filename = 'json/data6-' + variable1 + '.json';
 		var data = null;
-		
-		
+				
 		data = null;
-		
-		
+				
 		xhr_object.open("GET", filename, true);
 		
 		xhr_object.onreadystatechange = function(){

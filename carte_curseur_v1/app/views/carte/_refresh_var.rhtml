@@ -1,1 +1,5 @@
-Variables : + <%= select_tag 'variable', options_for_select(@va), :onchange=>"requestjson(6,8)" %>
+Variables : + <%= select_tag 'variable', options_for_select(@va), :onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
+
+<%= observe_field (:variable,
+		  :url => { :controller => 'carte', :action => 'update_map'},
+		  :update => 'cadre_legende') %>
