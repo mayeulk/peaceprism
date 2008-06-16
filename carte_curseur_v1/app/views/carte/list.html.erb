@@ -35,6 +35,7 @@
 	<!-- <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script> -->
 	<script type="text/javascript" src="/javascripts/src/data_update.js"></script>
 	<script type="text/ecmascript" src="/javascripts/src/donnees.js"></script>
+	<script type="text/ecmascript" src="/javascripts/src/json_ajax.js"></script>
 	<!-- <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script> -->
 
@@ -152,9 +153,11 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	Dataset : <%= select_tag "datasets", options_for_select(@dat) %>
 	<div id="liste_var"></div>
 	<div id="essai"> </div>
+	<br/>
+	
 </div>
 
-<%= observe_field (:datasets, :frequency => 0.2,
+<%= observe_field (:datasets,
 		  :url => { :controller => 'carte', :action => 'refresh_var'},
 		  :update => 'liste_var', :with => "'datas=' + $('datasets').value") %>
 		 
