@@ -2,4 +2,4 @@ Variables : + <%= select_tag 'variable', options_for_select(@va), :onchange=>"re
 
 <%= observe_field (:variable,
 		  :url => { :controller => 'carte', :action => 'update_map'},
-		  :update => 'cadre_legende') %>
+		  :update => 'cadre_legende', :with => "'vars=' + $('variable').value") %>

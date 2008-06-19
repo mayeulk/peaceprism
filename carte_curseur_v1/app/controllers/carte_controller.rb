@@ -62,9 +62,9 @@ before_filter :initialise_var
     #respond_to do |wants|
       #wants.json {
     
-      #@variable_choisie = params[:vars]
+      @variable_choisie = params[:vars]
 
-
+      render :partial => 'update_map'
       #@vari = params[:variable]
       # recuperation du jeu de donnees choisi et de la variable a cartographier
       # pour l'instant en dur le dataset 1 et la variable 8

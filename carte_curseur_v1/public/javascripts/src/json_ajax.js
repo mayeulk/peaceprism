@@ -43,7 +43,7 @@ function request01(f){
 			}
 		
 		
-		var filename = 'json/data6-' + variable1 + '.json';
+		var filename = 'json/data6_' + variable1 + '.json';
 		var data = null;
 				
 		data = null;
