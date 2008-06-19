@@ -34,15 +34,64 @@ namespace :db do
   
   #fin de la partie commune
 
-  
 
-  @variables = Variable.find(:all, :conditions => "kind='monadic' AND format != 'string' ")
+  @variables = Variable.find(:all, :conditions => "id = 63 OR id = 72 OR id = 49 OR id = 50") #"kind='monadic' AND format != 'string' 
   # dataset_id = 1 AND var_id=4 and 
 
   for @variable in @variables 
       @dataset = Dataset.find(@variable.dataset_id)     
       @var_annee = "dataset_#{@dataset.id}.var#{@dataset.identifieryear_var}"
       @var_code = "dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var}"
+      
+      # recueil des donnees concernant la variable (pour le type de discretisation
+      @info = Hash.new()
+      if @variable.binary_var == 1
+        @info['format'] = 'boolean'
+        @info['type'] = 'qualitatif'
+      else
+        if @variable.mini == nil and @variable.maxi == nil
+          @info['type'] = 'qualitatif'
+          @info['format'] = @variable.format
+          @var_qual = ActiveRecord::Base.connection.select_all("
+            SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+            
+          @tab_var = Hash.new()
+          for elt in @var_qual
+            @tab_var[elt['valeur']] = elt['signification']
+          end
+          @info['var_qual'] = @tab_var
+        else
+          if @variable.qualitatif_ordonne == 1
+            @info['type'] = 'qualitatif_ordonne'
+            @info['mini'] = @variable.mini
+            @info['maxi'] = @variable.maxi
+            @info['format'] = @variable.format
+            
+            @var_qual = ActiveRecord::Base.connection.select_all("
+            SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+ 
+            @tab_var = Hash.new()
+            for elt in @var_qual
+              @tab_var[elt['valeur']] = elt['signification']
+            end
+            @info['var_qual'] = @tab_var
+          else
+            @info['type'] = 'quantitatif'
+            @info['mini'] = @variable.mini
+            @info['maxi'] = @variable.maxi
+            @info['format'] = @variable.format
+            
+            @var_qual = ActiveRecord::Base.connection.select_all("
+            SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+ 
+            @tab_var = Hash.new()
+            for elt in @var_qual
+              @tab_var[elt['valeur']] = elt['signification']
+            end
+            @info['var_qual'] = @tab_var
+          end
+        end
+      end
 
       # constitution du jeu de donnees a afficher, en creant un code pays
       # fips-annees correspondant au code cow pour une date donnee
@@ -101,16 +150,14 @@ namespace :db do
         
       tab_envoi = Hash.new()
       
+      tab_envoi['info'] = @info
       tab_envoi['annees'] = tab_annees #pourraient n'etre envoyes qu'une seule fois
       tab_envoi['pays'] = tab_pays #pourraient n'etre envoyes qu'une seule fois
       tab_envoi['data'] = tab_do
 
-
-
-
-  outfile = File.new("#{RAILS_ROOT}/public/json/data#{@dataset.id}-#{@variable.var_id}.json", "w")
-  outfile.puts tab_envoi.to_json
-  outfile.close
+      outfile = File.new("#{RAILS_ROOT}/public/json/data#{@dataset.id}_#{@variable.var_id}.json", "w")
+      outfile.puts tab_envoi.to_json
+      outfile.close
     end # fin de la boucle 'variable'
         
         
