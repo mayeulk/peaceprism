@@ -43,7 +43,7 @@ namespace :db do
       @var_annee = "dataset_#{@dataset.id}.var#{@dataset.identifieryear_var}"
       @var_code = "dataset_#{@dataset.id}.var#{@dataset.identifierccode1_var}"
       
-      # recueil des donnees concernant la variable (pour le type de discretisation
+      # recueil des donnees concernant la variable (pour le type de discretisation)
       @info = Hash.new()
       if @variable.binary_var == 1
         @info['format'] = 'boolean'
@@ -70,11 +70,17 @@ namespace :db do
             @var_qual = ActiveRecord::Base.connection.select_all("
             SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
  
-            @tab_var = Hash.new()
+            @tab_var_ordo = Hash.new()
+            @tab_var_spe = Hash.new()
             for elt in @var_qual
-              @tab_var[elt['valeur']] = elt['signification']
+              if ((elt['valeur']).to_i >= @variable.mini)and((elt['valeur']).to_i <= @variable.maxi)
+                @tab_var_ordo[elt['valeur']] = elt['signification']
+              else
+                @tab_var_spe[elt['valeur']] = elt['signification']
+              end
             end
-            @info['var_qual'] = @tab_var
+            @info['var_qual_ordo'] = @tab_var_ordo
+            @info['var_qual_spe'] = @tab_var_spe
           else
             @info['type'] = 'quantitatif'
             @info['mini'] = @variable.mini
