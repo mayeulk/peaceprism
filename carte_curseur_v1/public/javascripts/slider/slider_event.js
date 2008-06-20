@@ -69,17 +69,14 @@ function reInit2(val, box){
 			truc.setAttribute("visibility", 'visible');
 			//truc.style.visibility = 'visible';
 			if ((data_year[k] == 'null') || (data_year[k] == null)){
-				truc.setAttribute("fill", "#C3C3C3"); // en gris
+				var donne = discretize[0];
+				truc.setAttribute("fill", '#' + donne['couleur']); // en gris
 			}
 			else {
 				var nbClas = parseInt($('nbClasses').innerHTML) ;
 				var donne = [] ;
 				for (var e = 1; e <= nbClas; e++) {
-		//			if (parseInt(data_year[k]) == parseInt($('val' + e).innerHTML)) {
-		//				truc.setAttribute("fill", '#' + $('colorfield' + e).value);
-		//			
-		//			}
-					donne = discretize[e-1] ;
+					donne = discretize[e] ;
 					if ((parseInt(data_year[k]) <= donne['maxi'])&&(parseInt(data_year[k]) >= donne['mini'])){
 						truc.setAttribute("fill", '#'+ donne['couleur']);
 					}
