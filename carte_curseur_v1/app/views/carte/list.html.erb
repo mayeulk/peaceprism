@@ -14,10 +14,6 @@
 	<!-- chargement des scripts utilises dans la page --> 	
 	
 	<script type="text/ecmascript" src="/javascripts/slider/slider_event.js"></script>
-	<!--<script type="text/ecmascript" src="/javascripts/slider/slider-setup.js"></script>
-	<script type="text/ecmascript" src="/javascripts/slider/slider.js"></script>
-	<script type="text/ecmascript" src="/javascripts/slider/addanevent.js"></script>-->
-
 	<!-- normalement on apele juste scriptaculous.js, mais celui-ci ne trouve pas le chemin
 	des autres fichiers (il cherche le 'path' courant, que Rails a du changer),
 	donc on importe tout en dur -->
@@ -32,12 +28,12 @@
 	<script src="/javascripts/src/knallgrau.scriptaculous.js" type="text/javascript"></script>
 	<script src="/javascripts/yahoo.color.js" type="text/javascript"></script>
   	<script src="/javascripts/colorPicker.js" type="text/javascript"></script>
-	<!-- <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script> -->
 	<script type="text/javascript" src="/javascripts/src/data_update.js"></script>
 	<script type="text/ecmascript" src="/javascripts/src/donnees.js"></script>
 	<script type="text/ecmascript" src="/javascripts/src/json_ajax.js"></script>
-	<!-- <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
-	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script> -->
+	<script type="text/ecmascript" src="/javascripts/src/initdiscretisation.js"></script>
+   <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
+	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
 
 	<!-- chargement des feuilles de style -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/slider.css"/>
@@ -45,7 +41,7 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/colorPicker.css"/>
 
     <script type="text/ecmascript">      
-        old_pays_survole="CZ19461993"; //var. globale
+		        old_pays_survole="CZ19461993"; //var. globale
         function survol_zone(pays_survole) {
         	pays_survole=pays_survole;
         	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
@@ -171,13 +167,7 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
     <%= render :partial => "guy_carte_"+@browser %>
 </div>
 
-<div id="cadre_legende">
-<!--
-	LEGENDE
-    <%= render :partial => "discretisation" %>
--->
-</div>
-
+<div id="cadre_legende"/>
 
 <%= observe_field(:pays2, :frequency => 0.1, # fonction reflex pour mettre a jour la frise
          :update => 'frise', :url => 

@@ -162,7 +162,12 @@ Control.ColorPicker.prototype = {
     if (!YAHOO.util.Color.isValidRGB(rgb)) return;
     this.swatch.style.backgroundColor = "rgb(" + rgb[0] + ", " + rgb[1] + ", " + rgb[2] + ")";
     var hsv = YAHOO.util.Color.rgb2hsv( rgb[0], rgb[1], rgb[2] );
-    this.swatch.style.color = (hsv[2] > 0.65) ? "#000000" : "#FFFFFF";
+	// EDIT pour afficher la valeur hexadecimal de la couleur dans une couleur identique au fond de la case 'input'
+    // this.swatch.style.color = (hsv[2] > 0.65) ? "#000000" : "#FFFFFF";
+	this.swatch.style.color = this.swatch.style.backgroundColor;
+	// EDIT pour rafraichir la carte avec les nouvelles couleurs
+	
+	
   },
   update : function(x, y) {
     if (!x) x = this.control.picker.currentDelta()[0];
