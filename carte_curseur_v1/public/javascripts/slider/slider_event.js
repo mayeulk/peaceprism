@@ -2,14 +2,14 @@
 
 annee_old =2003 // global variable
 nb_conflits_old = 0
-tab ="" // il faut définir la variable au chargement pour pouvoir y accéder après modification par AJAX.
+tab ="" // il faut definir la variable au chargement pour pouvoir y acceder apres modification par AJAX.
 discretize = new Array() ;
 // Any variable that is initialized inside a function using the var keyword will have a local scope. If a variable is initialized inside a function without var, it will have a global scope. A local variable can have the same name as a global variable.
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 // reInit1 est la fonction d'origine, qui pour une date affiche les zones de conflits
 
+// val est l'annee, renvoyee par le curseur
 function reInit(val, box){
-	// val est l'annee, renvoyee par le curseur
 	val = Math.round(val);
 	$('choix_annee').innerHTML = val;
 	$('info_date').innerHTML = val;
@@ -69,17 +69,19 @@ function reInit2(val, box){
 			truc.setAttribute("visibility", 'visible');
 			//truc.style.visibility = 'visible';
 			if ((data_year[k] == 'null') || (data_year[k] == null)){
-				var donne = discretize[0];
-				truc.setAttribute("fill", '#' + donne['couleur']); // en gris
+				truc.setAttribute("fill", "#C3C3C3"); // en gris
 			}
 			else {
 				var nbClas = parseInt($('nbClasses').innerHTML) ;
 				var donne = [] ;
 				for (var e = 1; e <= nbClas; e++) {
-					donne = discretize[e] ;
-					if ((parseInt(data_year[k]) <= donne['maxi'])&&(parseInt(data_year[k]) >= donne['mini'])){
-						truc.setAttribute("fill", '#'+ donne['couleur']);
+					if (parseInt(data_year[k]) == parseInt($('val' + e).innerHTML)) {
+						truc.setAttribute("fill", '#' + $('colorfield' + e).value);
 					}
+					//donne = discretize[e-1] ;
+					//if ((parseInt(data_year[k]) <= donne['maxi'])&&(parseInt(data_year[k]) >= donne['mini'])){
+					//	truc.setAttribute("fill", '#'+ donne['couleur']);
+					//}
 				}
 			}
 		}

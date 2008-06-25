@@ -1,5 +1,14 @@
-Variables : + <%= select_tag 'variable', options_for_select(@va), :onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
+Variable: <%= select_tag 'variable', options_for_select(@va), :onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
 
-<%= observe_field (:variable,
-		  :url => { :controller => 'carte', :action => 'update_map'},
-		  :update => 'cadre_legende', :with => "'vars=' + $('variable').value") %>
+<form>	
+	Type: <span id="typeVar"></span><br/>
+	Format: <span id="formatVar"></span><br/>
+	Min: <span id="varMini">none</span><br/>
+	Max: <span id="varMaxi">none</span><br/>
+	Number of classes: <span id="nbClasses"></span>
+	<div id='colorClasses'>
+	</div>
+	<!--rafraichir la carte avec les nouvelles couleurs-->
+</form>
+<div onclick= "reInit2(parseInt($('info_date').innerHTML, 10), 1);">Refresh map</div>
+
