@@ -60,28 +60,35 @@ function reInit2(val, box){
 	
 	// affichage des donnees sur la carte
 	for (k in t_pays) {
-		var truc = document.getElementById(t_pays[k]);
+		var paysSVG = document.getElementById(t_pays[k]);
 		if (data_year[k] == '#') {		// le pays n'existe pas a cette date	
-			truc.setAttribute("visibility", "hidden");
+			paysSVG.setAttribute("visibility", "hidden");
 			//truc.style.visibility = 'hidden';
 		}
 		else {
-			truc.setAttribute("visibility", 'visible');
+			paysSVG.setAttribute("visibility", "visible");
 			//truc.style.visibility = 'visible';
 			if ((data_year[k] == 'null') || (data_year[k] == null)){
-				truc.setAttribute("fill", "#C3C3C3"); // en gris
+				paysSVG.setAttribute("fill", "#C3C3C3"); // en gris
 			}
 			else {
 				var nbClas = parseInt($('nbClasses').innerHTML) ;
-				var donne = [] ;
-				for (var e = 1; e <= nbClas; e++) {
-					if (parseInt(data_year[k]) == parseInt($('val' + e).innerHTML)) {
-						truc.setAttribute("fill", '#' + $('colorfield' + e).value);
-					}
-					//donne = discretize[e-1] ;
-					//if ((parseInt(data_year[k]) <= donne['maxi'])&&(parseInt(data_year[k]) >= donne['mini'])){
-					//	truc.setAttribute("fill", '#'+ donne['couleur']);
+				var info = [] ;
+				for (var e = 0; e <= nbClas; e++) {
+					//if (parseInt(data_year[k]) == parseInt($('val' + e).innerHTML)) {
+					//	paysSVG.setAttribute("fill", '#' + $('colorfield' + e).value);
 					//}
+					info = discretize[e] ;
+					if (info['isFirstValue'] == 1){
+						if ((parseInt(data_year[k]) <= info['maxi'])&&(parseInt(data_year[k]) >= info['mini'])){
+							paysSVG.setAttribute("fill", '#'+ info['couleur']);
+						}
+					}
+					else{
+						if ((parseInt(data_year[k]) <= info['maxi'])&&(parseInt(data_year[k]) > info['mini'])){
+							paysSVG.setAttribute("fill", '#'+ info['couleur']);
+						}
+					}
 				}
 			}
 		}
