@@ -19,7 +19,10 @@ Control.ColorPicker.prototype = {
   initialize : function(field, options) {
     var colorPicker = this;
     Control.colorPickers.push(colorPicker);
-    this.field = $(field);
+    // this.field = $(field); // original
+	// EDIT pour utiliser le numero de champs plus tard dans la fonction
+	this.numField = field ;
+	this.field = $('colorfield' + field); // modifie pour application
     this.fieldName = this.field.name || this.field.id;
     this.options = Object.extend({
        IMAGE_BASE : "/img/"
@@ -165,9 +168,7 @@ Control.ColorPicker.prototype = {
 	// EDIT pour afficher la valeur hexadecimal de la couleur dans une couleur identique au fond de la case 'input'
     // this.swatch.style.color = (hsv[2] > 0.65) ? "#000000" : "#FFFFFF";
 	this.swatch.style.color = this.swatch.style.backgroundColor;
-	// EDIT pour rafraichir la carte avec les nouvelles couleurs
-	
-	
+		
   },
   update : function(x, y) {
     if (!x) x = this.control.picker.currentDelta()[0];
@@ -189,6 +190,12 @@ Control.ColorPicker.prototype = {
     this.field.value = YAHOO.util.Color.rgb2hex(rgb[0], rgb[1], rgb[2]);
 	$("colorpicker-okbutton").style.background = '#' + this.field.value;
     this.control.input.value = this.field.value;
+	// // EDIT pour rafraichir la carte avec les nouvelles couleurs
+	var infoVar = discretize[this.numField];
+	infoVar['couleur'] = YAHOO.util.Color.rgb2hex(rgb[0], rgb[1], rgb[2]);
+	discretize[this.numField] = infoVar ;
+	
+	//
     this.updateSwatch();
     if (this.options.onUpdate) this.options.onUpdate.bind(this)(this.field.value);
   }
