@@ -32,9 +32,14 @@
 	<script type="text/ecmascript" src="/javascripts/src/donnees.js"></script>
 	<script type="text/ecmascript" src="/javascripts/src/json_ajax.js"></script>
 	<script type="text/ecmascript" src="/javascripts/src/initdiscretisation.js"></script>
-   <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
+    <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
 
+<% if @browser=="ie" %>
+	<script type="text/ecmascript" src="/javascripts/modifier_vml_ie.js"></script>
+<% else %>
+    <script type="text/ecmascript" src="/javascripts/modifier_svg_moz.js"></script>
+<% end %>
 	<!-- chargement des feuilles de style -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/slider.css"/>
     <link rel="stylesheet" type="text/css" href="/stylesheets/carte.css"/>
