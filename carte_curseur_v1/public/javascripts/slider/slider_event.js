@@ -70,6 +70,9 @@ function reInit2(val, box){
 			//truc.style.visibility = 'visible';
 			if ((data_year[k] == 'null') || (data_year[k] == null)){
 				paysSVG.setAttribute("fill", "#C3C3C3"); // en gris
+				// appel de fonction javascript, par exemple:
+				// paysSVG.colorierPays("#C3C3C3")
+				// colorierPays(paysSVG,"#C3C3C3")
 			}
 			else {
 				var nbClas = parseInt($('nbClasses').innerHTML) ;
