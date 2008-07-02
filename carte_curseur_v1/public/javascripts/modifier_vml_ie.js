@@ -5,6 +5,6 @@
  ****************************************************************************/
 
 function colorierPays(pays, couleur){
-	pays.setAttribute("fillcolor", couleur); 
+	pays.style.fillcolor = couleur; 
 
 }

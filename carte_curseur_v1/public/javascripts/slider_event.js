@@ -5,9 +5,12 @@
  * @param {Object} box
  **********************************************************************************************/
 
-annee_old =2003 // global variable
-nb_conflits_old = 0
-tab ="" // il faut definir la variable au chargement pour pouvoir y acceder apres modification par AJAX.
+annee_old =2003 ; // global variable
+annee_en_cours = 1946 ;
+nb_conflits_old = 0 ;
+sliderDate = null ;
+lireFilm = 0 ;
+tab =""  ;// il faut definir la variable au chargement pour pouvoir y acceder apres modification par AJAX.
 //discretize = new Array() ;
 // Any variable that is initialized inside a function using the var keyword will have a local scope. If a variable is initialized inside a function without var, it will have a global scope. A local variable can have the same name as a global variable.
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -47,6 +50,7 @@ function reInit(val){
  
 function reInit2(annee){
 	// val est l'annee, renvoyee par le curseur
+	annee_en_cours = annee ;
 	val = Math.round(annee);
 	val2 = Math.round(annee);
 	$('choix_annee').innerHTML = val;
@@ -58,11 +62,6 @@ function reInit2(annee){
 	var t_data = tab['data'];
 	// le tableau de donnees pour la date selectionnee
 	data_year = t_data[val];
-	
-	
-	
-
-	
 	
 	// affichage des donnees sur la carte
 	//for (k in t_pays) {
@@ -111,6 +110,7 @@ function reInit2(annee){
 	};
 	
 	////////////////////////////////////////////////////////////////////
+	// affichage des zones de conflits si la case est cochee
 	if ($('conflitsAffiche').checked) {
 		nb_conflits = (window["AN" + val2]).length;
 		$('nompays').innerHTML = nb_conflits;
@@ -128,5 +128,21 @@ function reInit2(annee){
 		annee_old = val2;
 		nb_conflits_old = nb_conflits;
 	}
-	
+}
+
+function film() {
+	if (lire_film==1 && 2003 > annee_en_cours){
+		
+		annee_en_cours = annee_en_cours + 1 ;
+		
+  		var timer = setTimeout("film()",500);
+  		sliderDate.setValue(annee_en_cours);
+  		//reInit2(annee_en_cours);
+  		
+  		//b.value=slider[1].val;
+  		
+  	}
+	else{
+		alert(lire_film + '___' + sliderDate.sliderValue)
+	}
 }
