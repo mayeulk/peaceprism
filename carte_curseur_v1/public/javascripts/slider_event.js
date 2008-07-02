@@ -1,19 +1,24 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ /*********************************************************************************************
+ * fonctions pour remettre a jour la carte
+ * 
+ * @param {Object} val
+ * @param {Object} box
+ **********************************************************************************************/
 
 annee_old =2003 // global variable
 nb_conflits_old = 0
 tab ="" // il faut definir la variable au chargement pour pouvoir y acceder apres modification par AJAX.
-discretize = new Array() ;
+//discretize = new Array() ;
 // Any variable that is initialized inside a function using the var keyword will have a local scope. If a variable is initialized inside a function without var, it will have a global scope. A local variable can have the same name as a global variable.
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-// reInit1 est la fonction d'origine, qui pour une date affiche les zones de conflits
 
+// reInit1 est la fonction d'origine, qui pour une date affiche les zones de conflits
 // val est l'annee, renvoyee par le curseur
-function reInit(val, box){
+function reInit(val){
 	val = Math.round(val);
-	$('choix_annee').innerHTML = val;
-	$('info_date').innerHTML = val;
-	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 15) + 'px';
+	// $('choix_annee').innerHTML = val;
+	// $('info_date').innerHTML = val;
+	// $('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 15) + 'px';
 	nb_conflits = (window["AN" + val]).length;
 	$('nompays').innerHTML = nb_conflits;
 	
@@ -37,11 +42,13 @@ function reInit(val, box){
 	nb_conflits_old = nb_conflits;
 }
 
-// fonction reInit2 qui affiche des donnees monadic en 2 classes seulement
+// fonction reInit2, qui met à jour la carte, en fonction des donnees contenues dans 
+// le tableau du DOM 'tab', pour l'annee 'val' envoyee par le slider
  
-function reInit2(val, box){
+function reInit2(annee){
 	// val est l'annee, renvoyee par le curseur
-	val = Math.round(val);
+	val = Math.round(annee);
+	val2 = Math.round(annee);
 	$('choix_annee').innerHTML = val;
 	$('info_date').innerHTML = val;
 	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 15) + 'px';
@@ -51,32 +58,37 @@ function reInit2(val, box){
 	var t_data = tab['data'];
 	// le tableau de donnees pour la date selectionnee
 	data_year = t_data[val];
-	// recuperation des couleurs choisies
 	
-	coul1 = $('colorfield1').value;
-	coul2 = $('colorfield2').value;
-	//coul1 = "FF0000"
-	//coul2 = "0000FF"
+	
+	
+
+	
 	
 	// affichage des donnees sur la carte
-	for (k in t_pays) {
+	//for (k in t_pays) {
+	for(k=0; k < t_pays.length; k++){
 		var paysSVG = document.getElementById(t_pays[k]);
-		if (data_year[k] == '#') {		// le pays n'existe pas a cette date	
+	
+		if (data_year[k] == '#') {		// le pays n'existe pas a cette date
+			
 			paysSVG.setAttribute("visibility", "hidden");
 			//truc.style.visibility = 'hidden';
 		}
 		else {
+			var info = [] ;
 			paysSVG.setAttribute("visibility", "visible");
+			//paysSVG.setAttribute("opacity", "0.5");
 			//truc.style.visibility = 'visible';
 			if ((data_year[k] == 'null') || (data_year[k] == null)){
-				paysSVG.setAttribute("fill", "#C3C3C3"); // en gris
+				info = discretize[0] ;
+				//paysSVG.setAttribute("fill", "#"+ info['couleur']); // en gris
 				// appel de fonction javascript, par exemple:
 				// paysSVG.colorierPays("#C3C3C3")
-				// colorierPays(paysSVG,"#C3C3C3")
+				colorierPays(paysSVG, "#"+ info['couleur']) ;
 			}
 			else {
 				var nbClas = parseInt($('nbClasses').innerHTML) ;
-				var info = [] ;
+				// var info = [] ;
 				for (var e = 0; e <= nbClas; e++) {
 					//if (parseInt(data_year[k]) == parseInt($('val' + e).innerHTML)) {
 					//	paysSVG.setAttribute("fill", '#' + $('colorfield' + e).value);
@@ -84,26 +96,37 @@ function reInit2(val, box){
 					info = discretize[e] ;
 					if (info['isFirstValue'] == 1){
 						if ((parseInt(data_year[k]) <= info['maxi'])&&(parseInt(data_year[k]) >= info['mini'])){
-							paysSVG.setAttribute("fill", '#'+ info['couleur']);
+							//paysSVG.setAttribute("fill", '#'+ info['couleur']);
+							colorierPays(paysSVG, '#' + info['couleur']);
 						}
 					}
 					else{
 						if ((parseInt(data_year[k]) <= info['maxi'])&&(parseInt(data_year[k]) > info['mini'])){
-							paysSVG.setAttribute("fill", '#'+ info['couleur']);
+							colorierPays(paysSVG, '#' + info['couleur']);
 						}
 					}
 				}
 			}
 		}
+	};
+	
+	////////////////////////////////////////////////////////////////////
+	if ($('conflitsAffiche').checked) {
+		nb_conflits = (window["AN" + val2]).length;
+		$('nompays').innerHTML = nb_conflits;
+		
+		for (un_conflit = 0; un_conflit < nb_conflits_old; un_conflit++) {
+			var svgobj = document.getElementById((window["AN" + annee_old])[un_conflit]);
+			document.getElementById((window["AN" + annee_old])[un_conflit]).style.visibility = 'hidden';
+		}
+		for (un_conflit = 0; un_conflit < nb_conflits; un_conflit++) {
+			var svgobj = document.getElementById((window["AN" + val2])[un_conflit]);
+			document.getElementById((window["AN" + val2])[un_conflit]).style.visibility = 'visible';
+			colorierPays(document.getElementById((window["AN" + val2])[un_conflit]), '#C3C3C3');
+			document.getElementById((window["AN" + val2])[un_conflit]).setAttribute("opacity", "0.5");
+		}
+		annee_old = val2;
+		nb_conflits_old = nb_conflits;
 	}
-
+	
 }
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-
-
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

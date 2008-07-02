@@ -13,7 +13,7 @@
 <% end %>
 	<!-- chargement des scripts utilises dans la page --> 	
 	
-	<script type="text/ecmascript" src="/javascripts/slider/slider_event.js"></script>
+	<script type="text/ecmascript" src="/javascripts/slider_event.js"></script>
 	<!-- normalement on apele juste scriptaculous.js, mais celui-ci ne trouve pas le chemin
 	des autres fichiers (il cherche le 'path' courant, que Rails a du changer),
 	donc on importe tout en dur -->
@@ -28,11 +28,11 @@
 	<script src="/javascripts/src/knallgrau.scriptaculous.js" type="text/javascript"></script>
 	<script src="/javascripts/yahoo.color.js" type="text/javascript"></script>
   	<script src="/javascripts/colorPicker.js" type="text/javascript"></script>
-	<script type="text/javascript" src="/javascripts/src/data_update.js"></script>
-	<script type="text/ecmascript" src="/javascripts/src/donnees.js"></script>
-	<script type="text/ecmascript" src="/javascripts/src/json_ajax.js"></script>
-	<script type="text/ecmascript" src="/javascripts/src/initdiscretisation.js"></script>
-    <script type="text/ecmascript" src="/javascripts/donnees.js"></script>
+	<script type="text/javascript" src="/javascripts/data_update.js"></script>
+	<script type="text/ecmascript" src="/javascripts/donnees.js"></script>
+	<script type="text/ecmascript" src="/javascripts/json_ajax.js"></script>
+	<script type="text/ecmascript" src="/javascripts/initdiscretisation.js"></script>
+    <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script>
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
 
 <% if @browser=="ie" %>
@@ -152,6 +152,7 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	Country/zone: <%= text_field_tag :pays2 %>
 	<br/>
 	Dataset : <%= select_tag "datasets", options_for_select(@dat) %>
+	afficher les zones de conflits : <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" value="oui"/>
 	<div id="liste_var"></div>
 	<div id="essai"> </div>
 	<br/>
@@ -233,8 +234,8 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 	   
 	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
 	   sliderValue : <%=@debut_periode%>,
-	   onSlide:function(v){reInit2(v,1)},
-	   onChange:function(v){reInit2(v,1)}});
+	   onSlide:function(v){reInit2(v)},
+	   onChange:function(v){reInit2(v)}});
 
 	$('choix_annee').innerHTML = <%=@debut_periode%>
 // ]]>
