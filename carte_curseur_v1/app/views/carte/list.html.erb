@@ -13,7 +13,7 @@
 <% end %>
 	<!-- chargement des scripts utilises dans la page --> 	
 	
-	<script type="text/ecmascript" src="/javascripts/slider_event.js"></script>
+	
 	<!-- normalement on apele juste scriptaculous.js, mais celui-ci ne trouve pas le chemin
 	des autres fichiers (il cherche le 'path' courant, que Rails a du changer),
 	donc on importe tout en dur -->
@@ -34,6 +34,7 @@
 	<script type="text/ecmascript" src="/javascripts/initdiscretisation.js"></script>
     <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script>
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
+	<script type="text/ecmascript" src="/javascripts/slider_event.js"></script>
 
 <% if @browser=="ie" %>
 	<script type="text/ecmascript" src="/javascripts/modifier_vml_ie.js"></script>
@@ -52,11 +53,8 @@
         	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
         	document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
         	document.getElementById("pays2").value=pays_survole;
-        	old_pays_survole=pays_survole;
-        }
-      	function curseurPays(val, box) {
-        	var b=document.getElementById('output'+box);
-        	val=Math.round(val);
+        	old_pays_survole=pays_survole;        }
+      	function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
         	b.value=val;
         	//toggle_layer_number(val);
       	}
@@ -68,6 +66,7 @@
 	//ne marche pas très bien (le curseur ne bouge pas) mais pas très grave car je ne vais pas prendre ce cursuer, mais le code js de sciptaculous
 
 	//<![CDATA[
+/*
 		function film() {
 			if (lire_film==1 && 2003>slider[1].val){
 				slider[1].val=slider[1].val+1;
@@ -82,6 +81,7 @@
 			else slider[1].val= 1945
 		}
 		//]]>
+*/
 	</script>
 
 </head>
@@ -137,7 +137,7 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
     onclick="document.getElementById(&quot;navig_on_off&quot;).src=&quot;/images/navig/hg.png&quot;"/>
 
 	<!-- boutons de lancement et d'arret du film -->
-    <span id="film_play" onclick="lire_film=1;slider[1].val= 1945;film();">Start movie (1946-2003)</span>
+    <span id="film_play" onclick="lire_film=1;film();">Start movie (1946-2003)</span>
     <br/>
     <span id="film_stop" onclick="lire_film=0;">Stop  movie</span>
     <br/>
