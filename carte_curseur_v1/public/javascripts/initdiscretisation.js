@@ -67,7 +67,7 @@ function initdiscretisation(){
 
 			var o = 1;
 			for (var i in varQual) {
-				chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[o] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
+				chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[o] + '"></input><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
 				disc_var =[];
 				disc_var['valeur'] = i;
 				disc_var['mini'] = i ;
@@ -235,6 +235,5 @@ function initdiscretisation(){
 		}
 	}
 
-
-	reInit2(parseInt($('choix_annee').innerHTML),1);
+	reInit2(parseInt($('choix_annee').innerHTML));
   }

@@ -10,6 +10,7 @@ before_filter :initialise_var
     @datasets = ActiveRecord::Base.connection.select_all(
     "Select data_set_full_name, id from datasets where id<10 order by id")
     @dat = {}
+    # @dat['_choisissez un dataset_'] = '0'
     for @d in @datasets
      @dat[@d['data_set_full_name']] = @d['id']
     end
@@ -22,6 +23,7 @@ before_filter :initialise_var
           where (kind = 'monadic') and format != 'string' and dataset_id = #{@dataset_choisi} order by var_id")
     
     @va = {}
+    @va['_choisissez une variable_'] = '0'
     for v in @var_select
       @va[v['name']] = v['var_id']
     end

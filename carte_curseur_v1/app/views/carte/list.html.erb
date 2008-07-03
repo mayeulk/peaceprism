@@ -60,32 +60,7 @@
         	b.value=val;
         	//toggle_layer_number(val);
       	}
-      	//var pays= new Array ("Serbia", "Slovenia", "Montenegro", "Croatia", "Macedonia", "Bosnia_and_Herzegovina", "Cyprus_1_", "Luxembourg", "United_Arab_Emirates", "Qatar", "Azerbaijan", "Jordan", "Lebanon", "Netherlands", "Belgium", "Canada", "Greenland_1_", "Papua_New_Guinea", "Cambodia", "Vietnam", "Korea_x002C__Democratic_People_x0027_s_Republic_of", "Korea_x002C__Republic_of", "Mongolia", "Kazakhstan", "Taiwan", "Brunei", "Butan", "Bangladesh", "Afghanistan", "Kyrgyzstan", "Burkina_Faso", "Belize", "Indonesia", "Guatemala", "Dominican_Republic", "Burma", "Laos", "Malaysia", "Cuba", "Tajikistan", "Jamaica", "Thailand", "Nepal", "Uzbekistan", "Malawi", "Turkmenistan", "Puerto_Rico", "Russia_2_", "Sri_Lanka", "Nicaragua", "Madagascar", "Zambia", "El_Salvador", "Honduras", "Haiti", "Costa_Rica", "Panama", "Chile", "Bolivia", "Paraguay", "Uruguay", "Peru", "Brazil", "Mexico", "Kenya", "Tanzania", "Mozambique", "Zaire", "Angola", "Namibia", "Congo", "Cameroon", "Gabon", "Equatorial_Guinea", "Botswana", "Zimbabwe", "Uganda", "Burundi", "Guyana", "Suriname", "French_Guiana", "Ecuador", "Colombia", "Venezuela", "Benin", "Ghana", "Togo", "Guinea", "Liberia", "Sierra_Leone", "Nigeria", "Lesotho", "Swaziland", "Ivory_Coast", "Rwanda", "Western_Sahara", "Niger", "Sudan", "Lybia", "Chad", "Mali", "Mauritania", "Tunisia", "Algeria", "Morocco", "India", "New_Zealand", "Argentina", "United_Kingdom_1_", "United_States_1_", "Italy_1_", "Denmark_1_", "Egypt_1_", "South_Africa", "Finland", "France", "Portugal", "Ireland", "Iceland", "Germany", "Poland", "Australia_1_", "Turkey_1_", "Russia", "Saudi_Arabia", "Slovakia", "Spain_1_", "Israel", "Iraq", "Greece", "Romania", "Bulgaria", "Syria", "Albania", "Switzerland", "Czech_Republic", "Austria", "Kuwait", "Iran", "Estonia", "Latvia", "Hungary", "Pakistan", "Sweden", "Lithuania", "China_1_", "Norway", "Byelarus", "Ukraine", "Moldova", "Georgia", "Armenia", "Oman", "Eritrea", "Central_African_Republic", "Yeman", "Somalia", "Ethiopia", "Guinea-Bissau", "Philippines", "Japan", "Senegal", "Gambia_The");
     </script>
-    
-    
-    <script type="text/ecmascript">
-	//ne marche pas très bien (le curseur ne bouge pas) mais pas très grave car je ne vais pas prendre ce cursuer, mais le code js de sciptaculous
-
-	//<![CDATA[
-/*
-		function film() {
-			if (lire_film==1 && 2003>slider[1].val){
-				slider[1].val=slider[1].val+1;
-  				var timer = setTimeout("film()",500);
-  				//output1.value=slider[1].val;
-  				setBoxValue(slider[1].val, 1);
-  				drawSliderByVal(slider[1].val);
-  				//b.value=slider[1].val;
-  				var b=document.getElementById('output1');
-				b.value=slider[1].val;
-  			}
-			else slider[1].val= 1945
-		}
-		//]]>
-*/
-	</script>
-
 </head>
 	
 <body>
@@ -104,8 +79,6 @@
 
 comment combiner ça avec ce qui suit ?
 visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
-
-<img id="essai2" src="/images/navig/bd.png" onclick="document.getElementById(&quot;essai3&quot;).style.visibility=&quot;visible&quot;"/>
 
 <img style="visibility: hidden;" id="essai3" src="/images/navig/bg.png" onclick="document.getElementById(&quot;essai2&quot;).src=&quot;/images/navig/hg.png&quot;"/>
 
@@ -134,15 +107,10 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<!-- le pan pour le zoom et al navigation -->
 	<%= render :partial => "navig" %>
 	
-	<!-- une croix qui ferme le volet de navigation -->
+	<!-- une croix qui ferme le volet de navigation 
 	<img  id="navig_on_off" src="/images/navig/bd.png" 
     onclick="document.getElementById(&quot;navig_on_off&quot;).src=&quot;/images/navig/hg.png&quot;"/>
-
-	<!-- boutons de lancement et d'arret du film -->
-    <span id="film_play" onclick="lire_film=1;film();">Start movie (1946-2003)</span>
-    <br/>
-    <span id="film_stop" onclick="lire_film=0;">Stop  movie</span>
-    <br/>
+-->
 	
 	<!-- 3 cases pour afficher les donnees rapides associees au slider -->
 	Year:
@@ -154,11 +122,19 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	Country/zone: <%= text_field_tag :pays2 %>
 	<br/>
 	Dataset : <%= select_tag "datasets", options_for_select(@dat) %>
+	<!-- impossible de mettre une valeur par default -->
+	
 	afficher les zones de conflits : <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" value="oui"/>
 	<div id="liste_var"></div>
 	<div id="essai"> </div>
 	<br/>
 	
+	<!-- boutons de lancement et d'arret du film -->
+    <span id="film_play" onclick="lire_film=1;film();">Start movie (1946-2003)</span>
+    <br/>
+    <span id="film_stop" onclick="lire_film=0;">Stop  movie</span>
+    <br/>
+
 </div>
 
 <%= observe_field (:datasets,
