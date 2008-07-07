@@ -11,6 +11,7 @@ annee_en_cours = 1946 ;
 nb_conflits_old = 0 ;
 sliderDate = null ;
 lireFilm = 0 ;
+nbClasses = 0 ;
 tab =""  ;
 
 // fonction reInit2, qui met à jour la carte, en fonction des donnees contenues dans 
@@ -49,7 +50,7 @@ function reInit2(annee){
 				}
 				else {					
 					var nbClas = parseInt($('nbClasses').innerHTML) ;
-					for (var e = 0; e <= nbClas; e++) {
+					for (var e = 0; e <= nbClasses; e++) {
 						info = discretize[e] ;
 						if (info['isFirstValue'] == 1){
 							if ((parseInt(data_year[k]) <= info['maxi'])&&(parseInt(data_year[k]) >= info['mini'])){
