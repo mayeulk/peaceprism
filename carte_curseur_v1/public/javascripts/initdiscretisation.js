@@ -29,7 +29,8 @@ function initdiscretisation(){
 		var chaine = '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 		// autres classes
-		$('nbClasses').innerHTML = nbCla;		
+		$('nbClasses').innerHTML = nbCla;
+		nbClasses = 2 ;		
 		for (var i = 0; 2>i ; i++){
 			chaine += '<p><span id="val' + i+1 + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + (i+1) + '" value="0000FF"/></p>';
 			disc_var['valeur'] = i;
@@ -41,6 +42,24 @@ function initdiscretisation(){
 		}
 		$('colorClasses').innerHTML = chaine;
 		
+
+		//...puis avec les valeurs qualitatives
+		var varQual = varInfo['var_qual']; // les autres variables qualitatives
+		var c=2 ;
+		
+		for (var i in varQual) {
+			chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
+			disc_var = [];
+			disc_var['valeur'] = i;
+			disc_var['mini'] = i;
+			disc_var['isFirstValue'] = 1;
+			disc_var['maxi'] = i;
+			disc_var['couleur'] = tab_couleur[c];
+			discretize[o] = disc_var;
+			o += 1;
+			c += 1;
+		}
+				
 		// colorpickers associes aux cases
 		new Control.ColorPicker(0);
 		for (var i=1;2>=i;i++){
@@ -63,6 +82,7 @@ function initdiscretisation(){
 			discretize[0] = disc_var ;			
 
 			$('nbClasses').innerHTML = nbCla;
+			nbClasses = nbCla ;
 			var chaine = '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 			var o = 1;
@@ -88,7 +108,7 @@ function initdiscretisation(){
 			if (varInfo['type'] == 'qualitatif_ordonne'){
 				chaine='';
 				var varQualOrdo = varInfo['var_qual_ordo']; // recuperation du hash des varibles qualitatives ord
-				var varQualSpe = varInfo['var_qual_spe']; // les autres variables qualitatives
+				var varQual = varInfo['var_qual']; // les autres variables qualitatives
 				var valMini = varInfo['mini'];
 				var valMaxi = varInfo['maxi'];				
 				
@@ -97,9 +117,8 @@ function initdiscretisation(){
 					nbCla += 1;
 				}
 				
-				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs
-				
-				for (var i in varQualSpe){
+				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs				
+				for (var i in varQual){
 					nbCla += 1;
 				}
 
@@ -110,6 +129,7 @@ function initdiscretisation(){
 				discretize[0] = disc_var ;			
 
 				$('nbClasses').innerHTML = nbCla;
+				nbClasses = nbCla ;
 				var chaine = '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 				var o = 1;
@@ -126,22 +146,21 @@ function initdiscretisation(){
 					discretize[o] = disc_var ;
 					o += 1 ;
 				}
-				
 				//...puis avec les valeurs qualitatives
 				var c=2 ;
-				for (var i in varQualSpe) {
-					chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQualSpe[i] + '</span></p>';
-					disc_var =[];
+				for (var i in varQual) {
+					chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
+					disc_var = [];
 					disc_var['valeur'] = i;
-					disc_var['mini'] = i ;
-					disc_var['isFirstValue'] = 1 ;					
-					disc_var['maxi'] = i ;					
-					disc_var['couleur'] = tab_couleur[c];				
-					discretize[o] = disc_var ;
-					o += 1 ;
-					c += 1 ;
+					disc_var['mini'] = i;
+					disc_var['isFirstValue'] = 1;
+					disc_var['maxi'] = i;
+					disc_var['couleur'] = tab_couleur[c];
+					discretize[o] = disc_var;
+					o += 1;
+					c += 1;
 				}
-
+				
 				// integration dans le code HTML et association de colorpickers par classe
 				$('colorClasses').innerHTML = chaine;
 				new Control.ColorPicker(0);
@@ -151,7 +170,7 @@ function initdiscretisation(){
 			}
 			else{
 				////////////////////////// quatrieme cas : variable quantitative ///////////////////////
-				var varQualSpe = varInfo['var_qual']; // les autres variables qualitatives
+				var varQual = varInfo['var_qual'];
 				var valMini = varInfo['mini'];
 				var valMaxi = varInfo['maxi'];				
 				
@@ -169,7 +188,7 @@ function initdiscretisation(){
 				tabIntervals[i] = valMaxi ;
 				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs
 				
-				for (var i in varQualSpe){
+				for (var i in varQual){
 					nbCla += 1;
 				}
 				var disc_var = new Array() ;
@@ -179,6 +198,7 @@ function initdiscretisation(){
 				discretize[0] = disc_var ;			
 
 				$('nbClasses').innerHTML = nbCla;
+				nbClasses = nbCla ;
 				var chaine = '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 				var o = 1;
 				
@@ -207,30 +227,27 @@ function initdiscretisation(){
 					o += 1 ;
 				}
 				
-				//...puis avec les valeurs qualitatives
-/*
-				var c=2 ;
+				//...puis avec les valeurs qualitatives				
+				var c = 2;
 				for (var i in varQual) {
-					disc_var =[];
+					disc_var = [];
 					disc_var['valeur'] = i;
-					disc_var['isFirstValue'] = 1 ;
-					disc_var['mini'] = i ;					
-					disc_var['maxi'] = i ;					
-					disc_var['couleur'] = tab_couleur[c];				
-					discretize[o-1] = disc_var ;
-					chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQualSpe[i] + '</span></p>';
+					disc_var['isFirstValue'] = 1;
+					disc_var['mini'] = i;
+					disc_var['maxi'] = i;
+					disc_var['couleur'] = tab_couleur[c];
+					discretize[o - 1] = disc_var;
+					chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
 					
-					o += 1 ;
-					c += 1 ;
+					o += 1;
+					c += 1;
 				}
-*/
-			
+		
 				$('colorClasses').innerHTML = chaine;
 				new Control.ColorPicker(0);
 				for (var i=1;i<=nbCla;i++) {
 					new Control.ColorPicker(i);
-				}
-								
+				}								
 			}			
 		}
 	}

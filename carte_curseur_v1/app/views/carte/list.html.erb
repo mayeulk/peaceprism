@@ -13,7 +13,6 @@
 <% end %>
 	<!-- chargement des scripts utilises dans la page --> 	
 	
-	
 	<!-- normalement on apele juste scriptaculous.js, mais celui-ci ne trouve pas le chemin
 	des autres fichiers (il cherche le 'path' courant, que Rails a du changer),
 	donc on importe tout en dur -->
@@ -36,6 +35,7 @@
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
 	<script type="text/ecmascript" src="/javascripts/slider_event.js"></script>
 
+<!-- chargement de scripts different traitant les objet SVG ou VML, selon qu'on est sous Firefox ou IE -->
 <% if @browser=="ie" %>
 	<script type="text/ecmascript" src="/javascripts/modifier_vml_ie.js"></script>
 	<script language="javascript" type="text/javascript" src="/javascripts/firebug/firebug.js"></script>
@@ -101,7 +101,6 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
     
 <!-- un bloc contenant les elements de navigation et resultats d'action sur slider 
 on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec le z-index)-->  
-
 <div id="volet_navig">	
 	
 	<!-- le pan pour le zoom et al navigation -->
@@ -122,7 +121,7 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	Country/zone: <%= text_field_tag :pays2 %>
 	<br/>
 	Dataset : <%= select_tag "datasets", options_for_select(@dat) %>
-	<!-- impossible de mettre une valeur par default -->
+	<!-- impossible de mettre une valeur par default sous firefox -->
 	
 	afficher les zones de conflits : <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" value="oui"/>
 	<div id="liste_var"></div>
@@ -141,10 +140,6 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 		  :url => { :controller => 'carte', :action => 'refresh_var'},
 		  :update => 'liste_var', :with => "'datas=' + $('datasets').value") %>
 		 
-		 <!-- <%= observe_field(:variable, :frequency => 0.1, # fonction reflex pour mettre a jour la frise
-          :url => { :controller => 'carte', :action=> 'update_map' }) %>
-		  
-		  :update => 'essai',-->
 <!-- un bloc contenant la carte et donc tous ses objets SVG ou VML -->
 <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  > --> 
 <div id="cadre_carte" class="cadre_carte">
@@ -158,7 +153,6 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
          { :controller => 'carte', :action=> 'show_over' }, 
          :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').value") %>
 
-
 <br/>
 
 <div style="margin-top:5px; clear:both;">
@@ -166,7 +160,6 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 		@long_annee = (600 / (@fin_periode - @debut_periode + 1)).to_i
 		@long_curseur = @long_annee * (@fin_periode - @debut_periode + 1)
 	%>
-
 
 	<!-- une date de debut et une fleche gauche pour deplacer le curseur, de meme plus loin pour la droite -->
 	<div class="date"><%= @debut_periode %></div>
@@ -205,11 +198,7 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 </div>
 <script type="text/javascript">
 // <![CDATA[
-	// instanciation d'un objet slider attache aux div track_date et handle_date_debut
-	//var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
-	//   onSlide:function(v){reInit(v,1)},
-	//   onChange:function(v){reInit(v,1)}});
-	   
+   
 	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
 	   sliderValue : <%=@debut_periode%>,
 	   onSlide:function(v){reInit2(v)},
@@ -227,6 +216,7 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 
 <br/>
 <br/>
+<!-- un div pour afficher le partiel du tableau de donnees de la zone selectionnee -->
 <div id="tabl_donnees"></div>
 
 </body>

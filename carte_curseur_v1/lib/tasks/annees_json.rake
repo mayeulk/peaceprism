@@ -2,9 +2,8 @@ require 'activerecord'
 namespace :db do
   desc "Cree les fichiers json pour chaque variable"
   task(:create_fichiers_json => :environment) do
-
   
-        # toutes les annees existantes pour la carte
+      # toutes les annees existantes pour la carte
       @annees2 = ActiveRecord::Base.connection.select_all(
         "SELECT annee from annees order by annee")
       
@@ -45,10 +44,27 @@ namespace :db do
       
       # recueil des donnees concernant la variable (pour le type de discretisation)
       @info = Hash.new()
+      @info['var_id'] = @variable.var_id
+      @info['dataset_id'] = @variable.dataset_id
+      @info['name'] = @variable.name
+      @info['kind'] = @variable.kind
+      # cas 1 : variable binaire
       if @variable.binary_var == 1
         @info['format'] = 'boolean'
         @info['type'] = 'qualitatif'
+        
+        # s'il existe des variables qualitaives en plus
+        @var_qual = ActiveRecord::Base.connection.select_all("
+        SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+ 
+        @tab_var = Hash.new()
+        for elt in @var_qual
+          @tab_var[elt['valeur']] = elt['signification']
+        end
+        @info['var_qual'] = @tab_var
+        
       else
+        # cas : variable qualitative (pas de valeurs min ou max
         if @variable.mini == nil and @variable.maxi == nil
           @info['type'] = 'qualitatif'
           @info['format'] = @variable.format
@@ -61,6 +77,7 @@ namespace :db do
           end
           @info['var_qual'] = @tab_var
         else
+          # cas : variable qualitative ordonnee
           if @variable.qualitatif_ordonne == 1
             @info['type'] = 'qualitatif_ordonne'
             @info['mini'] = @variable.mini
@@ -76,17 +93,20 @@ namespace :db do
               if ((elt['valeur']).to_i >= @variable.mini)and((elt['valeur']).to_i <= @variable.maxi)
                 @tab_var_ordo[elt['valeur']] = elt['signification']
               else
+                # s'il existe des variables qualitaives en plus
                 @tab_var_spe[elt['valeur']] = elt['signification']
               end
             end
             @info['var_qual_ordo'] = @tab_var_ordo
-            @info['var_qual_spe'] = @tab_var_spe
+            @info['var_qual'] = @tab_var_spe
           else
+            # cas : quantitatif
             @info['type'] = 'quantitatif'
             @info['mini'] = @variable.mini
             @info['maxi'] = @variable.maxi
             @info['format'] = @variable.format
             
+            # s'il existe des variables qualitaives en plus
             @var_qual = ActiveRecord::Base.connection.select_all("
             SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
  

@@ -1,7 +1,7 @@
 class CarteController < ApplicationController
   
 before_filter :initialise_var
-  
+  # initialise les variables ruby au chargement de la page
   def initialise_var
     @debut_periode = 1946
     @fin_periode = 2003
@@ -16,6 +16,8 @@ before_filter :initialise_var
     end
   end
   
+  # rempli le tableau des variables appartenant au dataset choisi, et rend le partiel
+  # avec la liste deroulante de variables
   def refresh_var
     @dataset_choisi = params[:datas]
     @var_select = ActiveRecord::Base.connection.select_all(
@@ -31,7 +33,7 @@ before_filter :initialise_var
     render :partial => "refresh_var"
   end
   
-  
+  # rend l'action 'list' (c'est a dire affiche la page 'carte')
   def index
     list
     render :action => 'list'#, :content_type => "application/xhtml+xml", :layout => false
@@ -41,6 +43,7 @@ before_filter :initialise_var
  #verify :method => :post, :only => [ :destroy, :create, :update ],
 #         :redirect_to => { :action => :list }
 
+  # affiche la page selon le navigateur (firefox ou ie)
   def list
     # cf. la variable "@headers" dans l'ensemble des fichiers de ivygis et le post
     # de Robert Thau ici: http://www.nabble.com/Does-Rails-suppports-XHTML-for-views-for-inline-SVG's--t1505395.html
@@ -59,11 +62,7 @@ before_filter :initialise_var
     end    
   end
   
-
-#  def show
-#      @conflitsext = Conflitsext.find(params[:id])
-#  end
-
+  # rend le partiel contenant la frise chronologique du conflit selectionne
   def show_over
   @id=params[:id]
   @annee=params[:annee].to_i
@@ -76,6 +75,7 @@ before_filter :initialise_var
     end
   end
   
+  # rend le tableau de donnees sur le conflit selectionne
   def tableau
   @id=params[:id]
   @annee=params[:annee].to_i
