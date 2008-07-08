@@ -280,7 +280,22 @@ function chercherIntervals(nb, mini, maxi, disc){
 	}
 	// TODO effectifs egaux (non implemente pour l'instant)
 	else if(disc = 'quantiles'){
-		return '';
+		varPays = tab['pays'];
+		varData = tab['data'];
+		varInf = tab['info'];
+		
+		nbEltParClasse = parseInt(nbPays/nb) ;
+		
+		var cumul = 0 ;
+		var compt = 0 ;
+		for (annee in varData){
+			for (data in annee){
+				if (parseInt(varInf['mini']) <= parseInt(data) <= parseInt(varInf['maxi'])){
+					cumul = cumul + parseInt(data);
+					compt = compt + 1 ;					
+				}
+			}
+		}
 	}
 	
 	return intervals ;
