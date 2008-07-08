@@ -67,10 +67,13 @@ before_filter :initialise_var
   @id=params[:id]
   @annee=params[:annee].to_i
     if @id.strip.match(/^lt/)
-      @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')     
+      @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')
+      #@type_zone = 'conflit'
     else
-      #bricolage pour éviter une erreur car on a survole un pays au lieu d'un conflit. FIX IT
-      #il faudrait éviter de faire un appel ajax
+      #@type_zone = 'pays'
+      
+      #bricolage pour eviter une erreur car on a survole un pays au lieu d'un conflit. FIX IT
+      #il faudrait eviter de faire un appel ajax
     render(:nothing => true) # affiche un partial vide ("")
     end
   end

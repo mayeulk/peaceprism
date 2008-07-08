@@ -7,6 +7,7 @@
 %>
 
 <div style='background-color: white;color: white '>
+
 	<%	
 	@long_annee = (600 / (@fin_periode - @debut_periode + 1)).to_i
   	for conflitsext in @conflitsexts  %>
@@ -35,6 +36,7 @@
     	</div>
   		<% @debut_periode = conflitsext.finish + 1
   	end%>
+
 </div>
 <!--
 # IE6 ne gere pas opacity: mais FF et les autres ne gerent pas  filter: Alpha(Opacity=XX)
