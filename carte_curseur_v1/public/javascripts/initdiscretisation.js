@@ -11,7 +11,6 @@ discretize = new Array() ; // variable globale, il contiendra les parametres
 // c'est a dire en fonction des infos recuperees dans le json associe
 function initdiscretisation(){
 	// le tableau de couleurs discretisees sera genere par une fonction js automatique
-	var tab_couleur_disc = new Array('FFFFFF', 'FFEEEE', 'FFD2D2', 'FFBBBB', 'FF9999', 'FF0000');
 	var tab_couleur = new Array('FFFFFF', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', '000000');
 	var varInfo = tab['info'];
 	$('typeVar').innerHTML = varInfo['type'];
@@ -29,25 +28,29 @@ function initdiscretisation(){
 		var chaine = '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 		// autres classes
-		$('nbClasses').innerHTML = nbCla;
-		nbClasses = 2 ;		
+		//$('nbClasses').innerHTML = nbCla;
+		nbClasses = 2 ;	
+		var u=0;	
 		for (var i = 0; 2>i ; i++){
-			chaine += '<p><span id="val' + i+1 + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + (i+1) + '" value="0000FF"/></p>';
-			disc_var['valeur'] = i;
-			disc_var['mini'] = i ;
+			
+			chaine += '<p><span id="val' + i+1 + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + (i+1) + '" value="' + tab_couleur[i+1] + '"/><span id="intitule' + i+1 + '">' + i + '</span></p>';
+			disc_var['valeur'] = u;
+			disc_var['mini'] = '' + u ;
 			disc_var['isFirstValue'] = 1 ;			
-			disc_var['maxi'] = i ;			
-			disc_var['couleur'] = tab_couleur[i];
+			disc_var['maxi'] = '' + u ;			
+			disc_var['couleur'] = tab_couleur[u];
 			discretize[i+1] = disc_var ;
+			u=u+1;
+			
 		}
-		$('colorClasses').innerHTML = chaine;
-		
+		$('colorClasses').innerHTML = chaine;		
 
 		//...puis avec les valeurs qualitatives
 		var varQual = varInfo['var_qual']; // les autres variables qualitatives
 		var c=2 ;
-		
+		var o=3;
 		for (var i in varQual) {
+			alert('varqualbool');
 			chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
 			disc_var = [];
 			disc_var['valeur'] = i;
@@ -58,6 +61,7 @@ function initdiscretisation(){
 			discretize[o] = disc_var;
 			o += 1;
 			c += 1;
+			nbClasses = nbClasses + 1 ;
 		}
 				
 		// colorpickers associes aux cases
@@ -68,6 +72,7 @@ function initdiscretisation(){
 	}
 
 	else{ 
+		
 		// deuxieme cas : variable qualitative pure
 		if (varInfo['type'] == 'qualitatif'){
 			chaine='';
@@ -104,6 +109,7 @@ function initdiscretisation(){
 			}
 		}
 		else{ 
+			
 			// troisieme cas : variable qualitative ordonnee
 			if (varInfo['type'] == 'qualitatif_ordonne'){
 				chaine='';
@@ -132,6 +138,8 @@ function initdiscretisation(){
 				nbClasses = nbCla ;
 				var chaine = '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
+				var tab_couleur_disc = chercherCouleursDisc('#FF000','#FFFFFF', nbClasses);
+				
 				var o = 1;
 				
 				// remplissage du tableau a envoyer avec les valeurs ordonnees...
@@ -169,24 +177,22 @@ function initdiscretisation(){
 				}			
 			}
 			else{
+				
 				////////////////////////// quatrieme cas : variable quantitative ///////////////////////
 				var varQual = varInfo['var_qual'];
 				var valMini = varInfo['mini'];
 				var valMaxi = varInfo['maxi'];				
 				
 				// ici il faut ajouter une fonction qui calcule le nombre de classe et leur interval
-				var intervalTotal = valMaxi - valMini ;
+				// recherche du nb de classes
+				var nbCla = chercherNbClasses(valMini, valMaxi, 100) ;
 				
-				var nbCla = 5 ;
-				var longInterval = intervalTotal/nbCla ;
+				// generer le tableau d'intervals
+				var typeDisc = 'equivalence';
+				var tabIntervals = chercherIntervals(nbCla, valMini, valMaxi, typeDisc);
 				
-				var tabIntervals = new Array() ;
-				tabIntervals[0] = valMini ;
-				for (var i=1; i<nbCla; i++){
-					tabIntervals[i] = valMini + i * longInterval ;
-				}
-				tabIntervals[i] = valMaxi ;
 				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs
+				var tab_couleur_disc = chercherCouleursDisc('#FF000','#FFFFFF', nbClasses);
 				
 				for (var i in varQual){
 					nbCla += 1;
@@ -253,4 +259,41 @@ function initdiscretisation(){
 	}
 
 	reInit2(parseInt($('choix_annee').innerHTML));
-  }
+}
+
+function chercherNbClasses(mini, maxi, nbVal){
+	return 5 ;
+}
+
+function chercherIntervals(nb, mini, maxi, disc){
+	// meme amplitude
+	if (disc = 'equivalence'){		
+		var intervalTotal = maxi - mini ;
+		var longInterval = intervalTotal/nb ;
+		
+		intervals = new Array() ;
+		intervals[0] = mini ;
+		for (var i=1; i<nb; i++){
+			intervals[i] = mini + i * longInterval ;
+		}
+		intervals[i] = maxi ;				
+	}
+	// TODO effectifs egaux (non implemente pour l'instant)
+	else if(disc = 'quantiles'){
+		return '';
+	}
+	
+	return intervals ;
+}
+
+function chercherCouleursDisc(coul1, coul2, nbCla){
+	// pour le fun
+	var tab_couleur_discr = new Array('FFFFFF', 'FFEEEE', 'FFD2D2', 'FFBBBB', 'FF9999', 'FF0000');
+
+	return tab_couleur_discr ;
+	
+	// transformer en numerique
+	// calcul des proportions
+	// correction du gamma
+}
+
