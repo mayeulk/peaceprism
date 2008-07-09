@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 7) do
 
   create_table "annees", :id => false, :force => true do |t|
     t.integer "annee"
@@ -474,6 +474,17 @@ ActiveRecord::Schema.define(:version => 6) do
 
   create_table "tmp", :id => false, :force => true do |t|
     t.text "?column?"
+  end
+
+  create_table "var_labels", :force => true do |t|
+    t.integer  "var_key"
+    t.integer  "var_id"
+    t.integer  "dataset_id"
+    t.integer  "value"
+    t.string   "meaning"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "variable_qual", :force => true do |t|

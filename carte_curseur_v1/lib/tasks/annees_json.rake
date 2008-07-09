@@ -55,11 +55,11 @@ namespace :db do
         
         # s'il existe des variables qualitaives en plus
         @var_qual = ActiveRecord::Base.connection.select_all("
-        SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+        SELECT value, meaning FROM var_labels WHERE var_id = #{@variable.var_id}")
  
         @tab_var = Hash.new()
         for elt in @var_qual
-          @tab_var[elt['valeur']] = elt['signification']
+          @tab_var[elt['value']] = elt['meaning']
         end
         @info['var_qual'] = @tab_var
         
@@ -69,11 +69,11 @@ namespace :db do
           @info['type'] = 'qualitatif'
           @info['format'] = @variable.format
           @var_qual = ActiveRecord::Base.connection.select_all("
-            SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+            SELECT value, meaning FROM var_labels WHERE var_id = #{@variable.var_id}")
             
           @tab_var = Hash.new()
           for elt in @var_qual
-            @tab_var[elt['valeur']] = elt['signification']
+            @tab_var[elt['value']] = elt['meaning']
           end
           @info['var_qual'] = @tab_var
         else
@@ -85,16 +85,16 @@ namespace :db do
             @info['format'] = @variable.format
             
             @var_qual = ActiveRecord::Base.connection.select_all("
-            SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+            SELECT value, meaning FROM var_labels WHERE var_id = #{@variable.var_id}")
  
             @tab_var_ordo = Hash.new()
             @tab_var_spe = Hash.new()
             for elt in @var_qual
-              if ((elt['valeur']).to_i >= @variable.mini)and((elt['valeur']).to_i <= @variable.maxi)
-                @tab_var_ordo[elt['valeur']] = elt['signification']
+              if ((elt['value']).to_i >= @variable.mini)and((elt['value']).to_i <= @variable.maxi)
+                @tab_var_ordo[elt['value']] = elt['meaning']
               else
                 # s'il existe des variables qualitaives en plus
-                @tab_var_spe[elt['valeur']] = elt['signification']
+                @tab_var_spe[elt['value']] = elt['meaning']
               end
             end
             @info['var_qual_ordo'] = @tab_var_ordo
@@ -108,11 +108,11 @@ namespace :db do
             
             # s'il existe des variables qualitaives en plus
             @var_qual = ActiveRecord::Base.connection.select_all("
-            SELECT valeur, signification FROM variable_qual WHERE var_id = #{@variable.var_id}")
+            SELECT value, meaning FROM var_labels WHERE var_id = #{@variable.var_id}")
  
             @tab_var = Hash.new()
             for elt in @var_qual
-              @tab_var[elt['valeur']] = elt['signification']
+              @tab_var[elt['value']] = elt['meaning']
             end
             @info['var_qual'] = @tab_var
           end
