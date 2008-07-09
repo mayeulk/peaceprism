@@ -1,0 +1,24 @@
+<% 
+@cow_code = ActiveRecord::Base.connection.select_value(
+"SELECT cowcode from fips_cow_codes WHERE  fips_cntry = '#{@id[0..1]}' LIMIT 1"
+)
+# TODO: on pourrait faire une seule requete sql en utilisant select_one (selectionner une ligne contenant les 2 colonnes que l on veut
+@identifieryear_var = ActiveRecord::Base.connection.select_value( 
+  "SELECT identifieryear_var   FROM datasets where id = 6 LIMIT 1")
+@identifierccode1_var = ActiveRecord::Base.connection.select_value(
+  "SELECT identifierccode1_var FROM datasets where id = 6 LIMIT 1")
+
+@donnees_frise = ActiveRecord::Base.connection.select_all(
+      "SELECT var#{@variable}, var#{@identifieryear_var}  from dataset_#{@dataset} where var#{@identifierccode1_var}='#{@cow_code}' order by var#{@identifieryear_var}"
+          )
+
+# for ligne in @donnees_frise
+%>
+ <% #= (ligne['var#{@variable}']) 
+   %>
+ 
+ <%= @donnees_frise.to_json  %>
+
+<% #end
+
+%>

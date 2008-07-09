@@ -148,10 +148,15 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 
 <div id="cadre_legende"/>
 
-<%= observe_field(:pays2, :frequency => 0.1, # fonction reflex pour mettre a jour la frise
-         :update => 'frise', :url => 
-         { :controller => 'carte', :action=> 'show_over' }, 
-         :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').value") %>
+<%= observe_field(:pays2,
+	:frequency => 0.1, # fonction reflex pour mettre a jour la frise
+    :update => 'frise',
+	:url => { :controller => 'carte', :action=> 'show_over' }, 
+	:with => "'id=' + $('pays2').value+'&dataset='+ $('datasets').value+'&variable='+ $('variable').value")
+    
+%>
+<!-- '&annee='+ $('choix_annee').innerHTML+ -->
+
 
 <br/>
 
@@ -209,10 +214,11 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 </script>
 
 <br/>
-<%= observe_field(:pays2, :frequency => 0.1, # fonction reflex pour mettre a jour du tableau
-         :update => 'tabl_donnees', :url => 
-         { :controller => 'carte', :action=> 'tableau' }, 
-         :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').value") %>
+<%= observe_field(:pays2,
+	:frequency => 0.1, # fonction reflex pour mettre a jour du tableau
+    :update => 'tabl_donnees',
+	:url =>  { :controller => 'carte', :action=> 'tableau' }, 
+    :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').innerHTML+'&dataset='+ $('datasets').value+'&variable='+ $('variable').value") %>
 
 <br/>
 <br/>
