@@ -4,6 +4,11 @@
 
 <% form_for(@variable) do |f| %>
   <p>
+    <b>Var</b><br />
+    <%= f.text_field :var_id %>
+  </p>
+
+  <p>
     <b>Dataset</b><br />
     <%= f.text_field :dataset_id %>
   </p>
@@ -31,6 +36,76 @@
   <p>
     <b>Missing</b><br />
     <%= f.text_field :missing %>
+  </p>
+
+  <p>
+    <b>Created at</b><br />
+    <%= f.datetime_select :created_at %>
+  </p>
+
+  <p>
+    <b>Updated at</b><br />
+    <%= f.datetime_select :updated_at %>
+  </p>
+
+  <p>
+    <b>Mini</b><br />
+    <%= f.text_field :mini %>
+  </p>
+
+  <p>
+    <b>Maxi</b><br />
+    <%= f.text_field :maxi %>
+  </p>
+
+  <p>
+    <b>Binary var</b><br />
+    <%= f.text_field :binary_var %>
+  </p>
+
+  <p>
+    <b>Qualitatif ordonne</b><br />
+    <%= f.text_field :qualitatif_ordonne %>
+  </p>
+
+  <p>
+    <b>Long name</b><br />
+    <%= f.text_field :long_name %>
+  </p>
+
+  <p>
+    <b>Code var</b><br />
+    <%= f.text_field :code_var %>
+  </p>
+
+  <p>
+    <b>Descr before</b><br />
+    <%= f.text_area :descr_before %>
+  </p>
+
+  <p>
+    <b>Descr after</b><br />
+    <%= f.text_area :descr_after %>
+  </p>
+
+  <p>
+    <b>Long name fr</b><br />
+    <%= f.text_field :long_name_fr %>
+  </p>
+
+  <p>
+    <b>Descr before fr</b><br />
+    <%= f.text_area :descr_before_fr %>
+  </p>
+
+  <p>
+    <b>Descr after fr</b><br />
+    <%= f.text_area :descr_after_fr %>
+  </p>
+
+  <p>
+    <b>Page</b><br />
+    <%= f.text_field :page %>
   </p>
 
   <p>
