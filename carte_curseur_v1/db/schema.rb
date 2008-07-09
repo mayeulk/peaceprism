@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "annees", :id => false, :force => true do |t|
     t.integer "annee"
@@ -487,14 +487,6 @@ ActiveRecord::Schema.define(:version => 7) do
     t.datetime "updated_at"
   end
 
-  create_table "variable_qual", :force => true do |t|
-    t.integer "var_key"
-    t.integer "var_id"
-    t.integer "dataset_id"
-    t.integer "valeur"
-    t.text    "signification"
-  end
-
   create_table "variables", :force => true do |t|
     t.integer  "var_id"
     t.integer  "dataset_id"
@@ -509,6 +501,14 @@ ActiveRecord::Schema.define(:version => 7) do
     t.float    "maxi"
     t.integer  "binary_var"
     t.integer  "qualitatif_ordonne"
+    t.string   "long_name"
+    t.string   "code_var"
+    t.text     "descr_before"
+    t.text     "descr_after"
+    t.string   "long_name_fr"
+    t.text     "descr_before_fr"
+    t.text     "descr_after_fr"
+    t.integer  "page"
   end
 
 # Could not dump table "world" because of following StandardError
