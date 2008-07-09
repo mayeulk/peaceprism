@@ -64,18 +64,21 @@ before_filter :initialise_var
   
   # rend le partiel contenant la frise chronologique du conflit selectionne
   def show_over
-  @id=params[:id]
-  @annee=params[:annee].to_i
-    if @id.strip.match(/^lt/)
-      @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')
-      #@type_zone = 'conflit'
-    else
-      #@type_zone = 'pays'
+    @id=params[:id]
+    #render(:inline => @id[0..1])
+    #@annee=(params[:annee]) #.to_i
+    @dataset=(params[:dataset]) #.to_i
+    @variable=(params[:variable]) #.to_i
+      if @id.strip.match(/^lt/)
+        @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')
+        #@type_zone = 'conflit'
+      else
       
-      #bricolage pour eviter une erreur car on a survole un pays au lieu d'un conflit. FIX IT
-      #il faudrait eviter de faire un appel ajax
-    render(:nothing => true) # affiche un partial vide ("")
-    end
+            #eprec var12 dataset18  ou  var26 dataset6
+      #"SELECT var_id, dataset_id, name, kind from variables  where (kind = 'monadic') and format != 'string' and dataset_id = #{@dataset_choisi} order by var_id"
+         #render(:text =>"coucou")
+        render(:partial => "frise_pays")
+      end
   end
   
   # rend le tableau de donnees sur le conflit selectionne
