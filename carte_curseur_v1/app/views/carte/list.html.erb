@@ -120,8 +120,7 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<br/>
 	Country/zone: <%= text_field_tag :pays2 %>
 	<br/>
-	Dataset : <%= select_tag "datasets", options_for_select(@dat) %>
-	<!-- impossible de mettre une valeur par default sous firefox -->
+	Dataset : <%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
 	
 	afficher les zones de conflits : <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" value="oui"/>
 	<div id="liste_var"></div>
@@ -181,19 +180,12 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 				<span id="info_date"></span>				
 			</div>
 
-			<% @decalage = 1 # un repere des annees %>
 			<% for @an in @debut_periode..@fin_periode %>
-				<% if (@an%5 == 0) %>
-					<%= "<div class='repere_slider' style='left:" + (((@an-@debut_periode)*@long_annee)-@decalage).to_s + "px; border-width:2px;'></div>" %>
-					<% @decalage = @decalage + 4 %>
-					<% if (@an%10 == 0) %>
-						<%= "<div style='position:relative; float:left; width:40px; top:-33px; left:" + (((@an-@debut_periode)*@long_annee)-@decalage-15).to_s + "px; z-index:0'>" + (@an).to_s + "</div>"%>
-						<% @decalage = @decalage + 40 %>
-					<% end %>
-				<% else %>
-					<%= "<div class='repere_slider' style='left:" + (((@an-@debut_periode)*@long_annee)-@decalage).to_s + "px;'></div>" %>
-					<% @decalage = @decalage + 2 %>
-				<% end %>
+			
+			<div class='repere_slider<%=(@an%5 == 0 ? "_5ans" : "")%>' 	> </div>
+			
+			<div class='espace_entre_reperes'  > </div>
+						
 			<% end %>		
 		</div>
 		<div id="frise"></div>

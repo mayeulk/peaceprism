@@ -259,3 +259,1002 @@ Processing CarteController#show_over (for 127.0.0.1 at 2008-06-26 13:06:30) [POS
   Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
   Parameters: {"action"=>"show_over", "annee"=>"undefined", "id"=>"GL19463333", "controller"=>"carte"}
 Completed in 0.00527 (189 reqs/sec) | Rendering: 0.00012 (2%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/carte/show_over]
+
+
+Processing CarteController#index (for 192.168.1.18 at 2008-07-10 16:51:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.58931 (1 reqs/sec) | Rendering: 0.53990 (91%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-10 16:51:21) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"2"}
+Completed in 0.07922 (12 reqs/sec) | Rendering: 0.02857 (36%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-10 16:51:27) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.01082 (92 reqs/sec) | Rendering: 0.00404 (37%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#index (for 192.168.1.21 at 2008-07-10 16:56:10) [GET]
+  Session ID: 7dc5c8b172582f4284701f25606c0746
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.06579 (15 reqs/sec) | Rendering: 0.06203 (94%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 16:56:42) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.00714 (140 reqs/sec) | Rendering: 0.00130 (18%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#index (for 192.168.1.18 at 2008-07-10 16:56:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.07791 (12 reqs/sec) | Rendering: 0.07349 (94%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-10 16:57:37) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"4"}
+Completed in 0.00638 (156 reqs/sec) | Rendering: 0.00110 (17%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-10 16:57:48) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.00772 (129 reqs/sec) | Rendering: 0.00162 (21%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing VarLabelController#show (for 192.168.1.21 at 2008-07-10 16:57:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"var_label"}
+Rendering var_label/show
+Completed in 0.03124 (32 reqs/sec) | Rendering: 0.01297 (41%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/var_label/show/1]
+
+
+Processing VarLabelController#show (for 192.168.1.21 at 2008-07-10 16:58:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"var_label"}
+Rendering var_label/show
+Completed in 0.00289 (345 reqs/sec) | Rendering: 0.00078 (26%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/var_label/show/2]
+
+
+Processing CarteController#index (for 192.168.1.21 at 2008-07-10 17:03:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.01028 (97 reqs/sec) | Rendering: 0.00635 (61%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#index (for 192.168.1.21 at 2008-07-10 17:08:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.00991 (100 reqs/sec) | Rendering: 0.00582 (58%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#index (for 192.168.1.18 at 2008-07-10 17:09:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.09115 (10 reqs/sec) | Rendering: 0.08693 (95%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-10 17:09:08) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"9"}
+Completed in 0.00614 (162 reqs/sec) | Rendering: 0.00095 (15%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-10 17:09:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.01107 (90 reqs/sec) | Rendering: 0.00141 (12%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:12:33) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"9"}
+Completed in 0.00561 (178 reqs/sec) | Rendering: 0.00087 (15%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:12:43) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.00755 (132 reqs/sec) | Rendering: 0.00133 (17%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#tableau (for 192.168.1.21 at 2008-07-10 17:12:58) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1946", "id"=>"US19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.00409 (244 reqs/sec) | Rendering: 0.00011 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.21 at 2008-07-10 17:12:58) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"US19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.18974 (5 reqs/sec) | Rendering: 0.18588 (97%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/show_over]
+
+
+Processing CarteController#tableau (for 192.168.1.21 at 2008-07-10 17:13:39) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1946", "id"=>"", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.00397 (251 reqs/sec) | Rendering: 0.00011 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.21 at 2008-07-10 17:13:39) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+
+
+ActionView::TemplateError (PGError: ERROR:  invalid input syntax for integer: ""
+: SELECT var13, var5  from dataset_6 where var2='' order by var5) on line #11 of carte/_frise_pays.html.erb:
+8: @identifierccode1_var = ActiveRecord::Base.connection.select_value(
+9:   "SELECT identifierccode1_var FROM datasets where id = 6 LIMIT 1")
+10: 
+11: @donnees_frise = ActiveRecord::Base.connection.select_all(
+12:       "SELECT var#{@variable}, var#{@identifieryear_var}  from dataset_#{@dataset} where var#{@identifierccode1_var}='#{@cow_code}' order by var#{@identifieryear_var}"
+13:           )
+14: 
+
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:407:in `execute'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:782:in `select_raw'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/postgresql_adapter.rb:769:in `select'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `cache_sql'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    app/views/carte/_frise_pays.html.erb:11:in `_run_erb_47app47views47carte47_frise_pays46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:331:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/partials.rb:120:in `render_partial'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:896:in `send!'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:896:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/carte_controller.rb:80:in `show_over'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#tableau (for 192.168.1.21 at 2008-07-10 17:14:08) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1946", "id"=>"lt35lg110rd2000", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/tableau
+Completed in 0.21132 (4 reqs/sec) | Rendering: 0.03880 (18%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.21 at 2008-07-10 17:14:09) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"lt35lg110rd2000", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/show_over
+
+
+ActionView::TemplateError (comparison of Fixnum with nil failed) on line #81 of carte/show_over.rhtml:
+78:     </tr>
+79:     <% for conflitsext in @conflitsexts %>
+80:     <tr id="an<%=conflitsext.begin%>" 
+81:  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
+82:     style="border-style:solid; border-width:2px; border-color:#000000; color: white;
+83:     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
+84:       <% for column in Conflitsext.content_columns %>
+
+    app/views/carte/show_over.rhtml:81:in `<='
+    app/views/carte/show_over.rhtml:81:in `_run_erb_47app47views47carte47show_over46rhtml'
+    app/views/carte/show_over.rhtml:79:in `each'
+    app/views/carte/show_over.rhtml:79:in `_run_erb_47app47views47carte47show_over46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#index (for 192.168.1.21 at 2008-07-10 17:14:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.07797 (12 reqs/sec) | Rendering: 0.07415 (95%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#index (for 192.168.1.21 at 2008-07-10 17:15:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.07736 (12 reqs/sec) | Rendering: 0.07355 (95%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:15:14) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"9"}
+Completed in 0.00569 (175 reqs/sec) | Rendering: 0.00084 (14%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:15:25) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.00781 (128 reqs/sec) | Rendering: 0.00134 (17%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:15:32) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"9"}
+Completed in 0.00567 (176 reqs/sec) | Rendering: 0.00086 (15%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:15:48) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.00725 (137 reqs/sec) | Rendering: 0.00132 (18%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:15:52) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"9"}
+Completed in 0.00581 (172 reqs/sec) | Rendering: 0.00087 (14%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.21 at 2008-07-10 17:16:03) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.00743 (134 reqs/sec) | Rendering: 0.00132 (17%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing VarLabelController#show (for 192.168.1.21 at 2008-07-10 17:25:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"var_label"}
+Rendering var_label/show
+Completed in 0.00301 (331 reqs/sec) | Rendering: 0.00077 (25%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/var_label/show/1]
+
+
+Processing VarLabelController#show (for 192.168.1.21 at 2008-07-10 17:26:20) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"var_label"}
+Rendering var_label/show
+Completed in 0.00296 (337 reqs/sec) | Rendering: 0.00077 (26%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/var_label/show/3]
+
+
+Processing CarteController#index (for 192.168.1.18 at 2008-07-15 15:58:34) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 1.07651 (0 reqs/sec) | Rendering: 0.71533 (66%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-15 15:59:02) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.20757 (4 reqs/sec) | Rendering: 0.02458 (11%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing VarLabelController#show (for 192.168.1.18 at 2008-07-15 15:59:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show", "id"=>"-77", "controller"=>"var_label"}
+Rendering var_label/show
+Completed in 0.30848 (3 reqs/sec) | Rendering: 0.20747 (67%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/var_label/show/-77]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:00:28) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"CG19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.21484 (4 reqs/sec) | Rendering: 0.21009 (97%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/show_over]
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:00:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"2003", "id"=>"CG19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.00409 (244 reqs/sec) | Rendering: 0.00010 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing VarLabelController#show (for 192.168.1.18 at 2008-07-15 16:00:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show", "id"=>"-88", "controller"=>"var_label"}
+Rendering var_label/show
+Completed in 0.06468 (15 reqs/sec) | Rendering: 0.00084 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/var_label/show/-88]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:02:07) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"lt-13lg19rd700", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/show_over
+
+
+ActionView::TemplateError (comparison of Fixnum with nil failed) on line #81 of carte/show_over.rhtml:
+78:     </tr>
+79:     <% for conflitsext in @conflitsexts %>
+80:     <tr id="an<%=conflitsext.begin%>" 
+81:  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
+82:     style="border-style:solid; border-width:2px; border-color:#000000; color: white;
+83:     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
+84:       <% for column in Conflitsext.content_columns %>
+
+    app/views/carte/show_over.rhtml:81:in `<='
+    app/views/carte/show_over.rhtml:81:in `_run_erb_47app47views47carte47show_over46rhtml'
+    app/views/carte/show_over.rhtml:79:in `each'
+    app/views/carte/show_over.rhtml:79:in `_run_erb_47app47views47carte47show_over46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:02:08) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1993", "id"=>"lt-13lg19rd700", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/tableau
+Completed in 0.03109 (32 reqs/sec) | Rendering: 0.02580 (82%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:02:15) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"lt-30lg26rd900", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/show_over
+
+
+ActionView::TemplateError (comparison of Fixnum with nil failed) on line #81 of carte/show_over.rhtml:
+78:     </tr>
+79:     <% for conflitsext in @conflitsexts %>
+80:     <tr id="an<%=conflitsext.begin%>" 
+81:  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
+82:     style="border-style:solid; border-width:2px; border-color:#000000; color: white;
+83:     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
+84:       <% for column in Conflitsext.content_columns %>
+
+    app/views/carte/show_over.rhtml:81:in `<='
+    app/views/carte/show_over.rhtml:81:in `_run_erb_47app47views47carte47show_over46rhtml'
+    app/views/carte/show_over.rhtml:79:in `each'
+    app/views/carte/show_over.rhtml:79:in `_run_erb_47app47views47carte47show_over46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:02:15) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1993", "id"=>"lt-30lg26rd900", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/tableau
+Completed in 0.00595 (168 reqs/sec) | Rendering: 0.00128 (21%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:02:24) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"lt-12lg-74rd750", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/show_over
+
+
+ActionView::TemplateError (comparison of Fixnum with nil failed) on line #81 of carte/show_over.rhtml:
+78:     </tr>
+79:     <% for conflitsext in @conflitsexts %>
+80:     <tr id="an<%=conflitsext.begin%>" 
+81:  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
+82:     style="border-style:solid; border-width:2px; border-color:#000000; color: white;
+83:     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
+84:       <% for column in Conflitsext.content_columns %>
+
+    app/views/carte/show_over.rhtml:81:in `<='
+    app/views/carte/show_over.rhtml:81:in `_run_erb_47app47views47carte47show_over46rhtml'
+    app/views/carte/show_over.rhtml:79:in `each'
+    app/views/carte/show_over.rhtml:79:in `_run_erb_47app47views47carte47show_over46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:02:24) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"", "id"=>"lt-12lg-74rd750", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/tableau
+Completed in 0.00765 (130 reqs/sec) | Rendering: 0.00264 (34%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:02:28) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"lt4.5lg-74rd800", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/show_over
+
+
+ActionView::TemplateError (comparison of Fixnum with nil failed) on line #81 of carte/show_over.rhtml:
+78:     </tr>
+79:     <% for conflitsext in @conflitsexts %>
+80:     <tr id="an<%=conflitsext.begin%>" 
+81:  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
+82:     style="border-style:solid; border-width:2px; border-color:#000000; color: white;
+83:     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
+84:       <% for column in Conflitsext.content_columns %>
+
+    app/views/carte/show_over.rhtml:81:in `<='
+    app/views/carte/show_over.rhtml:81:in `_run_erb_47app47views47carte47show_over46rhtml'
+    app/views/carte/show_over.rhtml:79:in `each'
+    app/views/carte/show_over.rhtml:79:in `_run_erb_47app47views47carte47show_over46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:02:28) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"", "id"=>"lt4.5lg-74rd800", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/tableau
+Completed in 0.00779 (128 reqs/sec) | Rendering: 0.00199 (25%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:02:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"lt-12lg-74rd750", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/show_over
+
+
+ActionView::TemplateError (comparison of Fixnum with nil failed) on line #81 of carte/show_over.rhtml:
+78:     </tr>
+79:     <% for conflitsext in @conflitsexts %>
+80:     <tr id="an<%=conflitsext.begin%>" 
+81:  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
+82:     style="border-style:solid; border-width:2px; border-color:#000000; color: white;
+83:     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
+84:       <% for column in Conflitsext.content_columns %>
+
+    app/views/carte/show_over.rhtml:81:in `<='
+    app/views/carte/show_over.rhtml:81:in `_run_erb_47app47views47carte47show_over46rhtml'
+    app/views/carte/show_over.rhtml:79:in `each'
+    app/views/carte/show_over.rhtml:79:in `_run_erb_47app47views47carte47show_over46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:02:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"", "id"=>"lt-12lg-74rd750", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Rendering carte/tableau
+Completed in 0.00708 (141 reqs/sec) | Rendering: 0.00154 (21%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:02:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"PE19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.10035 (9 reqs/sec) | Rendering: 0.09683 (96%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/show_over]
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:02:29) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"", "id"=>"PE19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.00408 (245 reqs/sec) | Rendering: 0.00010 (2%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:02:33) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"RS19923333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.04624 (21 reqs/sec) | Rendering: 0.04261 (92%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/show_over]
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:02:33) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"", "id"=>"RS19923333", "dataset"=>"6", "controller"=>"carte", "variable"=>"13"}
+Completed in 0.00610 (163 reqs/sec) | Rendering: 0.00012 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#index (for 192.168.1.18 at 2008-07-15 16:03:15) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"index", "controller"=>"carte"}
+Rendering carte/list
+Completed in 0.08559 (11 reqs/sec) | Rendering: 0.08173 (95%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-15 16:03:33) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"1"}
+Completed in 0.00628 (159 reqs/sec) | Rendering: 0.00093 (14%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#refresh_var (for 192.168.1.18 at 2008-07-15 16:03:38) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"refresh_var", "controller"=>"carte", "datas"=>"6"}
+Completed in 0.00771 (129 reqs/sec) | Rendering: 0.00134 (17%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/refresh_var]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:06:05) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"KZ19923333", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Completed in 0.06555 (15 reqs/sec) | Rendering: 0.06008 (91%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/show_over]
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:06:05) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1992", "id"=>"KZ19923333", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Completed in 0.00577 (173 reqs/sec) | Rendering: 0.00018 (3%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:06:17) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"MG19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Completed in 0.04257 (23 reqs/sec) | Rendering: 0.03848 (90%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/show_over]
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:06:17) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1992", "id"=>"MG19463333", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Completed in 0.00651 (153 reqs/sec) | Rendering: 0.00011 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:06:22) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"KZ19923333", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Completed in 0.00881 (113 reqs/sec) | Rendering: 0.00526 (59%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/show_over]
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:06:22) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1992", "id"=>"KZ19923333", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Completed in 0.00590 (169 reqs/sec) | Rendering: 0.00010 (1%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing CarteController#show_over (for 192.168.1.18 at 2008-07-15 16:06:44) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"show_over", "id"=>"lt35lg110rd2000", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Rendering carte/show_over
+
+
+ActionView::TemplateError (comparison of Fixnum with nil failed) on line #81 of carte/show_over.rhtml:
+78:     </tr>
+79:     <% for conflitsext in @conflitsexts %>
+80:     <tr id="an<%=conflitsext.begin%>" 
+81:  <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
+82:     style="border-style:solid; border-width:2px; border-color:#000000; color: white;
+83:     background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
+84:       <% for column in Conflitsext.content_columns %>
+
+    app/views/carte/show_over.rhtml:81:in `<='
+    app/views/carte/show_over.rhtml:81:in `_run_erb_47app47views47carte47show_over46rhtml'
+    app/views/carte/show_over.rhtml:79:in `each'
+    app/views/carte/show_over.rhtml:79:in `_run_erb_47app47views47carte47show_over46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+    -e:2:in `load'
+    -e:2
+
+Rendering /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/500.html (500 Internal Server Error)
+
+
+Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:06:44) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"action"=>"tableau", "annee"=>"1992", "id"=>"lt35lg110rd2000", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
+Rendering carte/tableau
+Completed in 0.00642 (155 reqs/sec) | Rendering: 0.00102 (15%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]

@@ -144,7 +144,10 @@ function initdiscretisation(){
 				
 				// remplissage du tableau a envoyer avec les valeurs ordonnees...
 				for (var i in varQualOrdo) {
-					chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '">' + varQualOrdo[i] + '</span></p>';
+					chaine += '<p><span id="val' + o + '">'+
+						i +'</span> <input type="text" class="colorfields" id="colorfield' +
+						o + '" value="' + tab_couleur_disc[o] + '"/><a href="/var_label/show/'+ i +'" id="intitule' + o + '">' +
+					  varQualOrdo[i] + '</a></p>';
 					disc_var =[];
 					disc_var['valeur'] = i;
 					disc_var['mini'] = i ;
@@ -157,7 +160,11 @@ function initdiscretisation(){
 				//...puis avec les valeurs qualitatives
 				var c=2 ;
 				for (var i in varQual) {
-					chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
+					chaine += '<p><span id="val' + o + '">' + i +
+					  '</span> <input type="text" class="colorfields" id="colorfield' + o +
+					  '" value="' + tab_couleur[c] + '"/><a href="/var_label/show/'+ i +'" id="intitule' + o + '">' +
+					  varQual[i] + '</a></p>';
+					  
 					disc_var = [];
 					disc_var['valeur'] = i;
 					disc_var['mini'] = i;
