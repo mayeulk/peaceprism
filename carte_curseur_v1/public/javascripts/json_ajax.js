@@ -16,7 +16,7 @@
 			}
 		
 		
-		var filename = 'json/data6_' + variable1 + '.json';
+		var filename = 'json/data'+ dataset1 +'_' + variable1 + '.json';
 		var data = null;
 				
 		data = null;

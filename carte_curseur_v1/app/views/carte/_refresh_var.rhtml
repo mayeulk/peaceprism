@@ -1,7 +1,5 @@
-Variable: <%= select_tag 'variable', options_for_select(@va), :onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
-<script type='javascript'>
-	$('variable').value = 0 ;
-</script>
+Variable: <%= select_tag 'variable', options_for_select(@vars,@vars[0]),
+	:onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
 <form>	
 	Type: <span id="typeVar"></span><br/>
 	Format: <span id="formatVar"></span><br/>

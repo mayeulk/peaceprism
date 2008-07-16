@@ -14,7 +14,7 @@ lireFilm = 0 ;
 nbClasses = 0 ;
 tab =""  ;
 
-// fonction reInit2, qui met à jour la carte, en fonction des donnees contenues dans 
+// fonction reInit2, qui met a jour la carte, en fonction des donnees contenues dans 
 // le tableau du DOM 'tab', pour l'annee 'annee' envoyee par le slider 
 function reInit2(annee){
 		
@@ -23,7 +23,7 @@ function reInit2(annee){
 	// affichage de l'information 'date' sur la page et sur le curseur du slider
 	$('choix_annee').innerHTML = annee_en_cours; //.toString();
 	$('info_date').innerHTML = annee_en_cours; //.toString();
-	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 15) + 'px';
+	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 17) + 'px';
 	
 	if ($('variable').value != 0){		
 		// recuperation des donnees a afficher (le tableau de pays et le hash de donnees par dates)
@@ -81,7 +81,7 @@ function reInit2(annee){
 		for (un_conflit = 0; un_conflit < nb_conflits; un_conflit++) {
 			var svgobj = document.getElementById((window["AN" + annee_en_cours])[un_conflit]);
 			document.getElementById((window["AN" + annee_en_cours])[un_conflit]).style.visibility = 'visible';
-			colorierPays(document.getElementById((window["AN" + annee_en_cours])[un_conflit]), '#C3C3C3');
+			colorierPays(document.getElementById((window["AN" + annee_en_cours])[un_conflit]), '#A200C3');
 			//document.getElementById((window["AN" + annee_en_cours])[un_conflit]).setAttribute("opacity", "0.5");
 		}
 		annee_old = annee_en_cours;

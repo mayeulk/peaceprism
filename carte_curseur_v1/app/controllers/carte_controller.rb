@@ -9,10 +9,17 @@ before_filter :initialise_var
     @datasets2 = Dataset.find(:all)
     @datasets = ActiveRecord::Base.connection.select_all(
     "Select data_set_full_name, id from datasets where id<10 order by id")
-    @dat = {}
-    # @dat['_choisissez un dataset_'] = '0'
+    
+    # la liste des datasets disponibles pour le select html
+    @dat = Array.new()
+    @dat[0] = ['Please choose a dataset', '0']
+    i= 1
     for @d in @datasets
-     @dat[@d['data_set_full_name']] = @d['id']
+      option = Array.new()
+      option[0] = @d['data_set_full_name']
+      option[1] = @d['id']
+      @dat[i] = option
+      i += 1
     end
   end
   
@@ -21,15 +28,23 @@ before_filter :initialise_var
   def refresh_var
     @dataset_choisi = params[:datas]
     @var_select = ActiveRecord::Base.connection.select_all(
-       "SELECT var_id, dataset_id, name, kind from variables 
-          where (kind = 'monadic') and format != 'string' and dataset_id = #{@dataset_choisi} order by var_id")
+       "SELECT var_id, name, long_name from variables 
+          where (kind = 'monadic') and format != 'string'
+          and dataset_id = #{@dataset_choisi} order by var_id")
     
-    @va = {}
-    @va['_choisissez une variable_'] = '0'
-    for v in @var_select
-      @va[v['name']] = v['var_id']
+    # la liste des variables disponibles pour le select html
+    @vars = Array.new()
+    @vars[0] = ['Please choose a variable', '0']
+    i= 1
+    for @v in @var_select
+      option = Array.new()
+      # on met .to_s pour les tests tant que la base n'est pas remplie (si le nom long est absent, on fait nil.to_s)
+      option[0] = @v['long_name'].to_s + ' (' + @v['name'] + ')'
+      option[1] = @v['var_id']
+      @vars[i] = option
+      i += 1
     end
-
+    
     render :partial => "refresh_var"
   end
   

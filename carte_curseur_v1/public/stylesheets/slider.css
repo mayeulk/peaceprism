@@ -40,15 +40,48 @@ div#slider {
 .repere_slider {
 	position:relative;
 	float:left;
-	top:-17px;
+	top:-15px;
 	background-color:#696969;
-	border-style:solid;
-	border-color: #696969; 
+	height:5px; /*non lu par IE?*/
+	z-index:0;	
+	width:2px; 
+	border-width:0px;
+	}
+	
+.repere_slider_5ans {
+	position:relative;
+	float:left;
+	top:-15px;
+	background-color:red;
 	height:20px;
 	z-index:0;	
-	width:0px; 
-	border-width:1px;
+	width:2px; 
 	}
+
+.repere_slider_10ans {
+	position:relative;
+	float:left;
+	top:-15px;
+	background-color:red;
+	height:20px;
+	z-index:0;	
+	width:2px;
+	}
+	
+
+.espace_entre_reperes {
+	position:relative;
+	float:left;
+	top:-17px;
+	background-color:white;
+	height:10px;
+	z-index:0;	
+	width:8px; 
+}
+
+	
+	
+	
 #handle_date_debut {
 	opacity:0.5;
 	position:absolute;

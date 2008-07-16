@@ -1,0 +1,41 @@
+<h1>New var_label</h1>
+
+<%= error_messages_for :var_label %>
+
+<% form_for(@var_label) do |f| %>
+  <p>
+    <b>Var key</b><br />
+    <%= f.text_field :var_key %>
+  </p>
+
+  <p>
+    <b>Var</b><br />
+    <%= f.text_field :var_id %>
+  </p>
+
+  <p>
+    <b>Dataset</b><br />
+    <%= f.text_field :dataset_id %>
+  </p>
+
+  <p>
+    <b>Value</b><br />
+    <%= f.text_field :value %>
+  </p>
+
+  <p>
+    <b>Meaning</b><br />
+    <%= f.text_field :meaning %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', var_labels_path %>

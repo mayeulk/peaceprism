@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  var_key: 1
+  var_id: 1
+  dataset_id: 1
+  value: 1
+  meaning: MyString
+  description: MyText
+
+two:
+  var_key: 1
+  var_id: 1
+  dataset_id: 1
+  value: 1
+  meaning: MyString
+  description: MyText

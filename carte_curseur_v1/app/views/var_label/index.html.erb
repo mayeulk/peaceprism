@@ -1,0 +1,30 @@
+<h1>Listing var_labels</h1>
+
+<table>
+  <tr>
+    <th>Var key</th>
+    <th>Var</th>
+    <th>Dataset</th>
+    <th>Value</th>
+    <th>Meaning</th>
+    <th>Description</th>
+  </tr>
+
+<% for var_label in @var_labels %>
+  <tr>
+    <td><%=h var_label.var_key %></td>
+    <td><%=h var_label.var_id %></td>
+    <td><%=h var_label.dataset_id %></td>
+    <td><%=h var_label.value %></td>
+    <td><%=h var_label.meaning %></td>
+    <td><%=h var_label.description %></td>
+    <td><%= link_to 'Show', var_label %></td>
+    <td><%= link_to 'Edit', edit_var_label_path(var_label) %></td>
+    <td><%= link_to 'Destroy', var_label, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New var_label', new_var_label_path %>
