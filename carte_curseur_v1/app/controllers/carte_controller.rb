@@ -9,11 +9,11 @@ before_filter :initialise_var
     @datasets2 = Dataset.find(:all)
     @datasets = ActiveRecord::Base.connection.select_all(
     "Select data_set_full_name, id from datasets where id<10 order by id")
-    
+   
     # la liste des datasets disponibles pour le select html
     @dat = Array.new()
     @dat[0] = ['Please choose a dataset', '0']
-    i= 1
+    i= 1    
     for @d in @datasets
       option = Array.new()
       option[0] = @d['data_set_full_name']
@@ -44,7 +44,7 @@ before_filter :initialise_var
       @vars[i] = option
       i += 1
     end
-    
+
     render :partial => "refresh_var"
   end
   

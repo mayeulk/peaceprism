@@ -13,8 +13,10 @@ function initdiscretisation(){
 	// le tableau de couleurs discretisees sera genere par une fonction js automatique
 	var tab_couleur = new Array('FFFFFF', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', '000000');
 	var varInfo = tab['info'];
-	$('typeVar').innerHTML = varInfo['type'];
-	$('formatVar').innerHTML = varInfo['format'];
+	var dataset_courant = varInfo['dataset_id'];
+	var variable_courante = varInfo['var_id'];
+	// $('typeVar').innerHTML = varInfo['type'];
+	// $('formatVar').innerHTML = varInfo['format'];
 	
 	// premier cas : variable booleenne : 2 classes (oui/non)
 	if (varInfo['format'] == 'boolean'){
@@ -24,8 +26,13 @@ function initdiscretisation(){
 		// premiere case pour legende des valeurs 'null'
 		disc_var['valeur'] = 'null';
 		disc_var['couleur'] = 'C3C3C3';
-		discretize[0] = disc_var ;			
-		var chaine = '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+		discretize[0] = disc_var ;	
+		
+		var chaine = '<a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">description</a>';
+	
+				
+		chaine = chaine + '<p>0 <input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 		// autres classes
 		//$('nbClasses').innerHTML = nbCla;
@@ -86,13 +93,20 @@ function initdiscretisation(){
 			disc_var['couleur'] = 'C3C3C3';
 			discretize[0] = disc_var ;			
 
-			$('nbClasses').innerHTML = nbCla;
+			//$('nbClasses').innerHTML = nbCla;
 			nbClasses = nbCla ;
-			var chaine = '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+			
+			var chaine = '<a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">description</a>';
+
+			
+			chaine = chaine + '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 			var o = 1;
 			for (var i in varQual) {
-				chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[o] + '"></input><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
+				chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + 
+					o + '" value="' + tab_couleur[o] + '"></input><a href="/var_label/'+ dataset_courant + "/" + 
+					variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + '</a></p>';
 				disc_var =[];
 				disc_var['valeur'] = i;
 				disc_var['mini'] = i ;
@@ -134,9 +148,14 @@ function initdiscretisation(){
 				disc_var['couleur'] = 'C3C3C3';
 				discretize[0] = disc_var ;			
 
-				$('nbClasses').innerHTML = nbCla;
+				//$('nbClasses').innerHTML = nbCla;
 				nbClasses = nbCla ;
-				var chaine = '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+				
+				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">description</a>';
+
+				
+				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 				var tab_couleur_disc = chercherCouleursDisc('#FF000','#FFFFFF', nbClasses);
 				
@@ -146,8 +165,8 @@ function initdiscretisation(){
 				for (var i in varQualOrdo) {
 					chaine += '<p><span id="val' + o + '">'+
 						i +'</span> <input type="text" class="colorfields" id="colorfield' +
-						o + '" value="' + tab_couleur_disc[o] + '"/><a href="/var_label/show/'+ i +'" id="intitule' + o + '">' +
-					  varQualOrdo[i] + '</a></p>';
+						o + '" value="' + tab_couleur_disc[o] + '"/><a href="/var_label/'+ dataset_courant + "/" + 
+						variable_courante + "/" + i +'" id="intitule' + o + '">' + varQualOrdo[i] + '</a></p>';
 					disc_var =[];
 					disc_var['valeur'] = i;
 					disc_var['mini'] = i ;
@@ -162,8 +181,8 @@ function initdiscretisation(){
 				for (var i in varQual) {
 					chaine += '<p><span id="val' + o + '">' + i +
 					  '</span> <input type="text" class="colorfields" id="colorfield' + o +
-					  '" value="' + tab_couleur[c] + '"/><a href="/var_label/show/'+ i +'" id="intitule' + o + '">' +
-					  varQual[i] + '</a></p>';
+					  '" value="' + tab_couleur[c] + '"/><a href="/var_label/'+ dataset_courant + "/" + 
+					  variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + '</a></p>';
 					  
 					disc_var = [];
 					disc_var['valeur'] = i;
@@ -210,7 +229,7 @@ function initdiscretisation(){
 				disc_var['couleur'] = 'C3C3C3';
 				discretize[0] = disc_var ;			
 
-				$('nbClasses').innerHTML = nbCla;
+				//$('nbClasses').innerHTML = nbCla;
 				nbClasses = nbCla ;
 				var chaine = '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 				var o = 1;

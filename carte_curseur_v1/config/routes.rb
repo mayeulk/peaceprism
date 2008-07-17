@@ -2,6 +2,10 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'datasets/import_all_edf', :controller => 'datasets', :action => 'import_all_edf'
   map.resources :variables
   map.resources :var_labels
+  map.connect 'var_label/:dataset_id/:variable_id/:value', :controller => 'var_label',
+    :action => 'show_description'
+  map.connect 'variable/:dataset_id/:variable_id', :controller => 'variables',
+    :action => 'show_description'
 
   map.resources :datasets
   map.connect 'data/:dataset_id', :controller => 'data', :action => 'show_dataset'

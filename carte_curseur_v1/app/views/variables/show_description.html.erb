@@ -1,0 +1,61 @@
+<p>  
+  <b><h1><%=h @variable.long_name %></h1></b>
+</p>
+
+<p>
+  <b>Var:</b>
+  <%=h @variable.var_id %>
+  <b>, Dataset:</b>
+  <%=h @variable.dataset_id %>
+  <b>, Name:</b>
+  <%=h @variable.name %>
+</p>
+
+
+<p>
+  <b><h3>Description:</h3></b></br>
+  <%=h @variable.descr_before %>
+</p>
+
+<b><h3>Values:</h3></b></br>
+<% for ligne in @var_label %>
+	<u>
+  	<b><%= ligne['value'] %></b>	
+  	<b> : </b>
+  	<%= ligne['meaning'] %>	
+	</u>
+	<p>
+  	<b>Description:</b>
+  	<%= ligne['description'] %>
+	</p>
+<% end %>
+
+
+<p>
+  <b><h2>Descr after:</h2></b>
+  <%=h @variable.descr_after %>
+</p>
+
+
+
+
+
+
+
+
+<p>
+  <b>Long name fr:</b>
+  <%=h @variable.long_name_fr %>
+</p>
+
+<p>
+  <b>Descr before fr:</b>
+  <%=h @variable.descr_before_fr %>
+</p>
+
+<p>
+  <b>Descr after fr:</b>
+  <%=h @variable.descr_after_fr %>
+</p>
+
+

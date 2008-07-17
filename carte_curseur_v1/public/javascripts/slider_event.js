@@ -49,7 +49,7 @@ function reInit2(annee){
 					colorierPays(paysSVG, "#"+ info['couleur']) ;
 				}
 				else {					
-					var nbClas = parseInt($('nbClasses').innerHTML) ;
+					// var nbClas = parseInt($('nbClasses').innerHTML) ;
 					for (var e = 0; e <= nbClasses; e++) {
 						info = discretize[e] ;
 						if (info['isFirstValue'] == 1){
@@ -86,6 +86,15 @@ function reInit2(annee){
 		}
 		annee_old = annee_en_cours;
 		nb_conflits_old = nb_conflits;
+	}
+	else{
+		// effacage des zones de conflits precedentes...
+		for (un_conflit = 0; un_conflit < nb_conflits_old; un_conflit++) {
+			var svgobj = document.getElementById((window["AN" + annee_old])[un_conflit]);
+			document.getElementById((window["AN" + annee_old])[un_conflit]).style.visibility = 'hidden';
+		}
+		annee_old = annee_en_cours;
+		nb_conflits_old = 0;
 	}
 }
 

@@ -9,16 +9,41 @@
   "SELECT identifierccode1_var FROM datasets where id = 6 LIMIT 1")
 
 @donnees_frise = ActiveRecord::Base.connection.select_all(
-      "SELECT var#{@variable}, var#{@identifieryear_var}  from dataset_#{@dataset} where var#{@identifierccode1_var}='#{@cow_code}' order by var#{@identifieryear_var}"
+      "SELECT var#{@variable} as donnee, var#{@identifieryear_var} as annee from dataset_#{@dataset} where var#{@identifierccode1_var}='#{@cow_code}' and (var#{@identifieryear_var} >= #{@debut_periode}) and (var#{@identifieryear_var} <= #{@fin_periode}) order by var#{@identifieryear_var}"
           )
-
-# for ligne in @donnees_frise
+@long_annee = (600 / (@fin_periode - @debut_periode + 1)).to_i
 %>
- <% #= (ligne['var#{@variable}']) 
-   %>
- 
- <%= @donnees_frise.to_json  %>
 
-<% #end
 
+<%= @debut_periode %>
+
+
+<%
+compt_annee = @debut_periode
+@donnees_frise.each do |ligne|
 %>
+<%= ligne['annee'] %>
+<%= compt_annee %>
+
+<%
+if ligne['annee'].to_i == compt_annee.to_i
+%>
+
+	<div
+	style="overflow:hidden; position:relative;
+	height:15px;
+	width:<%= @long_annee %>px;
+	background-color:#0000FF;
+	float: left;
+	text-align: center;">
+	o
+	</div>
+	<% compt_annee = compt_annee + 1 %>
+	
+<% 	end %>
+
+
+<% compt_annee = compt_annee + 1 %>
+	
+<% end %>
+
