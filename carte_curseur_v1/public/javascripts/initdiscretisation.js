@@ -28,10 +28,14 @@ function initdiscretisation(){
 		disc_var['couleur'] = 'C3C3C3';
 		discretize[0] = disc_var ;	
 		
+		// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 		var chaine = '<a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">description</a>';
+					variable_courante + '" id="lien_desc">variable description</a>';
 	
-				
+		// chaine : la legende en tant que tel est affichee dans un div independant
+		chaine = chaine + '<div id="legende">';
+			
+		// chaine : premier interval pour les valeurs 'null'		
 		chaine = chaine + '<p>0 <input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 		// autres classes
@@ -50,6 +54,7 @@ function initdiscretisation(){
 			u=u+1;
 			
 		}
+		chaine += '</div>' ;
 		$('colorClasses').innerHTML = chaine;		
 
 		//...puis avec les valeurs qualitatives
@@ -96,10 +101,14 @@ function initdiscretisation(){
 			//$('nbClasses').innerHTML = nbCla;
 			nbClasses = nbCla ;
 			
+			// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 			var chaine = '<a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">description</a>';
+					variable_courante + '" id="lien_desc">variable description</a>';
 
+			// chaine : la legende en tant que tel est affichee dans un div independant
+			chaine = chaine + '<div id="legende">';
 			
+			// chaine : premier interval pour les valeurs 'null'
 			chaine = chaine + '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 			var o = 1;
@@ -116,6 +125,9 @@ function initdiscretisation(){
 				discretize[o] = disc_var ;
 				o += 1 ;
 			}
+			
+			chaine += '</div>' ;
+			
 			$('colorClasses').innerHTML = chaine;
 			new Control.ColorPicker(0);
 			for (var i=1;nbCla>=i;i++) {
@@ -151,11 +163,14 @@ function initdiscretisation(){
 				//$('nbClasses').innerHTML = nbCla;
 				nbClasses = nbCla ;
 				
+				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">description</a>';
-
+					variable_courante + '" id="lien_desc">variable description</a>';
 				
-				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+				// chaine : la legende en tant que tel est affichee dans un div independant
+				chaine = chaine + '<div id="legende">';
+				
+				chaine = chaine + '<p>0 <input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 				var tab_couleur_disc = chercherCouleursDisc('#FF000','#FFFFFF', nbClasses);
 				
@@ -195,6 +210,8 @@ function initdiscretisation(){
 					c += 1;
 				}
 				
+				chaine += '</div>' ;
+				
 				// integration dans le code HTML et association de colorpickers par classe
 				$('colorClasses').innerHTML = chaine;
 				new Control.ColorPicker(0);
@@ -216,9 +233,15 @@ function initdiscretisation(){
 				// generer le tableau d'intervals
 				var typeDisc = 'equivalence';
 				var tabIntervals = chercherIntervals(nbCla, valMini, valMaxi, typeDisc);
+				var chaineIntervals = '' ;
+				
+				for (var elt=0; elt<=nbCla; elt+=1) {
+					chaineIntervals += tabIntervals[elt] + ';' ;
+				}
+				alert(tabIntervals[2]);
 				
 				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs
-				var tab_couleur_disc = chercherCouleursDisc('#FF000','#FFFFFF', nbClasses);
+				var tab_couleur_disc = chercherCouleursDisc('#FF0000','#FFFFFF', nbClasses);
 				
 				for (var i in varQual){
 					nbCla += 1;
@@ -231,10 +254,23 @@ function initdiscretisation(){
 
 				//$('nbClasses').innerHTML = nbCla;
 				nbClasses = nbCla ;
-				var chaine = '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+				
+				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
+				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">variable description</a><br/>';
+				
+				// une zone de saisie pour choisir manuellement les intervals
+				chaine += valMini + '<input type="text" id="choixIntervals" value="' + chaineIntervals + '"/>' + 
+					valMaxi + '<button type="button" onclick="changerIntervals($(\'choixIntervals\').value)">Change</button>' ;
+				
+				// chaine : la legende en tant que tel est affichee dans un div independant
+				chaine = chaine + '<div id="legende">';
+				
+				// chaine : une case de legende pour les valeurs 'null'
+				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 				var o = 1;
 				
-				// premier interval
+				// chaine : premier interval
 				chaine += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
 				disc_var =[];
 				disc_var['valeur'] = o;
@@ -245,7 +281,7 @@ function initdiscretisation(){
 				discretize[o] = disc_var ;
 					
 				o += 1 ;			
-				// remplissage du tableau a envoyer avec les intervals de valeurs...
+				// remplissage du tableau a envoyer et de la chaine avec les intervals de valeurs...
 				for (var i=1; i<nbCla; i++) {
 					disc_var =[];
 					disc_var['valeur'] = i;
@@ -274,7 +310,9 @@ function initdiscretisation(){
 					o += 1;
 					c += 1;
 				}
-		
+				
+				chaine += '</div>' ;
+				
 				$('colorClasses').innerHTML = chaine;
 				new Control.ColorPicker(0);
 				for (var i=1;i<=nbCla;i++) {
@@ -285,6 +323,56 @@ function initdiscretisation(){
 	}
 
 	reInit2(parseInt($('choix_annee').innerHTML));
+}
+
+function changerIntervals(choixIntervals){
+	var ch = $('choixIntervals').value ;
+	var reg = new RegExp("[;]+", "g") ;
+	var tabCh = ch.split(reg) ;
+	if (verifierCoherenceIntervals(tabCh) == 1){
+		nbClasses = 5
+		tabIntervals = tabCh ;
+		var tab_couleur_disc = chercherCouleursDisc('#FF0000','#FFFFFF', nbClasses);
+		
+		// chaine : une case de legende pour les valeurs 'null'
+		chaine = '' ;
+		chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+		var o = 1;
+		
+		// chaine : premier interval
+		chaine += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
+		disc_var =[];
+		disc_var['valeur'] = o;
+		disc_var['isFirstValue'] = 1 ;
+		disc_var['mini'] = tabIntervals[0] ;				
+		disc_var['maxi'] = tabIntervals[1] ;				
+		disc_var['couleur'] = tab_couleur_disc[o];				
+		discretize[o] = disc_var ;
+			
+		o += 1 ;			
+		// remplissage du tableau a envoyer et de la chaine avec les intervals de valeurs...
+		for (var i=1; i<5; i++) {
+			disc_var =[];
+			disc_var['valeur'] = i;
+			disc_var['isFirstValue'] = 0 ;
+			disc_var['mini'] = tabIntervals[i] ;					
+			disc_var['maxi'] = tabIntervals[i+1] ;					
+			disc_var['couleur'] = tab_couleur_disc[o];				
+			discretize[o] = disc_var ;
+			chaine += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
+			
+			o += 1 ;
+		}
+		
+		$('legende').innerHTML = chaine ;
+		new Control.ColorPicker(0);
+		for (var i=1;i<=nbClasses;i++) {
+			new Control.ColorPicker(i);
+		}	
+	} 
+	else{
+		alert('mauvais !') ;
+	}
 }
 
 function chercherNbClasses(mini, maxi, nbVal){
@@ -338,3 +426,6 @@ function chercherCouleursDisc(coul1, coul2, nbCla){
 	// correction du gamma
 }
 
+function verifierCoherenceIntervals(tabInter){
+	return 1 ;
+}
