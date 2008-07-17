@@ -1258,3 +1258,27 @@ Processing CarteController#tableau (for 192.168.1.18 at 2008-07-15 16:06:44) [PO
   Parameters: {"action"=>"tableau", "annee"=>"1992", "id"=>"lt35lg110rd2000", "dataset"=>"6", "controller"=>"carte", "variable"=>"12"}
 Rendering carte/tableau
 Completed in 0.00642 (155 reqs/sec) | Rendering: 0.00102 (15%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/carte/tableau]
+
+
+Processing DataController#png (for 192.168.1.18 at 2008-07-17 16:51:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"dataset_id"=>"6", "action"=>"png", "controller"=>"data", "variable_id"=>"12"}
+Completed in 2.35516 (0 reqs/sec) | Rendering: 0.00085 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/data/6/col/12/png]
+
+
+Processing DataController#png (for 192.168.1.18 at 2008-07-17 16:51:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"dataset_id"=>"6", "action"=>"png", "controller"=>"data", "variable_id"=>"11"}
+Completed in 0.17078 (5 reqs/sec) | Rendering: 0.00041 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/data/6/col/11/png]
+
+
+Processing DataController#png (for 192.168.1.18 at 2008-07-17 16:51:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"dataset_id"=>"6", "action"=>"png", "controller"=>"data", "variable_id"=>"12"}
+Completed in 0.15440 (6 reqs/sec) | Rendering: 0.00042 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/data/6/col/12/png]
+
+
+Processing DataController#png (for 192.168.1.18 at 2008-07-17 16:51:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--8f31c8352f4841f714c4c651142c714d04338646
+  Parameters: {"dataset_id"=>"6", "action"=>"png", "controller"=>"data", "variable_id"=>"13"}
+Completed in 0.27394 (3 reqs/sec) | Rendering: 0.00042 (0%) | DB: 0.00000 (0%) | 200 OK [http://192.168.1.18/data/6/col/13/png]
