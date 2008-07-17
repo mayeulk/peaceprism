@@ -21,6 +21,16 @@ class VariablesController < ApplicationController
     end
   end
 
+  def show_description
+    @variable = Variable.find(:first, :conditions => 'var_id = \''+params[:variable_id]+'\' and dataset_id = \'' +params[:dataset_id]+'\'')
+    @var_label = VarLabel.find(:all, :order => "value ASC", :conditions => 'var_id = \''+params[:variable_id]+'\' and dataset_id = \'' +params[:dataset_id]+'\'')
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @variable }
+    end
+  end
+
   # GET /variables/new
   # GET /variables/new.xml
   def new

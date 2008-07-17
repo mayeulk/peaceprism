@@ -1,11 +1,14 @@
 Variable: <%= select_tag 'variable', options_for_select(@vars,@vars[0]),
 	:onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
+	
 <form>	
+	<!-- 
 	Type: <span id="typeVar"></span><br/>
 	Format: <span id="formatVar"></span><br/>
 	Min: <span id="varMini">none</span><br/>
 	Max: <span id="varMaxi">none</span><br/>
 	Number of classes: <span id="nbClasses"></span>
+	-->
 	<div id='colorClasses'>
 	</div>
 	<!--rafraichir la carte avec les nouvelles couleurs-->
