@@ -34,6 +34,7 @@
     <script type="text/ecmascript" src="/javascripts/donnees_conflits.js"></script>
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
 	<script type="text/ecmascript" src="/javascripts/slider_event.js"></script>
+	<script type="text/javascript" src="/javascripts/frise.js"></script>
 
 <!-- chargement de scripts different traitant les objet SVG ou VML, selon qu'on est sous Firefox ou IE -->
 <% if @browser=="ie" %>
@@ -55,6 +56,7 @@
         	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
         	document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
         	document.getElementById("pays2").value=pays_survole;
+			afficherFrise(pays_survole);
         	old_pays_survole=pays_survole;        }
       	function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
         	b.value=val;
@@ -118,8 +120,11 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	countries in civil war.
 
 	<br/>
-	Country/zone: <%= text_field_tag :pays2 %>
+
+	Country/zone: <input type="text" id="pays2"/>
 	<br/>
+
+
 
 	Dataset : <%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
 	
@@ -148,13 +153,13 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 
 <div id="cadre_legende"/>
 
-<%= observe_field(:pays2,
-	:frequency => 0.1, # fonction reflex pour mettre a jour la frise
-    :update => 'frise',
-	:url => { :controller => 'carte', :action=> 'show_over' }, 
-	:with => "'id=' + $('pays2').value+'&dataset='+ $('datasets').value+'&variable='+ $('variable').value")
+<!-- <%= #observe_field(:pays2,
+	#:frequency => 0.1, # fonction reflex pour mettre a jour la frise
+    #:update => 'frise',
+	#:url => { :controller => 'carte', :action=> 'show_over' }, 
+	#:with => "'id=' + $('pays2').value+'&dataset='+ $('datasets').value+'&variable='+ $('variable').value")
     
-%>
+%> -->
 <!-- '&annee='+ $('choix_annee').innerHTML+ -->
 
 
@@ -207,11 +212,6 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 </script>
 
 <br/>
-<%= observe_field(:pays2,
-	:frequency => 0.1, # fonction reflex pour mettre a jour du tableau
-    :update => 'tabl_donnees',
-	:url =>  { :controller => 'carte', :action=> 'tableau' }, 
-    :with => "'id=' + $('pays2').value+'&annee='+ $('choix_annee').innerHTML+'&dataset='+ $('datasets').value+'&variable='+ $('variable').value") %>
 
 <br/>
 <br/>
