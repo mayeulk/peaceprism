@@ -1,20 +1,15 @@
+<p style="background-color:#FFFFCC; border-style:solid;">
+	Dataset reference: <%= auto_link(@citation) %>
+</p>
+<div>
 Variable: <%= select_tag 'variable', options_for_select(@vars,@vars[0]),
 	:onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
+</div>
+<br/>
+<span style="margin-right:10px; margin-top:10px; background-color:#DDDDDD; border-style:outset;" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);">Refresh map</span>
 	
-<form>	
-	<!-- 
-	Type: <span id="typeVar"></span><br/>
-	Format: <span id="formatVar"></span><br/>
-	Min: <span id="varMini">none</span><br/>
-	Max: <span id="varMaxi">none</span><br/>
-	Number of classes: <span id="nbClasses"></span>
-	-->
-	<div id='colorClasses'>
-	</div>
-	<!--rafraichir la carte avec les nouvelles couleurs-->
-</form>
-<!--
-<div onclick= "reInit2(parseInt($('info_date').innerHTML, 10), 1); afficherFrise(pays_survole);">Refresh map</div>
--->
-<div onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);">Refresh map</div>
+<!-- boutons de lancement et d'arret du film -->
+<span id="film_play" style="margin-left:10px; background-color:#DDDDDD; margin-top:10px; border-style:outset;" onclick="lire_film=1;film();">Start movie</span>
+
+<span id="film_stop" style="margin-left:10px; background-color:#DDDDDD; margin-top:10px; border-style:outset;" onclick="lire_film=0;">Stop movie</span>
 

@@ -32,8 +32,8 @@ function initdiscretisation(){
 		discretize[0] = disc_var ;	
 		
 		// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-		var chaine = '<a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">variable description</a>';
+		var chaine = varInfo['name'] + ' : <a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">var description</a>';
 					
 		// lien vers le graphique de cette variable 
 		chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
@@ -50,7 +50,7 @@ function initdiscretisation(){
 		var u=0;	
 		for (var i = 0; 2>i ; i++){
 			
-			chaine += '<p><span id="val' + i+1 + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + (i+1) + '" value="' + tab_couleur[i+1] + '"/><span id="intitule' + i+1 + '">' + i + '</span></p>';
+			chaine += '<p><span id="val' + i+1 + '"></span> <input type="text" class="colorfields" id="colorfield' + (i+1) + '" value="' + tab_couleur[i+1] + '"/><span id="intitule' + i+1 + '">' + i + '</span></p>';
 			disc_var['valeur'] = u;
 			disc_var['mini'] = '' + u ;
 			disc_var['isFirstValue'] = 1 ;			
@@ -60,7 +60,7 @@ function initdiscretisation(){
 			u=u+1;			
 		}
 		chaine += '</div>' ;
-		$('colorClasses').innerHTML = chaine;		
+		$('cadre_legende').innerHTML = chaine;		
 
 		//...puis avec les valeurs qualitatives
 		var varQual = varInfo['var_qual']; // les autres variables qualitatives
@@ -102,8 +102,8 @@ function initdiscretisation(){
 			discretize[0] = disc_var ;
 			
 			// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-			var chaine = '<a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">variable description</a>';
+			var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + '</b></span> : <a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">var description</a>';
 
 			// lien vers le graphique de cette variable 
 			chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
@@ -113,7 +113,7 @@ function initdiscretisation(){
 			chaine = chaine + '<div id="legende">';
 			
 			// chaine : premier interval pour les valeurs 'null'
-			chaine = chaine + '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+			chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 			var o = 1;
 			
@@ -123,7 +123,7 @@ function initdiscretisation(){
 	
 			chaine += '</div>' ;
 			
-			$('colorClasses').innerHTML = chaine;
+			$('cadre_legende').innerHTML = chaine;
 			new Control.ColorPicker(0);
 			for (var i=1;nbClasses>=i;i++) {
 				new Control.ColorPicker(i);
@@ -148,8 +148,8 @@ function initdiscretisation(){
 				discretize[0] = disc_var ;			
 			
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">variable description</a>';
+				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + '</b></span> : <a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">var description</a>';
 					
 				// lien vers le graphique de cette variable 
 				chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
@@ -158,7 +158,7 @@ function initdiscretisation(){
 				// chaine : la legende en tant que tel est affichee dans un div independant
 				chaine = chaine + '<div id="legende">';
 				
-				chaine = chaine + '<p>0 <input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+				chaine = chaine + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 				var tab_couleur_disc = chercherCouleursDisc('#FF000','#FFFFFF', nbClasses);
 				
@@ -178,7 +178,7 @@ function initdiscretisation(){
 				chaine += '</div>' ;
 				
 				// integration dans le code HTML et association de colorpickers par classe
-				$('colorClasses').innerHTML = chaine;
+				$('cadre_legende').innerHTML = chaine;
 				new Control.ColorPicker(0);
 				for (var i=1;nbClasses>=i;i++) {
 					new Control.ColorPicker(i);
@@ -221,16 +221,16 @@ function initdiscretisation(){
 				nbClasses = nbCla ;
 				
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">variable description</a><br/>';
+				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + '</b></span> : <a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">var description</a> -';
 				
 				// lien vers le graphique de cette variable 
-				chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_graph">Graph</a>';
+				chaine += '<a href="/graph/dis/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_graph">Graph</a><br/>';
 				
 				// une zone de saisie pour choisir manuellement les intervals
 				chaine += '<span id="vMini">' + valMini + '</span>' +
-					'<input type="text" id="choixIntervals" value="' + chaineIntervals + '"/>' + 
+					'; <input type="text" id="choixIntervals" value="' + chaineIntervals + '"/> ;' + 
 					'<span id="vMaxi">' + valMaxi + '</span>' +
 					'<button type="button" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + $(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">Change</button>' ;
 				
@@ -289,7 +289,7 @@ function initdiscretisation(){
 
 				chaine += '</div>' ;
 				
-				$('colorClasses').innerHTML = chaine;
+				$('cadre_legende').innerHTML = chaine;
 				
 				
 				afficherLegendeQuant($('vMini').innerHTML + ';' + $('choixIntervals').value + ';' + $('vMaxi').innerHTML);
@@ -318,10 +318,9 @@ function afficherLegendeQual (varQual, tab_couleur, o){
 	var chaine2 = '' ;
 	var c=2 ;
 	for (var i in varQual) {
-		chaine2 += '<p><span id="val' + o + '">' + i +
-		  '</span> <input type="text" class="colorfields" id="colorfield' + o +
-		  '" value="' + tab_couleur[c] + '"/><a href="/var_label/'+ dataset_courant + "/" + 
-		  variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + '</a></p>';
+		chaine2 += '<p><span id="val' + o + '"> </span> <input type="text" class="colorfields" id="colorfield' + o +
+		  '" value="' + tab_couleur[c-1] + '"/> <a href="/var_label/'+ dataset_courant + "/" + 
+		  variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + ' (' + i + ')</a></p>';
 		  
 		disc_var = [];
 		disc_var['valeur'] = i;
@@ -362,11 +361,11 @@ function afficherLegendeQuant(choixIntervals){
 		disc_var['signification'] = 'No Data';
 		discretize[0] = disc_var ;			
 
-		chaine3 = chaine3 + '<p>0 <input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+		chaine3 = chaine3 + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 		var o = 1;
 		
 		// chaine : premier interval
-		chaine3 += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
+		chaine3 += '<p><span id="val' + o + '"></span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
 		disc_var =[];
 		disc_var['valeur'] = o;
 		disc_var['isFirstValue'] = 1 ;
@@ -387,7 +386,7 @@ function afficherLegendeQuant(choixIntervals){
 			disc_var['couleur'] = tab_couleur_disc[o];
 			disc_var['signification'] = '';					
 			discretize[o] = disc_var ;
-			chaine3 += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
+			chaine3 += '<p><span id="val' + o + '"></span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
 			
 			o += 1 ;
 		}

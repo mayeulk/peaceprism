@@ -27,6 +27,8 @@ before_filter :initialise_var
   # avec la liste deroulante de variables
   def refresh_var
     @dataset_choisi = params[:datas]
+    @citation = ActiveRecord::Base.connection.select_value(
+    "Select data_set_citation from datasets where id = #{@dataset_choisi}")
     @var_select = ActiveRecord::Base.connection.select_all(
        "SELECT var_id, name, long_name from variables 
           where (kind = 'monadic') and format != 'string'
