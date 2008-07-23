@@ -13,5 +13,8 @@ Variable: <%= select_tag 'variable', options_for_select(@vars,@vars[0]),
 	</div>
 	<!--rafraichir la carte avec les nouvelles couleurs-->
 </form>
-<div onclick= "reInit2(parseInt($('info_date').innerHTML, 10), 1);">Refresh map</div>
+<!--
+<div onclick= "reInit2(parseInt($('info_date').innerHTML, 10), 1); afficherFrise(pays_survole);">Refresh map</div>
+-->
+<div onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);">Refresh map</div>
 

@@ -50,8 +50,9 @@ function reInit2(annee){
 				}
 				else {					
 					// var nbClas = parseInt($('nbClasses').innerHTML) ;
-					for (var e = 0; e <= nbClasses; e++) {
+					for (var e = 1; e <= nbClasses; e++) {
 						info = discretize[e] ;
+			
 						if (info['isFirstValue'] == 1){
 							if ((parseInt(data_year[k]) <= info['maxi'])&&(parseInt(data_year[k]) >= info['mini'])){
 								colorierPays(paysSVG, '#' + info['couleur']);

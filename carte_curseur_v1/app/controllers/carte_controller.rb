@@ -108,5 +108,18 @@ before_filter :initialise_var
     render(:nothing => true) # affiche un partial vide ("")
     end
   end
- 
+end
+
+def auto_complete_for_message_cc
+  auto_complete_responder_for_contacts params[:message][:cc]
+end
+
+private
+def auto_complete_responder_for_contacts(value)
+  @contacts = Dataset.find(:all, 
+    :conditions => [ 'LOWER(name) LIKE ?',
+    '%' + value.downcase + '%' ], 
+    :order => 'name ASC',
+    :limit => 8)
+  render :partial => 'contacts'
 end

@@ -6,16 +6,18 @@
 
 discretize = new Array() ; // variable globale, il contiendra les parametres
 							// des variables a afficher (valeur, couleur...)
-
+dataset_courant = '';
+variable_courante = '';
 // fonction qui rempli le tableau discretize en fonction de la variable choisie,
 // c'est a dire en fonction des infos recuperees dans le json associe
 function initdiscretisation(){
 	// le tableau de couleurs discretisees sera genere par une fonction js automatique
 	var tab_couleur = new Array('FFFFFF', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', '000000');
 	var varInfo = tab['info'];
-	var dataset_courant = varInfo['dataset_id'];
-	var variable_courante = varInfo['var_id'];
+	dataset_courant = varInfo['dataset_id'];
+	variable_courante = varInfo['var_id'];
 	discretize = [] ;
+	nbClasses = 0 ;
 	// $('typeVar').innerHTML = varInfo['type'];
 	// $('formatVar').innerHTML = varInfo['format'];
 	
@@ -52,8 +54,7 @@ function initdiscretisation(){
 			disc_var['maxi'] = '' + u ;			
 			disc_var['couleur'] = tab_couleur[u];
 			discretize[i+1] = disc_var ;
-			u=u+1;
-			
+			u=u+1;			
 		}
 		chaine += '</div>' ;
 		$('colorClasses').innerHTML = chaine;		
@@ -90,18 +91,12 @@ function initdiscretisation(){
 		if (varInfo['type'] == 'qualitatif'){
 			chaine='';
 			var varQual = varInfo['var_qual']; // recuperation du hash des varibles qualitatives
-			var nbCla = 0 ;
-			for (var i in varQual){
-				nbCla += 1;
-			}
+
 			var disc_var = new Array() ;			
 			disc_var['valeur'] = 'null';
 			disc_var['couleur'] = 'C3C3C3';
 			disc_var['signification'] = 'No Data' ;
-			discretize[0] = disc_var ;			
-
-			//$('nbClasses').innerHTML = nbCla;
-			nbClasses = nbCla ;
+			discretize[0] = disc_var ;
 			
 			// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 			var chaine = '<a href="/variable/' + dataset_courant + '/' + 
@@ -114,26 +109,16 @@ function initdiscretisation(){
 			chaine = chaine + '<p>0<input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 			var o = 1;
-			for (var i in varQual) {
-				chaine += '<p><span id="val' + o + '">'+ i +'</span> <input type="text" class="colorfields" id="colorfield' + 
-					o + '" value="' + tab_couleur[o] + '"></input><a href="/var_label/'+ dataset_courant + "/" + 
-					variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + '(' + i + ')</a></p>';
-				disc_var =[];
-				disc_var['valeur'] = i;
-				disc_var['mini'] = i ;
-				disc_var['isFirstValue'] = 1 ;				
-				disc_var['maxi'] = i ;				
-				disc_var['couleur'] = tab_couleur[o];
-				disc_var['signification'] = varQual[i] ;				
-				discretize[o] = disc_var ;
-				o += 1 ;
-			}
 			
+			var tr1 = afficherLegendeQual(varQual, tab_couleur, o);
+			ch1 = tr1[1] ;
+			chaine += ch1 ;			
+	
 			chaine += '</div>' ;
 			
 			$('colorClasses').innerHTML = chaine;
 			new Control.ColorPicker(0);
-			for (var i=1;nbCla>=i;i++) {
+			for (var i=1;nbClasses>=i;i++) {
 				new Control.ColorPicker(i);
 			}
 		}
@@ -147,15 +132,6 @@ function initdiscretisation(){
 				var valMini = varInfo['mini'];
 				var valMaxi = varInfo['maxi'];				
 				
-				var nbCla = 0 ;
-				for (var i in varQualOrdo){
-					nbCla += 1;
-				}
-				
-				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs				
-				for (var i in varQual){
-					nbCla += 1;
-				}
 
 				var disc_var = new Array() ;
 				
@@ -163,10 +139,7 @@ function initdiscretisation(){
 				disc_var['couleur'] = 'C3C3C3';
 				disc_var['signification'] = 'No Data' ;
 				discretize[0] = disc_var ;			
-
-				//$('nbClasses').innerHTML = nbCla;
-				nbClasses = nbCla ;
-				
+			
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
 					variable_courante + '" id="lien_desc">variable description</a>';
@@ -180,53 +153,27 @@ function initdiscretisation(){
 				
 				var o = 1;
 				
-				// remplissage du tableau a envoyer avec les valeurs ordonnees...
-				for (var i in varQualOrdo) {
-					chaine += '<p><span id="val' + o + '">'+
-						i +'</span> <input type="text" class="colorfields" id="colorfield' +
-						o + '" value="' + tab_couleur_disc[o] + '"/><a href="/var_label/'+ dataset_courant + "/" + 
-						variable_courante + "/" + i +'" id="intitule' + o + '">' + varQualOrdo[i] + '(' + i + ')</a></p>';
-					disc_var =[];
-					disc_var['valeur'] = i;
-					disc_var['mini'] = i ;
-					disc_var['isFirstValue'] = 1 ;					
-					disc_var['maxi'] = i ;					
-					disc_var['couleur'] = tab_couleur_disc[o];
-					disc_var['signification'] = varQualOrdo[i] ;
-					discretize[o] = disc_var ;
-					o += 1 ;
-				}
+				// remplissage du tableau a envoyer avec les valeurs ordonnees...				
+				var tr1 = afficherLegendeQual(varQualOrdo, tab_couleur_disc, o);
+				ch1 = tr1[1] ;
+				chaine += ch1 ;
+				o = tr1[0] ;
+				
 				//...puis avec les valeurs qualitatives
-				var c=2 ;
-				for (var i in varQual) {
-					chaine += '<p><span id="val' + o + '">' + i +
-					  '</span> <input type="text" class="colorfields" id="colorfield' + o +
-					  '" value="' + tab_couleur[c] + '"/><a href="/var_label/'+ dataset_courant + "/" + 
-					  variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + '(' + i + ')</a></p>';
-					  
-					disc_var = [];
-					disc_var['valeur'] = i;
-					disc_var['mini'] = i;
-					disc_var['isFirstValue'] = 1;
-					disc_var['maxi'] = i;
-					disc_var['couleur'] = tab_couleur[c];
-					disc_var['signification'] = varQual[i] ;
-					discretize[o] = disc_var;
-					o += 1;
-					c += 1;
-				}
+				var tr2 = afficherLegendeQual(varQual, tab_couleur, o);
+				ch2 = tr2[1];
+				chaine += ch2 ;
 				
 				chaine += '</div>' ;
 				
 				// integration dans le code HTML et association de colorpickers par classe
 				$('colorClasses').innerHTML = chaine;
 				new Control.ColorPicker(0);
-				for (var i=1;nbCla>=i;i++) {
+				for (var i=1;nbClasses>=i;i++) {
 					new Control.ColorPicker(i);
 				}			
 			}
-			else{
-				
+			else{				
 				////////////////////////// quatrieme cas : variable quantitative ///////////////////////
 				var varQual = varInfo['var_qual'];
 				var valMini = varInfo['mini'];
@@ -241,15 +188,14 @@ function initdiscretisation(){
 				var tabIntervals = chercherIntervals(nbCla, valMini, valMaxi, typeDisc);
 				var chaineIntervals = '' ;
 				
-				for (var elt=0; elt<nbCla; elt+=1) {
+				for (var elt=1; elt<nbCla - 1; elt+=1) {
 					chaineIntervals += tabIntervals[elt] + ';' ;
 				}
 				chaineIntervals += tabIntervals[elt] ;
-				//alert(tabIntervals[2]);
-				
+								
 				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs
-				var tab_couleur_disc = chercherCouleursDisc('#FF0000','#FFFFFF', nbClasses);
-				
+				var tab_couleur_disc = chercherCouleursDisc('#FF0000','#FFFFFF', nbClasses);				
+
 				for (var i in varQual){
 					nbCla += 1;
 				}
@@ -268,12 +214,15 @@ function initdiscretisation(){
 					variable_courante + '" id="lien_desc">variable description</a><br/>';
 				
 				// une zone de saisie pour choisir manuellement les intervals
-				chaine += valMini + '<input type="text" id="choixIntervals" value="' + chaineIntervals + '"/>' + 
-					valMaxi + '<button type="button" onclick="changerIntervals($(\'choixIntervals\').value)">Change</button>' ;
+				chaine += '<span id="vMini">' + valMini + '</span>' +
+					'<input type="text" id="choixIntervals" value="' + chaineIntervals + '"/>' + 
+					'<span id="vMaxi">' + valMaxi + '</span>' +
+					'<button type="button" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + $(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">Change</button>' ;
 				
 				// chaine : la legende en tant que tel est affichee dans un div independant
 				chaine = chaine + '<div id="legende">';
 				
+
 				// chaine : une case de legende pour les valeurs 'null'
 				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 				var o = 1;
@@ -322,9 +271,14 @@ function initdiscretisation(){
 					c += 1;
 				}
 				
+
 				chaine += '</div>' ;
 				
 				$('colorClasses').innerHTML = chaine;
+				
+				
+				afficherLegendeQuant($('vMini').innerHTML + ';' + $('choixIntervals').value + ';' + $('vMaxi').innerHTML);
+				
 				new Control.ColorPicker(0);
 				for (var i=1;i<=nbCla;i++) {
 					new Control.ColorPicker(i);
@@ -332,7 +286,6 @@ function initdiscretisation(){
 			}			
 		}
 	}
-
 	reInit2(parseInt($('choix_annee').innerHTML));
 }
 
@@ -347,9 +300,10 @@ function afficherLegendeQual (varQual, tab_couleur, o){
 	nbClasses = nbClasses + nbCla ;	
 
 	//...puis avec les valeurs qualitatives
+	var chaine2 = '' ;
 	var c=2 ;
 	for (var i in varQual) {
-		chaine += '<p><span id="val' + o + '">' + i +
+		chaine2 += '<p><span id="val' + o + '">' + i +
 		  '</span> <input type="text" class="colorfields" id="colorfield' + o +
 		  '" value="' + tab_couleur[c] + '"/><a href="/var_label/'+ dataset_courant + "/" + 
 		  variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + '</a></p>';
@@ -360,61 +314,78 @@ function afficherLegendeQual (varQual, tab_couleur, o){
 		disc_var['isFirstValue'] = 1;
 		disc_var['maxi'] = i;
 		disc_var['couleur'] = tab_couleur[c];
+		disc_var['signification'] = varQual[i] ;
 		discretize[o] = disc_var;
 		o += 1;
 		c += 1;
 	}
-	return chaine ;
+	var truc = new Array() ;
+	truc[0] = o ;
+	truc[1] = chaine2 ;
+	return truc ;
 }
 
-function changerIntervals(choixIntervals){
-	var ch = $('choixIntervals').value ;
+function afficherLegendeQuant(choixIntervals){
+	var ch = choixIntervals ;
 	var reg = new RegExp("[;]+", "g") ;
 	var tabCh = ch.split(reg) ;
+	
 	if (verifierCoherenceIntervals(tabCh) == 0){
-		//alert(discretize);
-		nbClasses = 5
-		tabIntervals = tabCh ;
+		
+		nbClasses = tabCh.length - 1 ;
+		var tabIntervals = tabCh ;
+		
 		var tab_couleur_disc = chercherCouleursDisc('#FF0000','#FFFFFF', nbClasses);
 		
 		// chaine : une case de legende pour les valeurs 'null'
-		chaine = '' ;
-		chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+		var chaine3 = '' ;
+		discretize = [] ;
+		var disc_var = new Array() ;
+		
+		disc_var['valeur'] = 'null';
+		disc_var['couleur'] = 'C3C3C3';
+		disc_var['signification'] = 'No Data';
+		discretize[0] = disc_var ;			
+
+		chaine3 = chaine3 + '<p>0 <input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 		var o = 1;
 		
 		// chaine : premier interval
-		chaine += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
+		chaine3 += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
 		disc_var =[];
 		disc_var['valeur'] = o;
 		disc_var['isFirstValue'] = 1 ;
 		disc_var['mini'] = tabIntervals[0] ;				
 		disc_var['maxi'] = tabIntervals[1] ;				
-		disc_var['couleur'] = tab_couleur_disc[o];				
+		disc_var['couleur'] = tab_couleur_disc[o];
+		disc_var['signification'] = '';				
 		discretize[o] = disc_var ;
 			
 		o += 1 ;			
 		// remplissage du tableau a envoyer et de la chaine avec les intervals de valeurs...
-		for (var i=1; i<5; i++) {
+		for (var i=1; i<nbClasses; i++) {
 			disc_var =[];
-			disc_var['valeur'] = i;
+			disc_var['valeur'] = i+1;
 			disc_var['isFirstValue'] = 0 ;
 			disc_var['mini'] = tabIntervals[i] ;					
 			disc_var['maxi'] = tabIntervals[i+1] ;					
-			disc_var['couleur'] = tab_couleur_disc[o];				
+			disc_var['couleur'] = tab_couleur_disc[o];
+			disc_var['signification'] = '';					
 			discretize[o] = disc_var ;
-			chaine += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
+			chaine3 += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
 			
 			o += 1 ;
 		}
 		
-		$('legende').innerHTML = chaine ;
+		$('legende').innerHTML = chaine3 ;
 		new Control.ColorPicker(0);
 		for (var i=1;i<=nbClasses;i++) {
 			new Control.ColorPicker(i);
-		}	
+		}
+		reInit2(annee_en_cours);
 	} 
 	else{
-		alert('mauvais !') ;
+		alert('wrong order of values !') ;
 	}
 }
 
@@ -470,14 +441,16 @@ function chercherCouleursDisc(coul1, coul2, nbCla){
 }
 
 function verifierCoherenceIntervals(tabInter){
-	alert(discretize);
 	var err = 0 ;
 	nbCl = tabInter.length;
+	
 	for (var i=0; i<(nbCl-1); i++){
 		if (parseInt(tabInter[i]) > parseInt(tabInter[i+1])){
 			err += 1 ;
 		}
-		
+		if (tabInter[i].length < 1){
+			err += 1 ;
+		}	
 	}
 	return err ;
 }
