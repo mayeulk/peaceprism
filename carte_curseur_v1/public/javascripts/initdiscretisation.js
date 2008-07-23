@@ -34,7 +34,10 @@ function initdiscretisation(){
 		// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 		var chaine = '<a href="/variable/' + dataset_courant + '/' + 
 					variable_courante + '" id="lien_desc">variable description</a>';
-	
+					
+		// lien vers le graphique de cette variable 
+		chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_graph">Graph</a>';
 		// chaine : la legende en tant que tel est affichee dans un div independant
 		chaine = chaine + '<div id="legende">';
 			
@@ -102,6 +105,10 @@ function initdiscretisation(){
 			var chaine = '<a href="/variable/' + dataset_courant + '/' + 
 					variable_courante + '" id="lien_desc">variable description</a>';
 
+			// lien vers le graphique de cette variable 
+			chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_graph">Graph</a>';
+
 			// chaine : la legende en tant que tel est affichee dans un div independant
 			chaine = chaine + '<div id="legende">';
 			
@@ -143,6 +150,10 @@ function initdiscretisation(){
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
 					variable_courante + '" id="lien_desc">variable description</a>';
+					
+				// lien vers le graphique de cette variable 
+				chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_graph">Graph</a>';
 				
 				// chaine : la legende en tant que tel est affichee dans un div independant
 				chaine = chaine + '<div id="legende">';
@@ -212,6 +223,10 @@ function initdiscretisation(){
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 				var chaine = '<a href="/variable/' + dataset_courant + '/' + 
 					variable_courante + '" id="lien_desc">variable description</a><br/>';
+				
+				// lien vers le graphique de cette variable 
+				chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_graph">Graph</a>';
 				
 				// une zone de saisie pour choisir manuellement les intervals
 				chaine += '<span id="vMini">' + valMini + '</span>' +
