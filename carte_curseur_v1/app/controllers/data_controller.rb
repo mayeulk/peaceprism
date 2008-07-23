@@ -66,38 +66,4 @@ class DataController < ApplicationController
     render :inline =>    @data
   end
 
-  def png
-  fichier = "/home/mk/PRISM/eclipse_workspace/carte_curseur_v1/public/graphs/hist" +
-    params[:dataset_id] + "-" + params[:variable_id] + ".png"
-  
-    if  true #!File.exists?(fichier)
-#require 'R4rb' #mis dans environment.rb
-   @dataset = Dataset.find(params[:dataset_id])
-   @variable = Variable.find(:first, :conditions => "var_id = #{params[:variable_id]} AND dataset_id = #{params[:dataset_id]}")
-   @data = ActiveRecord::Base.connection.select_values("SELECT var#{@variable.var_id} as data from dataset_#{@dataset.id} where var#{@variable.var_id} IS NOT NULL")
-#    @pays = ActiveRecord::Base.connection.select_values("SELECT var#{@dataset.identifierccode1_var} as ccode from dataset_#{@dataset.id} group by var#{@dataset.identifierccode1_var} ORDER BY var#{@dataset.identifierccode1_var} ASC")
-#    @annees = ActiveRecord::Base.connection.select_values("SELECT var#{@dataset.identifieryear_var} as annee from dataset_#{@dataset.id} group by var#{@dataset.identifieryear_var} ORDER BY var#{@dataset.identifieryear_var} ASC")
-      Array.initR
-      @dataset.data_set_full_name.to_a > :data_set_full_name
-      @variable.name.to_a > :variable_name
-      #@variable.long_name.to_a > :variable_long_name
-      @data > :data
-        ('png(filename="' + fichier + '")').to_R
-  #        'hist(x=as.numeric(data), main=variable_name, sub=data_set_full_name,xlab=variable_name)'.to_R
-        
-      if VarLabel.exists?(:dataset_id => @dataset.id, :var_id => @variable.var_id)
-        'barplot(table(as.numeric(data)), main=variable_name, sub=data_set_full_name,xlab=variable_name)'.to_R
-      else
-        'hist(as.numeric(data), main=variable_name, sub=data_set_full_name)'.to_R
-      end
-      
-      'dev.off()'.to_R
-    end
-    send_file(fichier, :type => 'image', :disposition => 'inline', :stream=> false)
-
-  end
-
-
-
-
 end
