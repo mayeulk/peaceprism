@@ -95,9 +95,6 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 -->
 <!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
 
-<!-- titre = remplacer par h1 ? -->
-<div id="titre">CARTE D'AFFICHAGE DES DONNEES SUR LES CONFLITS</div>
-
 <!-- le bouton pour fermer le volet navigation -->
 <img id="bascule_volet_navig_img" alt="Fermer" onclick="Effect.toggle(&quot;volet_navig&quot;,'blind',{duration:1.0, scaleX:false , scaleY: true });setTimeout('bascule_volet_navig()',800);" src="/images/navig/fermer0.gif" />
     
@@ -112,7 +109,12 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<img  id="navig_on_off" src="/images/navig/bd.png" 
     onclick="document.getElementById(&quot;navig_on_off&quot;).src=&quot;/images/navig/hg.png&quot;"/>
 -->
-	
+</div>
+
+<img id="bascule_volet_navig_img" alt="Fermer" onclick="Effect.toggle(&quot;volet_info&quot;,'blind',{duration:1.0, scaleX:false , scaleY: true });setTimeout('bascule_volet_navig()',800);" src="/images/navig/fermer0.gif" />
+ 
+
+<div id="volet_info">
 	<!-- 3 cases pour afficher les donnees rapides associees au slider -->
 	Year:
     <span id="choix_annee" size="3"> </span> ;
@@ -121,23 +123,13 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 
 	<br/>
 
-	Country/zone: <input type="text" id="pays2"/>
-	<br/>
-
-
-
 	Dataset : <%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
 	
-	afficher les zones de conflits : <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" value="oui"/>
+	| Show conflict areas: (<input type="text" class="colorfields" style="background:#A200C3;"/>)
+	<input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" value="oui"/>
+	
 	<div id="liste_var"></div>
 	<div id="essai"> </div>
-	<br/>
-	
-	<!-- boutons de lancement et d'arret du film -->
-    <span id="film_play" onclick="lire_film=1;film();">Start movie (1946-2003)</span>
-    <br/>
-    <span id="film_stop" onclick="lire_film=0;">Stop  movie</span>
-    <br/>
 
 </div>
 
@@ -151,7 +143,7 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
     <%= render :partial => "guy_carte_"+@browser %>
 </div>
 
-<div id="cadre_legende"/>
+<div id="cadre_legende"></div>
 
 <!-- <%= #observe_field(:pays2,
 	#:frequency => 0.1, # fonction reflex pour mettre a jour la frise
@@ -194,10 +186,15 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 						
 			<% end %>		
 		</div>
-		<div id="frise"></div>
+		<div class="fleche" onclick="sliderDate.setValueBy(1);">&gt;</div>
+		<div class="date"><%= @fin_periode %></div>
+		<div id="frise"></div>==> : <input type="text" id="pays2"/>
 	</div>
-	<div class="fleche" onclick="sliderDate.setValueBy(1);">&gt;</div>
-	<div class="date"><%= @fin_periode %></div>
+
+
+
+
+	
 </div>
 <script type="text/javascript">
 // <![CDATA[
@@ -212,6 +209,7 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 </script>
 
 <br/>
+
 
 <br/>
 <br/>
