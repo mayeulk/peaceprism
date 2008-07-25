@@ -2,11 +2,11 @@
 	Dataset reference: <%= auto_link(@citation) %>
 </p>
 <div>
-Variable: <%= select_tag 'variable', options_for_select(@vars,@vars[0]),
+<b>Variable:</b> <%= select_tag 'variable', options_for_select(@vars,@vars[0]),
 	:onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
 </div>
 <br/>
-<span style="margin-right:10px; margin-top:10px; background-color:#DDDDDD; border-style:outset;" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);">Refresh map</span>
+<span id="refresh_button" style="margin-right:10px; margin-top:10px; background-color:#DDDDDD; border-style:outset; cursor:pointer;" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);">Refresh map</span>
 	
 <!-- boutons de lancement et d'arret du film -->
 <span id="film_play" style="margin-left:10px; background-color:#DDDDDD; margin-top:10px; border-style:outset;" onclick="lire_film=1;film();">Start movie</span>

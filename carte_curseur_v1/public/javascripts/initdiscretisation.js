@@ -32,8 +32,8 @@ function initdiscretisation(){
 		discretize[0] = disc_var ;	
 		
 		// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-		var chaine = varInfo['name'] + ' : <a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">var description</a>';
+		var chaine = varInfo['name'] + ': <a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">Description</a>';
 					
 		// lien vers le graphique de cette variable 
 		chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
@@ -103,7 +103,7 @@ function initdiscretisation(){
 			
 			// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 			var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + '</b></span> : <a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">var description</a>';
+					variable_courante + '" id="lien_desc">Description</a>';
 
 			// lien vers le graphique de cette variable 
 			chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
@@ -148,8 +148,9 @@ function initdiscretisation(){
 				discretize[0] = disc_var ;			
 			
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + '</b></span> : <a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">var description</a>';
+				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + 
+					'</b></span> : <a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">Description</a>';
 					
 				// lien vers le graphique de cette variable 
 				chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
@@ -205,7 +206,7 @@ function initdiscretisation(){
 				chaineIntervals += tabIntervals[elt] ;
 								
 				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs
-				var tab_couleur_disc = chercherCouleursDisc('#FF0000','#FFFFFF', nbClasses);				
+				var tab_couleur_disc = chercherCouleursDisc('FF0000','FFFFFF', nbClasses);				
 
 				for (var i in varQual){
 					nbCla += 1;
@@ -221,15 +222,16 @@ function initdiscretisation(){
 				nbClasses = nbCla ;
 				
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + '</b></span> : <a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">var description</a> -';
+				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + 
+					'</b></span> : <a href="/variable/' + dataset_courant + '/' + 
+					variable_courante + '" id="lien_desc">Description</a> ';
 				
 				// lien vers le graphique de cette variable 
 				chaine += '<a href="/graph/dis/' + dataset_courant + '/' + 
 					variable_courante + '" id="lien_graph">Graph</a><br/>';
 				
 				// une zone de saisie pour choisir manuellement les intervals
-				chaine += '<span id="vMini">' + valMini + '</span>' +
+				chaine += ' <span id="vMini">' + valMini + '</span>' +
 					'; <input type="text" id="choixIntervals" value="' + chaineIntervals + '"/> ;' + 
 					'<span id="vMaxi">' + valMaxi + '</span>' +
 					'<button type="button" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + $(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">Change</button>' ;
@@ -302,6 +304,7 @@ function initdiscretisation(){
 		}
 	}
 	reInit2(parseInt($('choix_annee').innerHTML));
+	afficherFrise(old_pays_survole);
 }
 
 function afficherLegendeQual (varQual, tab_couleur, o){
@@ -327,7 +330,7 @@ function afficherLegendeQual (varQual, tab_couleur, o){
 		disc_var['mini'] = i;
 		disc_var['isFirstValue'] = 1;
 		disc_var['maxi'] = i;
-		disc_var['couleur'] = tab_couleur[c];
+		disc_var['couleur'] = tab_couleur[c-1];
 		disc_var['signification'] = varQual[i] ;
 		discretize[o] = disc_var;
 		o += 1;
@@ -349,7 +352,7 @@ function afficherLegendeQuant(choixIntervals){
 		nbClasses = tabCh.length - 1 ;
 		var tabIntervals = tabCh ;
 		
-		var tab_couleur_disc = chercherCouleursDisc('#FF0000','#FFFFFF', nbClasses);
+		var tab_couleur_disc = chercherCouleursDisc('FF0000','FFFFFF', nbClasses);
 		
 		// chaine : une case de legende pour les valeurs 'null'
 		var chaine3 = '' ;
@@ -397,6 +400,7 @@ function afficherLegendeQuant(choixIntervals){
 			new Control.ColorPicker(i);
 		}
 		reInit2(annee_en_cours);
+		afficherFrise(old_pays_survole);
 	} 
 	else{
 		alert('wrong order of values !') ;
@@ -447,8 +451,41 @@ function chercherCouleursDisc(coul1, coul2, nbCla){
 	// pour le fun
 	var tab_couleur_discr = new Array('FFFFFF', 'FFEEEE', 'FFD2D2', 'FFBBBB', 'FF9999', 'FF0000');
 
-	return tab_couleur_discr ;
+	var rgb1 = YAHOO.util.Color.hex2rgb( coul1 );
+	var rgb2 = YAHOO.util.Color.hex2rgb( coul2 );
 	
+	//alert('' + rgb1[0]+rgb1[1]+rgb1[2]+rgb2[0]+rgb2[1]+rgb2[2]);
+	
+	
+	var hsv1 = YAHOO.util.Color.rgb2hsv( rgb1[0], rgb1[1], rgb1[2] );
+	var hsv2 = YAHOO.util.Color.rgb2hsv( rgb2[0], rgb2[1], rgb2[2] );
+	
+	var diffHue = hsv1[0]*100 - hsv2[0]*100 ;
+	var diffSat = hsv1[1]*100 - hsv2[1]*100 ;
+	var diffVal = hsv1[2]*100 - hsv2[2]*100 ;
+	
+	//alert('' + hsv1[0]*100 + hsv1[1]*100 + hsv1[2]*100+ hsv2[0]*100 + hsv2[1]*100 + hsv2[2]*100);
+	//alert('' + diffHue + diffSat + diffVal);
+	
+	var tabHue = new Array();
+	var tabSat = new Array();
+	var tabVal = new Array();
+	var tabCoul = new Array();
+	var tabCoul2 = new Array();
+	
+	for(var i=0; i<=nbCla; i++){
+		//tabHue[i] = parseInt(hsv1[0]*100 + i*(diffHue/nbCla));
+		tabHue[i] = parseInt(hsv1[0]*100);
+		tabSat[i] = parseInt(hsv1[1]*100 - i*(diffSat/nbCla));
+		tabVal[i] = parseInt(hsv1[2]*100 + i*(diffVal/nbCla));
+		//alert('' + tabHue[i]+tabSat[i]+tabVal[i])
+		tabCoul2 = YAHOO.util.Color.hsv2rgb(tabHue[i]/100, tabSat[i]/100, tabVal[i]/100);
+		tabCoul[i] = YAHOO.util.Color.rgb2hex(tabCoul[0], tabCoul[1], tabCoul[2]);
+
+	}
+
+	//return tabCoul ;
+	return tab_couleur_discr ;
 	// transformer en numerique
 	// calcul des proportions
 	// correction du gamma

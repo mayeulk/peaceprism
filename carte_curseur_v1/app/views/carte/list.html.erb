@@ -55,7 +55,8 @@
         	pays_survole=pays_survole;
         	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
         	document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
-        	document.getElementById("pays2").value=pays_survole;
+			ti = document.getElementById(pays_survole).getAttribute("title") ;
+        	document.getElementById("pays2").value=ti;//pays_survole;
 			afficherFrise(pays_survole);
         	old_pays_survole=pays_survole;        }
       	function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
@@ -118,15 +119,15 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<!-- 3 cases pour afficher les donnees rapides associees au slider -->
 	Year:
     <span id="choix_annee" size="3"> </span> ;
-	<span id="nompays"> </span>
-	countries in civil war.
 
 	<br/>
 
-	Dataset : <%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
+	<b>Dataset: </b><%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
 	
-	| Show conflict areas: (<input type="text" class="colorfields" style="background:#A200C3;"/>)
-	<input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" value="oui"/>
+	. <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" onclick="reInit2(annee_en_cours);"/>
+	<input type="text" style="width:25px; background:#A200C3;"/>
+	Civil Conflicts (data source: <a href="http://www.prio.no/CSCW/Datasets/Armed-Conflict/">PRIO</a>)
+	
 	
 	<div id="liste_var"></div>
 	<div id="essai"> </div>
@@ -188,7 +189,7 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 		</div>
 		<div class="fleche" onclick="sliderDate.setValueBy(1);">&gt;</div>
 		<div class="date"><%= @fin_periode %></div>
-		<div id="frise"></div>==> : <input type="text" id="pays2"/>
+		<div id="frise"></div>=> <input type="text" id="pays2"/>
 	</div>
 
 

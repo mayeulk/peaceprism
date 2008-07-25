@@ -3,18 +3,14 @@
  */
 
 function afficherFrise(actuPays){
-	if (tab != "") {
-	
-	
+	if (tab != "") {	
 		var info = tab['info'];
 		var ann = tab['annees'];
 		var pays = tab['pays'];
-		var data = tab['data'];
-		
-		var long_annee = 10;
-		
-		//var actuPays = $('pays2').value ;
+		var data = tab['data'];		
+		var long_annee = 10;		
 		var p = 0
+		
 		while (pays[p] != actuPays) {
 			p += 1;
 		}
@@ -27,8 +23,7 @@ function afficherFrise(actuPays){
 		
 		for (var a = 0; a < ann.length; a++) {
 			tabDataPays[c] = (data[parseInt(ann[a])])[p];
-			//alert(tabDataPays[c]);
-			
+						
 			if (tabDataPays[c] == '#') {
 				coul = 'FFFFFF';
 				sign = 'Country dont exist';
@@ -56,7 +51,7 @@ function afficherFrise(actuPays){
 					}
 				}
 			}
-			ch += '<div title="' + ann[a] + ' : ' + sign + '(' + tabDataPays[c] + ')" style="height:20px; width:' + long_annee + 'px;background-color:#' + coul + ';float:left"> </div>';
+			ch += '<div title="' + ann[a] + ' : ' + sign + ' (' + tabDataPays[c] + ')" style="height:20px; width:' + long_annee + 'px;background-color:#' + coul + ';float:left"> </div>';
 			c += 1;
 		}
 		//alert(tabDataPays);
