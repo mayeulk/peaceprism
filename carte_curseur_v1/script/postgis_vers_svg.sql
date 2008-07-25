@@ -1,3 +1,15 @@
+
+
+ERROR:  could not access file "/usr/lib/postgresql/8.2/lib/liblwgeom.so.1.2": Aucun fichier ou dossier de ce type
+
+********** Erreur **********
+
+ERROR: could not access file "/usr/lib/postgresql/8.2/lib/liblwgeom.so.1.2": Aucun fichier ou dossier de ce type
+État SQL :58P01
+
+
+
+
 --------------------------------------- POSTGIS VERS SVG -------------------------------------------------
 -- la requete genere un fichier SVG a partir des tables 'world' et 'conflits_ext'
 
@@ -7,14 +19,14 @@ drop view test_geom;
 create view test_geom as
 (
 -- d'abord les grands pays (>2000 km2), tres simplifies : couleur  grise (lightgrey et black)
-select cntry_name, Scale(Simplify(the_geom, 10000),0.0001,0.0001,1) as the_geom
+select cntry_name, fips_cntry, world.begin, world.end, Scale(Simplify(the_geom, 10000),0.0001,0.0001,1) as the_geom
 -- assvg(Scale(Simplify(the_geom,echelle_de_simplif.),chgmt_echelle_x,chgmt_echelle_y,?), 0:absolute 1:relative,precision)
 -- apparemment, simplifier les frontieres joue aussi sur la vitesse de demasquage des zones de conflit
-from world where (world.begin<=2000 and world.end>=2000) and (area2d(the_geom)/1000000)>2000
+from world where (area2d(the_geom)/1000000)>2000
 union all
 -- puis les petits pays (<2000 km2), sans simplification
-select cntry_name, Scale (the_geom,0.0001,0.0001,1) as the_geom
-from world where (world.begin<=2000 and world.end>=2000) and (area2d(the_geom)/1000000)<=2000
+select cntry_name, fips_cntry, world.begin, world.end, Scale (the_geom,0.0001,0.0001,1) as the_geom
+from world where (area2d(the_geom)/1000000)<=2000
 );
 
 
@@ -33,7 +45,7 @@ select '<svg id="monde" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www
 
 union all
 -- carte du monde en l'an 2000 :
-select '<path id="' || replace(cntry_name, '&', 'and') -- le caractere "&" plante en svg
+select '<path id="' || fips_cntry || test_geom.begin || test_geom.end -- le caractere "&" plante en svg
 || '" fill="#D3D3D3" stroke="#000000" onmousedown="survol_zone(this.id);" d=" '
 || assvg (the_geom, 0, 0) ||'"/>' as svg from test_geom
 
@@ -51,3 +63,7 @@ select '</svg>'
 copy tmp to '/home/commun/ecole/REC/PRISM/tmp/guy_carte_moz.svg';
 -- creation du fichier SVG
 -- pour implementation dans le projet radrails, copier dans le repertoire local app/views/carte, en changeant le nom en _guy_carte_moz.rhtml';
+
+
+
+

@@ -72,7 +72,7 @@ function reInit2(annee){
 	// affichage des zones de conflits si la case est cochee
 	if ($('conflitsAffiche').checked) {
 		nb_conflits = (window["AN" + annee_en_cours]).length;
-		$('nompays').innerHTML = nb_conflits;
+		//$('nompays').innerHTML = nb_conflits;
 		// effacage des zones de conflits precedentes...
 		for (un_conflit = 0; un_conflit < nb_conflits_old; un_conflit++) {
 			var svgobj = document.getElementById((window["AN" + annee_old])[un_conflit]);

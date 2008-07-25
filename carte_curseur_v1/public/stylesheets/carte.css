@@ -18,9 +18,11 @@
 	}
 
 #film_play {
+	cursor:pointer;
 	}
 
-#film_stop {	
+#film_stop {
+	cursor:pointer;	
 }
 
 #cadre_legende {
