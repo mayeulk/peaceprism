@@ -352,7 +352,7 @@ function afficherLegendeQuant(choixIntervals){
 		nbClasses = tabCh.length - 1 ;
 		var tabIntervals = tabCh ;
 		
-		var tab_couleur_disc = chercherCouleursDisc('FF0000','FFFFFF', nbClasses);
+		var tab_couleur_disc = chercherCouleursDisc('FFFFFF','FF0000', nbClasses);
 		
 		// chaine : une case de legende pour les valeurs 'null'
 		var chaine3 = '' ;
@@ -454,18 +454,27 @@ function chercherCouleursDisc(coul1, coul2, nbCla){
 	var rgb1 = YAHOO.util.Color.hex2rgb( coul1 );
 	var rgb2 = YAHOO.util.Color.hex2rgb( coul2 );
 	
-	//alert('' + rgb1[0]+rgb1[1]+rgb1[2]+rgb2[0]+rgb2[1]+rgb2[2]);
-	
-	
 	var hsv1 = YAHOO.util.Color.rgb2hsv( rgb1[0], rgb1[1], rgb1[2] );
 	var hsv2 = YAHOO.util.Color.rgb2hsv( rgb2[0], rgb2[1], rgb2[2] );
 	
-	var diffHue = hsv1[0]*100 - hsv2[0]*100 ;
-	var diffSat = hsv1[1]*100 - hsv2[1]*100 ;
-	var diffVal = hsv1[2]*100 - hsv2[2]*100 ;
-	
-	//alert('' + hsv1[0]*100 + hsv1[1]*100 + hsv1[2]*100+ hsv2[0]*100 + hsv2[1]*100 + hsv2[2]*100);
-	//alert('' + diffHue + diffSat + diffVal);
+	if (hsv1[0] <= hsv2[0]) {
+		var diffHue = hsv2[0] * 100 - hsv1[0] * 100;
+	}
+	else{
+		var diffHue = hsv1[0] * 100 - hsv2[0] * 100;
+	}
+	if (hsv1[1] <= hsv2[1]) {
+		var diffSat = hsv2[1] * 100 - hsv1[1] * 100;
+	}
+	else{
+		var diffSat = hsv1[1]*100 - hsv2[1]*100 ;
+	}
+	if (hsv1[2] <= hsv2[2]) {
+		var diffVal = hsv2[2] * 100 - hsv1[2] * 100;
+	}
+	else{
+		var diffVal = hsv1[2]*100 - hsv2[2]*100 ;
+	}
 	
 	var tabHue = new Array();
 	var tabSat = new Array();
@@ -473,22 +482,33 @@ function chercherCouleursDisc(coul1, coul2, nbCla){
 	var tabCoul = new Array();
 	var tabCoul2 = new Array();
 	
-	for(var i=0; i<=nbCla; i++){
-		//tabHue[i] = parseInt(hsv1[0]*100 + i*(diffHue/nbCla));
-		tabHue[i] = parseInt(hsv1[0]*100);
-		tabSat[i] = parseInt(hsv1[1]*100 - i*(diffSat/nbCla));
-		tabVal[i] = parseInt(hsv1[2]*100 + i*(diffVal/nbCla));
-		//alert('' + tabHue[i]+tabSat[i]+tabVal[i])
+	for(var i=1; i<=nbCla; i++){
+		
+		if (hsv1[0]<=hsv2[0]){
+			tabHue[i] = parseInt(hsv1[0]*100 + (i-1)*(diffHue/(nbCla-1)));
+		}
+		else{
+			tabHue[i] = parseInt(hsv1[0]*100 - (i-1)*(diffHue/(nbCla-1)));
+		}
+		if (hsv1[1]<=hsv2[1]){
+			tabSat[i] = parseInt(hsv1[1]*100 + (i-1)*(diffSat/(nbCla-1)));
+		}
+		else{
+			tabSat[i] = parseInt(hsv1[1]*100 - (i-1)*(diffSat/(nbCla-1)));
+		}
+		if (hsv1[2]<=hsv2[2]){
+			tabVal[i] = parseInt(hsv1[2]*100 + (i-1)*(diffVal/(nbCla-1)));
+		}
+		else{
+			tabVal[i] = parseInt(hsv1[2]*100 - (i-1)*(diffVal/(nbCla-1)));
+		}
+		
 		tabCoul2 = YAHOO.util.Color.hsv2rgb(tabHue[i]/100, tabSat[i]/100, tabVal[i]/100);
-		tabCoul[i] = YAHOO.util.Color.rgb2hex(tabCoul[0], tabCoul[1], tabCoul[2]);
-
+		tabCoul[i] = YAHOO.util.Color.rgb2hex(tabCoul2[0], tabCoul2[1], tabCoul2[2]);
+		alert('' + tabCoul[i]);
 	}
 
-	//return tabCoul ;
-	return tab_couleur_discr ;
-	// transformer en numerique
-	// calcul des proportions
-	// correction du gamma
+	return tabCoul ;
 }
 
 function verifierCoherenceIntervals(tabInter){
