@@ -32,8 +32,9 @@ function initdiscretisation(){
 		discretize[0] = disc_var ;	
 		
 		// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-		var chaine = varInfo['name'] + ': <a href="/variable/' + dataset_courant + '/' + 
-					variable_courante + '" id="lien_desc">Description</a>';
+		var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + 
+			'</b></span> : <a href="/variable/' + dataset_courant + '/' + 
+			variable_courante + '" id="lien_desc">Description</a>';
 					
 		// lien vers le graphique de cette variable 
 		chaine += ' <a href="/graph/dis/' + dataset_courant + '/' + 
@@ -42,27 +43,27 @@ function initdiscretisation(){
 		chaine = chaine + '<div id="legende">';
 			
 		// chaine : premier interval pour les valeurs 'null'		
-		chaine = chaine + '<p>0 <input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+		chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
 		// autres classes
-		//$('nbClasses').innerHTML = nbCla;
 		nbClasses = 2 ;	
 		var u=0;	
-		for (var i = 0; 2>i ; i++){
-			
+		for (var i=0; i<2; i++){
+			disc_var = [] ;
 			chaine += '<p><span id="val' + i+1 + '"></span> <input type="text" class="colorfields" id="colorfield' + (i+1) + '" value="' + tab_couleur[i+1] + '"/><span id="intitule' + i+1 + '">' + i + '</span></p>';
 			disc_var['valeur'] = u;
-			disc_var['mini'] = '' + u ;
+			disc_var['mini'] = u ;
 			disc_var['isFirstValue'] = 1 ;			
-			disc_var['maxi'] = '' + u ;			
-			disc_var['couleur'] = tab_couleur[u];
+			disc_var['maxi'] = u ;			
+			disc_var['couleur'] = tab_couleur[u+1];
 			discretize[i+1] = disc_var ;
-			u=u+1;			
+			u = u+1 ;			
 		}
 		chaine += '</div>' ;
 		$('cadre_legende').innerHTML = chaine;		
 
 		//...puis avec les valeurs qualitatives
+/*
 		var varQual = varInfo['var_qual']; // les autres variables qualitatives
 		var c=2 ;
 		var o=3;
@@ -80,6 +81,7 @@ function initdiscretisation(){
 			c += 1;
 			nbClasses = nbClasses + 1 ;
 		}
+*/
 				
 		// colorpickers associes aux cases
 		new Control.ColorPicker(0);
@@ -137,15 +139,19 @@ function initdiscretisation(){
 				var varQualOrdo = varInfo['var_qual_ordo']; // recuperation du hash des varibles qualitatives ord
 				var varQual = varInfo['var_qual']; // les autres variables qualitatives
 				var valMini = varInfo['mini'];
-				var valMaxi = varInfo['maxi'];				
-				
+				var valMaxi = varInfo['maxi'];					
 
 				var disc_var = new Array() ;
 				
 				disc_var['valeur'] = 'null';
 				disc_var['couleur'] = 'C3C3C3';
 				disc_var['signification'] = 'No Data' ;
-				discretize[0] = disc_var ;			
+				discretize[0] = disc_var ;	
+				
+				var nbClas = 0 ;
+				for (var i in varQualOrdo){
+					nbClas += 1;
+				}		
 			
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + 
@@ -161,12 +167,12 @@ function initdiscretisation(){
 				
 				chaine = chaine + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
 
-				var tab_couleur_disc = chercherCouleursDisc('#FF000','#FFFFFF', nbClasses);
+				var tab_couleur_discr = chercherCouleursDisc('FFFFFF','FF0000', nbClas);
 				
 				var o = 1;
 				
 				// remplissage du tableau a envoyer avec les valeurs ordonnees...				
-				var tr1 = afficherLegendeQual(varQualOrdo, tab_couleur_disc, o);
+				var tr1 = afficherLegendeQual(varQualOrdo, tab_couleur_discr, o);
 				ch1 = tr1[1] ;
 				chaine += ch1 ;
 				o = tr1[0] ;
@@ -234,65 +240,17 @@ function initdiscretisation(){
 				chaine += ' <span id="vMini">' + valMini + '</span>' +
 					'; <input type="text" id="choixIntervals" value="' + chaineIntervals + '"/> ;' + 
 					'<span id="vMaxi">' + valMaxi + '</span>' +
-					'<button type="button" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + $(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">Change</button>' ;
+					'<button type="button" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + ' +
+					'$(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">Change</button>' ;
 				
 				// chaine : la legende en tant que tel est affichee dans un div independant
 				chaine = chaine + '<div id="legende">';
-				
 
 				// chaine : une case de legende pour les valeurs 'null'
 				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
-				var o = 1;
-				
-				// chaine : premier interval
-				chaine += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
-				disc_var =[];
-				disc_var['valeur'] = o;
-				disc_var['isFirstValue'] = 1 ;
-				disc_var['mini'] = tabIntervals[0] ;				
-				disc_var['maxi'] = tabIntervals[1] ;				
-				disc_var['couleur'] = tab_couleur_disc[o];
-				disc_var['signification'] = '';			
-				discretize[o] = disc_var ;
-					
-				o += 1 ;			
-				// remplissage du tableau a envoyer et de la chaine avec les intervals de valeurs...
-				for (var i=1; i<nbCla; i++) {
-					disc_var =[];
-					disc_var['valeur'] = o;
-					disc_var['isFirstValue'] = 0 ;
-					disc_var['mini'] = tabIntervals[i] ;					
-					disc_var['maxi'] = tabIntervals[i+1] ;					
-					disc_var['couleur'] = tab_couleur_disc[o];
-					disc_var['signification'] = '' ;				
-					discretize[o] = disc_var ;
-					chaine += '<p><span id="val' + o + '">'+ o +'</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
-					
-					o += 1 ;
-				}
-				
-				//...puis avec les valeurs qualitatives				
-				var c = 2;
-				for (var i in varQual) {
-					disc_var = [];
-					disc_var['valeur'] = i;
-					disc_var['isFirstValue'] = 1;
-					disc_var['mini'] = i;
-					disc_var['maxi'] = i;
-					disc_var['couleur'] = tab_couleur[c];
-					disc_var['signification'] = varQual[i] ;
-					discretize[o - 1] = disc_var;
-					chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
-					
-					o += 1;
-					c += 1;
-				}
-				
-
 				chaine += '</div>' ;
 				
-				$('cadre_legende').innerHTML = chaine;
-				
+				$('cadre_legende').innerHTML = chaine;				
 				
 				afficherLegendeQuant($('vMini').innerHTML + ';' + $('choixIntervals').value + ';' + $('vMaxi').innerHTML);
 				
@@ -447,10 +405,8 @@ function chercherIntervals(nb, mini, maxi, disc){
 	return intervals ;
 }
 
+// fonction qui renvoi un tableau de couleurs discretisees
 function chercherCouleursDisc(coul1, coul2, nbCla){
-	// pour le fun
-	var tab_couleur_discr = new Array('FFFFFF', 'FFEEEE', 'FFD2D2', 'FFBBBB', 'FF9999', 'FF0000');
-
 	var rgb1 = YAHOO.util.Color.hex2rgb( coul1 );
 	var rgb2 = YAHOO.util.Color.hex2rgb( coul2 );
 	
@@ -505,7 +461,6 @@ function chercherCouleursDisc(coul1, coul2, nbCla){
 		
 		tabCoul2 = YAHOO.util.Color.hsv2rgb(tabHue[i]/100, tabSat[i]/100, tabVal[i]/100);
 		tabCoul[i] = YAHOO.util.Color.rgb2hex(tabCoul2[0], tabCoul2[1], tabCoul2[2]);
-		alert('' + tabCoul[i]);
 	}
 
 	return tabCoul ;

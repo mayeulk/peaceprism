@@ -68,11 +68,18 @@
 	
 <body>
     <script type="text/ecmascript">
-        bascule_volet_navig_val=0;
-        function bascule_volet_navig() {
-			bascule_volet_navig_val=1-bascule_volet_navig_val;
-          	document.getElementById("bascule_volet_navig_img").src="images/navig/fermer" + bascule_volet_navig_val +".gif";
-        }
+		function toggleCode(img1, div1) {
+			var d = document.getElementById(img1);
+			var s = document.getElementById(div1);
+    		if(s.style.display == "none") {
+				d.src = "/images/navig/fermer0.gif";
+        		s.style.display = "block";
+    		}
+    		else {
+				d.src = "/images/navig/fermer1.gif";
+        		s.style.display = "none";
+    		}
+		}		
     </script>
 
 
@@ -97,29 +104,21 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 <!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
 
 <!-- le bouton pour fermer le volet navigation -->
-<img id="bascule_volet_navig_img" alt="Fermer" onclick="Effect.toggle(&quot;volet_navig&quot;,'blind',{duration:1.0, scaleX:false , scaleY: true });setTimeout('bascule_volet_navig()',800);" src="/images/navig/fermer0.gif" />
-    
+<a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog1', 'volet_navig')"><img id="imgTog1" src="/images/navig/fermer0.gif" /> </a>   
 <!-- un bloc contenant les elements de navigation et resultats d'action sur slider 
 on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec le z-index)-->  
-<div id="volet_navig">	
+<div id="volet_navig" style="display:block;" >	
 	
 	<!-- le pan pour le zoom et al navigation -->
 	<%= render :partial => "navig" %>
-	
-	<!-- une croix qui ferme le volet de navigation 
-	<img  id="navig_on_off" src="/images/navig/bd.png" 
-    onclick="document.getElementById(&quot;navig_on_off&quot;).src=&quot;/images/navig/hg.png&quot;"/>
--->
+
 </div>
 
-<img id="bascule_volet_navig_img" alt="Fermer" onclick="Effect.toggle(&quot;volet_info&quot;,'blind',{duration:1.0, scaleX:false , scaleY: true });setTimeout('bascule_volet_navig()',800);" src="/images/navig/fermer0.gif" />
- 
+<a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog2', 'volet_info')"><img id="imgTog2" src="/images/navig/fermer0.gif" /> </a>   
 
 <div id="volet_info">
-	<!-- 3 cases pour afficher les donnees rapides associees au slider -->
 	Year:
     <span id="choix_annee" size="3"> </span> ;
-
 	<br/>
 
 	<b>Dataset: </b><%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
@@ -168,9 +167,9 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 	<div class="date"><%= @debut_periode %></div>
 	<div class="fleche" onclick="sliderDate.setValueBy(-1);">&lt;</div>
 
-<!-- Slider avec des valeurs predefinies (annees entre date debut et date de fin du jeu de donnees,
-et deux curseurs pour specifier un debut et eventuellement une fin pour une valeur selectionnee
-l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'instance du slider) -->
+	<!-- Slider avec des valeurs predefinies (annees entre date debut et date de fin du jeu de donnees,
+	et deux curseurs pour specifier un debut et eventuellement une fin pour une valeur selectionnee
+	l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'instance du slider) -->
 
 	<div id="slider_frise">	  
 		<div id="slider">
@@ -179,39 +178,31 @@ l'attribut CSS 'width' est necessairement declare en ligne (surement pour l'inst
 				<span id="info_date"></span>				
 			</div>
 
-			<% for @an in @debut_periode..@fin_periode %>
-			
-			<div class='repere_slider<%=(@an%5 == 0 ? "_5ans" : "")%>' 	> </div>
-			
-			<div class='espace_entre_reperes'  > </div>
-						
+			<% for @an in @debut_periode..@fin_periode %>			
+				<div class='repere_slider<%=(@an%5 == 0 ? "_5ans" : "")%>' 	> </div>			
+				<div class='espace_entre_reperes'  > </div>						
 			<% end %>		
 		</div>
 		<div class="fleche" onclick="sliderDate.setValueBy(1);">&gt;</div>
 		<div class="date"><%= @fin_periode %></div>
 		<div id="frise"></div>=> <input type="text" id="pays2"/>
-	</div>
-
-
-
-
-	
+	</div>	
 </div>
+
 <script type="text/javascript">
-// <![CDATA[
+// script de creation de l'objet slider
    
-	var sliderDate = new Control.Slider('handle_date_debut','track_date',{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),values:<%= (@debut_periode..@fin_periode).to_json %>, 
-	   sliderValue : <%=@debut_periode%>,
-	   onSlide:function(v){reInit2(v)},
-	   onChange:function(v){reInit2(v)}});
+	var sliderDate = new Control.Slider('handle_date_debut','track_date',
+		{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),
+		values:<%= (@debut_periode..@fin_periode).to_json %>, 
+	   	sliderValue : <%=@debut_periode%>,
+	   	onSlide:function(v){reInit2(v)},
+	   	onChange:function(v){reInit2(v)}});
 
 	$('choix_annee').innerHTML = <%=@debut_periode%>
-// ]]>
 </script>
 
 <br/>
-
-
 <br/>
 <br/>
 <!-- un div pour afficher le partiel du tableau de donnees de la zone selectionnee -->
