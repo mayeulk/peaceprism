@@ -18,9 +18,7 @@ function initdiscretisation(){
 	variable_courante = varInfo['var_id'];
 	discretize = [] ;
 	nbClasses = 0 ;
-	// $('typeVar').innerHTML = varInfo['type'];
-	// $('formatVar').innerHTML = varInfo['format'];
-	
+
 	// premier cas : variable booleenne : 2 classes (oui/non)
 	if (varInfo['format'] == 'boolean'){
 		chaine='';
@@ -63,7 +61,7 @@ function initdiscretisation(){
 		$('cadre_legende').innerHTML = chaine;		
 
 		//...puis avec les valeurs qualitatives
-/*
+
 		var varQual = varInfo['var_qual']; // les autres variables qualitatives
 		var c=2 ;
 		var o=3;
@@ -81,7 +79,7 @@ function initdiscretisation(){
 			c += 1;
 			nbClasses = nbClasses + 1 ;
 		}
-*/
+
 				
 		// colorpickers associes aux cases
 		new Control.ColorPicker(0);
