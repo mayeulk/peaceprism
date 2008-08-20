@@ -1,0 +1,866 @@
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000262)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000225)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000552)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000278)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000537)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000548)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000357)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000249)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000553)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000271)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000455)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000240)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000227)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000282)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000243)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000224)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000209)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000396)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000219)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000247)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000214)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000230)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000214)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.001024)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 14:54:04.149386', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 14:54:04.149386')[0m
+  [4;36;1mSQL (0.000490)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mSQL (0.000365)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000239)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000251)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000207)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.001020)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:09:10.834886', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:09:10.834886')[0m
+  [4;36;1mSQL (0.000469)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000761)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 1) [0m
+  [4;36;1mSQL (0.000334)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000209)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000602)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:09:10.844981', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:09:10.844981')[0m
+  [4;35;1mSQL (0.000287)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000284)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000210)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000329)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000243)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000205)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000206)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000234)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.000969)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:12:20.310541', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:12:20.310541')[0m
+  [4;36;1mSQL (0.000474)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000760)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mSQL (0.000363)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000210)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000603)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:12:20.321999', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:12:20.321999')[0m
+  [4;35;1mSQL (0.000281)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000292)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000302)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000278)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000246)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000214)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000291)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000248)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000229)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.000993)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:14:58.872647', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:14:58.872647')[0m
+  [4;36;1mSQL (0.000476)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000000)[0m   [0mPGError: ERROR: missing FROM-clause entry for table "variable"
+LINE 1: SELECT * FROM "datasets" WHERE (id = variable.dataset_id...
+ ^
+: SELECT * FROM "datasets" WHERE (id = variable.dataset_id) [0m
+  [4;36;1mSQL (0.000302)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000210)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000605)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:14:58.882443', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:14:58.882443')[0m
+  [4;35;1mSQL (0.000366)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000306)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000209)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000223)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000376)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000234)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.000965)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:16:46.678009', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:16:46.678009')[0m
+  [4;36;1mSQL (0.000466)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mSQL (0.000345)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.000588)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:16:46.688078', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:16:46.688078')[0m
+  [4;36;1mSQL (0.000267)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mSQL (0.000302)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000220)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000243)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000214)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000255)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000579)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.000973)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:17:35.445898', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:17:35.445898')[0m
+  [4;36;1mSQL (0.000473)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000746)[0m   [0mSELECT * FROM "datasets" WHERE (id = 5) [0m
+  [4;36;1mSQL (0.000409)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000217)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000624)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:17:35.458199', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:17:35.458199')[0m
+  [4;35;1mSQL (0.000283)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000293)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000239)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000315)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000222)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000234)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.001026)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:20:24.951151', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:20:24.951151')[0m
+  [4;36;1mSQL (0.000617)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000885)[0m   [0mSELECT * FROM "datasets" WHERE (id = 1) [0m
+  [4;36;1mSQL (0.000551)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000288)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000963)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:20:24.965151', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:20:24.965151')[0m
+  [4;35;1mSQL (0.001102)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000670)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000392)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000410)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000209)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000248)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000300)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000222)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.002513)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:23:23.911828', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:23:23.911828')[0m
+  [4;36;1mSQL (0.002691)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.001455)[0m   [0mSELECT * FROM "datasets" WHERE (id = 1) [0m
+  [4;36;1mSQL (0.000335)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000222)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000640)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:23:23.930819', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:23:23.930819')[0m
+  [4;35;1mSQL (0.000284)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000292)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000212)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000313)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000283)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000255)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000204)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000203)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.000973)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:25:18.783015', NULL, 6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:25:18.783015')[0m
+  [4;36;1mSQL (0.001584)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000849)[0m   [0mSELECT * FROM "datasets" WHERE (id = 6) [0m
+  [4;36;1mSQL (0.000369)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000216)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000607)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:25:18.795070', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:25:18.795070')[0m
+  [4;35;1mSQL (0.000276)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000284)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000216)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000348)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000222)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000281)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000744)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000281)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000274)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000219)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000249)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000363)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000235)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000222)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000962)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 6) [0m
+  [4;36;1mVariable Create (0.000998)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 15:41:21.751648', NULL, 6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:41:21.751648')[0m
+  [4;35;1mSQL (0.000479)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000498)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 6) [0m
+  [4;35;1mSQL (0.000375)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000611)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000666)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 15:41:21.767228', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 15:41:21.767228')[0m
+  [4;35;1mSQL (0.000286)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000335)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000222)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000237)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000245)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000344)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000971)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.001001)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:01:37.879861', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:01:37.879861')[0m
+  [4;35;1mSQL (0.000486)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000535)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000370)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000488)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000565)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:01:37.890961', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:01:37.890961')[0m
+  [4;35;1mSQL (0.000468)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000478)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000310)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000254)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000232)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000282)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000239)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000209)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000207)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000232)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000230)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Create (0.001065)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:14:52.858067', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:14:52.858067')[0m
+  [4;36;1mSQL (0.000473)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000824)[0m   [0mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;36;1mSQL (0.000473)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000252)[0m   [0mBEGIN[0m
+  [4;36;1mVariable Create (0.000690)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:14:52.869825', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:14:52.869825')[0m
+  [4;35;1mSQL (0.000299)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000313)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000243)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.015049)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000267)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000242)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000207)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000231)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000204)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.001010)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000977)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:18:08.345854', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:18:08.345854')[0m
+  [4;35;1mSQL (0.000473)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000518)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000303)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000539)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000592)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:18:08.357077', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:18:08.357077')[0m
+  [4;35;1mSQL (0.000270)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000449)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000290)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000266)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000297)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000266)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000928)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000682)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:19:01.538361', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:19:01.538361')[0m
+  [4;35;1mSQL (0.000415)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000532)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000323)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000482)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000528)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:19:01.548914', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:19:01.548914')[0m
+  [4;35;1mSQL (0.000275)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000474)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000302)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000218)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000257)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.001128)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.001392)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:24:04.207049', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:24:04.207049')[0m
+  [4;35;1mSQL (0.000736)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000937)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000511)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000288)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000721)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000784)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:24:04.219933', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:24:04.219933')[0m
+  [4;35;1mSQL (0.000415)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000685)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000405)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000304)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000301)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000273)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000283)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000209)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000299)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000984)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000776)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:26:17.267100', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:26:17.267100')[0m
+  [4;35;1mSQL (0.000411)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.003795)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.007296)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000275)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000631)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000745)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:26:17.288820', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:26:17.288820')[0m
+  [4;35;1mSQL (0.000287)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000508)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000317)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000271)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000265)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000252)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000219)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001340)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000349)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000951)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000673)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:33:01.687413', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:33:01.687413')[0m
+  [4;35;1mSQL (0.000400)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000522)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000512)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000502)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000603)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:33:01.698632', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:33:01.698632')[0m
+  [4;35;1mSQL (0.000293)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000467)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000314)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000250)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000219)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000231)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000253)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000219)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000214)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000234)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000937)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000689)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:35:31.092922', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:35:31.092922')[0m
+  [4;35;1mSQL (0.000419)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000520)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000383)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000529)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000539)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:35:31.103972', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:35:31.103972')[0m
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000448)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000313)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000279)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000220)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000250)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000455)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000251)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000223)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000970)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000708)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:36:05.896090', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:36:05.896090')[0m
+  [4;35;1mSQL (0.000406)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000526)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000360)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000501)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000533)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:36:05.906911', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:36:05.906911')[0m
+  [4;35;1mSQL (0.001696)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000498)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000355)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000218)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.001398)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000219)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000257)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000359)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000235)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000202)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000203)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000952)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.003519)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:36:35.738865', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:36:35.738865')[0m
+  [4;35;1mSQL (0.000512)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000544)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 2) [0m
+  [4;35;1mSQL (0.000372)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000494)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000551)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:36:35.755583', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:36:35.755583')[0m
+  [4;35;1mSQL (0.000297)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000474)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000319)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000224)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000266)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000213)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000250)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000847)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 4) [0m
+  [4;36;1mVariable Create (0.000697)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:37:10.993878', NULL, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:37:10.993878')[0m
+  [4;35;1mSQL (0.000408)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000483)[0m   [0;1mSELECT * FROM "datasets" WHERE (id = 4) [0m
+  [4;35;1mDataset Load (0.000377)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 4) [0m
+  [4;36;1mSQL (0.000331)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000226)[0m   [0mBEGIN[0m
+  [4;36;1mDataset Load (0.000481)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mVariable Create (0.000643)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:37:11.005385', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:37:11.005385')[0m
+  [4;36;1mSQL (0.000283)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000474)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mSQL (0.000312)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000216)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000294)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000237)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000246)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000264)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000207)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000207)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000234)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000961)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000682)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:38:12.747011', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:38:12.747011')[0m
+  [4;35;1mSQL (0.000399)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000379)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000263)[0m   [0mBEGIN[0m
+  [4;36;1mDataset Load (0.000563)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mVariable Create (0.000539)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:38:12.758214', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:38:12.758214')[0m
+  [4;36;1mSQL (0.000271)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000446)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mSQL (0.000333)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000246)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000267)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000257)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000328)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000263)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000207)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000260)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000890)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 4) [0m
+  [4;36;1mVariable Create (0.006807)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:38:28.568664', NULL, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:38:28.568664')[0m
+  [4;35;1mSQL (0.003452)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000849)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 4) [0m
+  [4;35;1mSQL (0.000408)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000496)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000554)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:38:28.589255', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:38:28.589255')[0m
+  [4;35;1mSQL (0.000273)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000453)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000336)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000259)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000221)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000273)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000250)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000209)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000207)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000843)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 4) [0m
+  [4;36;1mVariable Create (0.000689)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:42:09.260157', NULL, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:42:09.260157')[0m
+  [4;35;1mSQL (0.000410)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000491)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 4) [0m
+  [4;35;1mSQL (0.000380)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000486)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mVariable Create (0.000529)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:42:09.271764', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:42:09.271764')[0m
+  [4;35;1mSQL (0.000265)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000457)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mSQL (0.000350)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000267)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000245)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000930)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000679)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:42:35.677884', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:42:35.677884')[0m
+  [4;35;1mSQL (0.000403)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000346)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000211)[0m   [0mBEGIN[0m
+  [4;36;1mDataset Load (0.000526)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mVariable Create (0.003164)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:42:35.687428', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:42:35.687428')[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000489)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000214)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000261)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000243)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000209)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000204)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Load (0.000947)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;36;1mVariable Create (0.000697)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 16:50:12.796066', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:50:12.796066')[0m
+  [4;35;1mSQL (0.000409)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mSQL (0.000329)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000216)[0m   [0mBEGIN[0m
+  [4;36;1mDataset Load (0.000523)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;35;1mVariable Create (0.000552)[0m   [0mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 16:50:12.805621', NULL, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 16:50:12.805621')[0m
+  [4;36;1mSQL (0.000276)[0m   [0;1mSELECT currval('variables_id_seq')[0m
+  [4;35;1mDataset Load (0.000450)[0m   [0mSELECT * FROM "datasets" WHERE ("datasets"."id" = 5) [0m
+  [4;36;1mSQL (0.000304)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000213)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000265)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000215)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000267)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000226)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000248)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000258)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000227)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.010673)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000298)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000262)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000959)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 2) LIMIT 1[0m
+  [4;36;1mVariable Create (0.001103)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 17:37:10.159207', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:37:10.159207')[0m
+  [4;35;1mSQL (0.000461)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000683)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;35;1mSQL (0.000352)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000274)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000689)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;36;1mDataset Exists (0.001182)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.001056)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000273)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000256)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000216)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000218)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000355)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000244)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000787)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 2) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000704)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 17:37:41.093918', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:37:41.093918')[0m
+  [4;35;1mSQL (0.000401)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000690)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;35;1mSQL (0.000351)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000798)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000561)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000620)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 17:37:41.106924', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:37:41.106924')[0m
+  [4;35;1mSQL (0.000275)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Exists (0.000448)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000290)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000285)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000224)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000258)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000214)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000823)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 2) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000691)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 17:38:46.745778', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:38:46.745778')[0m
+  [4;35;1mSQL (0.000408)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000716)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;35;1mSQL (0.000353)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000493)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;36;1mDataset Exists (0.000441)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.000312)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000241)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.002626)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000224)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000209)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000243)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000820)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 2) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000687)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 3, NULL, '2008-08-20 17:39:30.857908', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:39:30.857908')[0m
+  [4;35;1mSQL (0.000400)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Load (0.000687)[0m   [0;1mSELECT * FROM "datasets" WHERE ("datasets"."id" = 2) [0m
+  [4;35;1mSQL (0.000323)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000488)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000546)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 17:39:30.870372', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:39:30.870372')[0m
+  [4;35;1mSQL (0.000278)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Exists (0.000433)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000268)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000243)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000408)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;36;1mDataset Exists (0.000352)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.000245)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000234)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000205)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000266)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000242)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000205)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000201)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000265)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000248)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000210)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000760)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000692)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 17:53:03.856949', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:53:03.856949')[0m
+  [4;35;1mSQL (0.000415)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Exists (0.000476)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000311)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000427)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;36;1mDataset Exists (0.000359)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.000247)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000213)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000269)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000221)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000249)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000252)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000214)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000258)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Exists (0.000767)[0m   [0mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 1) LIMIT 1[0m
+  [4;36;1mVariable Exists (0.000649)[0m   [0;1mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000397)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Exists (0.000486)[0m   [0mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 5) LIMIT 1[0m
+  [4;36;1mVariable Exists (0.000374)[0m   [0;1mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.000260)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000261)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000678)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000647)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 17:53:57.529171', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:53:57.529171')[0m
+  [4;35;1mSQL (0.000482)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Exists (0.000569)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000375)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000261)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000474)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;36;1mDataset Exists (0.000359)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.000267)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000248)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Exists (0.000666)[0m   [0mSELECT "variables".id FROM "variables" WHERE ("variables"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mVariable Exists (0.000375)[0m   [0;1mSELECT "variables".id FROM "variables" WHERE ("variables"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000314)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Exists (0.000384)[0m   [0mSELECT "variables".id FROM "variables" WHERE ("variables"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mVariable Exists (0.000338)[0m   [0;1mSELECT "variables".id FROM "variables" WHERE ("variables"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000253)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000218)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000674)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000697)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 17:54:39.739297', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 17:54:39.739297')[0m
+  [4;35;1mSQL (0.000411)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Exists (0.000469)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000311)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000438)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;36;1mDataset Exists (0.000363)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.000249)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000212)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000270)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000266)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000215)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Exists (0.000771)[0m   [0mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 1) LIMIT 1[0m
+  [4;36;1mVarLabel Create (0.000602)[0m   [0;1mINSERT INTO "var_labels" ("var_key", "meaning", "var_id", "updated_at", "dataset_id", "value", "description", "created_at") VALUES(1, NULL, 1, '2008-08-20 18:02:28.986445', 1, NULL, NULL, '2008-08-20 18:02:28.986445')[0m
+  [4;35;1mSQL (0.000400)[0m   [0mSELECT currval('var_labels_id_seq')[0m
+  [4;36;1mVariable Exists (0.000468)[0m   [0;1mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000373)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mBEGIN[0m
+  [4;35;1mVariable Exists (0.000487)[0m   [0mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 236) LIMIT 1[0m
+  [4;36;1mVariable Exists (0.000391)[0m   [0;1mSELECT "variables".id FROM "variables" WHERE ("variables"."id" = 236) LIMIT 1[0m
+  [4;35;1mSQL (0.000270)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000209)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000605)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;36;1mVariable Create (0.000623)[0m   [0;1mINSERT INTO "variables" ("name", "long_name_fr", "var_id", "format", "updated_at", "mini", "dataset_id", "kind", "reverse", "descr_after_fr", "long_name", "code_var", "descr_before_fr", "qualitatif_ordonne", "descr_before", "descr_after", "page", "maxi", "binary_var", "missing", "created_at") VALUES(NULL, NULL, 1, NULL, '2008-08-20 18:02:29.006609', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2008-08-20 18:02:29.006609')[0m
+  [4;35;1mSQL (0.000286)[0m   [0mSELECT currval('variables_id_seq')[0m
+  [4;36;1mDataset Exists (0.000445)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000322)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mBEGIN[0m
+  [4;35;1mDataset Exists (0.000436)[0m   [0mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;36;1mDataset Exists (0.000356)[0m   [0;1mSELECT "datasets".id FROM "datasets" WHERE ("datasets"."id" = 5) LIMIT 1[0m
+  [4;35;1mSQL (0.000264)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000320)[0m   [0mROLLBACK[0m

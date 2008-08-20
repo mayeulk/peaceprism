@@ -1,4 +1,4 @@
-class AddColumnsToVariables < ActiveRecord::Migration
+class AddColumnsToVariables2 < ActiveRecord::Migration
   def self.up
     # Pour mettre à jour les vues:
     # ./script/generate scaffold Variable var_id:integer dataset_id:integer name:string  format:string  kind:string reverse:string missing:string   created_at:datetime  updated_at:datetime  mini:float  maxi:float   binary_var:integer qualitatif_ordonne:integer  long_name:string  code_var:string   descr_before:text    descr_after:text    long_name_fr:string   descr_before_fr:text   descr_after_fr:text page:integer

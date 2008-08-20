@@ -3,11 +3,11 @@
 one:
   country_name: MyString
   cowcode: 1
-  fipscode: MyString
+  fips_cntry: MyString
   contcode: 1
 
 two:
   country_name: MyString
   cowcode: 1
-  fipscode: MyString
+  fips_cntry: MyString
   contcode: 1
