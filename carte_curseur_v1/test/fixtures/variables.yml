@@ -1,15 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   dataset_id: 1
-  name: MyString
+  name: MACHAINEDEcaracteresMyString
   format: MyString
   kind: MyString
   reverse: MyString
   missing: MyString
 
 two:
-  dataset_id: 1
+  id: 2
+  dataset_id: 2
   name: MyString
   format: MyString
   kind: MyString

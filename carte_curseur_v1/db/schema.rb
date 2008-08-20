@@ -1,5 +1,5 @@
 # This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of ActiveRecord to incrementally modify your database, and
+# please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your database schema. If you need
@@ -110,109 +110,6 @@ ActiveRecord::Schema.define(:version => 8) do
     t.decimal "var20"
   end
 
-  create_table "dataset_13", :force => true do |t|
-    t.string  "var1"
-    t.integer "var2"
-    t.integer "var3"
-    t.integer "var4"
-    t.integer "var5"
-    t.integer "var6"
-    t.integer "var7"
-    t.integer "var8"
-    t.integer "var9"
-    t.decimal "var10"
-    t.decimal "var11"
-  end
-
-  create_table "dataset_14", :force => true do |t|
-    t.integer "var1"
-    t.string  "var2"
-    t.integer "var3"
-    t.integer "var4"
-    t.integer "var5"
-    t.integer "var6"
-    t.decimal "var7"
-  end
-
-  create_table "dataset_15", :force => true do |t|
-    t.integer "var1"
-    t.integer "var2"
-    t.string  "var3"
-    t.integer "var4"
-    t.string  "var5"
-    t.integer "var6"
-    t.integer "var7"
-    t.decimal "var8"
-  end
-
-  create_table "dataset_16", :force => true do |t|
-    t.integer "var1"
-    t.integer "var2"
-    t.integer "var3"
-    t.integer "var4"
-    t.integer "var5"
-    t.integer "var6"
-    t.decimal "var7"
-  end
-
-  create_table "dataset_17", :force => true do |t|
-    t.string  "var1"
-    t.integer "var2"
-    t.integer "var3"
-    t.decimal "var4"
-  end
-
-  create_table "dataset_18", :force => true do |t|
-    t.integer "var1"
-    t.integer "var2"
-    t.string  "var3"
-    t.string  "var4"
-    t.integer "var5"
-    t.integer "var6"
-    t.integer "var7"
-    t.integer "var8"
-    t.integer "var9"
-    t.integer "var10"
-    t.integer "var11"
-    t.integer "var12"
-    t.integer "var13"
-    t.integer "var14"
-    t.integer "var15"
-    t.integer "var16"
-    t.integer "var17"
-    t.integer "var18"
-    t.integer "var19"
-    t.integer "var20"
-    t.integer "var21"
-    t.integer "var22"
-    t.integer "var23"
-    t.integer "var24"
-    t.integer "var25"
-    t.integer "var26"
-    t.integer "var27"
-    t.integer "var28"
-    t.integer "var29"
-    t.integer "var30"
-    t.integer "var31"
-    t.integer "var32"
-    t.integer "var33"
-    t.integer "var34"
-    t.integer "var35"
-    t.integer "var36"
-    t.decimal "var37"
-  end
-
-  create_table "dataset_19", :force => true do |t|
-    t.integer "var1"
-    t.integer "var2"
-    t.integer "var3"
-    t.decimal "var4"
-    t.decimal "var5"
-    t.integer "var6"
-    t.integer "var7"
-    t.integer "var8"
-  end
-
   create_table "dataset_2", :force => true do |t|
     t.integer "var1"
     t.string  "var2"
@@ -221,80 +118,6 @@ ActiveRecord::Schema.define(:version => 8) do
     t.integer "var5"
     t.integer "var6"
     t.decimal "var7"
-  end
-
-  create_table "dataset_20", :force => true do |t|
-    t.integer "var1"
-    t.integer "var2"
-    t.integer "var3"
-    t.decimal "var4"
-    t.decimal "var5"
-  end
-
-  create_table "dataset_21", :force => true do |t|
-    t.integer "var1"
-    t.integer "var2"
-    t.decimal "var3"
-    t.decimal "var4"
-  end
-
-  create_table "dataset_22", :force => true do |t|
-    t.integer "var1"
-    t.decimal "var2"
-    t.decimal "var3"
-    t.decimal "var4"
-    t.integer "var5"
-  end
-
-  create_table "dataset_23", :force => true do |t|
-    t.integer "var1"
-    t.decimal "var2"
-    t.decimal "var3"
-    t.decimal "var4"
-    t.decimal "var5"
-    t.decimal "var6"
-    t.decimal "var7"
-    t.decimal "var8"
-    t.decimal "var9"
-    t.decimal "var10"
-    t.decimal "var11"
-    t.decimal "var12"
-    t.decimal "var13"
-    t.decimal "var14"
-    t.decimal "var15"
-    t.decimal "var16"
-    t.decimal "var17"
-    t.decimal "var18"
-    t.decimal "var19"
-    t.decimal "var20"
-    t.decimal "var21"
-    t.decimal "var22"
-    t.decimal "var23"
-    t.decimal "var24"
-    t.decimal "var25"
-  end
-
-  create_table "dataset_24", :force => true do |t|
-    t.integer "var1"
-    t.integer "var2"
-    t.integer "var3"
-    t.integer "var4"
-    t.integer "var5"
-    t.integer "var6"
-    t.integer "var7"
-    t.integer "var8"
-    t.integer "var9"
-    t.integer "var10"
-    t.integer "var11"
-    t.integer "var12"
-    t.integer "var13"
-    t.integer "var14"
-    t.integer "var15"
-    t.integer "var16"
-    t.integer "var17"
-    t.integer "var18"
-    t.integer "var19"
-    t.decimal "var20"
   end
 
   create_table "dataset_3", :force => true do |t|
@@ -458,7 +281,7 @@ ActiveRecord::Schema.define(:version => 8) do
   end
 
   add_index "tablepaysannees", ["ccode"], :name => "ccode_paysannees_idx"
-  add_index "tablepaysannees", ["ccode", "annee"], :name => "table_paysannees_idx"
+  add_index "tablepaysannees", ["annee", "ccode"], :name => "table_paysannees_idx"
 
   create_table "tabletab", :id => false, :force => true do |t|
     t.integer "annee"
