@@ -11,14 +11,20 @@ class DatasetsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
-
-  def test_should_create_dataset
-    assert_difference('Dataset.count') do
-      post :create, :dataset => { }
-    end
-
-    assert_redirected_to dataset_path(assigns(:dataset))
+  
+  
+  def test_datasets_are_assigned_properly
+    get :index
+    assert_equal 2, assigns(:datasets).size
   end
+
+#  def test_should_create_dataset
+#    assert_difference('Dataset.count') do
+#      post :create, :dataset => { }
+#    end
+#
+#    assert_redirected_to dataset_path(assigns(:dataset))
+#  end
 
   def test_should_show_dataset
     get :show, :id => datasets(:one).id

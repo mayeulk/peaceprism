@@ -1,17 +1,73 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   var_key: 1
   var_id: 1
   dataset_id: 1
   value: 1
-  meaning: MyString
-  description: MyText
+  meaning: meaning1
+  description: description-meaning1
 
 two:
+  id: 2
+  var_key: 1
+  var_id: 1
+  dataset_id: 1
+  value: 2
+  meaning: meaning2
+  description: description-meaning2
+
+three:
+  id: 3
   var_key: 1
   var_id: 1
   dataset_id: 1
   value: 1
-  meaning: MyString
-  description: MyText
+  meaning: meaning3
+  description: description-meaning3
+  
+four:
+  id: 4
+  var_key: 1
+  var_id: 1
+  dataset_id: 1
+  value: -66
+  meaning: meaning-66
+  description: description-meaning-66
+  
+five:
+  id: 5
+  var_key: 1
+  var_id: 1
+  dataset_id: 1
+  value: -77
+  meaning: meaning-77
+  description: description-meaning-77
+  
+six:
+  id: 6
+  var_key: 2
+  var_id: 2
+  dataset_id: 1
+  value: 44
+  meaning: meaning44
+  description: description-meaning44
+  
+seven:
+  id: 7
+  var_key: 2
+  var_id: 2
+  dataset_id: 1
+  value: 55
+  meaning: meaning55
+  description: description-meaning55
+  
+eight:
+  id: 8
+  var_key: 2
+  var_id: 2
+  dataset_id: 1
+  value: 66
+  meaning: meaning66
+  description: description-meaning66

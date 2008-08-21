@@ -2,28 +2,32 @@
 
 one:
   id: 1
-  configuration_file: MyString
-  data_file_name: MyString
-  data_set_full_name: MyString
-  data_set_short_name: MyString
-  data_set_citation: MyText
-  unit_of_analysis: MyString
-  first_year_possible: 1
-  last_year_possible: 1
+  configuration_file: dataset1
+  data_file_name: dataset1
+  data_set_full_name: dataset1
+  data_set_short_name: dataset1
+  data_set_citation: citation dataset1
+  unit_of_analysis: country-year1
+  first_year_possible: 1815
+  last_year_possible: 2003
   label_line_in_data_file: false
-  number_of_variables: 1
-  number_of_cases: 1
+  number_of_variables: 10
+  number_of_cases: 15600
+  identifierccode1_var: 3
+  identifieryear_var: 5
 
 two:
   id: 2
-  configuration_file: MyString
-  data_file_name: MyString
-  data_set_full_name: MyString
-  data_set_short_name: MyString
-  data_set_citation: MyText
-  unit_of_analysis: MyString
-  first_year_possible: 1
-  last_year_possible: 1
+  configuration_file: dataset2
+  data_file_name: dataset2
+  data_set_full_name: dataset2
+  data_set_short_name: dataset2
+  data_set_citation: citation dataset2
+  unit_of_analysis: country-year2
+  first_year_possible: 1946
+  last_year_possible: 2003
   label_line_in_data_file: false
-  number_of_variables: 1
-  number_of_cases: 1
+  number_of_variables: 15
+  number_of_cases: 10000
+  identifierccode1_var: 2
+  identifieryear_var: 4
