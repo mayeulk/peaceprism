@@ -2,18 +2,111 @@
 
 one:
   id: 1
+  var_id: 1
   dataset_id: 1
-  name: MACHAINEDEcaracteresMyString
-  format: MyString
-  kind: MyString
-  reverse: MyString
-  missing: MyString
+  name: var1-qualitatif_ordonne
+  format: integer
+  kind: monadic
+  reverse: none
+  missing: -99
+  mini: 1
+  maxi: 3
+  binary_var: 0
+  qualitatif_ordonne: 1
+  long_name: long_name1
+  code_var: CODE1
+  descr_before: descr-before1
+  descr_after: descr_after1
+  long_name_fr: long_name_fr1
+  descr_before_fr: descr_before_fr1
+  descr_after_fr: descr_after_fr1
+  page: 56
 
 two:
   id: 2
+  var_id: 2
+  dataset_id: 1
+  name: var2-qualitatif
+  format: integer
+  kind: monadic
+  reverse: none
+  missing: -99
+  mini: 
+  maxi: 
+  binary_var: 0
+  qualitatif_ordonne: 0
+  long_name: long_name2
+  code_var: CODE2
+  descr_before: descr-before2
+  descr_after: descr_after2
+  long_name_fr: long_name_fr2
+  descr_before_fr: descr_before_fr2
+  descr_after_fr: descr_after_fr2
+  page: 561
+  
+  
+three:
+  id: 3
+  var_id: 3
+  dataset_id: 1
+  name: var3-quantitatif
+  format: integer
+  kind: monadic
+  reverse: none
+  missing: -99
+  mini: 0
+  maxi: 195
+  binary_var: 0
+  qualitatif_ordonne: 0
+  long_name: long_name3
+  code_var: CODE3
+  descr_before: descr-before3
+  descr_after: descr_after3
+  long_name_fr: long_name_fr3
+  descr_before_fr: descr_before_fr3
+  descr_after_fr: descr_after_fr3
+  page: 112
+  
+four:
+  id: 4
+  var_id: 4
+  dataset_id: 1
+  name: var4-binaire
+  format: integer
+  kind: monadic
+  reverse: none
+  missing: -99
+  mini: 
+  maxi: 
+  binary_var: 1
+  qualitatif_ordonne: 0
+  long_name: long_name4
+  code_var: CODE4
+  descr_before: descr-before4
+  descr_after: descr_after4
+  long_name_fr: long_name_fr4
+  descr_before_fr: descr_before_fr4
+  descr_after_fr: descr_after_fr4
+  page: 40  
+  
+five:
+  id: 5
+  var_id: 1
   dataset_id: 2
-  name: MyString
-  format: MyString
-  kind: MyString
-  reverse: MyString
-  missing: MyString
+  name: var5-qualitatif
+  format: integer
+  kind: monadic
+  reverse: none
+  missing: -99
+  mini: 
+  maxi: 
+  binary_var: 0
+  qualitatif_ordonne: 0
+  long_name: long_name5
+  code_var: CODE5
+  descr_before: descr-before5
+  descr_after: descr_after5
+  long_name_fr: long_name_fr5
+  descr_before_fr: descr_before_fr5
+  descr_after_fr: descr_after_fr5
+  page: 2

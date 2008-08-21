@@ -12,13 +12,13 @@ class VariablesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  def test_should_create_variable
-    assert_difference('Variable.count') do
-      post :create, :variable => { }
-    end
-
-    assert_redirected_to variable_path(assigns(:variable))
-  end
+#  def test_should_create_variable
+#    assert_difference('Variable.count') do
+#      post :create, :variable => { }
+#  end
+#
+#    assert_redirected_to variable_path(assigns(:variable))
+#  end
 
   def test_should_show_variable
     get :show, :id => variables(:one).id
