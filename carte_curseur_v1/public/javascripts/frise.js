@@ -3,6 +3,7 @@
  */
 
 function afficherFrise(actuPays){
+	var countrydoesnotexist = 'Country does not exist'
 	if (tab != "") {	
 		var info = tab['info'];
 		var ann = tab['annees'];
@@ -26,12 +27,13 @@ function afficherFrise(actuPays){
 						
 			if (tabDataPays[c] == '#') {
 				coul = 'FFFFFF';
-				sign = 'Country dont exist';
+				sign = countrydoesnotexist;
 			}
 			else {
 				if ((tabDataPays[c] == 'null') || (tabDataPays[c] == null)) {
-					coul = 'C3C3C3';
-					sign = 'No Data';
+					var info2 = discretize[0];
+					coul = info2['couleur'];
+					sign = info2['signification'];
 				}
 				else {
 					for (var y = 1; y < discretize.length; y++) {

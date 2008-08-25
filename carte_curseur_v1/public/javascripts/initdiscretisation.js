@@ -14,6 +14,7 @@ function initdiscretisation(){
 	// le tableau de couleurs discretisees sera genere par une fonction js automatique
 	var tab_couleur = new Array('FFFFFF', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', '000000');
 	var varInfo = tab['info'];
+	var nodata='?'; //'No Data'
 	dataset_courant = varInfo['dataset_id'];
 	variable_courante = varInfo['var_id'];
 	discretize = [] ;
@@ -41,7 +42,7 @@ function initdiscretisation(){
 		chaine = chaine + '<div id="legende">';
 			
 		// chaine : premier interval pour les valeurs 'null'		
-		chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+		chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 
 		// autres classes
 		nbClasses = 2 ;	
@@ -98,7 +99,7 @@ function initdiscretisation(){
 			var disc_var = new Array() ;			
 			disc_var['valeur'] = 'null';
 			disc_var['couleur'] = 'C3C3C3';
-			disc_var['signification'] = 'No Data' ;
+			disc_var['signification'] = nodata ;
 			discretize[0] = disc_var ;
 			
 			// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
@@ -113,7 +114,7 @@ function initdiscretisation(){
 			chaine = chaine + '<div id="legende">';
 			
 			// chaine : premier interval pour les valeurs 'null'
-			chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+			chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 
 			var o = 1;
 			
@@ -143,7 +144,7 @@ function initdiscretisation(){
 				
 				disc_var['valeur'] = 'null';
 				disc_var['couleur'] = 'C3C3C3';
-				disc_var['signification'] = 'No Data' ;
+				disc_var['signification'] = nodata ;
 				discretize[0] = disc_var ;	
 				
 				var nbClas = 0 ;
@@ -163,7 +164,7 @@ function initdiscretisation(){
 				// chaine : la legende en tant que tel est affichee dans un div independant
 				chaine = chaine + '<div id="legende">';
 				
-				chaine = chaine + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+				chaine = chaine + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 
 				var tab_couleur_discr = chercherCouleursDisc('FFFFFF','FF0000', nbClas);
 				
@@ -219,7 +220,7 @@ function initdiscretisation(){
 							
 				disc_var['valeur'] = 'null';
 				disc_var['couleur'] = 'C3C3C3';
-				disc_var['signification'] = 'No Data';
+				disc_var['signification'] = nodata;
 				discretize[0] = disc_var ;			
 
 				//$('nbClasses').innerHTML = nbCla;
@@ -245,7 +246,7 @@ function initdiscretisation(){
 				chaine = chaine + '<div id="legende">';
 
 				// chaine : une case de legende pour les valeurs 'null'
-				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 				chaine += '</div>' ;
 				
 				$('cadre_legende').innerHTML = chaine;				
@@ -317,10 +318,10 @@ function afficherLegendeQuant(choixIntervals){
 		
 		disc_var['valeur'] = 'null';
 		disc_var['couleur'] = 'C3C3C3';
-		disc_var['signification'] = 'No Data';
+		disc_var['signification'] = nodata;
 		discretize[0] = disc_var ;			
 
-		chaine3 = chaine3 + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> No Data </span></p>';
+		chaine3 = chaine3 + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 		var o = 1;
 		
 		// chaine : premier interval
