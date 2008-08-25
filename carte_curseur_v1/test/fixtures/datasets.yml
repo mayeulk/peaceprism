@@ -11,10 +11,10 @@ one:
   first_year_possible: 1815
   last_year_possible: 2003
   label_line_in_data_file: false
-  number_of_variables: 10
-  number_of_cases: 15600
-  identifierccode1_var: 3
-  identifieryear_var: 5
+  number_of_variables: 9
+  number_of_cases: 5
+  identifierccode1_var: 2
+  identifieryear_var: 3
 
 two:
   id: 2
@@ -27,7 +27,7 @@ two:
   first_year_possible: 1946
   last_year_possible: 2003
   label_line_in_data_file: false
-  number_of_variables: 15
-  number_of_cases: 10000
-  identifierccode1_var: 2
-  identifieryear_var: 4
+  number_of_variables: 9
+  number_of_cases: 5
+  identifierccode1_var: 1
+  identifieryear_var: 3

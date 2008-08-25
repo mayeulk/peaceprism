@@ -1,0 +1,49 @@
+one:
+  id: 1
+  var1: 220
+  var2: "FRN"
+  var3: 1950
+  var4: 85
+  var5: 0
+  var6: 7
+  var7: 220
+  
+two:
+  id: 2
+  var1: 220
+  var2: "FRN"
+  var3: 1951
+  var4: 59
+  var5: 0
+  var6: 7
+  var7: 220
+  
+three:
+  id: 3
+  var1: 220
+  var2: "FRN"
+  var3: 1952
+  var4: 25
+  var5: 0
+  var6: 7
+  var7: 220
+   
+four:
+  id: 4
+  var1: 2
+  var2: "USA"
+  var3: 1950
+  var4: 24
+  var5: 0
+  var6: 7
+  var7: 220
+  
+five:
+  id: 5
+  var1: 2
+  var2: "USA"
+  var3: 1951
+  var4: 14
+  var5: 0
+  var6: 7
+  var7: 220

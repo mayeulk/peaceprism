@@ -1,5 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-first:
+one:
   id: 1
-another:
+  ltlgrd: lt59lg26rd200
+  begin: 1946
+  finish: 1948
+  intensity: 2
+  type_of_war: 3
+  territory: Estonia
+two:
   id: 2
+  ltlgrd: lt35lg110rd2000
+  begin: 1946
+  finish: 1978
+  intensity: 2
+  type_of_war: 3
+  territory: Estonia
