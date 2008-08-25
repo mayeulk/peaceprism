@@ -14,7 +14,7 @@ function initdiscretisation(){
 	// le tableau de couleurs discretisees sera genere par une fonction js automatique
 	var tab_couleur = new Array('FFFFFF', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', '000000');
 	var varInfo = tab['info'];
-	var nodata='?'; //'No Data'
+	nodata='?'; //'No Data'
 	dataset_courant = varInfo['dataset_id'];
 	variable_courante = varInfo['var_id'];
 	discretize = [] ;
