@@ -89,11 +89,22 @@ before_filter :initialise_var
       if @id.strip.match(/^lt/)
         @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')
         #@type_zone = 'conflit'
+        #render :nothing => true
       else
-      
-            #eprec var12 dataset18  ou  var26 dataset6
-      #"SELECT var_id, dataset_id, name, kind from variables  where (kind = 'monadic') and format != 'string' and dataset_id = #{@dataset_choisi} order by var_id"
-         #render(:text =>"coucou")
+        @cow_code = ActiveRecord::Base.connection.select_value(
+            "SELECT cowcode from fips_cow_codes WHERE  fips_cntry = '#{@id[0..1]}' LIMIT 1"
+        )
+        # TODO: on pourrait faire une seule requete sql en utilisant select_one (selectionner une ligne contenant les 2 colonnes que l on veut
+        @identifieryear_var = ActiveRecord::Base.connection.select_value( 
+          "SELECT identifieryear_var   FROM datasets where id = #{@dataset} LIMIT 1")
+        @identifierccode1_var = ActiveRecord::Base.connection.select_value(
+          "SELECT identifierccode1_var   FROM datasets where id = #{@dataset} LIMIT 1")
+
+        @donnees_frise = ActiveRecord::Base.connection.select_all(
+          "SELECT var#{@variable} as donnee, var#{@identifieryear_var} as annee from dataset_#{@dataset} where var#{@identifierccode1_var}='#{@cow_code}' and (var#{@identifieryear_var} >= #{@debut_periode}) and (var#{@identifieryear_var} <= #{@fin_periode}) order by var#{@identifieryear_var}"
+          )
+        @long_annee = (600 / (@fin_periode - @debut_periode + 1)).to_i
+                  
         render(:partial => "frise_pays")
       end
   end
@@ -102,8 +113,8 @@ before_filter :initialise_var
   def tableau
   @id=params[:id]
   @annee=params[:annee].to_i
-    if @id.strip.match(/^lt/)
-      @conflitsexts = Conflitsext.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')     
+    if @id.strip.match('(.)\1')[0] != nil
+      @conflitsexts = Conflitsexts.find(:all, :order => "begin ASC", :conditions => 'ltlgrd = \''+params[:id]+'\'')     
     else
       #bricolage pour eviter une erreur car on a survole un pays au lieu d'un conflit. FIX IT
       #il faudrait eviter de faire un appel ajax

@@ -38,10 +38,6 @@
   	end%>
 
 </div>
-<!--
-# IE6 ne gere pas opacity: mais FF et les autres ne gerent pas  filter: Alpha(Opacity=XX)
-# filter: Alpha(Opacity=<%= conflitsext.intensity.to_f*33.3; %>);
--->
 
 <br/>
 <table style="clear:both;">
@@ -68,25 +64,3 @@
   </tr>
 </table>
 
-<!--
-<div class="tableau_donnees">
-  <table style="border-collapse: separate ; background-color: black;">
-    <tr class="tete_colonne">
-      <% for column in Conflitsext.content_columns %>
-      <td>  <%= column.human_name %> </td>
-      <% end %>
-    </tr>
-    <% for conflitsext in @conflitsexts %>
-    <tr id="an<%=conflitsext.begin%>" 
- <%= "class='ligne_en_cours'" if ( (conflitsext.begin<=@annee) && (conflitsext.finish>=@annee)) %> 
-    style="border-style:solid; border-width:2px; border-color:#000000; color: white;
-    background-color:<%=rgbo(@couleurs[conflitsext.type_of_war-1],conflitsext.intensity.to_f/3 )%>;">
-      <% for column in Conflitsext.content_columns %>
-      <td style=" border: inherit;">
-      <%= conflitsext[(column.name)] %> </td>
-      <% end %>
-    </tr>
-    <% end %>
-  </table>
-</div>
--->

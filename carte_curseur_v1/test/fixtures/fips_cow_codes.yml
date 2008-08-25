@@ -1,13 +1,22 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  country_name: MyString
-  cowcode: 1
-  fips_cntry: MyString
+  id: 1
+  country_name: France
+  cowcode: 220
+  fips_cntry: FR
   contcode: 1
 
 two:
-  country_name: MyString
-  cowcode: 1
-  fips_cntry: MyString
+  id: 2
+  country_name: Finland
+  cowcode: 375
+  fips_cntry: FI
   contcode: 1
+  
+three:
+  id: 3
+  country_name: Ethiopia
+  cowcode: 530
+  fips_cntry: ET
+  contcode: 4
