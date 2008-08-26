@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="36"
+   height="36"
+   id="svg2477"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="reference.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/mk/PRISM/eclipse_workspace/carte_curseur_v1/icons/reference.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="10.568245"
+     inkscape:cx="21.813629"
+     inkscape:cy="18.766703"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1018"
+     inkscape:window-height="741"
+     inkscape:window-x="1024"
+     inkscape:window-y="0" />
+  <defs
+     id="defs2479">
+    <inkscape:perspective
+       id="perspective2485"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 104.375 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="375 : 104.375 : 1"
+       inkscape:persp3d-origin="187.5 : 69.583333 : 1"
+       id="perspective2498" />
+  </defs>
+  <metadata
+     id="metadata2482">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Calque 1">
+    <path
+       style="fill:#001873;fill-opacity:1;fill-rule:evenodd;stroke:#fefefe;stroke-width:0.70586699;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="cccccccc"
+       id="path14684"
+       d="M 4.4632044,59.731682 C 7.9839589,65.647508 11.145454,70.557403 14.666208,76.473231 C 21.899325,73.000378 24.965015,71.826791 31.264054,69.647277 C 34.018386,70.43765 36.916422,69.000608 38.090008,67.922824 C 43.287312,67.204302 49.346842,66.342077 55.190816,65.76726 C 55.047112,64.833182 55.334521,64.473922 55.190816,63.539844 C 49.131286,59.108962 42.999905,54.462523 36.940374,50.031641 C 25.875143,53.169184 15.528435,56.594137 4.4632044,59.731682 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.52940023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccccc"
+       id="path14685"
+       d="M 5.8283949,59.947237 C 8.9898899,64.976887 12.151384,70.006538 15.312879,75.036187 C 20.917345,72.09025 27.569833,67.702161 32.774444,68.874337 C 32.521819,67.141874 33.336142,66.171517 34.353696,65.04874 C 25.899093,63.587746 21.683769,68.449741 15.672139,70.796911 C 15.552386,72.018397 15.432632,73.239884 15.312879,74.46137 C 15.480533,73.287786 15.504483,72.1142 15.672138,70.940616 C 12.941757,66.701339 9.7084117,61.384279 6.9780306,57.145003 C 6.0918527,57.576115 5.9960511,58.941307 5.8283949,59.947237 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.52940023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+       sodipodi:nodetypes="csccccc"
+       id="path14686"
+       d="M 33.563323,66.701339 C 35.886541,62.270457 37.770661,61.957425 42.329284,61.312427 C 45.900747,60.807103 48.404754,60.926311 52.045263,60.758655 C 51.733903,61.812488 52.268832,63.204534 52.747846,64.617626 C 49.322893,64.76133 46.616462,64.545774 42.83225,65.048738 C 40.317424,64.833182 38.090007,66.41393 36.437408,68.066529 C 36.581113,65.000838 34.85666,66.892946 33.563323,66.701339 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:1.84599864;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccsc"
+       id="path4088"
+       d="M 15.757008,18.235314 C 18.248179,21.438536 20.73935,24.64176 23.230521,27.844982 C 15.546082,26.795642 10.130071,31.593191 5.2836185,33.135142 C 3.7160784,29.017237 2.0495224,24.635094 0.48198311,20.517188 C 4.0910288,18.987305 6.8506762,16.441287 11.628587,16.094747 C 13.480535,15.960426 14.592363,17.194173 15.757008,18.235314 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:1.79774952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccc"
+       id="path4090"
+       d="M 23.150295,28.103505 C 25.360351,25.631335 29.046408,28.454341 35.505309,31.818462 C 32.425266,27.058505 29.345222,22.298549 26.26518,17.538594 C 21.732667,15.83079 18.993831,11.868406 16.165119,14.390924 L 23.150295,28.103505 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.60500902;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccsc"
+       id="path14687"
+       d="M 15.558434,14.763907 C 18.035958,18.441005 20.513483,22.118104 22.991008,25.795203 C 15.348664,24.590628 9.9623196,30.097912 5.1424156,31.867974 C 3.5834628,27.140878 1.9260361,22.110453 0.36708347,17.383357 C 3.9563592,15.627147 6.7008899,12.704477 11.452628,12.306671 C 13.294432,12.152479 14.400168,13.568743 15.558434,14.763907 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.59172362;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccc"
+       id="path950"
+       d="M 23.339408,26.436326 C 25.550813,23.462262 29.239119,26.858388 35.701961,30.905484 C 32.620039,25.179172 29.538116,19.452862 26.456194,13.726552 C 21.920916,11.672035 19.180407,6.9052163 16.34997,9.9398495 L 23.339408,26.436326 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.59172362;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccsc"
+       id="path2518"
+       d="M 15.483105,11.772553 C 17.851253,16.243693 20.219401,20.714831 22.58755,25.185969 C 15.282596,21.539591 10.134044,25.330616 5.5269254,25.562555 C 4.0367962,20.334021 2.4525404,14.770482 0.9624113,9.5419488 C 4.3932302,8.9308195 7.0165972,6.882556 11.558559,8.0021234 C 13.319052,8.4360747 14.375973,10.206558 15.483105,11.772553 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.59172362;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccc"
+       id="path2520"
+       d="M 23.243473,25.045599 C 25.454878,20.941833 29.143184,22.45378 35.606026,23.199319 C 32.524104,19.047415 29.442181,14.895511 26.360259,10.743607 C 21.82498,11.005947 19.084472,7.639125 16.254034,12.119692 L 23.243473,25.045599 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.56816775;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccsc"
+       id="path2524"
+       d="M 16.026666,10.423995 C 18.247284,15.371397 20.467903,20.318797 22.688524,25.266199 C 15.920393,20.162578 11.20145,22.933976 6.9532961,22.249817 C 5.5365385,16.718776 4.0302508,10.833616 2.6134933,5.3025743 C 5.7734667,5.3731297 8.176994,3.8442652 12.375931,5.8685514 C 14.003465,6.6531774 14.992729,8.6359561 16.026666,10.423995 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#001873;stroke-width:0.67508227;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccc"
+       id="path2526"
+       d="M 23.062532,25.207786 C 25.224644,18.668988 28.71156,19.248291 34.84867,17.646828 C 31.976222,13.192776 29.103769,8.7387199 26.23132,4.2846656 C 21.913423,6.4881026 19.354545,2.9743316 16.598207,10.282544 L 23.062532,25.207786 z" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98620605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.94482414, 0.98620604;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 4.8241483,7.9741664 C 12.227786,6.3597499 14.482762,10.36569 14.482762,10.36569"
+       id="path3650"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98620605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.94482414, 0.98620604;stroke-dashoffset:3.74758294;stroke-opacity:1"
+       d="M 6.1119975,11.147847 C 13.515635,9.5334309 15.770611,13.539371 15.770611,13.539371"
+       id="path3652"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98620605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.94482414, 0.98620604;stroke-dashoffset:1.18344724;stroke-opacity:1"
+       d="M 6.9399007,14.271814 C 14.343539,12.657398 16.966471,15.811347 16.966471,15.811347"
+       id="path3654"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98620605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.94482414, 0.98620604;stroke-dashoffset:2.7613769;stroke-opacity:1"
+       d="M 7.4918362,17.111785 C 14.895475,15.497368 17.886364,18.840648 17.886364,18.840648"
+       id="path3656"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98620605;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.95861811, 0.98620604;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 8.7796861,19.951754 C 16.183324,18.337338 18.254321,21.301955 18.254321,21.301955"
+       id="path3658"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g4100"
+       transform="matrix(0.9721649,0,0,1.00045,1.0064655,-8.5533083e-3)">
+      <path
+         sodipodi:nodetypes="ccccc"
+         id="path3660"
+         d="M 18.721816,11.011746 C 18.721816,11.011746 21.041407,15.426617 22.09138,18.177104 C 25.065005,16.181651 28.02841,15.366632 30.151011,15.199293 C 27.947874,11.259882 26.999179,10.340749 25.506477,8.5457464 C 21.080768,8.8042078 18.721816,11.011746 18.721816,11.011746 z"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.97288698px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         id="path3662"
+         d="M 21.053638,9.5055338 L 24.602004,16.980758"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         id="path3664"
+         d="M 23.703084,8.7958608 L 27.724566,16.034527"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         id="path3666"
+         d="M 20.438588,13.479704 L 24.554692,11.776488 L 27.866501,10.782946"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         id="path3668"
+         d="M 21.479442,15.845281 C 24.649316,13.053899 29.522405,13.38508 29.522405,13.38508"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+  <g
+     id="g2547"
+     inkscape:groupmode="layer"
+     inkscape:label="lorem ipsum">
+    <flowRoot
+       id="flowRoot2549"
+       xml:space="preserve"><flowRegion
+         id="flowRegion2551"><rect
+           id="rect2553"
+           width="36"
+           height="36"
+           x="0"
+           y="0" /></flowRegion><flowPara
+         id="flowPara2555">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Nam massa turpis, nonummy et, consectetuer id, placerat ac, ante. Praesent a lacus vitae turpis consequat semper. Donec ut urna. Donec tempus quam quis neque. Praesent semper, neque vel condimentum hendrerit, lectus elit pretium ligula, nec consequat nisl velit at dui. Curabitur tincidunt tellus nec purus. Ut venenatis. Nam laoreet dui sed magna. In commodo, dolor quis fermentum ullamcorper, urna massa volutpat massa, vitae mattis purus arcu nec nulla. Donec ut urna. Proin dolor sapien, adipiscing id, sagittis eu, molestie viverra, mauris. </flowPara><flowPara
+         id="flowPara2557" /><flowPara
+         id="flowPara2559">Morbi volutpat. Pellentesque viverra dolor non nunc. In consectetuer, lorem eu lobortis egestas, velit odio imperdiet eros, sit amet sagittis nunc mi ac neque. Sed a lorem ut est tincidunt consectetuer. Suspendisse potenti. Mauris sed nulla quis nisi interdum tempor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean turpis ipsum, rhoncus vitae, posuere vitae, euismod sed, ligula. Nam a nunc. Suspendisse viverra placerat tortor. Curabitur tincidunt tellus nec purus. Curabitur nunc ante, ullamcorper vel, auctor a, aliquam at, tortor. In leo ante, venenatis eu, volutpat ut, imperdiet auctor, enim. Proin dolor sapien, adipiscing id, sagittis eu, molestie viverra, mauris. Quisque dictum quam vel neque. Praesent a eros. Etiam fermentum. Ut venenatis. Praesent scelerisque. </flowPara><flowPara
+         id="flowPara2561" /><flowPara
+         id="flowPara2563">Praesent aliquet, neque pretium congue mattis, ipsum augue dignissim ante, ac pretium nisl lectus at magna. Vivamus posuere, ante eu tempor dictum, felis nibh facilisis sem, eu auctor metus nulla non lorem. Nullam sapien mauris, venenatis at, fermentum at, tempus eu, urna. Morbi turpis arcu, egestas congue, condimentum quis, tristique cursus, leo. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur risus urna, placerat et, luctus pulvinar, auctor vel, orci. Aenean ligula. Pellentesque sit amet dui vel justo gravida auctor. Aliquam vel nibh. Suspendisse viverra placerat tortor. Donec sit amet enim. Nulla blandit justo a metus. Cras facilisis felis sit amet lorem. Quisque malesuada nulla sed pede volutpat pulvinar. In hac habitasse platea dictumst. Etiam fermentum. Etiam cursus purus interdum libero. Curabitur tincidunt tellus nec purus. Vivamus feugiat. </flowPara><flowPara
+         id="flowPara2565" /><flowPara
+         id="flowPara2567">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean turpis ipsum, rhoncus vitae, posuere vitae, euismod sed, ligula. Vestibulum viverra varius enim. Cras facilisis felis sit amet lorem. Praesent semper, neque vel condimentum hendrerit, lectus elit pretium ligula, nec consequat nisl velit at dui. Quisque dictum quam vel neque. Curabitur nunc ante, ullamcorper vel, auctor a, aliquam at, tortor. Etiam sodales orci nec ligula. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer porta. Integer risus velit, facilisis eget, viverra et, venenatis id, leo. Morbi a mauris. Maecenas viverra. Nam molestie nisl at metus. In consectetuer, lorem eu lobortis egestas, velit odio imperdiet eros, sit amet sagittis nunc mi ac neque. Donec interdum vestibulum libero. Aenean scelerisque metus eget sem. Fusce nonummy commodo dui. </flowPara><flowPara
+         id="flowPara2569" /><flowPara
+         id="flowPara2571">Vivamus feugiat. Fusce nonummy commodo dui. Etiam pede nunc, vestibulum vel, rutrum et, tincidunt eu, enim. Aenean id purus. Pellentesque viverra dolor non nunc. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Sed a lorem ut est tincidunt consectetuer. Mauris tincidunt aliquam ante. Fusce nonummy commodo dui. Quisque facilisis, urna sit amet pulvinar mollis, purus arcu adipiscing velit, non condimentum diam purus eu massa. Suspendisse fermentum. </flowPara><flowPara
+         id="flowPara2573" /></flowRoot>  </g>
+  <g
+     inkscape:label="lorem ipsum"
+     inkscape:groupmode="layer"
+     id="g2638"
+     style="display:inline">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2640"><flowRegion
+         id="flowRegion2642"><rect
+           y="0"
+           x="0"
+           height="36"
+           width="36"
+           id="rect2644" /></flowRegion><flowPara
+         id="flowPara2646">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Quisque pretium rutrum ligula. Vestibulum non arcu a ante feugiat vestibulum. Donec at diam a tellus dignissim vestibulum. Fusce venenatis ligula in pede. Vestibulum viverra varius enim. Curabitur nunc ante, ullamcorper vel, auctor a, aliquam at, tortor. Nam malesuada sapien eu nibh. Pellentesque condimentum felis a sem. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Cras ac enim vel dui vestibulum suscipit. Mauris ac massa vestibulum nisl facilisis viverra. Quisque malesuada nulla sed pede volutpat pulvinar. Sed non ipsum. Fusce consectetuer tellus ut nisl. </flowPara><flowPara
+         id="flowPara2648" /><flowPara
+         id="flowPara2650">Vestibulum non arcu a ante feugiat vestibulum. Aenean ultrices turpis. Duis sem velit, ultrices et, fermentum auctor, rhoncus ut, ligula. Sed quis elit. Mauris et pede. Maecenas justo. Suspendisse venenatis. In tempus urna. Pellentesque ac turpis. Sed quis elit. Cras facilisis felis sit amet lorem. Quisque aliquam, nulla ac scelerisque convallis, nisi ligula sagittis risus, at nonummy arcu urna pulvinar nibh. Vivamus quis mi. Aliquam sed erat. </flowPara><flowPara
+         id="flowPara2652" /><flowPara
+         id="flowPara2654">Sed dolor. Vivamus posuere, ante eu tempor dictum, felis nibh facilisis sem, eu auctor metus nulla non lorem. Phasellus at purus sed purus cursus iaculis. In tempus urna. Curabitur accumsan felis in erat. Nunc metus. Fusce venenatis ligula in pede. Proin lectus orci, venenatis pharetra, egestas id, tincidunt vel, eros. Donec nonummy lacinia leo. Quisque facilisis, urna sit amet pulvinar mollis, purus arcu adipiscing velit, non condimentum diam purus eu massa. Suspendisse molestie sem. Nullam venenatis gravida orci. In tempus urna. In leo ante, venenatis eu, volutpat ut, imperdiet auctor, enim. Fusce nonummy commodo dui. Proin dolor sapien, adipiscing id, sagittis eu, molestie viverra, mauris. Suspendisse potenti. Nam rhoncus, lectus vel hendrerit congue, nisl lorem feugiat ante, in fermentum erat nulla tristique arcu. </flowPara><flowPara
+         id="flowPara2656" /><flowPara
+         id="flowPara2658">Suspendisse fermentum. Integer porta. Praesent a eros. Maecenas justo. Pellentesque suscipit accumsan massa. Suspendisse molestie sem. Etiam cursus purus interdum libero. Mauris sed nulla quis nisi interdum tempor. Cras gravida. Curabitur accumsan felis in erat. Donec tempus quam quis neque. Cras ac enim vel dui vestibulum suscipit. Praesent scelerisque. Sed dolor. Praesent aliquet, neque pretium congue mattis, ipsum augue dignissim ante, ac pretium nisl lectus at magna. Quisque aliquam, nulla ac scelerisque convallis, nisi ligula sagittis risus, at nonummy arcu urna pulvinar nibh. Quisque pretium rutrum ligula. Morbi a mauris. </flowPara><flowPara
+         id="flowPara2660" /><flowPara
+         id="flowPara2662">Praesent aliquet, neque pretium congue mattis, ipsum augue dignissim ante, ac pretium nisl lectus at magna. Curabitur nunc ante, ullamcorper vel, auctor a, aliquam at, tortor. Nulla sagittis condimentum ligula. Sed dolor. Aliquam velit dui, commodo quis, porttitor eget, convallis et, nisi. Phasellus auctor enim eget sem. Proin diam augue, semper vitae, varius et, viverra id, felis. In leo ante, venenatis eu, volutpat ut, imperdiet auctor, enim. Aliquam vel nibh. Cras gravida. Quisque aliquam, nulla ac scelerisque convallis, nisi ligula sagittis risus, at nonummy arcu urna pulvinar nibh. Nam id neque. </flowPara><flowPara
+         id="flowPara2664" /></flowRoot>  </g>
+  <g
+     id="g2762"
+     inkscape:groupmode="layer"
+     inkscape:label="lorem ipsum">
+    <flowRoot
+       id="flowRoot2764"
+       xml:space="preserve"><flowRegion
+         id="flowRegion2766"><rect
+           id="rect2768"
+           width="36"
+           height="36"
+           x="0"
+           y="0" /></flowRegion><flowPara
+         id="flowPara2770">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In tempus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Pellentesque et arcu. Praesent a lacus vitae turpis consequat semper. Curabitur lorem risus, sagittis vitae, accumsan a, iaculis id, metus. Pellentesque condimentum felis a sem. Nullam venenatis gravida orci. Integer risus velit, facilisis eget, viverra et, venenatis id, leo. Nam id neque. Aenean turpis ipsum, rhoncus vitae, posuere vitae, euismod sed, ligula. Quisque vehicula porttitor odio. Nam consectetuer mollis dolor. Vivamus feugiat. Mauris ac massa vestibulum nisl facilisis viverra. Fusce consectetuer tellus ut nisl. In hac habitasse platea dictumst. </flowPara><flowPara
+         id="flowPara2772" /><flowPara
+         id="flowPara2774">Mauris tempor ultrices justo. Aenean turpis ipsum, rhoncus vitae, posuere vitae, euismod sed, ligula. Donec sit amet enim. Nulla sed lacus. Nulla sed lacus. Praesent semper, neque vel condimentum hendrerit, lectus elit pretium ligula, nec consequat nisl velit at dui. Maecenas justo. Pellentesque suscipit accumsan massa. Quisque vehicula porttitor odio. Nam massa turpis, nonummy et, consectetuer id, placerat ac, ante. Nam pharetra. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Donec interdum vestibulum libero. Nam laoreet dui sed magna. Etiam pede nunc, vestibulum vel, rutrum et, tincidunt eu, enim. Donec ut urna. Proin dolor sapien, adipiscing id, sagittis eu, molestie viverra, mauris. Aenean turpis ipsum, rhoncus vitae, posuere vitae, euismod sed, ligula. Aenean id purus. Integer tempus malesuada pede. </flowPara><flowPara
+         id="flowPara2776" /><flowPara
+         id="flowPara2778">Sed a lorem ut est tincidunt consectetuer. Sed quis elit. In tempus urna. Pellentesque convallis dolor vel libero. Pellentesque viverra dolor non nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Proin dolor sapien, adipiscing id, sagittis eu, molestie viverra, mauris. Curabitur accumsan felis in erat. Cras gravida. Nam consectetuer mollis dolor. Vestibulum viverra varius enim. Fusce venenatis ligula in pede. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer tempus malesuada pede. </flowPara><flowPara
+         id="flowPara2780" /><flowPara
+         id="flowPara2782">Maecenas viverra. Sed a lorem ut est tincidunt consectetuer. Sed non ipsum. Vivamus feugiat. Mauris et dolor. Etiam cursus purus interdum libero. Phasellus hendrerit. Etiam cursus purus interdum libero. Proin lectus orci, venenatis pharetra, egestas id, tincidunt vel, eros. Mauris tempor ultrices justo. Quisque facilisis, urna sit amet pulvinar mollis, purus arcu adipiscing velit, non condimentum diam purus eu massa. Morbi a mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. </flowPara><flowPara
+         id="flowPara2784" /><flowPara
+         id="flowPara2786">Fusce venenatis ligula in pede. Donec ut purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec gravida, ante vel ornare lacinia, orci enim porta est, eget sollicitudin lectus lectus eget lacus. Sed at turpis vitae velit euismod aliquet. Donec nonummy lacinia leo. Phasellus lacinia iaculis mi. Quisque malesuada nulla sed pede volutpat pulvinar. Aliquam velit dui, commodo quis, porttitor eget, convallis et, nisi. Curabitur accumsan felis in erat. Aenean ligula. Aliquam metus. Maecenas viverra. Mauris urna sem, suscipit vitae, dignissim id, ultrices sed, nunc. </flowPara><flowPara
+         id="flowPara2788" /></flowRoot>  </g>
+</svg>
