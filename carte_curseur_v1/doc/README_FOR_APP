@@ -7,3 +7,22 @@ lancer svn à la ligne de commande:
 svnserve -d --foreground -r /home/mk/docs_new/programmation_PRISM/subversion --listen-host=localhost
 
 enlever --foreground pour le laisser en démon en arrière plan
+
+
+MIGRATIONS:
+
+# option -t pour suivre la *t*race
+rake -t db:migrate   #mettre à jour la base (toutes les migrations)
+
+#utile:
+sudo /var/log/postgresql/tail -f  postgresql-8.2-main.log
+
+rake -t db:migrate VERSION=8 #aller à la version 8 
+rake db:version # afficher la version en cours
+
+# effectuer la partie 'up' de la migration 8,
+# meme si la version actuelle n'est pas la 7
+rake -t db:migrate:up VERSION=8 
+
+# l'inverse:
+rake -t db:migrate:down VERSION=8
