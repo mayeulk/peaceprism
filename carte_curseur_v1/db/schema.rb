@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 9) do
 
   create_table "annees", :id => false, :force => true do |t|
     t.integer "annee"
@@ -333,6 +333,8 @@ ActiveRecord::Schema.define(:version => 8) do
     t.text     "descr_after_fr"
     t.integer  "page"
   end
+
+  add_index "variables", ["dataset_id", "var_id"], :name => "index_variables_on_var_id_and_dataset_id", :unique => true
 
 # Could not dump table "world" because of following StandardError
 #   Unknown type 'geometry' for column 'the_geom'
