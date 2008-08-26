@@ -8,11 +8,14 @@ discretize = new Array() ; // variable globale, il contiendra les parametres
 							// des variables a afficher (valeur, couleur...)
 dataset_courant = '';
 variable_courante = '';
+// le tableau de couleurs discretisees sera genere par une fonction js automatique
+tab_couleur = new Array('FFFFFF', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', '000000');
+couleurs_pour_disc = new Array('FFF0F0', 'FF0000');
+couleur_null = 'C3C3C3';
 // fonction qui rempli le tableau discretize en fonction de la variable choisie,
 // c'est a dire en fonction des infos recuperees dans le json associe
 function initdiscretisation(){
-	// le tableau de couleurs discretisees sera genere par une fonction js automatique
-	var tab_couleur = new Array('FFFFFF', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', '000000');
+
 	var varInfo = tab['info'];
 	nodata='?'; //'No Data'
 	dataset_courant = varInfo['dataset_id'];
@@ -27,7 +30,7 @@ function initdiscretisation(){
 		
 		// premiere case pour legende des valeurs 'null'
 		disc_var['valeur'] = 'null';
-		disc_var['couleur'] = 'C3C3C3';
+		disc_var['couleur'] = couleur_null;
 		discretize[0] = disc_var ;	
 		
 		// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
@@ -98,7 +101,7 @@ function initdiscretisation(){
 
 			var disc_var = new Array() ;			
 			disc_var['valeur'] = 'null';
-			disc_var['couleur'] = 'C3C3C3';
+			disc_var['couleur'] = couleur_null;
 			disc_var['signification'] = nodata ;
 			discretize[0] = disc_var ;
 			
@@ -143,7 +146,7 @@ function initdiscretisation(){
 				var disc_var = new Array() ;
 				
 				disc_var['valeur'] = 'null';
-				disc_var['couleur'] = 'C3C3C3';
+				disc_var['couleur'] = couleur_null;
 				disc_var['signification'] = nodata ;
 				discretize[0] = disc_var ;	
 				
@@ -166,7 +169,7 @@ function initdiscretisation(){
 				
 				chaine = chaine + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 
-				var tab_couleur_discr = chercherCouleursDisc('FFFFFF','FF0000', nbClas);
+				var tab_couleur_discr = chercherCouleursDisc(couleurs_pour_disc[0], couleurs_pour_disc[1], nbClas);
 				
 				var o = 1;
 				
@@ -210,20 +213,10 @@ function initdiscretisation(){
 				}
 				chaineIntervals += tabIntervals[elt] ;
 								
-				// ici il faudra integrer la fonction qui genere le tableau de nbCla couleurs
-				var tab_couleur_disc = chercherCouleursDisc('FF0000','FFFFFF', nbClasses);				
-
 				for (var i in varQual){
 					nbCla += 1;
 				}
 				var disc_var = new Array() ;
-							
-				disc_var['valeur'] = 'null';
-				disc_var['couleur'] = 'C3C3C3';
-				disc_var['signification'] = nodata;
-				discretize[0] = disc_var ;			
-
-				//$('nbClasses').innerHTML = nbCla;
 				nbClasses = nbCla ;
 				
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
@@ -246,7 +239,6 @@ function initdiscretisation(){
 				chaine = chaine + '<div id="legende">';
 
 				// chaine : une case de legende pour les valeurs 'null'
-				chaine = chaine + '<p>0<input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 				chaine += '</div>' ;
 				
 				$('cadre_legende').innerHTML = chaine;				
@@ -309,7 +301,7 @@ function afficherLegendeQuant(choixIntervals){
 		nbClasses = tabCh.length - 1 ;
 		var tabIntervals = tabCh ;
 		
-		var tab_couleur_disc = chercherCouleursDisc('FFFFFF','FF0000', nbClasses);
+		var tab_couleur_disc = chercherCouleursDisc(couleurs_pour_disc[0], couleurs_pour_disc[1], nbClasses);
 		
 		// chaine : une case de legende pour les valeurs 'null'
 		var chaine3 = '' ;
@@ -317,7 +309,7 @@ function afficherLegendeQuant(choixIntervals){
 		var disc_var = new Array() ;
 		
 		disc_var['valeur'] = 'null';
-		disc_var['couleur'] = 'C3C3C3';
+		disc_var['couleur'] = couleur_null;
 		disc_var['signification'] = nodata;
 		discretize[0] = disc_var ;			
 
