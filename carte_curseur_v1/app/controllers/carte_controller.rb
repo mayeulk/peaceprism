@@ -27,27 +27,31 @@ before_filter :initialise_var
   # avec la liste deroulante de variables
   def refresh_var
     @dataset_choisi = params[:datas]
-    @citation = ActiveRecord::Base.connection.select_value(
-    "Select data_set_citation from datasets where id = #{@dataset_choisi}")
-    @var_select = ActiveRecord::Base.connection.select_all(
-       "SELECT var_id, name, long_name from variables 
-          where (kind = 'monadic') and format != 'string'
-          and dataset_id = #{@dataset_choisi} order by var_id")
-    
-    # la liste des variables disponibles pour le select html
-    @vars = Array.new()
-    @vars[0] = ['Please choose a variable', '0']
-    i= 1
-    for @v in @var_select
-      option = Array.new()
-      # on met .to_s pour les tests tant que la base n'est pas remplie (si le nom long est absent, on fait nil.to_s)
-      option[0] = @v['long_name'].to_s + ' (' + @v['name'] + ')'
-      option[1] = @v['var_id']
-      @vars[i] = option
-      i += 1
+    if @dataset_choisi != '0'
+      @citation = ActiveRecord::Base.connection.select_value(
+      "Select data_set_citation from datasets where id = #{@dataset_choisi}")
+      @var_select = ActiveRecord::Base.connection.select_all(
+         "SELECT var_id, name, long_name from variables 
+            where (kind = 'monadic') and format != 'string'
+            and dataset_id = #{@dataset_choisi} order by var_id")
+      
+      # la liste des variables disponibles pour le select html
+      @vars = Array.new()
+      @vars[0] = ['Please choose a variable', '0']
+      i= 1
+      for @v in @var_select
+        option = Array.new()
+        # on met .to_s pour les tests tant que la base n'est pas remplie (si le nom long est absent, on fait nil.to_s)
+        option[0] = @v['long_name'].to_s + ' (' + @v['name'] + ')'
+        option[1] = @v['var_id']
+        @vars[i] = option
+        i += 1
+      end
+      
+      render :partial => "refresh_var"
+    else
+      render(:nothing => true)
     end
-
-    render :partial => "refresh_var"
   end
   
   # rend l'action 'list' (c'est a dire affiche la page 'carte')
