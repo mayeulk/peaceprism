@@ -1,5 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
+fixtures :variables, :datasets
+
 class VariableTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   def test_truth
@@ -7,13 +9,19 @@ class VariableTest < ActiveSupport::TestCase
   end
   
   def test_should_create_record
-    variable = Variable.create(:var_id=>1, :dataset_id=>1)
+    variable = Variable.create(:var_id=>5, :dataset_id=>1)
     assert variable.valid?, "variable non valide"
   end
   
-   def test_should_not_create_record
+  
+#  def test_should_not_create_duplicate_record
+#    variable = Variable.create(:var_id=>6, :dataset_id=>1)
+#    assert variable.valid?, "variable non valide"
+#  end
+  
+   def test_should_not_create_orphan_record
     variable = Variable.create(:var_id=>1, :dataset_id=>5)
-    assert !(variable.valid?), "variable valide alors qu'elle ne doit pas"
+    assert !(variable.valid?), "variable cree sans correspondre a un dataset"
   end
 
   

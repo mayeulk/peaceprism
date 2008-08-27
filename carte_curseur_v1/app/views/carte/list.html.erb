@@ -133,6 +133,10 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 
 </div>
 
+<script type="text/ecmascript">
+	$('datasets').value = 0		
+</script>
+
 <%= observe_field (:datasets,
 		  :url => { :controller => 'carte', :action => 'refresh_var'},
 		  :update => 'liste_var', :with => "'datas=' + $('datasets').value") %>

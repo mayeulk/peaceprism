@@ -4,4 +4,5 @@ class Variable < ActiveRecord::Base
   validates_presence_of :dataset_id
   
   validates_existence_of :dataset # valide l'existence d'un dataset associe
+  #validates_uniqueness_of :var_id+:dataset_id
 end

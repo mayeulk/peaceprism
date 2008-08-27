@@ -334,8 +334,6 @@ ActiveRecord::Schema.define(:version => 9) do
     t.integer  "page"
   end
 
-  add_index "variables", ["dataset_id", "var_id"], :name => "index_variables_on_var_id_and_dataset_id", :unique => true
-
 # Could not dump table "world" because of following StandardError
 #   Unknown type 'geometry' for column 'the_geom'
 
