@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-fixtures :variables, :datasets
 
 class VariableTest < ActiveSupport::TestCase
+  fixtures :variables, :datasets
   # Replace this with your real tests.
   def test_truth
     assert true
