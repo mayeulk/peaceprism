@@ -121,14 +121,19 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
     <span id="choix_annee" size="3"> </span> ;
 	<br/>
 
-	<b>Dataset: </b><%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
+	<div style="float:left;">
+	<img src="/images/icones/dataset.png" id="dataset_ico" title="dataset"/>
+	</div>
+	<div id="block_for_select" >&#160;=&#160;<%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
 	
 	&#160;  <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" onclick="reInit2(annee_en_cours);"/>
 	<input type="text" style="width:25px; background:#A200C3;"/>
 	Civil Conflicts (data source: <a href="http://www.prio.no/CSCW/Datasets/Armed-Conflict/">PRIO</a>)
 	
+	</div>
+
 	
-	<div id="liste_var"></div>
+	<div id="liste_var" style="clear:both;"></div>
 	<div id="essai"> </div>
 
 </div>

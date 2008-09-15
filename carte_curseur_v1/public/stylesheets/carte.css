@@ -31,7 +31,7 @@
 }
 /* carte */
 .cadre_carte {
-	float:left;	
+	float:left;
 	border: 2px solid black;
 	background-color:#B4DAF6; /* bleu pale */
 	overflow: hidden;
@@ -69,4 +69,18 @@ margin-right:5px;
 .colorfields {
 	width: 25px;
 	margin-left: 10px;
+	cursor:pointer;
 } 
+
+/* pour empecher d'avoir un contour bleu quand l'image et dans un lien */
+img { border-width:0;
+	border: none; }
+
+#dataset_ico {padding-bottom: 0px}
+
+#block_for_select {
+	/*float: left;*/
+	/*position: relative;*/
+	/*clear: both;*/
+	/*padding: 0px;*/
+	}
