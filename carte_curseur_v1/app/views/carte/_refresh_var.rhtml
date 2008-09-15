@@ -1,15 +1,20 @@
 <p style="background-color:#FFFFCC; border-style:solid;">
-	Dataset reference: <%= auto_link(@citation) %>
+	<div style="float:left;">
+	<img id="reference" src="/images/icones/reference.png" title="Dataset reference"/>&#160;&#160;
+	</div>
+	<%= auto_link(@citation) %>
 </p>
-<div>
-<b>Variable:</b> <%= select_tag 'variable', options_for_select(@vars,@vars[0]),
+<div style="float:left;">
+<img src="/images/icones/variable.png" title="variable"/>
+</div>
+<div id="block_for_select" >&#160;=&#160;<%= select_tag 'variable', options_for_select(@vars,@vars[0]),
 	:onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
 </div>
 <br/>
-<span id="refresh_button" style="margin-right:10px; margin-top:10px; background-color:#DDDDDD; border-style:outset; cursor:pointer;" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);">Refresh map</span>
+<img id="refresh" src="/images/icones/reload_map.png" title="reload map" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);"/>
 	
 <!-- boutons de lancement et d'arret du film -->
-<span id="film_play" style="margin-left:10px; background-color:#DDDDDD; margin-top:10px; border-style:outset;" onclick="lire_film=1;film();">Start movie</span>
+<img id="movie1" src="/images/icones/movie_clap_play.png" title="play movie" onclick="lire_film=1;film();"/>
 
-<span id="film_stop" style="margin-left:10px; background-color:#DDDDDD; margin-top:10px; border-style:outset;" onclick="lire_film=0;">Stop movie</span>
+<img id="movie2" src="/images/icones/movie_clap_stop.png" title="stop movie" onclick="lire_film=0;"/>
 
