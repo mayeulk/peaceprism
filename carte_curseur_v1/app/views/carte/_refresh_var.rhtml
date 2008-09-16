@@ -11,6 +11,12 @@
 	:onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
 </div>
 <br/>
+
+<img align='top' src="/images/icones/zoomin.png" onclick="zoom(1.25)"/>
+<img align='top' src="/images/icones/zoomout.png" onclick="zoom(1/1.25)"/>
+<img src="/images/icones/globe.png" onclick="initzoom()"/>
+<img id="resize" src="/images/icones/resize_enfonce.png" onclick="resz()"/>
+
 <img id="refresh" src="/images/icones/reload_map.png" title="reload map" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);"/>
 	
 <!-- boutons de lancement et d'arret du film -->
