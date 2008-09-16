@@ -4,7 +4,9 @@
 	}
 
 /* volet navig */
-#volet_navig {}
+#table_navig {
+	background-color:#C3C3C3;
+}
 
 #navig {
 	text-align: left;  
@@ -27,19 +29,24 @@
 
 #cadre_legende {
 
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 /* carte */
+#carte_navig {
+	float:left;
+	margin-bottom:30px;
+}
+
 .cadre_carte {
 	float:left;
 	border: 2px solid black;
 	background-color:#B4DAF6; /* bleu pale */
 	overflow: hidden;
-	left:10px; 
-	top: 10px; 
+	/*left:10px; */
+	/*top: 10px; */
 	width:600px; 
 	height:300px;
-	margin-bottom:30px;
+	
 	/*
 margin-right:5px;
 */

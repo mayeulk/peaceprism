@@ -103,16 +103,6 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 -->
 <!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
 
-<!-- le bouton pour fermer le volet navigation -->
-<a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog1', 'volet_navig')"><img id="imgTog1" src="/images/navig/fermer0.gif" /> </a>   
-<!-- un bloc contenant les elements de navigation et resultats d'action sur slider 
-on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec le z-index)-->  
-<div id="volet_navig" style="display:block;" >	
-	
-	<!-- le pan pour le zoom et al navigation -->
-	<%= render :partial => "navig" %>
-
-</div>
 
 <a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog2', 'volet_info')"><img id="imgTog2" src="/images/navig/fermer0.gif" /> </a>   
 
@@ -148,8 +138,29 @@ on pensera a le placer autre-part, ou autrement (peut-etre au dessus carte avec 
 		 
 <!-- un bloc contenant la carte et donc tous ses objets SVG ou VML -->
 <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  > --> 
-<div id="cadre_carte" class="cadre_carte">
-    <%= render :partial => "guy_carte_"+@browser %>
+<div id="carte_navig">
+	
+	<table id="table_navig" border="0" cellpadding="0" cellspacing="0">
+  		<tbody>
+    		<tr><td><img id="hg" src="/images/icones/hg.png" onclick="pan(-.1,-.1)"/></td>
+      			<td><center><img id="h"  src="/images/icones/h.png" onclick="pan(0,-.1)"/></center></td>
+     			<td><img id="hd" src="/images/icones/hd.png" onclick="pan(.1,-.1)"/></td>
+    		</tr>
+    		<tr><td><img id="g"  src="/images/icones/g.png" onclick="pan(-.1,0)"/></td>
+				<td>
+				<div id="cadre_carte" class="cadre_carte">
+      				<%= render :partial => "guy_carte_"+@browser %>
+				</div>
+				</td>
+     			<td><img id="d"  src="/images/icones/d.png" onclick="pan(.1,0)"/></td>
+   			</tr>
+    		<tr><td><img id="bg" align='top' src="/images/icones/bg.png" onclick="pan(-.1,.1)"/></td>
+      			<td><center><img id="b" align='top' src="/images/icones/b.png" onclick="pan(0,.1)"/></center></td>
+      			<td><img id="bd" align='top' src="/images/icones/bd.png"  onclick="pan(.1,.1)"/></td>
+    		</tr>
+  		</tbody>
+	</table>
+	    
 </div>
 
 <div id="cadre_legende"></div>
