@@ -50,7 +50,9 @@ before_filter :initialise_var
       
       render :partial => "refresh_var"
     else
-      render(:nothing => true)
+      # render(:nothing => true)
+      # render :inline => "<%= 1+1 %>"
+      render :inline => "<script type='text/ecmascript'>requestjson(0,0)</script>"
     end
   end
   

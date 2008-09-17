@@ -25,7 +25,7 @@ function reInit2(annee){
 	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 17) + 'px';
 	
 	
-	if ($('variable').value != 0){		
+//	if ($('variable').value != 0){		
 		// recuperation des donnees a afficher (le tableau de pays et le hash de donnees par dates)
 		var t_pays = tab['pays'];
 		var t_data = tab['data'];
@@ -67,7 +67,7 @@ function reInit2(annee){
 				}
 			}
 		}
-	}
+//	}
 	$('info_date').innerHTML = annee_en_cours; //.toString();
 	
 	// affichage des zones de conflits si la case est cochee
