@@ -30,7 +30,8 @@ function initdiscretisation(){
 		discretize[0] = disc_var;
 		chaine = '';
 		$('cadre_legende').innerHTML = chaine;
-		// reInit2(parseInt($('choix_annee').innerHTML));
+		reInit2(annee_en_cours);
+		
 	}
 	else {
 	
@@ -254,7 +255,7 @@ function initdiscretisation(){
 					'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a><br/>';
 					
 					// une zone de saisie pour choisir manuellement les intervals
-					chaine += ' <span id="vMini">' + valMini + '</span>' +
+					chaine += ' <span id="vMini" style="padding-left:10px;">' + valMini + '</span>' +
 					'; <input type="text" id="choixIntervals" value="' +
 					chaineIntervals +
 					'"/> ;' +
@@ -282,7 +283,7 @@ function initdiscretisation(){
 			}
 		}
 	}
-	reInit2(parseInt($('choix_annee').innerHTML));
+	reInit2(annee_en_cours);
 	afficherFrise(old_pays_survole);
 }
 

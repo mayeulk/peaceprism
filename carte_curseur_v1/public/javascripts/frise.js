@@ -1,7 +1,23 @@
 /**
  * @author guy
  */
+old_pays_survole="CZ19461993"; //var. globale
 
+// fonction reflexe sur clic d'un pays : appel de la fonction afficherFrise()
+function survol_zone(pays_survole) {
+	pays_survole=pays_survole;
+	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
+	document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
+	ti = document.getElementById(pays_survole).getAttribute("title") ;
+	document.getElementById("pays2").value=ti;//pays_survole;
+	afficherFrise(pays_survole);
+	old_pays_survole=pays_survole;        }
+	function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
+	b.value=val;
+	//toggle_layer_number(val);
+}
+	
+	
 function afficherFrise(actuPays){
 	var countrydoesnotexist = 'Country does not exist'
 	if (tab != "") {	

@@ -49,21 +49,6 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/carte.css"/>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/colorPicker.css"/>
 
-    <script type="text/ecmascript">      
-		    old_pays_survole="CZ19461993"; //var. globale
-        function survol_zone(pays_survole) {
-        	pays_survole=pays_survole;
-        	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
-        	document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
-			ti = document.getElementById(pays_survole).getAttribute("title") ;
-        	document.getElementById("pays2").value=ti;//pays_survole;
-			afficherFrise(pays_survole);
-        	old_pays_survole=pays_survole;        }
-      	function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
-        	b.value=val;
-        	//toggle_layer_number(val);
-      	}
-    </script>
 </head>
 	
 <body>
@@ -103,32 +88,29 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 -->
 <!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
 
-<div style="float:left;">
+<div style="float:right;">
 	<a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog2', 'volet_info')"><img id="imgTog2" src="/images/navig/fermer0.gif" /> </a>   
 </div>
-<div id="volet_info">
-	<img src="/images/logo/logo_Peace_Prism.png"/>
-	<center><h1>PEACE PRISM</h1></center>
-	
-	Year:
-    <span id="choix_annee" size="3"> </span> ;
-	<br/>
-
-	<div style="float:left;">
-	<img src="/images/icones/dataset.png" id="dataset_ico" title="dataset"/>
+<div id="volet_info" >
+	<div id="titre">
+		<img src="/images/logo/logo_Peace_Prism.png" style="float:left;"/>
+		<h1>PEACE PRISM</h1>
 	</div>
-	<div id="block_for_select" >&#160;=&#160;<%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
+	<div id="selections">
+
+		<div class="conteneur_icone">
+			<img src="/images/icones/dataset.png" id="dataset_ico" title="dataset"/>
+		</div>
+		<div id="block_for_select" >&#160;=&#160;<%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
 	
-	&#160;  <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" onclick="reInit2(annee_en_cours);"/>
-	<input type="text" style="width:25px; background:#A200C3;"/>
-	Civil Conflicts (data source: <a href="http://www.prio.no/CSCW/Datasets/Armed-Conflict/">PRIO</a>)
+		&#160;  <input type="checkbox" name="conflitsAffiche" id="conflitsAffiche" onclick="reInit2(annee_en_cours);"/>
+		<input type="text" style="width:25px; background:#A200C3;"/>
+		Civil Conflicts (data source: <a href="http://www.prio.no/CSCW/Datasets/Armed-Conflict/">PRIO</a>)
 	
+		</div>	
+		<div id="liste_var" style="clear:both;"></div>
+		<div id="essai"> </div>
 	</div>
-
-	
-	<div id="liste_var" style="clear:both;"></div>
-	<div id="essai"> </div>
-
 </div>
 <div>
 	<img align='top' src="/images/icones/zoomin.png" onclick="zoom(1.25)"/>
@@ -146,10 +128,9 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 
 
 <script type="text/ecmascript">
-	
+	// pour charger par defaut une carte vide, on force le choix a zero
 	$('datasets').value = 0;
-	requestjson(0,0);
-	//reInit2($('choix_annee').innerHTML);
+	requestjson(0,0);	
 </script>
 
 <%= observe_field (:datasets,
@@ -192,7 +173,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 	#:with => "'id=' + $('pays2').value+'&dataset='+ $('datasets').value+'&variable='+ $('variable').value")
     
 %> -->
-<!-- '&annee='+ $('choix_annee').innerHTML+ -->
+
 
 
 <br/>
@@ -239,7 +220,6 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 	   	onSlide:function(v){reInit2(v)},
 	   	onChange:function(v){reInit2(v)}});
 
-	$('choix_annee').innerHTML = <%=@debut_periode%>
 </script>
 
 <br/>

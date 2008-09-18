@@ -1,23 +1,35 @@
-
+/* haut de page : titre et zone de selection (dataset et variable) */
 #titre {
 	height: 50px;
 	}
 
-/* volet navig */
+.conteneur_icone{
+	float:left;
+}
+
+#selections{
+	 clear:both;
+	 border:2px solid black;
+	 background-color:#FFEEDD;
+	 margin-top:5px;
+	 margin-bottom:5px;
+	 padding-left:10px;
+	 padding-right:10px;
+	 padding-top:5px;
+	}
+
+#block_for_select {
+	/*float: left;*/
+	/*position: relative;*/
+	/*clear: both;*/
+	/*padding: 0px;*/
+	}
+
+
+/* les icones de navigation et de controle de la carte */
 #table_navig {
 	background-color:#C3C3C3;
 }
-
-#navig {
-	text-align: left;  
-	background-color: white;
-}
-
-#navig_on_off {
-	position: absolute; 
-	top: -10px; 
-	left: -10px;
-	}
 
 #film_play {
 	cursor:pointer;
@@ -27,10 +39,14 @@
 	cursor:pointer;	
 }
 
-#cadre_legende {
 
-	/*border: 1px solid black;*/
-}
+img { /* pour empecher d'avoir un contour bleu quand l'image est dans un lien */
+	border-width:0;
+	border: none;
+	}
+
+#dataset_ico {padding-bottom: 0px}
+
 /* carte */
 #carte_navig {
 	float:left;
@@ -46,15 +62,24 @@
 	/*top: 10px; */
 	width:600px; 
 	height:300px;
-	
-	/*
-margin-right:5px;
-*/
-	}
+	/*margin-right:5px;*/
+}
 
 .cadre_carte_rouge {
 	border: 4px dashed red;
+}
+	
+/* legende */
+#cadre_legende {
+	/*border: 1px solid black;*/
+	margin-left:5px;
 	}
+	
+.colorfields {
+	width: 25px;
+	margin-left: 10px;
+	cursor:pointer;
+	} 	
 	
 /* tableau donnees */
 .tete_colonne {
@@ -70,24 +95,4 @@ margin-right:5px;
 	height: 300px; 
 	width: 100%; 
 	overflow: auto;
-	}
-
-	
-.colorfields {
-	width: 25px;
-	margin-left: 10px;
-	cursor:pointer;
-} 
-
-/* pour empecher d'avoir un contour bleu quand l'image et dans un lien */
-img { border-width:0;
-	border: none; }
-
-#dataset_ico {padding-bottom: 0px}
-
-#block_for_select {
-	/*float: left;*/
-	/*position: relative;*/
-	/*clear: both;*/
-	/*padding: 0px;*/
 	}
