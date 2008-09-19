@@ -250,7 +250,7 @@ function initdiscretisation(){
 					'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a> ';
 					
 					// lien vers le graphique de cette variable 
-					chaine += '<a href="/graph/dis/' + dataset_courant + '/' +
+					chaine += ' <a href="/graph/dis/' + dataset_courant + '/' +
 					variable_courante +
 					'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a><br/>';
 					
@@ -261,9 +261,10 @@ function initdiscretisation(){
 					'"/> ;' +
 					'<span id="vMaxi">' +
 					valMaxi +
-					'</span>' +
-					'<button type="button" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + ' +
-					'$(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">Change</button>';
+					' </span>' +
+					'<button type="button" title="reload legend" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + ' +
+					'$(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">' +
+					'<img src="/images/icones/reload_legend.png" title="reload legend"/></button>';
 					
 					// chaine : la legende en tant que tel est affichee dans un div independant
 					chaine = chaine + '<div id="legende">';
@@ -499,6 +500,9 @@ function verifierCoherenceIntervals(tabInter){
 		if (tabInter[i].length < 1){
 			err += 1 ;
 		}	
+		if (parseInt(tabInter[i]) == parseInt(tabInter[i+1])){
+			err += 1 ;
+		}
 	}
 	return err ;
 }
