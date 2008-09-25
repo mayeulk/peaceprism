@@ -21,7 +21,7 @@ function reInit2(annee){
 	annee_en_cours = annee ;
 		
 	// affichage de l'information 'date' sur la page et sur le curseur du slider
-	$('info_date').innerHTML = annee_en_cours; //.toString();
+	$('info_date').innerHTML = "&#160;&#160;" + annee_en_cours +"&#160;&#160;";
 	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 17) + 'px';
 		
 //	if ($('variable').value != 0){		

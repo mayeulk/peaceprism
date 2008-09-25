@@ -99,11 +99,13 @@ div#slider {
 #info_date{
 	 position:absolute; 
 	 left:0px; 
-	 top:-28px; /* position relative au dessus du curseur (taille curseur + taille texte */
+	 top:-28px; /* position relative au dessus du curseur (taille curseur + taille texte) */
+	 /*
 	 background-color:#FFFF00;
 	 border-style:solid;
 	 border-color:#FF0000;
 	 border-width:2px;
+*/
 	 z-index:2;
 	}
 div#frise {
