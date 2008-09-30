@@ -47,7 +47,9 @@ function initdiscretisation(){
 			
 			// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 			var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] +
-			'</b></span> : <a href="/variable/' +
+			'</b></span> : <a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+			'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+			'href="/variable/' +
 			dataset_courant +
 			'/' +
 			variable_courante +
@@ -55,7 +57,9 @@ function initdiscretisation(){
 			
 			
 			// lien vers le graphique de cette variable 
-			chaine += ' <a href="/graph/dis/' + dataset_courant + '/' +
+			chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+			'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+			'href="/graph/dis/' + dataset_courant + '/' +
 			variable_courante +
 			'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a>';
 			// chaine : la legende en tant que tel est affichee dans un div independant
@@ -122,12 +126,18 @@ function initdiscretisation(){
 				discretize[0] = disc_var;
 				
 				// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
-				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] + '</b></span> : <a href="/variable/' + dataset_courant + '/' +
+				var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] +
+				'</b></span> : <a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+				'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+				'href="/variable/' +
+				dataset_courant + '/' +
 				variable_courante +
 				'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a>';
 				
 				// lien vers le graphique de cette variable 
-				chaine += ' <a href="/graph/dis/' + dataset_courant + '/' +
+				chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+				'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+				'href="/graph/dis/' + dataset_courant + '/' +
 				variable_courante +
 				'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a>';
 				
@@ -175,15 +185,25 @@ function initdiscretisation(){
 					
 					// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 					var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] +
-					'</b></span> : <a href="/variable/' +
+					
+					
+					'</b></span> : <a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					'href="/variable/' +
+					
+					//'</b></span> : <a href="/variable/' +
 					dataset_courant +
 					'/' +
 					variable_courante +
 					'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a>';
 					
 					// lien vers le graphique de cette variable 
-					chaine += ' <a href="/graph/dis/' + dataset_courant + '/' +
+					chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+										
+					'href="/graph/dis/' + dataset_courant + '/' +
 					variable_courante +
+					
 					'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a>';
 					
 					// chaine : la legende en tant que tel est affichee dans un div independant
@@ -243,14 +263,18 @@ function initdiscretisation(){
 					
 					// chaine de code HTML a injecter : d'abord un lien pour la description de la variable
 					var chaine = '<span style="margin-left:10px;"><b>' + varInfo['name'] +
-					'</b></span> : <a href="/variable/' +
+					'</b></span> : <a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					'href="/variable/' +
 					dataset_courant +
 					'/' +
 					variable_courante +
 					'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a> ';
 					
 					// lien vers le graphique de cette variable 
-					chaine += ' <a href="/graph/dis/' + dataset_courant + '/' +
+					chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					'href="/graph/dis/' + dataset_courant + '/' +
 					variable_courante +
 					'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a><br/>';
 					
@@ -285,6 +309,7 @@ function initdiscretisation(){
 		}
 	}
 	reInit2(annee_en_cours);
+	survol_zone(old_pays_survole);
 	afficherFrise(old_pays_survole);
 }
 
@@ -303,7 +328,9 @@ function afficherLegendeQual (varQual, tab_couleur, o){
 	var c=2 ;
 	for (var i in varQual) {
 		chaine2 += '<p><span id="val' + o + '"> </span> <input type="text" title="click to change color" class="colorfields" id="colorfield' + o +
-		  '" value="' + tab_couleur[c-1] + '"/> <a href="/var_label/'+ dataset_courant + "/" + 
+		  '" value="' + tab_couleur[c-1] + '"/> <a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+		  'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+		  'href="/var_label/'+ dataset_courant + "/" + 
 		  variable_courante + "/" + i +'" id="intitule' + o + '">' + varQual[i] + ' (' + i + ')</a></p>';
 		  
 		disc_var = [];

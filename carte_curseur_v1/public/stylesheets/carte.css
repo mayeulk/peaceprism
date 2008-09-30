@@ -1,6 +1,8 @@
 /* haut de page : titre et zone de selection (dataset et variable) */
 #titre {
-	height: 50px;
+	/*
+height: 50px;
+*/
 	}
 
 .conteneur_icone{
@@ -56,7 +58,7 @@ img { /* pour empecher d'avoir un contour bleu quand l'image est dans un lien */
 .cadre_carte {
 	float:left;
 	border: 2px solid black;
-	background-color:#B4DAF6; /* bleu pale */
+	background-color:#B4DAF6;  /*bleu pale*/
 	overflow: hidden;
 	/*left:10px; */
 	/*top: 10px; */
@@ -67,6 +69,8 @@ img { /* pour empecher d'avoir un contour bleu quand l'image est dans un lien */
 
 .cadre_carte_rouge {
 	border: 4px dashed red;
+	overflow: hidden;
+	background-color:#B4DAF6;  /*bleu pale*/
 }
 	
 /* legende */

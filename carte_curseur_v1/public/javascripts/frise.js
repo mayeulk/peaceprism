@@ -9,13 +9,15 @@ function survol_zone(pays_survole) {
 	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
 	document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
 	ti = document.getElementById(pays_survole).getAttribute("title") ;
+	//ti = document.getElementById(pays_survole).title ;
 	document.getElementById("pays2").value=ti;//pays_survole;
 	afficherFrise(pays_survole);
-	old_pays_survole=pays_survole;        }
-	function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
-	b.value=val;
-	//toggle_layer_number(val);
+	old_pays_survole=pays_survole;        
 }
+	//function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
+	//b.value=val;
+	//toggle_layer_number(val);
+//}
 	
 	
 function afficherFrise(actuPays){

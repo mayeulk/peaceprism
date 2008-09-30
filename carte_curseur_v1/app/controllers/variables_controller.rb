@@ -22,9 +22,14 @@ class VariablesController < ApplicationController
   end
 
   def show_description
+    @dataset_choisi = params[:dataset_id]
     @variable = Variable.find(:first, :conditions => 'var_id = \''+params[:variable_id]+'\' and dataset_id = \'' +params[:dataset_id]+'\'')
     @var_label = VarLabel.find(:all, :order => "value ASC", :conditions => 'var_id = \''+params[:variable_id]+'\' and dataset_id = \'' +params[:dataset_id]+'\'')
-    
+    @citation = ActiveRecord::Base.connection.select_value(
+    "Select data_set_citation from datasets where id = #{@dataset_choisi}")
+    @dataset_name = ActiveRecord::Base.connection.select_value(
+    "Select data_set_full_name from datasets where id = #{@dataset_choisi}")
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @variable }

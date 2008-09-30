@@ -22,37 +22,40 @@ carte_h=300;
 function resz() { 
 	if (rsz==0)     {
 		rsz=1; 
+		//w = document.getElementById("cadre_carte").style.width;
+		//h = document.getElementById("cadre_carte").style.height;
 		//document.getElementById("navig").style.backgroundColor="red";
 		document.getElementById("cadre_carte").className="cadre_carte_rouge";
-		document.getElementById("b").src="images/navig/b-r.gif";
-		document.getElementById("bd").src="images/navig/bd-r.gif";
-		document.getElementById("bg").src="images/navig/bg-r.gif";
-		document.getElementById("d").src="images/navig/d-r.gif";
-		document.getElementById("g").src="images/navig/g-r.gif";
-		document.getElementById("h").src="images/navig/h-r.gif";
-		document.getElementById("hd").src="images/navig/hd-r.gif";
-		document.getElementById("hg").src="images/navig/hg-r.gif";
-		document.getElementById("resize").src="images/navig/resize_enfonce.gif";
-		
+		document.getElementById("b").src="images/icones/b-r.png";
+		document.getElementById("bd").src="images/icones/bd-r.png";
+		document.getElementById("bg").src="images/icones/bg-r.png";
+		document.getElementById("d").src="images/icones/d-r.png";
+		document.getElementById("g").src="images/icones/g-r.png";
+		document.getElementById("h").src="images/icones/h-r.png";
+		document.getElementById("hd").src="images/icones/hd-r.png";
+		document.getElementById("hg").src="images/icones/hg-r.png";
+		//document.getElementById("resize").src="images/icones/resize_enfonce.png";
+		document.getElementById("cadre_carte").style.width = 600;
+		document.getElementById("cadre_carte").style.height = 300;
 	}
 	else {
 		rsz=0;
 		//    document.getElementById("navig").style.backgroundColor="white";
 		document.getElementById("cadre_carte").className="cadre_carte";    
-		document.getElementById("b").src="images/navig/b.gif";
-		document.getElementById("bd").src="images/navig/bd.gif";
-		document.getElementById("bg").src="images/navig/bg.gif";
-		document.getElementById("d").src="images/navig/d.gif";
-		document.getElementById("g").src="images/navig/g.gif";
-		document.getElementById("h").src="images/navig/h.gif";
-		document.getElementById("hd").src="images/navig/hd.gif";
-		document.getElementById("hg").src="images/navig/hg.gif";
-		document.getElementById("resize").src="images/navig/resize.gif";
+		document.getElementById("b").src="images/icones/b.png";
+		document.getElementById("bd").src="images/icones/bd.png";
+		document.getElementById("bg").src="images/icones/bg.png";
+		document.getElementById("d").src="images/icones/d.png";
+		document.getElementById("g").src="images/icones/g.png";
+		document.getElementById("h").src="images/icones/h.png";
+		document.getElementById("hd").src="images/icones/hd.png";
+		document.getElementById("hg").src="images/icones/hg.png";
+		//document.getElementById("resize").src="images/icones/resize_enfonce.png";
 	}
 }
 
-x_org = 0 ;//milieu d'origine (x) (bof)
-y_org = 0 ;//milieu d'origine (y) (bof)
+x_org = -1800 ;//milieu d'origine (x) (bof)
+y_org = -900 ;//milieu d'origine (y) (bof)
 w_org = 600 ;//largeur d'origine (???) (sino zoombox incorrecte???!!)
 h_org = 300 ;//hauteur d'origine
 n_x=0;
@@ -60,8 +63,8 @@ n_y=0;
 
 function initzoom()
 {
-	x_org = 0 ;//milieu d'origine (x) (bof)
-	y_org = 0; //milieu d'origine (y) (bof)
+	x_org = -1800 ;//milieu d'origine (x) (bof)
+	y_org = -900; //milieu d'origine (y) (bof)
 	w_org = 600; //largeur d'origine (???) (sino zoombox incorrecte???!!)
 	h_org = 300; //hauteur d'origine
 	n_x=0;
@@ -77,11 +80,16 @@ function pan(dx,dy)
 	if (rsz==1) {		
 		carte_w=carte_w+dx*400 ;
 		carte_h=carte_h+dy*400 ;
+		//view_w=view_w
 		if (30>carte_w) {carte_w=30}; //ne pas changer la taille si elle est deja� petite
 		if (30>carte_h) {carte_h=30};
 		
 		document.getElementById("cadre_carte").style.width=carte_w+"px";
 		document.getElementById("cadre_carte").style.height=carte_h+"px";
+
+		document.getElementById("monde").style.width=carte_w+"px";
+		document.getElementById("monde").style.height=carte_h+"px";
+		
 	}
 	else
 	{
