@@ -1,5 +1,6 @@
 /*****************************************************************************
  * fonctions d'affichage de formes sur la carte, pour SVG
+ * fonctions de zoom et pan pour Firefox
  * @author guy
  * 
  ****************************************************************************/

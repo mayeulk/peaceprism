@@ -1,5 +1,6 @@
 /*****************************************************************************
  * fonctions d'affichage des formes sur la carte, pour le VML
+ * fonctions de zoom et pan pour Internet Explorer
  * @author guy
  * 
  ****************************************************************************/
