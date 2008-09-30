@@ -10,7 +10,7 @@ annee_old =2003 ;
 annee_en_cours = 1946 ;
 nb_conflits_old = 0 ;
 sliderDate = null ;
-lireFilm = 0 ;
+lire_film = 0 ;
 nbClasses = 0 ;
 tab =""  ;
 
@@ -19,11 +19,12 @@ tab =""  ;
 function reInit2(annee){
 		
 	annee_en_cours = annee ;
-		
+	//$('info_date').setAttribute("visibility", "hidden");
 	// affichage de l'information 'date' sur la page et sur le curseur du slider
 	$('info_date').innerHTML = "&#160;&#160;" + annee_en_cours +"&#160;&#160;";
 	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 17) + 'px';
-		
+	//$('info_date').setAttribute("visibility", "visible");
+	
 //	if ($('variable').value != 0){		
 		// recuperation des donnees a afficher (le tableau de pays et le hash de donnees par dates)
 		var t_pays = tab['pays'];
@@ -102,10 +103,15 @@ function reInit2(annee){
 // la fonction film incremente l'annee toutes les demi-secondes ; en
 // incrementant le slider, la carte se met-a-jour automatiquement
 function film() {
+	var d = document.getElementById("movie");
 	if (lire_film==1 && 2003 > annee_en_cours){		
 		annee_en_cours = annee_en_cours + 1 ;
 		
+		d.src = "/images/icones/movie_clap_stop.png";
   		var timer = setTimeout("film()",500);
   		sliderDate.setValue(annee_en_cours);  		
   	}
+	else{
+		d.src = "/images/icones/movie_clap_play.png";
+	}
 }
