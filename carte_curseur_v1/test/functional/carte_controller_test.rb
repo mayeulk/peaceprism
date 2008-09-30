@@ -67,27 +67,6 @@ class CarteControllerTest < ActionController::TestCase
     assert_equal 3, assigns(:dat).size
   end
 
-  def test_show_over_conflicts_zone
-    get :show_over, :id => "lt35lg110rd2000", :dataset => 1, :variable => 1
-    assert_response :success
-    assert_equal 1, assigns(:dataset).size
-    assert_equal 1, assigns(:variable).size
-    assert_equal 1, assigns(:conflitsexts).size
-  end
-
-  def test_show_over_country
-    get :show_over, :id => 'FR19462003', :dataset => 1, :variable => 8
-    assert_response :success
-    assert_equal 1946, assigns(:debut_periode)
-    assert_equal 1, assigns(:dataset).size
-    assert_equal 1, assigns(:variable).size
-    assert_nil assigns(:conflitsexts)
-    assert_equal 'FR19462003', assigns(:id)
-    assert_equal "220", assigns(:cow_code)
-    assert_equal '2', assigns(:identifierccode1_var)
-    assert_equal '3', assigns(:identifieryear_var)
-    assert_equal 3, assigns(:donnees_frise).size
-  end
 
   # tests verifiant les vues rendues
   def test_good_number_of_datasets_in_select_box

@@ -28,6 +28,7 @@ union all
 -- carte du monde en l'an 2000 :
 -- d'abord les grands pays (>2000 km2), tres simplifies
 select '<v:shape id="' || fips_cntry || test_geom.begin || test_geom.end
+|| '" title="' || test_geom.cntry_name
 || '" style="position: relative; width:3600;height:1800" fillcolor="#D3D3D3" strokecolor="#000000" strokeweight="0.25pt" onmousedown="survol_zone(this.id);" path=" '
 || regexp_replace(regexp_replace(assvg(the_geom,0,0), 'M', 'm', 'g'), 'm +(-?[0-9]+) +(-?[0-9]+) +(-?[0-9]+)', E'm \\1 \\2 l \\3', 'g') ||'"/>' as svg
 -- par rapport a la ligne ci-dessous, on a multiplie par 10 et enleve la decimale car IE6 VML confond le point decimal avec un separateur de coordonnees...
