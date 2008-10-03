@@ -1,7 +1,7 @@
 ------------------------------- POSTGIS VERS VML ----------------------------------------------------------
 -- requete similaire a postgis_vers_svg.sql, avec quelques changements pour des specificites propres a VML
 
-drop view test_geom;
+drop view IF EXISTS test_geom;
 create view test_geom as
 (
 -- d'abord les grands pays (>2000 km2), tres simplifies : couleur  grise (lightgrey et black)
@@ -25,12 +25,16 @@ select '<v:group id="monde" style="position:relative;left:0px;top:0px; width:600
 || '<v:rect style="top:-900; left:-1800; height:1800; width:3600;" fillcolor="#B4DAF6" />' -- la mer en bleu pale
 union all
 
--- carte du monde en l'an 2000 :
--- d'abord les grands pays (>2000 km2), tres simplifies
+-- Transforme en VML
 select '<v:shape id="' || fips_cntry || test_geom.begin || test_geom.end
 || '" title="' || test_geom.cntry_name
-|| '" style="position: relative; width:3600;height:1800" fillcolor="#D3D3D3" strokecolor="#000000" strokeweight="0.25pt" onmousedown="survol_zone(this.id);" path=" '
-|| regexp_replace(regexp_replace(assvg(the_geom,0,0), 'M', 'm', 'g'), 'm +(-?[0-9]+) +(-?[0-9]+) +(-?[0-9]+)', E'm \\1 \\2 l \\3', 'g') ||'"/>' as svg
+|| '" style="position: relative; width:3600;height:1800;visibility:' ||
+CASE -- ne pas afficher au chargement de la page les pays invisibles en 2003
+    WHEN test_geom.end >=2003 THEN 'visible'
+    ELSE 'hidden'
+END
+||';" fillcolor="#D3D3D3" strokecolor="#000000" strokeweight="0.25pt" onmousedown="survol_zone(this.id);" path=" '
+|| regexp_replace(regexp_replace(assvg(the_geom,0,0), 'Z', 'X', 'g'), 'M +(-?[0-9]+) +(-?[0-9]+) +(-?[0-9]+)', E'M \\1 \\2 L \\3', 'g') ||'"/>' as svg
 -- par rapport a la ligne ci-dessous, on a multiplie par 10 et enleve la decimale car IE6 VML confond le point decimal avec un separateur de coordonnees...
 -- || assvg(Scale(Simplify(the_geom,50000),0.00001,0.00001,1),0,1)||'"/>' as svg
 from test_geom
@@ -40,7 +44,7 @@ union all
 -- zones de conflits :
 select '<v:shape id="lt'::text||lat||'lg'|| lon||'rd'||radius
 || '" style="position:relative; width:3600; height:1800; visibility:hidden" fillcolor="#F08080" strokecolor="#B22222" strokeweight="0.25pt" onmousedown="survol_zone(this.id);" path=" '
-|| regexp_replace(regexp_replace(assvg(Scale(Simplify(the_geom,10000),0.0001,0.0001,1),0,0), 'M', 'm', 'g'), 'm +(-?[0-9]+) +(-?[0-9]+) +(-?[0-9]+)', E'm \\1 \\2 l \\3', 'g') ||'"/>' as svg
+|| regexp_replace(regexp_replace(assvg(Scale(Simplify(the_geom,10000),0.0001,0.0001,1),0,0), 'Z', 'L', 'g'), 'M +(-?[0-9]+) +(-?[0-9]+) +(-?[0-9]+)', E'M \\1 \\2 L \\3', 'g') ||'"/>' as svg
 from conflits_ext
 group by lat,lon,radius, the_geom
 --order by confid; 
@@ -51,4 +55,5 @@ select '</v:group>'
 );
 
 -- creation d'un fichier de sortie pour l'implementation dans l'appli radrails
-copy tmp to '/home/commun/ecole/REC/PRISM/tmp/guy_carte_ie.html';
+-- ceci marche avec: chmod 777 /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/app/views/carte
+copy tmp to '/home/mk/PRISM/eclipse_workspace/carte_curseur_v1/app/views/carte/_carte_ie.html';

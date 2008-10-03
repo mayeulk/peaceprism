@@ -10,15 +10,14 @@ function colorierPays(pays, couleur){
 }
 
 function afficherPays(pays){
-	pays.setAttribute("visibility", "visible");
+	pays.style.visibility = 'visible';
 }
 	
 function masquerPays(pays){
-	pays.setAttribute("visibility", "hidden");
+		pays.style.visibility = 'hidden';
 }
 
 //paysSVG.setAttribute("opacity", "0.5");
-//truc.style.visibility = 'visible';
 
 rsz=0;
 carte_w=600;

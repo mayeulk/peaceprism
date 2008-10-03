@@ -77,8 +77,8 @@ namespace :db do
     tab_envoi['pays'] = tab_pays #pourraient n'etre envoyes qu'une seule fois
     tab_envoi['data'] = tab_do
   
-    outfile = File.new("#{RAILS_ROOT}/public/json/data0_0.json", "w")
-    outfile.puts tab_envoi.to_json
+    outfile = File.new("#{RAILS_ROOT}/public/javascripts/data0_0.js", "w")
+    outfile.puts "tab=" + tab_envoi.to_json
     outfile.close
      
   end

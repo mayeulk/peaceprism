@@ -7,7 +7,7 @@
 // variables globales
 // il faut definir les variables au chargement pour pouvoir y acceder apres modification par AJAX.
 annee_old =2003 ; 
-annee_en_cours = 1946 ;
+annee_en_cours = 2003 ;
 nb_conflits_old = 0 ;
 sliderDate = null ;
 lire_film = 0 ;

@@ -35,11 +35,11 @@
 	<script type="text/ecmascript" src="/javascripts/zones_conflits.js"></script>
 	<script type="text/ecmascript" src="/javascripts/slider_event.js"></script>
 	<script type="text/javascript" src="/javascripts/frise.js"></script>
+	<script type="text/javascript" src="/javascripts/data0_0.js"></script>
 
 <!-- chargement de scripts different traitant les objet SVG ou VML, selon qu'on est sous Firefox ou IE -->
 <% if @browser=="ie" %>
 	<script type="text/ecmascript" src="/javascripts/modifier_vml_ie.js"></script>
-	<script language="javascript" type="text/javascript" src="/javascripts/firebug/firebug.js"></script>
 	
 <% else %>
     <script type="text/ecmascript" src="/javascripts/modifier_svg_moz.js"></script>
@@ -128,7 +128,8 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 <script type="text/ecmascript">
 	// pour charger par defaut une carte vide, on force le choix a zero
 	$('datasets').value = 0;
-	requestjson(0,0);	
+	//requestjson(0,0);	
+	initdiscretisation();
 </script>
 
 <%= observe_field (:datasets,
@@ -147,7 +148,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
     		<tr><td><img id="g"  src="/images/icones/g.png" onclick="pan(-.1,0)"/></td>
 				<td>
 				<div id="cadre_carte" class="cadre_carte">
-      				<%= render :partial => "guy_carte_"+@browser %>
+      				<%= render :partial => "carte_"+@browser+".html" %>
 				</div>
 				</td>
      			<td><img id="d"  src="/images/icones/d.png" onclick="pan(.1,0)"/></td>
@@ -213,7 +214,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 	var sliderDate = new Control.Slider('handle_date_debut','track_date',
 		{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),
 		values:<%= (@debut_periode..@fin_periode).to_json %>, 
-	   	sliderValue : <%=@debut_periode%>,
+	   	sliderValue : <%=@fin_periode%>,
 	   	onSlide:function(v){reInit2(v)},
 	   	onChange:function(v){reInit2(v)}});
 

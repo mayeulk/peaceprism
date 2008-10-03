@@ -10,11 +10,11 @@ function colorierPays(pays, couleur){
 }
 
 function afficherPays(pays){
-	pays.style.visibility = 'visible';
+	pays.style.visibility = "visible";
 }
 	
 function masquerPays(pays){
-	pays.style.visibility = 'hidden';
+	pays.style.visibility = "hidden";
 }
 
 rsz=0;
@@ -55,8 +55,8 @@ function resz() {
 	}
 }
 
-x_org = -1800 ;//milieu d'origine (x) (bof)
-y_org = -900 ;//milieu d'origine (y) (bof)
+x_org = -1800 ;//
+y_org = -900 ;//
 w_org = 600 ;//largeur d'origine (???) (sino zoombox incorrecte???!!)
 h_org = 300 ;//hauteur d'origine
 n_x=0;
@@ -94,8 +94,8 @@ function pan(dx,dy)
 	}
 	else
 	{
-	n_x=n_x-dx*(w_org);
-	n_y=n_y-dy*(w_org);
+	n_x=n_x+dx*(x_org);
+	n_y=n_y+dy*(y_org);
 	document.getElementById("monde").style.left=n_x+"px";
 	document.getElementById("monde").style.top=n_y+"px";
 	//document.getElementById("nompays").value="nx:"+n_x+" ny:"+n_y+" w"+w_org+" h"+h_org
