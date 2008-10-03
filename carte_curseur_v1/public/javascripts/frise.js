@@ -1,7 +1,7 @@
 /**
  * @author guy
  */
-old_pays_survole="CZ19461993"; //var. globale
+old_pays_survole="US19463333"; //var. globale
 
 // fonction reflexe sur clic d'un pays : appel de la fonction afficherFrise()
 function survol_zone(pays_survole) {

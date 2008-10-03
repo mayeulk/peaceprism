@@ -3,7 +3,7 @@
 
 -- NB: SOUS PGADMIN", POUR EXPORTER LE RESULTAT DE CE FICHIER, CHOISIR LE MENU FICHIER/PREFERENCES/REQUETES
 -- PUIS: Nombre max. de caracteres par colonne: 100000
-drop view test_geom;
+drop view IF EXISTS test_geom;
 create view test_geom as
 (
 -- d'abord les grands pays (>2000 km2), tres simplifies : couleur  grise (lightgrey et black)
@@ -35,13 +35,18 @@ union all
 -- carte du monde en l'an 2000 :
 select '<path id="' || fips_cntry || test_geom.begin || test_geom.end -- le caractere "&" plante en svg
 || '" title="' || test_geom.cntry_name
-|| '" fill="#D3D3D3" stroke="#000000" onmousedown="survol_zone(this.id);" d=" '
+|| '" fill="#D3D3D3" stroke="#000000" style="visibility:' ||
+CASE -- ne pas afficher au chargement de la page les pays invisibles en 2003
+    WHEN test_geom.end >=2003 THEN 'visible'
+    ELSE 'hidden'
+END
+||';" onmousedown="survol_zone(this.id);" d=" '
 || assvg (the_geom, 0, 0) ||'"/>' as svg from test_geom
 
 union all
 -- zones de conflits : couleurs rouge (lightcoral et firebrick)
 -- creation d'un code pour les zones de conflits : lat, lon, radius, (confid)
-select '<path id="lt'::text||lat||'lg'|| lon||'rd'||radius||'" title="lt'::text||lat||'lg'|| lon||'rd'||radius||'" visibility="hidden" fill="#F08080" opacity=".65"  stroke="#B22222" onmousedown="survol_zone(this.id);" d=" '
+select '<path id="lt'::text||lat||'lg'|| lon||'rd'||radius||'" title="lt'::text||lat||'lg'|| lon||'rd'||radius||'" style="visibility:hidden;" fill="#F08080" opacity=".65"  stroke="#B22222" onmousedown="survol_zone(this.id);" d=" '
 || assvg(Scale(Simplify(the_geom, 10000),0.0001,0.0001,1),0,0)||'"/>' as svg from conflits_ext
 group by lat,lon,radius, the_geom
 -- order by confid; 
@@ -49,8 +54,5 @@ group by lat,lon,radius, the_geom
 union all
 select '</svg>'
 );
--- copy tmp to '/home/commun/ecole/REC/PRISM/tmp/guy_carte_moz2.svg';
- copy tmp to '/home/gtokarski/ouvert/guy_carte_moz2.svg';
---copy tmp to '/home/mk/Desktop/guy-partage/guy_carte_moz.svg';
--- creation du fichier SVG
--- pour implementation dans le projet radrails, copier dans le repertoire local app/views/carte, en changeant le nom en _guy_carte_moz.rhtml';
+-- ceci marche avec: chmod 777 /home/mk/PRISM/eclipse_workspace/carte_curseur_v1/app/views/carte
+copy tmp to '/home/mk/PRISM/eclipse_workspace/carte_curseur_v1/app/views/carte/_carte_moz.html'
