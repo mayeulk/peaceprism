@@ -19,8 +19,14 @@ tab =""  ;
 function reInit2(annee){
 		
 	annee_en_cours = annee ;
-	$('info_date').innerHTML = "&#160;&#160;" + annee_en_cours +"&#160;&#160;";
-	$('info_date').style.left = (($('handle_date_debut').style.left.replace(/px$/, "")) - 17) + 'px';
+	
+	// Afficher l'annne en cours en changeant l'attribut de style "visibility", et non pas le contenu et la position de l'annee.
+	// Le fait de changer le contenu (e.g. "1990") faisait que le contenu etait rafraichi bien avant que la carte ne le soit.
+	// Le fait d'afficher ou masquer (sans changer la position du texte affiche) permet de contourner ce bug d'affichage de Firefox 3.0, cf. ticket:16
+	$('info_date_' + annee_old).style.visibility = "hidden";
+	$('info_date_' + annee_en_cours).style.visibility = "visible";
+	
+
 	
 //	if ($('variable').value != 0){		
 		// recuperation des donnees a afficher (le tableau de pays et le hash de donnees par dates)
@@ -92,9 +98,13 @@ function reInit2(annee){
 			var svgobj = document.getElementById((window["AN" + annee_old])[un_conflit]);
 			document.getElementById((window["AN" + annee_old])[un_conflit]).style.visibility = 'hidden';
 		}
+		
+		
 		annee_old = annee_en_cours;
 		nb_conflits_old = 0;
 	}
+	
+
 }
 
 // la fonction film incremente l'annee toutes les demi-secondes ; en
