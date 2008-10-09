@@ -96,18 +96,20 @@ div#slider {
 	cursor:move;
 	}
 
-#info_date{
-	 position:absolute; 
-	 left:0px; 
-	 top:-28px; /* position relative au dessus du curseur (taille curseur + taille texte) */
-	 /*
+
+/* classe info_date pour toutes les dates pre-positionnees */	
+.info_date{
+	position:absolute;
+	  /* position relative au dessus du curseur (taille curseur + taille texte) */
 	 background-color:#FFFF00;
 	 border-style:solid;
 	 border-color:#FF0000;
 	 border-width:2px;
-*/
 	 z-index:2;
 	}
+
+	
+	
 div#frise {
 	clear:both;
 	/* width:600px; on va laisser la taille s'adapter aux objets contenus (la frise en elle-meme) */

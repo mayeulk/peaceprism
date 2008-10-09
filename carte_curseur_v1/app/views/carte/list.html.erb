@@ -194,13 +194,21 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 		<div id="slider">
 			<div id="track_date" style="width:<%= @long_curseur %>px; height:10px;"> 
     			<div id="handle_date_debut"	style="width:<%= @long_annee %>px; height:20px; background-color:#f00;"> </div>
-				<span id="info_date"></span>				
+								
 			</div>
+
+		<!-- on dessine a priori les noms des annees au dessus du curseur, cf. ticket:16  -->
+		<% for @an in @debut_periode..(@fin_periode-1) %>
+			<span class="info_date" id='info_date_<%= @an%>' style='left: <%= @long_annee*(@an-1946)+58%>px; visibility:hidden;' ><%=@an%></span>
+		<% end %>
+		<span class="info_date" id='info_date_2003' style='left: <%= @long_annee*(2003-1946)+58%>px; visibility:visible;' >2003</span>
 
 			<% for @an in @debut_periode..@fin_periode %>			
 				<div class='repere_slider<%=(@an%5 == 0 ? "_5ans" : "")%>' 	> </div>			
 				<div class='espace_entre_reperes'  > </div>						
-			<% end %>		
+			<% end %>
+			
+					
 		</div>
 		<div class="fleche" onclick="sliderDate.setValueBy(1);">&#160;&#8594;&#160;</div>
 		<div class="date"><%= @fin_periode %></div>
