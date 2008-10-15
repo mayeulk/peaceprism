@@ -59,10 +59,12 @@
     		if(s.style.display == "none") {
 				d.src = "/images/navig/fermer0.gif";
         		s.style.display = "block";
+				d.title = "hide";
     		}
     		else {
 				d.src = "/images/navig/fermer1.gif";
         		s.style.display = "none";
+				d.title = "show";
     		}
 		}		
     </script>
@@ -89,7 +91,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 <!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
 
 <div style="float:right;">
-	<a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog2', 'volet_info')"><img id="imgTog2" src="/images/navig/fermer0.gif" /> </a>   
+	<a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog2', 'volet_info')"><img title="Hide" id="imgTog2" src="/images/navig/fermer0.gif" /> </a>   
 </div>
 <div id="volet_info" >
 	<div id="titre">
@@ -99,7 +101,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 	<div id="selections">
 
 		<div class="conteneur_icone">
-			<img src="/images/icones/dataset.png" id="dataset_ico" title="dataset"/>
+			<img src="/images/icones/dataset.png" id="dataset_ico" title="Dataset"/>
 		</div>
 		<div id="block_for_select" >&#160;=&#160;<%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
 	
@@ -113,15 +115,15 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 	</div>
 </div>
 <div>
-	<img src="/images/icones/zoomin.png" onclick="zoom(1.25)"/>
-	<img src="/images/icones/zoomout.png" onclick="zoom(1/1.25)"/>
-	<img src="/images/icones/globe.png" onclick="initzoom()"/>
-	<img id="resize" src="/images/icones/resize_enfonce.png" onclick="resz()"/>
+	<img title="Zoom in" src="/images/icones/zoomin.png" onclick="zoom(1.25)"/>
+	<img title="Zoom out" src="/images/icones/zoomout.png" onclick="zoom(1/1.25)"/>
+	<img title="Show entire world map" src="/images/icones/globe.png" onclick="initzoom()"/>
+	<img title="Resize map" id="resize" src="/images/icones/resize_enfonce.png" onclick="resz()"/>
 	
-	<img id="refresh" src="/images/icones/reload_map.png" title="reload map" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);"/>
+	<img title="Reload map" id="refresh" src="/images/icones/reload_map.png" onclick="reInit2(annee_en_cours); afficherFrise(old_pays_survole);"/>
 		
 	<!-- boutons de lancement et d'arret du film -->
-	<img id="movie" src="/images/icones/movie_clap_play.png" title="play movie" onclick="lire_film = Math.pow(lire_film-1, 2);film();"/>
+	<img id="movie" src="/images/icones/movie_clap_play.png" title="Play movie" onclick="lire_film = Math.pow(lire_film-1, 2);film();"/>
 
 </div> 
 
@@ -141,21 +143,21 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 	
 	<table id="table_navig" border="0" cellpadding="0" cellspacing="0">
   		<tbody>
-    		<tr><td><img id="hg" src="/images/icones/hg.png" onclick="pan(-.1,-.1)"/></td>
-      			<td><center><img id="h"  src="/images/icones/h.png" onclick="pan(0,-.1)"/></center></td>
-     			<td><img id="hd" src="/images/icones/hd.png" onclick="pan(.1,-.1)"/></td>
+    		<tr><td><img id="hg" src="/images/icones/hg.png" title="Pan up and left" onclick="pan(-.1,-.1)"/></td>
+      			<td><center><img id="h" src="/images/icones/h.png" title="Pan up" onclick="pan(0,-.1)"/></center></td>
+     			<td><img id="hd" src="/images/icones/hd.png" title="Pan up and right" onclick="pan(.1,-.1)"/></td>
     		</tr>
-    		<tr><td><img id="g"  src="/images/icones/g.png" onclick="pan(-.1,0)"/></td>
+    		<tr><td><img id="g"  src="/images/icones/g.png" title="Pan left" onclick="pan(-.1,0)"/></td>
 				<td>
 				<div id="cadre_carte" class="cadre_carte">
       				<%= render :partial => "carte_"+@browser+".html" %>
 				</div>
 				</td>
-     			<td><img id="d"  src="/images/icones/d.png" onclick="pan(.1,0)"/></td>
+     			<td><img id="d"  src="/images/icones/d.png" title="Pan right" onclick="pan(.1,0)"/></td>
    			</tr>
-    		<tr><td><img id="bg" align='top' src="/images/icones/bg.png" onclick="pan(-.1,.1)"/></td>
-      			<td><center><img id="b" align='top' src="/images/icones/b.png" onclick="pan(0,.1)"/></center></td>
-      			<td><img id="bd" align='top' src="/images/icones/bd.png"  onclick="pan(.1,.1)"/></td>
+    		<tr><td><img id="bg" align='top' title="Pan down and left" src="/images/icones/bg.png" onclick="pan(-.1,.1)"/></td>
+      			<td><center><img id="b" align='top' title="Pan down" src="/images/icones/b.png" onclick="pan(0,.1)"/></center></td>
+      			<td><img id="bd" align='top' title="Pan down and right" src="/images/icones/bd.png"  onclick="pan(.1,.1)"/></td>
     		</tr>
   		</tbody>
 	</table>
@@ -184,7 +186,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 
 	<!-- une date de debut et une fleche gauche pour deplacer le curseur, de meme plus loin pour la droite -->
 	<div class="date"><%= @debut_periode %></div>
-	<div class="fleche" onclick="sliderDate.setValueBy(-1);">&#160;&#8592;&#160;</div>
+	<div class="fleche" title="Previous year" onclick="sliderDate.setValueBy(-1);">&#160;&#8592;&#160;</div>
 
 	<!-- Slider avec des valeurs predefinies (annees entre date debut et date de fin du jeu de donnees,
 	et deux curseurs pour specifier un debut et eventuellement une fin pour une valeur selectionnee
@@ -210,7 +212,7 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 			
 					
 		</div>
-		<div class="fleche" onclick="sliderDate.setValueBy(1);">&#160;&#8594;&#160;</div>
+		<div class="fleche" title="Next year" onclick="sliderDate.setValueBy(1);">&#160;&#8594;&#160;</div>
 		<div class="date"><%= @fin_periode %></div>
 		<div id="frise"></div>&#8594;&#160;<input type="text" id="pays2"/>
 	</div>	

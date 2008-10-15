@@ -115,10 +115,12 @@ function film() {
 		annee_en_cours = annee_en_cours + 1 ;
 		
 		d.src = "/images/icones/movie_clap_stop.png";
+		d.title="Stop movie";
   		var timer = setTimeout("film()",500);
   		sliderDate.setValue(annee_en_cours);  		
   	}
 	else{
 		d.src = "/images/icones/movie_clap_play.png";
+		d.title="Play movie";
 	}
 }
