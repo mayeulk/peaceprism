@@ -28,13 +28,21 @@ function resz() {
 		//document.getElementById("navig").style.backgroundColor="red";
 		document.getElementById("cadre_carte").className="cadre_carte_rouge";
 		document.getElementById("b").src="images/icones/b-r.png";
+		document.getElementById("b").title="Increase height";
 		document.getElementById("bd").src="images/icones/bd-r.png";
+		document.getElementById("bd").title="Increase width and height";
 		document.getElementById("bg").src="images/icones/bg-r.png";
+		document.getElementById("bg").title="Increase height and reduce width";
 		document.getElementById("d").src="images/icones/d-r.png";
+		document.getElementById("d").title="Increase width";
 		document.getElementById("g").src="images/icones/g-r.png";
+		document.getElementById("g").title="Reduce width";
 		document.getElementById("h").src="images/icones/h-r.png";
+		document.getElementById("h").title="Reduce height";
 		document.getElementById("hd").src="images/icones/hd-r.png";
+		document.getElementById("hd").title="Increase width and reduce height";
 		document.getElementById("hg").src="images/icones/hg-r.png";
+		document.getElementById("hg").title="Reduce height and width";
 		//document.getElementById("resize").src="images/icones/resize_enfonce.png";
 		
 	}
@@ -43,13 +51,21 @@ function resz() {
 		//    document.getElementById("navig").style.backgroundColor="white";
 		document.getElementById("cadre_carte").className="cadre_carte";    
 		document.getElementById("b").src="images/icones/b.png";
+		document.getElementById("b").title="Pan down";
 		document.getElementById("bd").src="images/icones/bd.png";
+		document.getElementById("bd").title="Pan down and right";
 		document.getElementById("bg").src="images/icones/bg.png";
+		document.getElementById("bg").title="Pan down and left";
 		document.getElementById("d").src="images/icones/d.png";
+		document.getElementById("d").title="Pan right";
 		document.getElementById("g").src="images/icones/g.png";
+		document.getElementById("g").title="Pan left";
 		document.getElementById("h").src="images/icones/h.png";
+		document.getElementById("h").title="Pan up";
 		document.getElementById("hd").src="images/icones/hd.png";
+		document.getElementById("hd").title="Pan up and right";
 		document.getElementById("hg").src="images/icones/hg.png";
+		document.getElementById("hg").title="Pan up and left";
 		//document.getElementById("resize").src="images/icones/resize_enfonce.png";
 	}
 }

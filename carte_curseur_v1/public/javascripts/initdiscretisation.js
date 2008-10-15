@@ -53,7 +53,7 @@ function initdiscretisation(){
 			dataset_courant +
 			'/' +
 			variable_courante +
-			'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a>';
+			'" id="lien_desc"><img src="/images/icones/description.png" title="Description"/></a>';
 			
 			
 			// lien vers le graphique de cette variable 
@@ -61,19 +61,19 @@ function initdiscretisation(){
 			'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
 			'href="/graph/dis/' + dataset_courant + '/' +
 			variable_courante +
-			'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a>';
+			'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
 			// chaine : la legende en tant que tel est affichee dans un div independant
 			chaine = chaine + '<div id="legende">';
 			
 			// chaine : premier interval pour les valeurs 'null'		
-			chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> ' + nodata + ' </span></p>';
+			chaine = chaine + '<p><input type="text" title="Change color" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> ' + nodata + ' </span></p>';
 			
 			// autres classes
 			nbClasses = 2;
 			var u = 0;
 			for (var i = 0; i < 2; i++) {
 				disc_var = [];
-				chaine += '<p><span id="val' + i + 1 + '"></span> <input type="text" class="colorfields" id="colorfield' + (i + 1) + '" value="' + tab_couleur[i + 1] + '"/><span id="intitule' + i + 1 + '">' + i + '</span></p>';
+				chaine += '<p><span id="val' + i + 1 + '"></span> <input type="text" title="Change color" class="colorfields" id="colorfield' + (i + 1) + '" value="' + tab_couleur[i + 1] + '"/><span id="intitule' + i + 1 + '">' + i + '</span></p>';
 				disc_var['valeur'] = u;
 				disc_var['mini'] = u;
 				disc_var['isFirstValue'] = 1;
@@ -92,7 +92,7 @@ function initdiscretisation(){
 			var o = 3;
 			for (var i in varQual) {
 				alert('varqualbool');
-				chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
+				chaine += '<p><span id="val' + o + '">' + i + '</span> <input type="text" title="Change color" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur[c] + '"/><span id="intitule' + o + '">' + varQual[i] + '</span></p>';
 				disc_var = [];
 				disc_var['valeur'] = i;
 				disc_var['mini'] = i;
@@ -132,20 +132,20 @@ function initdiscretisation(){
 				'href="/variable/' +
 				dataset_courant + '/' +
 				variable_courante +
-				'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a>';
+				'" id="lien_desc"><img src="/images/icones/Description.png" title="description"/></a>';
 				
 				// lien vers le graphique de cette variable 
 				chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
 				'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
 				'href="/graph/dis/' + dataset_courant + '/' +
 				variable_courante +
-				'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a>';
+				'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
 				
 				// chaine : la legende en tant que tel est affichee dans un div independant
 				chaine = chaine + '<div id="legende">';
 				
 				// chaine : premier interval pour les valeurs 'null'
-				chaine = chaine + '<p><input type="text" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> ' + nodata + ' </span></p>';
+				chaine = chaine + '<p><input type="text" title="Change color" id="colorfield0" class="colorfields" value="C3C3C3"/><span id="intitule0"> ' + nodata + ' </span></p>';
 				
 				var o = 1;
 				
@@ -195,7 +195,7 @@ function initdiscretisation(){
 					dataset_courant +
 					'/' +
 					variable_courante +
-					'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a>';
+					'" id="lien_desc"><img src="/images/icones/description.png" title="Description"/></a>';
 					
 					// lien vers le graphique de cette variable 
 					chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
@@ -204,12 +204,12 @@ function initdiscretisation(){
 					'href="/graph/dis/' + dataset_courant + '/' +
 					variable_courante +
 					
-					'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a>';
+					'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
 					
 					// chaine : la legende en tant que tel est affichee dans un div independant
 					chaine = chaine + '<div id="legende">';
 					
-					chaine = chaine + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> ' + nodata + ' </span></p>';
+					chaine = chaine + '<p><input type="text" title="Change color" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> ' + nodata + ' </span></p>';
 					
 					var tab_couleur_discr = chercherCouleursDisc(couleurs_pour_disc[0], couleurs_pour_disc[1], nbClas);
 					
@@ -269,14 +269,14 @@ function initdiscretisation(){
 					dataset_courant +
 					'/' +
 					variable_courante +
-					'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a> ';
+					'" id="lien_desc"><img src="/images/icones/description.png" title="Description"/></a> ';
 					
 					// lien vers le graphique de cette variable 
 					chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
 					'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
 					'href="/graph/dis/' + dataset_courant + '/' +
 					variable_courante +
-					'" id="lien_graph"><img src="/images/icones/graphic.png" title="graph"/></a><br/>';
+					'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a><br/>';
 					
 					// une zone de saisie pour choisir manuellement les intervals
 					chaine += ' <span id="vMini" style="padding-left:10px;">' + valMini + '</span>' +
@@ -288,7 +288,7 @@ function initdiscretisation(){
 					' </span>' +
 					'<button type="button" title="reload legend" onclick="afficherLegendeQuant($(\'vMini\').innerHTML + \';\' + ' +
 					'$(\'choixIntervals\').value + \';\' + $(\'vMaxi\').innerHTML)">' +
-					'<img src="/images/icones/reload_legend.png" title="reload legend"/></button>';
+					'<img src="/images/icones/reload_legend.png" title="Apply classes to legend"/></button>';
 					
 					// chaine : la legende en tant que tel est affichee dans un div independant
 					chaine = chaine + '<div id="legende">';
@@ -327,7 +327,7 @@ function afficherLegendeQual (varQual, tab_couleur, o){
 	var chaine2 = '' ;
 	var c=2 ;
 	for (var i in varQual) {
-		chaine2 += '<p><span id="val' + o + '"> </span> <input type="text" title="click to change color" class="colorfields" id="colorfield' + o +
+		chaine2 += '<p><span id="val' + o + '"> </span> <input type="text" title="Change color" class="colorfields" id="colorfield' + o +
 		  '" value="' + tab_couleur[c-1] + '"/> <a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
 		  'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
 		  'href="/var_label/'+ dataset_courant + "/" + 
@@ -372,11 +372,11 @@ function afficherLegendeQuant(choixIntervals){
 		disc_var['signification'] = nodata;
 		discretize[0] = disc_var ;			
 
-		chaine3 = chaine3 + '<p><input type="text" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
+		chaine3 = chaine3 + '<p><input type="text" title="Change color" class="colorfields" id="colorfield0" value="C3C3C3"/><span id="intitule0"> '+nodata+' </span></p>';
 		var o = 1;
 		
 		// chaine : premier interval
-		chaine3 += '<p><span id="val' + o + '"></span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
+		chaine3 += '<p><span id="val' + o + '"></span> <input type="text" title="Change color" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> [ ' + tabIntervals[0] + ' - ' + tabIntervals[1] + ' ]</span></p>';
 		disc_var =[];
 		disc_var['valeur'] = o;
 		disc_var['isFirstValue'] = 1 ;
@@ -397,7 +397,7 @@ function afficherLegendeQuant(choixIntervals){
 			disc_var['couleur'] = tab_couleur_disc[o];
 			disc_var['signification'] = '';					
 			discretize[o] = disc_var ;
-			chaine3 += '<p><span id="val' + o + '"></span> <input type="text" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
+			chaine3 += '<p><span id="val' + o + '"></span> <input type="text" title="Change color" class="colorfields" id="colorfield' + o + '" value="' + tab_couleur_disc[o] + '"/><span id="intitule' + o + '"> ] ' + tabIntervals[i] + ' - ' + tabIntervals[i+1] + ' ]</span></p>';
 			
 			o += 1 ;
 		}

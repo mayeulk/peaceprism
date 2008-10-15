@@ -5,7 +5,7 @@
 	<%= auto_link(@citation) %>
 </div>
 <div class="conteneur_icone">
-	<img src="/images/icones/variable.png" title="variable"/>
+	<img src="/images/icones/variable.png" title="Variable"/>
 </div>
 <div id="block_for_select" >&#160;=&#160;<%= select_tag 'variable', options_for_select(@vars,@vars[0]),
 	:onchange=>"requestjson(#{@dataset_choisi},this.value)" %>
