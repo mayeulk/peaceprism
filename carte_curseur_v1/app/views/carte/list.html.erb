@@ -70,26 +70,6 @@
     </script>
 
 
-<!--
-<%= image_tag("navig/fermer.gif",
-  :onclick => visual_effect(:toggle_blind, 'volet_navig',   :duration => 1.0, :scaleX => true, :scaleY => false)   )  %>
-
-comment combiner ça avec ce qui suit ?
-visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
-
-<img style="visibility: hidden;" id="essai3" src="/images/navig/bg.png" onclick="document.getElementById(&quot;essai2&quot;).src=&quot;/images/navig/hg.png&quot;"/>
-
-<div onclick="Effect.toggle(&quot;volet_navig&quot;,'appear',{duration:1.0});">Volet navig</div>
-
-<%= content_tag 'div', 'Masquer navig',
-  :onclick => visual_effect(:toggle_blind, 'volet_navig', :duration => 1.0, :scaleX => true, :scaleY => false)  %>
--->
-         
-<!--
- :with => "'id=' + escape(pays_survole)")
--->
-<!--grace au "position:relative;" du div ancetre, on place ce div par rapport a l'ancetre  -->
-
 <div style="float:right;">
 	<a id="toggle1" href="javascript:void(0)" onclick="toggleCode('imgTog2', 'volet_info')"><img title="Hide" id="imgTog2" src="/images/navig/fermer0.gif" /> </a>   
 </div>
@@ -126,13 +106,6 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 	<img id="movie" src="/images/icones/movie_clap_play.png" title="Play movie" onclick="lire_film = Math.pow(lire_film-1, 2);film();"/>
 
 </div> 
-
-<script type="text/ecmascript">
-	// pour charger par defaut une carte vide, on force le choix a zero
-	$('datasets').value = 0;
-	//requestjson(0,0);	
-	initdiscretisation();
-</script>
 
 <%= observe_field (:datasets,
 		  :url => { :controller => 'carte', :action => 'refresh_var'},
@@ -235,6 +208,13 @@ visual_effect(:toggle_appear, 'pays2', :duration => 1.0)
 <br/>
 <!-- un div pour afficher le partiel du tableau de donnees de la zone selectionnee -->
 <div id="tabl_donnees"></div>
+
+<script type="text/ecmascript">
+	// pour charger par defaut une carte vide, on force le choix a zero
+	$('datasets').value = 0;
+	//requestjson(0,0);	
+	initdiscretisation();
+</script>
 
 </body>
 
