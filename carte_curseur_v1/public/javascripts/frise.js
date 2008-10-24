@@ -71,7 +71,7 @@ function afficherFrise(actuPays){
 					}
 				}
 			}
-			ch += '<div title="' + ann[a] + ' : ' + sign + ' (' + tabDataPays[c] + ')" style="height:20px; width:' + long_annee + 'px;background-color:#' + coul + ';float:left"> </div>';
+			ch += '<div title="' + ann[a] + ' : ' + sign + ' (' + tabDataPays[c] + ' ' + info['unit'] + ')" style="height:20px; width:' + long_annee + 'px;background-color:#' + coul + ';float:left"> </div>';
 			c += 1;
 		}
 		//alert(tabDataPays);

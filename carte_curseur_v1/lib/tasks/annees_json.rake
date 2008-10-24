@@ -105,6 +105,7 @@ namespace :db do
             @info['mini'] = @variable.mini
             @info['maxi'] = @variable.maxi
             @info['format'] = @variable.format
+            @info['unit'] = @variable.unit
             
             # s'il existe des variables qualitaives en plus
             @var_qual = ActiveRecord::Base.connection.select_all("

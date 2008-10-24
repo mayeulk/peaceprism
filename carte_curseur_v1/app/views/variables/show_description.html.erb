@@ -27,7 +27,21 @@ variable_controller (action 'show_description') et on ajoute le div ci-apres.
   <%=h @variable.descr_before %>
 </p>
 
-<b><h3>Values:</h3></b></br>
+<% if @variable.binary_var == 1 %>
+	
+<% else %>
+	<% if @variable.mini == nil and @variable.maxi == nil %>
+		<b><h3>Values:</h3></b></br>
+	<% else %>
+		<% if @variable.qualitatif_ordonne == 1 %>
+			<b><h3>Values:</h3></b></br>
+		<% else %>
+			<b><h3>Unit:</h3></b></br>
+			<%= @variable.unit %>
+		<% end %>
+	<% end %>
+<% end %>
+
 <% for ligne in @var_label %>
 	<u>
   	<b><%= ligne['value'] %></b>	
