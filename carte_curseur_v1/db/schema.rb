@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 9) do
+ActiveRecord::Schema.define(:version => 10) do
 
   create_table "annees", :id => false, :force => true do |t|
     t.integer "annee"
@@ -332,6 +332,7 @@ ActiveRecord::Schema.define(:version => 9) do
     t.text     "descr_before_fr"
     t.text     "descr_after_fr"
     t.integer  "page"
+    t.string   "unit"
   end
 
 # Could not dump table "world" because of following StandardError

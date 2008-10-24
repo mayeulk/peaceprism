@@ -132,7 +132,7 @@ function initdiscretisation(){
 				'href="/variable/' +
 				dataset_courant + '/' +
 				variable_courante +
-				'" id="lien_desc"><img src="/images/icones/Description.png" title="description"/></a>';
+				'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a>';
 				
 				// lien vers le graphique de cette variable 
 				chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
@@ -240,6 +240,7 @@ function initdiscretisation(){
 					var varQual = varInfo['var_qual'];
 					var valMini = varInfo['mini'];
 					var valMaxi = varInfo['maxi'];
+					var valUnit = varInfo['unit'];
 					
 					// ici il faut ajouter une fonction qui calcule le nombre de classe et leur interval
 					// recherche du nb de classes
@@ -278,6 +279,7 @@ function initdiscretisation(){
 					variable_courante +
 					'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a><br/>';
 					
+					chaine += '<span style="margin-left:10px;"><b> Unit </b></span> = ' + valUnit + '<br/>';
 					// une zone de saisie pour choisir manuellement les intervals
 					chaine += ' <span id="vMini" style="padding-left:10px;">' + valMini + '</span>' +
 					'; <input type="text" id="choixIntervals" value="' +
