@@ -94,6 +94,13 @@
 		<div id="essai"> </div>
 	</div>
 </div>
+<script type="text/ecmascript">
+	// pour charger par defaut une carte vide, on force le choix a zero
+	$('datasets').value = 0;
+	//requestjson(0,0);	
+	initdiscretisation();
+</script>
+
 <div>
 	<img title="Zoom in" src="/images/icones/zoomin.png" onclick="zoom(1.25)"/>
 	<img title="Zoom out" src="/images/icones/zoomout.png" onclick="zoom(1/1.25)"/>
@@ -192,12 +199,6 @@
 		<div id="frise"></div>&#8594;&#160;<input type="text" id="pays2"/>
 	</div>	
 </div>
-<script type="text/ecmascript">
-	// pour charger par defaut une carte vide, on force le choix a zero
-	$('datasets').value = 0;
-	//requestjson(0,0);	
-	initdiscretisation();
-</script>
 <script type="text/javascript">
 // script de creation de l'objet slider
    
