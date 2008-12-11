@@ -6,7 +6,7 @@
  **********************************************************************************************/
 // variables globales
 // il faut definir les variables au chargement pour pouvoir y acceder apres modification par AJAX.
-annee_old =2003 ; 
+annee_old = 2003 ; 
 annee_en_cours = 2003 ;
 nb_conflits_old = 0 ;
 sliderDate = null ;
@@ -72,7 +72,6 @@ function reInit2(annee){
 		}
 //	}
 	
-	
 	// affichage des zones de conflits si la case est cochee
 	if ($('conflitsAffiche').checked) {
 		nb_conflits = (window["AN" + annee_en_cours]).length;
@@ -104,7 +103,6 @@ function reInit2(annee){
 		nb_conflits_old = 0;
 	}
 	
-
 }
 
 // la fonction film incremente l'annee toutes les demi-secondes ; en
