@@ -46,12 +46,14 @@ function afficherFrise(actuPays){
 			if (tabDataPays[c] == '#') {
 				coul = 'FFFFFF';
 				sign = countrydoesnotexist;
+				unite = '' ;
 			}
 			else {
 				if ((tabDataPays[c] == 'null') || (tabDataPays[c] == null)) {
 					var info2 = discretize[0];
 					coul = info2['couleur'];
 					sign = info2['signification'];
+					unite = '' ;
 				}
 				else {
 					for (var y = 1; y < discretize.length; y++) {
@@ -60,18 +62,20 @@ function afficherFrise(actuPays){
 							if ((parseInt(tabDataPays[c]) <= parseInt(info2['maxi'])) && (parseInt(tabDataPays[c]) >= parseInt(info2['mini']))) {
 								coul = info2['couleur'];
 								sign = info2['signification'];
+								unite = info['unit'] ;
 							}
 						}
 						else {
 							if ((parseInt(tabDataPays[c]) <= parseInt(info2['maxi'])) && (parseInt(tabDataPays[c]) > parseInt(info2['mini']))) {
 								coul = info2['couleur'];
 								sign = info2['signification'];
+								unite = info['unit'] ;
 							}
 						}
 					}
 				}
 			}
-			ch += '<div title="' + ann[a] + ' : ' + sign + ' (' + tabDataPays[c] + ' ' + info['unit'] + ')" style="height:20px; width:' + long_annee + 'px;background-color:#' + coul + ';float:left"> </div>';
+			ch += '<div title="' + ann[a] + ' : ' + sign + ' (' + tabDataPays[c] + ' ' + unite + ')" style="height:20px; width:' + long_annee + 'px;background-color:#' + coul + ';float:left"> </div>';
 			c += 1;
 		}
 		//alert(tabDataPays);

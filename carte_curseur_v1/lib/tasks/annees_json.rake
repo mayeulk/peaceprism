@@ -52,6 +52,7 @@ namespace :db do
       if @variable.binary_var == 1
         @info['format'] = 'boolean'
         @info['type'] = 'qualitatif'
+        @info['unit'] = ""
         
         # s'il existe des variables qualitaives en plus
         @var_qual = ActiveRecord::Base.connection.select_all("
@@ -68,6 +69,7 @@ namespace :db do
         if @variable.mini == nil and @variable.maxi == nil
           @info['type'] = 'qualitatif'
           @info['format'] = @variable.format
+          @info['unit'] = ""
           @var_qual = ActiveRecord::Base.connection.select_all("
             SELECT value, meaning FROM var_labels WHERE var_id = #{@variable.var_id}")
             
@@ -83,6 +85,7 @@ namespace :db do
             @info['mini'] = @variable.mini
             @info['maxi'] = @variable.maxi
             @info['format'] = @variable.format
+            @info['unit'] = ""
             
             @var_qual = ActiveRecord::Base.connection.select_all("
             SELECT value, meaning FROM var_labels WHERE var_id = #{@variable.var_id}")
@@ -99,6 +102,7 @@ namespace :db do
             end
             @info['var_qual_ordo'] = @tab_var_ordo
             @info['var_qual'] = @tab_var_spe
+            
           else
             # cas : quantitatif
             @info['type'] = 'quantitatif'

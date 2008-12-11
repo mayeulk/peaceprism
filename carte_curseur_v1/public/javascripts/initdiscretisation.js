@@ -79,6 +79,7 @@ function initdiscretisation(){
 				disc_var['isFirstValue'] = 1;
 				disc_var['maxi'] = u;
 				disc_var['couleur'] = tab_couleur[u + 1];
+				disc_var['signification'] = u
 				discretize[i + 1] = disc_var;
 				u = u + 1;
 			}

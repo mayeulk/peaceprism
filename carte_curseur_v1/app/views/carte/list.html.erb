@@ -97,10 +97,9 @@
 <script type="text/ecmascript">
 	// pour charger par defaut une carte vide, on force le choix a zero
 	$('datasets').value = 0;
-	//requestjson(0,0);	
+	requestjson(0,0);	
 	initdiscretisation();
 </script>
-
 <div>
 	<img title="Zoom in" src="/images/icones/zoomin.png" onclick="zoom(1.25)"/>
 	<img title="Zoom out" src="/images/icones/zoomout.png" onclick="zoom(1/1.25)"/>
@@ -117,6 +116,7 @@
 <%= observe_field (:datasets,
 		  :url => { :controller => 'carte', :action => 'refresh_var'},
 		  :update => 'liste_var', :with => "'datas=' + $('datasets').value") %>
+
 <!-- un bloc contenant la carte et donc tous ses objets SVG ou VML -->
 <!--position: relative; overflow: hidden;   background-color: #B4DAF6; "  > --> 
 <div id="carte_navig" style="float:left;">
