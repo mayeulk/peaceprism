@@ -17,7 +17,7 @@
 # ou http://mayeul-kauffmann.fr.eu.org:3000/carte
 development:
   adapter: postgresql
-  database: testgis
+  database: testsguy
   username: postgres
   password: rootpg38000
   host: 192.168.1.18
@@ -26,7 +26,7 @@ development:
 developmentguy:
   adapter: postgresql
   database: testsguy
-  username: postgres
+  username: cartecurseurv1
   password: rootpg38000
   host: 192.168.1.18
   port: 5433

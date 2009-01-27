@@ -35,7 +35,7 @@ before_filter :initialise_var
             where (kind = 'monadic') and format != 'string'
             and dataset_id = #{@dataset_choisi} order by var_id")
       
-      # la liste des variables disponibles pour le select html
+      # la liste des variables disponibles sous forme d'un tableau
       @vars = Array.new()
       @vars[0] = ['Please choose a variable', '0']
       i= 1
@@ -50,8 +50,6 @@ before_filter :initialise_var
       
       render :partial => "refresh_var"
     else
-      # render(:nothing => true)
-      # render :inline => "<%= 1+1 %>"
       render :inline => "<script type='text/ecmascript'>requestjson(0,0)</script>"
     end
   end
