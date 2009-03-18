@@ -1,25 +1,27 @@
 require 'activerecord'
-#require 'action_controller'
-#require 'application'
-#require 'datasets_controller'
-#require 'variables_controller'
+
 namespace :db do
-  desc "Importe les données de type EDF (EUGene) à partir du dossier spécifié"
-  task(:import_edf_data, :folder, :file, :needs => :environment) do |t, args|  
+  desc "Importe les données de type EDF (EUGene) à partir du dossier spécifié. [folder, file], file
+  peut-être le nom du fichier une une partie du nom, si vide, alors ce sont
+  tous les edf du répertoire"
+  task(:import_edf_data2, :folder, :file) do |t, args|  
     args.with_defaults(:folder => '/home/commun/ecole/REC/PRISM/EUGene/a_importer/', :file => nil)
-       
-    # DatasetsController.import_edf(folder, 'testGuy.edf')   
-   
-    # emplacement des fichiers edf
-    @folder='/home/commun/ecole/REC/PRISM/EUGene/a_importer/'
-    require 'find'
     
+    # emplacement des fichiers edf
+    @folder=args.folder
+    
+    require 'find'
+        
     # liste les fichiers .edf
     @edffiles = Array.new
     Find.find(@folder) do |path|
       # fichiers se terminant par ".edf"
-      if File.basename(path) =~ /\.edf$/  
-        @edffiles = @edffiles << File.basename(path, ".edf")
+      if File.basename(path) =~ /\.edf$/
+        if args.file.nil?
+          @edffiles = @edffiles << File.basename(path, ".edf")
+        else
+          @edffiles = @edffiles << File.basename(path, ".edf")
+        end
       end
     end
 
