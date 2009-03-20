@@ -1,32 +1,37 @@
-require 'activerecord'
+# usage: utiliser la console
+# cd ~/workspace/carte_curseur_v1
+# rake db:import_edf_data2['/home/commun/ecole/REC/PRISM/EUGene/a_importer/']
 
+
+require 'activerecord'
+#require 'action_controller'
+#require 'application'
+#require 'datasets_controller'
+#require 'variables_controller'
 namespace :db do
-  desc "Importe les données de type EDF (EUGene) à partir du dossier spécifié. [folder, file], file
-  peut-être le nom du fichier une une partie du nom, si vide, alors ce sont
-  tous les edf du répertoire"
-  task(:import_edf_data2, :folder, :file) do |t, args|  
-    args.with_defaults(:folder => '/home/commun/ecole/REC/PRISM/EUGene/a_importer/', :file => nil)
-    
+  desc "Importe les données de type EDF (EUGene) à partir du dossier spécifié"
+  task :import_edf_data2, :folder, :needs=>:environment do |t, args|  
+    args.with_defaults(:folder => '/home/commun/ecole/REC/PRISM/EUGene/a_importer/')
+       
+    # DatasetsController.import_edf(folder, 'testGuy.edf')   
+    puts "First name is #{args.folder}"  
     # emplacement des fichiers edf
-    @folder=args.folder
-    
+    @folder='/home/commun/ecole/REC/PRISM/EUGene/a_importer/'
+    #@folder = args[:folder]
+    @file = 'testGuy' #args.file
     require 'find'
-        
+    
     # liste les fichiers .edf
     @edffiles = Array.new
     Find.find(@folder) do |path|
       # fichiers se terminant par ".edf"
-      if File.basename(path) =~ /\.edf$/
-        if args.file.nil?
-          @edffiles = @edffiles << File.basename(path, ".edf")
-        else
-          @edffiles = @edffiles << File.basename(path, ".edf")
-        end
+      if File.basename(path) =~ /\.edf$/  
+        @edffiles = @edffiles << File.basename(path, ".edf")
       end
     end
 
     @edffiles.each do |edffile|
-      if edffile == "testGuy"
+      if edffile == "testGuy" #@file
       ################################################################
       
       #@edf_data=edf_to_yaml(@folder, edffile)
