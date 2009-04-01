@@ -15,13 +15,18 @@
 # et Cocher "Serveur de base de données (postgresql-8.0)
 # ouvrir http://127.0.0.1:3000/carte
 # ou http://mayeul-kauffmann.fr.eu.org:3000/carte
+
+# base de developpement habituelle: 'testsgis' au lieu
+# de  'testsguy' (qui elle s'utilise en lançant le serveur
+#  avec le mode "developmentguy")
 development:
   adapter: postgresql
-  database: testsguy
+  database: testgis
   username: postgres
   password: rootpg38000
   host: 192.168.1.18
   port: 5433
+
 
 developmentguy:
   adapter: postgresql
