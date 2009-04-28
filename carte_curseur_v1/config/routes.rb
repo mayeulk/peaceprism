@@ -11,6 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :datasets
   map.connect 'data/:dataset_id', :controller => 'data', :action => 'show_dataset'
   map.connect 'data/:dataset_id/col/:variable_id', :controller => 'data', :action => 'show_column'
+  map.connect 'convert/:dataset_id', :controller => 'export', :action => 'choose'
+  map.connect 'convert/:dataset_id/xml', :controller => 'export', :action => 'xml'
   
   map.connect 'graph/dis/:dataset_id/:variable_id', :controller => 'graph', :action => 'dis'
   
