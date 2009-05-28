@@ -70,8 +70,10 @@ function reInit2(annee){
 				}
 			}
 		}
+		annee_old = annee_en_cours;
 //	}
 	
+	/* zones de conflits (donnees PRIO), a decommenter pour les reintegrer dans l'appli
 	// affichage des zones de conflits si la case est cochee
 	if ($('conflitsAffiche').checked) {
 		nb_conflits = (window["AN" + annee_en_cours]).length;
@@ -88,7 +90,7 @@ function reInit2(annee){
 			colorierPays(document.getElementById((window["AN" + annee_en_cours])[un_conflit]), '#A200C3');
 			//document.getElementById((window["AN" + annee_en_cours])[un_conflit]).setAttribute("opacity", "0.5");
 		}
-		annee_old = annee_en_cours;
+		
 		nb_conflits_old = nb_conflits;
 	}
 	else{
@@ -96,12 +98,11 @@ function reInit2(annee){
 		for (un_conflit = 0; un_conflit < nb_conflits_old; un_conflit++) {
 			var svgobj = document.getElementById((window["AN" + annee_old])[un_conflit]);
 			document.getElementById((window["AN" + annee_old])[un_conflit]).style.visibility = 'hidden';
-		}
+		}		
 		
-		
-		annee_old = annee_en_cours;
 		nb_conflits_old = 0;
 	}
+	*/
 	
 }
 
