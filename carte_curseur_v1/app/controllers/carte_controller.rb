@@ -8,7 +8,7 @@ before_filter :initialise_var
     @dataset_choisi = ""
     @datasets2 = Dataset.find(:all)
     @datasets = ActiveRecord::Base.connection.select_all(
-    "Select data_set_full_name, id from datasets where id<10 order by id")
+    "Select data_set_full_name, id from datasets order by id")
    
     # la liste des datasets disponibles pour le select html
     @dat = Array.new()

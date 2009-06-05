@@ -34,7 +34,7 @@ namespace :db do
   #fin de la partie commune
 
 
-  @variables = Variable.find(:all, :conditions => "id = 63 OR id = 72 OR id = 49 OR id = 50") #"kind='monadic' AND format != 'string' 
+  @variables = Variable.find(:all, :conditions => "id > 286 AND id <= 292") #"kind='monadic' AND format != 'string' 
   # dataset_id = 1 AND var_id=4 and 
 
   for @variable in @variables 
