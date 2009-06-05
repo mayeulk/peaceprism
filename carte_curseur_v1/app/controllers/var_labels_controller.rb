@@ -1,4 +1,14 @@
-class VarLabelController < ApplicationController
+class VarLabelsController < ApplicationController
+ 
+  def index
+    @var_labels = VarLabel.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @var_labels }
+    end
+  end  
+  
   def show
       #@var_label = VarLabel.find(4)
       #TODO: faire que ca marche pour les autres variables que 13 (xrreg)
@@ -21,6 +31,10 @@ class VarLabelController < ApplicationController
       format.xml  { render :xml => @var_label }
     end
   end
-  
+
+  # GET /var_labels/1/edit
+  def edit
+    @var_label = VarLabel.find(params[:id])
+  end
 
 end
