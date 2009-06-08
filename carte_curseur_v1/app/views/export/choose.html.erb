@@ -1,9 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	    <link rel="stylesheet" type="text/css" href="/stylesheets/slider.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/slider.css"/>
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/carte.css"/>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/colorPicker.css"/>
+    <script type="text/javascript" src="/javascripts/lib/prototype.js"></script> 
 
 	</head>
 <body>	
@@ -13,11 +14,24 @@
 		<img src="/images/logo/logo_Peace_Prism.png" style="float: left;"/>
 <h1>PEACE PRISM</h1>
 	</div>
+
 	<div id="selections">
 
 		<div class="conteneur_icone">
 			<img src="/images/icones/dataset.png" id="dataset_ico" title="Dataset"/>
+		</div>
+		<div id="block_for_select" >&#160;=&#160;<%= select_tag "datasets", options_for_select(@dat,@dat[0]) %>
+		</div>
+		<div id="message" style="clear:both;"></div>
+	</div>
+	<%= observe_field (:datasets,
+		  :url => { :controller => 'export', :action => 'create_vdf'},
+		  :update => 'message', :with => "'datas=' + $('datasets').value") %>
 
+<!--
+	<div id="selections">
+		<div class="conteneur_icone">
+			<img src="/images/icones/dataset.png" id="dataset_ico" title="Dataset"/>
 		</div>
 		<div id="block_for_select"> = <select id="datasets" name="datasets"><option value="0">Please choose a dataset</option>
 <option value="1">National Material Capabilities</option>
@@ -30,22 +44,18 @@
 <option value="7">Oneal and Russett Trade Data (9/2000) v1.0</option>
 <option value="8">Barbieri Trade Data (Dyadic file) v1.1</option>
 <option value="9">Barbieri Trade Data (National file) v1.1</option></select>
-	
-
 		</div>	
-		<div id="liste_var" style="clear: both;"><div style="border-style: solid; background-color: rgb(255, 255, 204);">
-
-	<div style="float: left;">
-	<img id="reference" src="/images/icones/reference.png" title="Dataset reference"/>  
+		<div id="liste_var" style="clear: both;">
+			<div style="border-style: solid; background-color: rgb(255, 255, 204);">
+				<div style="float: left;">
+					<img id="reference" src="/images/icones/reference.png" title="Dataset reference"/>  
+				</div>
+				Marshall, Monty G. and Keith Jaggers. 2002. Polity IV Project: Political Regime Characteristics and Transitions, 1800-2002. <a href="http://www.cidcm.umd.edu/inscr/polity/index.htm">http://www.cidcm.umd.edu/inscr/polity/index.htm</a>.
+			</div>
+			<br/>
+		</div>
 	</div>
-	Marshall, Monty G. and Keith Jaggers. 2002. Polity IV Project: Political Regime Characteristics and Transitions, 1800-2002. <a href="http://www.cidcm.umd.edu/inscr/polity/index.htm">http://www.cidcm.umd.edu/inscr/polity/index.htm</a>.
-</div>
-
-<br/>
-
-</div>
-
-	</div>
+-->
 </div>
 
 <div>
