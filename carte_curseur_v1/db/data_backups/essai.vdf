@@ -1,0 +1,193 @@
+--- 
+var_label: []
+
+variable: 
+- !ruby/object:Variable 
+  attributes: 
+    name: ccode1
+    long_name_fr: 
+    var_id: "1"
+    format: integer
+    updated_at: 2008-05-19 19:17:56.991365
+    mini: 
+    dataset_id: "4"
+    kind: identifierccode1
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "27"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:17:56.991365
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: ccode2
+    long_name_fr: 
+    var_id: "2"
+    format: integer
+    updated_at: 2008-05-19 19:17:56.995863
+    mini: 
+    dataset_id: "4"
+    kind: identifierccode2
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "28"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:17:56.995863
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: year
+    long_name_fr: 
+    var_id: "3"
+    format: integer
+    updated_at: 2008-05-19 19:17:57.000406
+    mini: 
+    dataset_id: "4"
+    kind: identifieryear
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "29"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:17:57.000406
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: allynum
+    long_name_fr: 
+    var_id: "4"
+    format: integer
+    updated_at: 2008-05-19 19:17:57.005742
+    mini: 
+    dataset_id: "4"
+    kind: dyadic_ordered
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "30"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:17:57.005742
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: sstype
+    long_name_fr: 
+    var_id: "5"
+    format: integer
+    updated_at: 2008-05-19 19:17:57.015516
+    mini: 
+    dataset_id: "4"
+    kind: dyadic_ordered
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "31"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:17:57.015516
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: num alli
+    long_name_fr: 
+    var_id: "6"
+    format: integer
+    updated_at: 2008-05-19 19:17:57.019763
+    mini: 
+    dataset_id: "4"
+    kind: dyadic_ordered
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "32"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:17:57.019763
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: version
+    long_name_fr: 
+    var_id: "7"
+    format: real
+    updated_at: 2008-05-19 19:17:57.024021
+    mini: 
+    dataset_id: "4"
+    kind: identifierversion
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "33"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:17:57.024021
+  attributes_cache: {}
+

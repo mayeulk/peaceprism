@@ -1,0 +1,24 @@
+# User data set configuration file for EUGene software
+# Configuration file NMC_test.edf
+data_file_name: NMC_test.csv
+data_set_full_name: National Material Capabilities
+data_set_short_name: NMC_test
+data_set_citation: "Singer, J. David, Stuart Bremer, and John Stuckey. (1972). 'Capability Distribution, Uncertainty, and Major Power War, 1820-1965.' in Bruce Russett (ed) Peace, War, and Numbers, Beverly Hills: Sage, 19-48."
+unit_of_analysis: country_year
+first_year_possible: 1816
+last_year_possible: 2001
+label_line_in_data_file: true
+number_of_variables: 11
+number_of_cases: 13020
+variables:
+ - [stateabb, string, monadic, none, -9]
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [irst, integer, monadic, none, -9]
+ - [milex, integer, monadic, none, -9]
+ - [milper, integer, monadic, none, -9]
+ - [energy, integer, monadic, none, -9]
+ - [tpop, integer, monadic, none, -9]
+ - [upop, integer, monadic, none, -9]
+ - [cinc, real, monadic, none, -9]
+ - [version, real, identifierversion, none, -9]

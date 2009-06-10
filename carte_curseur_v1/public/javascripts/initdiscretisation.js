@@ -524,13 +524,13 @@ function verifierCoherenceIntervals(tabInter){
 	nbCl = tabInter.length;
 	
 	for (var i=0; i<(nbCl-1); i++){
-		if (parseInt(tabInter[i]) > parseInt(tabInter[i+1])){
+		if (parseFloat(tabInter[i]) > parseFloat(tabInter[i+1])){
 			err += 1 ;
 		}
 		if (tabInter[i].length < 1){
 			err += 1 ;
 		}	
-		if (parseInt(tabInter[i]) == parseInt(tabInter[i+1])){
+		if (parseFloat(tabInter[i]) == parseFloat(tabInter[i+1])){
 			err += 1 ;
 		}
 	}

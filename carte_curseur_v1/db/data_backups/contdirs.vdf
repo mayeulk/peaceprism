@@ -1,0 +1,193 @@
+--- 
+var_label: []
+
+variable: 
+- !ruby/object:Variable 
+  attributes: 
+    name: stateno
+    long_name_fr: 
+    var_id: "1"
+    format: integer
+    updated_at: 2008-05-19 19:14:44.599377
+    mini: 
+    dataset_id: "2"
+    kind: identifierccode1
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "12"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:14:44.599377
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: stateab
+    long_name_fr: 
+    var_id: "2"
+    format: string
+    updated_at: 2008-05-19 19:14:44.604736
+    mini: 
+    dataset_id: "2"
+    kind: monadic
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "13"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:14:44.604736
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: year
+    long_name_fr: 
+    var_id: "3"
+    format: integer
+    updated_at: 2008-05-19 19:14:44.609946
+    mini: 
+    dataset_id: "2"
+    kind: identifieryear
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "14"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:14:44.609946
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: total
+    long_name_fr: 
+    var_id: "4"
+    format: integer
+    updated_at: 2008-05-19 19:14:44.615206
+    mini: 
+    dataset_id: "2"
+    kind: monadic
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "15"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:14:44.615206
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: land
+    long_name_fr: 
+    var_id: "5"
+    format: integer
+    updated_at: 2008-05-19 19:14:44.619799
+    mini: 
+    dataset_id: "2"
+    kind: monadic
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "16"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:14:44.619799
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: sea
+    long_name_fr: 
+    var_id: "6"
+    format: integer
+    updated_at: 2008-05-19 19:14:44.624242
+    mini: 
+    dataset_id: "2"
+    kind: monadic
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "17"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:14:44.624242
+  attributes_cache: {}
+
+- !ruby/object:Variable 
+  attributes: 
+    name: version
+    long_name_fr: 
+    var_id: "7"
+    format: real
+    updated_at: 2008-05-19 19:14:44.62841
+    mini: 
+    dataset_id: "2"
+    kind: identifierversion
+    reverse: none
+    descr_after_fr: 
+    long_name: 
+    code_var: 
+    descr_before_fr: 
+    unit: 
+    id: "18"
+    qualitatif_ordonne: 
+    descr_before: 
+    descr_after: 
+    page: 
+    maxi: 
+    binary_var: 
+    missing: "-9"
+    created_at: 2008-05-19 19:14:44.62841
+  attributes_cache: {}
+
