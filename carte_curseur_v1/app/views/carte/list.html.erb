@@ -208,7 +208,7 @@
 	var sliderDate = new Control.Slider('handle_date_debut','track_date',
 		{range:$R(<%= @debut_periode %>, <%= @fin_periode %>),
 		values:<%= (@debut_periode..@fin_periode).to_json %>, 
-	   	sliderValue : <%=@fin_periode%>,
+	   	sliderValue : 2000 //<%=@fin_periode%>,
 	   	onSlide:function(v){reInit2(v)},
 	   	onChange:function(v){reInit2(v)}});
 

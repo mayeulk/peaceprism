@@ -1,7 +1,6 @@
 --- 
 var_label: 
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "50"
     meaning: Unregulated
     var_id: "13"
@@ -11,10 +10,7 @@ var_label:
     value: "1"
     description: Changes in chief executive occur through forceful seizures of power. Such caesaristic transfers of power are sometimes legitimized after the fact in noncompetitive elections or by legislative enactment. Despite these "legitimization" techniques, <b>a polity remains unregulated until the de facto leader of the coup has been replaced as head of government either by designative or competitive modes of executive selection.</b> However, unregulated recruitment does not include the occasional forceful ouster of a chief executive if elections are called within a reasonable time and the previous pattern continues.
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "63"
     meaning: Exact Date
     var_id: "26"
@@ -24,10 +20,7 @@ var_label:
     value: "1"
     description: Used when the exact date of the polity start could be identified.
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "63"
     meaning: Assigned Date
     var_id: "26"
@@ -39,10 +32,7 @@ var_label:
       Used where more than one event could be attributed to the change leading to polity start, or the event persisted for more than one day, or the Polity coders were uncertain whether or not the particular event identified was indeed the source of the change in political structure identified by earlier versions of the data.
 
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "63"
     meaning: Approximate Date
     var_id: "26"
@@ -54,10 +44,7 @@ var_label:
       Used if the month of the polity start could be identified, but not a specific day. In these cases, the polity is assumed to start on the 16th day of the month.
 
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "63"
     meaning: Missing Date
     var_id: "26"
@@ -69,10 +56,7 @@ var_label:
       Used if the year of the polity start could be identified/were coded in Polity II, but not a specific day and month. In these cases, the polity is assumed to start on July 1 (i.e., 0701)
 
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "63"
     meaning: Unknown
     var_id: "26"
@@ -84,10 +68,7 @@ var_label:
       No EPREC code was recorded for dates in 1995-98
 
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "50"
     meaning: Interregnum Period
     var_id: "13"
@@ -97,10 +78,7 @@ var_label:
     value: "-77"
     description: "A \"-77\" code for the Polity component variables indicates periods of \xE2\x80\x9Cinterregnum,\xE2\x80\x9D during which there is a complete collapse of central political authority. This is most likely to occur during periods of internal war. Lebanon between 1978 and 1986--in which internal factionalism, civil war, and external military intervention has at times reduced the scope of the regime's central authority to a few square blocks of Beirut--is a recent example of an interregnum. During an interregnal period, all variables of authority characteristics are coded \"-77\". Moreover,like the \"-88\" and \"-66\" codes, a \"-77\" is entered for the year in which the interregnum began, regardless of the month of its origin, and for each year prior to the year in which central authority is regained or a new polity is established. Two caveats are associated with the \"-77\" code:   1) If the interregnal period results in the formation of a new polity, and it is less than a year, the period is usually incorporated without separate mention in the \"transition period\" of the next polity.  2) If a country is occupied by foreign powers during wartime, terminating the old polity, then reestablishes a polity after foreign occupation ends, the intervening years are coded as an interregnum if a \"new\" polity is established.  <b>The identification of an \xE2\x80\x9Cinterregnum\xE2\x80\x9D period is especially important in the identification of an abrupt or disruptive regime transition, described below. Interregnal periods are equated with the collapse, or failure, of central state authority, whether or not that failure is followed by a radical transformation, or revolution, in the mode of governance. Such substantial modal transformations may not result in a substantial change in authority characteristics, e.g., Cambodia 1975, Afghanistan 1978, or Iran 1979. </b>\n"
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "50"
     meaning: Designational/Transitional
     var_id: "13"
@@ -110,10 +88,7 @@ var_label:
     value: "2"
     description: Chief executives are chosen by designation within the political elite, without formal competition (i.e., one-party systems or "rigged" multiparty elections). Also coded here are transitional arrangements intended to regularize future power transitions after an initial unregulated seizure of power (i.e., after constitutional legitimization of military rule or during periods when the leader of the coup steps down as head of state but retains unrivaled power within the political realm as head of the military). This category also includes polities in transition from designative to elective modes of executive selection (i.e., the period of "guided democracy" often exhibited during the transition from military to civilian rule) or vice versa (i.e., regimes ensuring electoral victory through the intimidation of oppositional leaders or the promulgation of a "state of emergency" before executive elections).
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "50"
     meaning: Transition Period
     var_id: "13"
@@ -125,10 +100,7 @@ var_label:
       A score of "-88" indicates a period of transition. Some new polities are preceded by a "transition period" during which new institutions are planned, legally constituted, and put into effect. Democratic and quasi-democratic polities are particularly likely to be so established, in a procedure involving constitutional conventions and referenda. During this period of transition, all authority characteristic indicators are scored "-88". Two examples:  1) In Argentina, after 6 years of state terrorism, economic decline and, finally, the humiliating defeat in the Falklands war, the military junta was dissolved in June 1982. Headed by retired General Bignone, the interim government established a dialogue with the major political parties and promised to hold elections in October 1983. Competitive elections were held in October and Raul Alfonsin was inaugurated in December 1983. The transitional period is the period from June, 1982, through October, 1983. However, operationally, only 1982 is coded as the transition period. Constrained by our use of an annual time-series format, transition periods are only coded if the new polity is formally established in a different year than that of the previous polity's demise. A "-88" is entered in the year of the polity's demise rather than the year of its origin, regardless of the month in which either event occurred. 2) Cuba, in the immediate post-revolution years, demonstrates that an individual's attempt to consolidate power can also result in periods of transition. In January 1959 Fidel Castro and his rebel troops captured Santa Clara, Santiago and Havana, forcing Batista to resign and flee the country. Manuel Urrutia was named provisional president by Castro shortly thereafter. It was not until December 1961 that Castro declared himself a Marxist-Leninist and announced the formation of a unified party to bring communism to Cuba. Thus, 1959 and 1960 are coded as transitional years.  When using the "-88" code, the question of whether a substantially new polity has been formed must be decided before dealing with the question of when. The basic criterion for operationally determining a "polity change" is a 3-point change in either the composite DEMOC or AUTOC score. In general, the transition code should be applied sparingly and only in those cases where authority patterns are changing and those changes are not being seriously challenged. These are truly transitional polities where the implementation of generally accepted and substantially altered principles of governance is incomplete and fluid, resulting in mixed patterns that are difficult to define as either those of the old regime or those of the new regime.
 
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "50"
     meaning: Regulated
     var_id: "13"
@@ -138,10 +110,7 @@ var_label:
     value: "3"
     description: Chief executives are determined by hereditary succession or in competitive elections. Ascriptive/designative and ascriptive/elective selections (i.e., an effective king and premier) are also coded as regulated. The fundamental difference between regulated selection and unregulated recruitment is that regulated structures require the existence of institutionalized modes of executive recruitment, either through constitutional decree or lineage. Moreover, in regulated competitive systems, unlike the designational/transitional mode, the method of future executive selection is not dependent on the particular party or regime currently holding power.
     created_at: 
-  attributes_cache: {}
-
-- !ruby/object:VarLabel 
-  attributes: 
+-
     var_key: "50"
     meaning: Interruption Periods
     var_id: "13"
@@ -154,8 +123,7 @@ var_label:
   attributes_cache: {}
 
 variable: 
-- !ruby/object:Variable 
-  attributes: 
+-
     name: cyear
     long_name_fr: ""
     var_id: "1"
@@ -179,10 +147,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: ccode
     long_name_fr: ""
     var_id: "2"
@@ -206,10 +171,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: scode
     long_name_fr: ""
     var_id: "3"
@@ -233,10 +195,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: country
     long_name_fr: ""
     var_id: "4"
@@ -260,10 +219,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: year
     long_name_fr: ""
     var_id: "5"
@@ -287,10 +243,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: flag
     long_name_fr: ""
     var_id: "6"
@@ -314,10 +267,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: fragment
     long_name_fr: ""
     var_id: "7"
@@ -341,10 +291,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: democ
     long_name_fr: ""
     var_id: "8"
@@ -368,10 +315,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: autoc
     long_name_fr: ""
     var_id: "9"
@@ -395,10 +339,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: polity
     long_name_fr: ""
     var_id: "10"
@@ -422,10 +363,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: polity2
     long_name_fr: ""
     var_id: "11"
@@ -449,10 +387,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: durable
     long_name_fr: "durabilit\xC3\xA9 du r\xC3\xA9gime"
     var_id: "12"
@@ -476,10 +411,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: xrreg
     long_name_fr: "R\xC3\xA9gulation du recrutement du chef de l\xE2\x80\x99ex\xC3\xA9cutif"
     var_id: "13"
@@ -503,10 +435,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: xrcomp
     long_name_fr: ""
     var_id: "14"
@@ -530,10 +459,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: xropen
     long_name_fr: ""
     var_id: "15"
@@ -557,10 +483,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: xconst
     long_name_fr: ""
     var_id: "16"
@@ -584,10 +507,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: parreg
     long_name_fr: ""
     var_id: "17"
@@ -611,10 +531,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: parcomp
     long_name_fr: ""
     var_id: "18"
@@ -638,10 +555,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: exrec
     long_name_fr: ""
     var_id: "19"
@@ -665,10 +579,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: exconst
     long_name_fr: ""
     var_id: "20"
@@ -692,10 +603,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: polcomp
     long_name_fr: ""
     var_id: "21"
@@ -719,10 +627,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: prior
     long_name_fr: ""
     var_id: "22"
@@ -746,10 +651,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: emonth
     long_name_fr: ""
     var_id: "23"
@@ -773,10 +675,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: eday
     long_name_fr: ""
     var_id: "24"
@@ -800,10 +699,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: eyear
     long_name_fr: ""
     var_id: "25"
@@ -827,10 +723,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: eprec
     long_name_fr: 
     var_id: "26"
@@ -856,10 +749,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:41.496074
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: interim
     long_name_fr: ""
     var_id: "27"
@@ -883,10 +773,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: bmonth
     long_name_fr: ""
     var_id: "28"
@@ -910,10 +797,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: bday
     long_name_fr: ""
     var_id: "29"
@@ -937,10 +821,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: byear
     long_name_fr: ""
     var_id: "30"
@@ -964,10 +845,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: bprec
     long_name_fr: ""
     var_id: "31"
@@ -991,10 +869,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: post
     long_name_fr: ""
     var_id: "32"
@@ -1018,10 +893,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: change
     long_name_fr: ""
     var_id: "33"
@@ -1045,10 +917,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: d4
     long_name_fr: ""
     var_id: "34"
@@ -1072,10 +941,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: sf
     long_name_fr: ""
     var_id: "35"
@@ -1099,10 +965,7 @@ variable:
     binary_var: "1"
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: regtrans
     long_name_fr: ""
     var_id: "36"
@@ -1126,10 +989,7 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
-- !ruby/object:Variable 
-  attributes: 
+-
     name: version
     long_name_fr: ""
     var_id: "37"
@@ -1153,5 +1013,3 @@ variable:
     binary_var: 
     missing: "-99"
     created_at: 2008-05-19 19:21:00
-  attributes_cache: {}
-
