@@ -21,7 +21,7 @@
 #  avec le mode "developmentguy")
 development:
   adapter: postgresql
-  database: testgis
+  database: prism_db
   username: postgres
   password: rootpg38000
   host: 192.168.1.18
@@ -59,7 +59,7 @@ test:
 
 production:
   adapter: postgresql
-  database: testgis
+  database: prism_db
   username: postgres
   password: rootpg38000
   host: 192.168.1.18

@@ -10,6 +10,7 @@ class AddColumnsToVariables2 < ActiveRecord::Migration
     add_column(:variables, :descr_before_fr, :text)
     add_column(:variables, :descr_after_fr, :text)
     add_column(:variables, :page, :integer)
+    add_column(:variables, :unit, :string)
   end
 
   def self.down
@@ -21,5 +22,6 @@ class AddColumnsToVariables2 < ActiveRecord::Migration
     remove_column(:variables, :descr_before_fr)
     remove_column(:variables, :descr_after_fr)
     remove_column(:variables, :page)
+    remove_column(:variables, :unit)
   end
 end
