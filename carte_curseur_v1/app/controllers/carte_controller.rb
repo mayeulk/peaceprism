@@ -32,7 +32,7 @@ before_filter :initialise_var
       "Select data_set_citation from datasets where id = #{@dataset_choisi}")
       @var_select = ActiveRecord::Base.connection.select_all(
          "SELECT var_id, name, long_name from variables 
-            where (kind = 'monadic') and format != 'string'
+            where (kind = 'monadic' or kind = 'dyadic') and format != 'string'
             and dataset_id = #{@dataset_choisi} order by var_id")
       
       # la liste des variables disponibles sous forme d'un tableau

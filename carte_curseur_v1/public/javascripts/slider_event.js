@@ -32,6 +32,8 @@ function reInit2(annee){
 		// recuperation des donnees a afficher (le tableau de pays et le hash de donnees par dates)
 		var t_pays = tab['pays'];
 		var t_data = tab['data'];
+		var t_info = tab['info'];
+		var kind = t_info['kind'];
 		// le tableau de donnees pour la date selectionnee
 		data_year = t_data[annee_en_cours];
 		
@@ -69,6 +71,9 @@ function reInit2(annee){
 					}
 				}
 			}
+		}
+		if (kind =='dyadic'){
+			colorierPays(document.getElementById(old_pays_survole), "#000000");
 		}
 		annee_old = annee_en_cours;
 //	}

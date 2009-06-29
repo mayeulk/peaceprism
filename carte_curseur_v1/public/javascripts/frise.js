@@ -4,22 +4,26 @@
 old_pays_survole="US19463333"; //var. globale
 
 // fonction reflexe sur clic d'un pays : appel de la fonction afficherFrise()
+// si monadic, ou la requetejson dyadic si dyadic
 function survol_zone(pays_survole) {
-	pays_survole=pays_survole;
-	document.getElementById(pays_survole).setAttribute("stroke-width", "2");
-	document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
-	ti = document.getElementById(pays_survole).getAttribute("title") ;
+	t_inf = tab['info'];
+	ti = document.getElementById(pays_survole).getAttribute("title");
 	//ti = document.getElementById(pays_survole).title ;
-	document.getElementById("pays2").value=ti;//pays_survole;
-	afficherFrise(pays_survole);
+	document.getElementById("pays2").value = ti;//pays_survole;
+	if (t_inf['kind'] == 'dyadic') {
+		$('frise').innerHTML = 'Clic on a country';
+		requestjson_dyadic(pays_survole);
+	}
+	else { // variable monadic	
+		pays_survole = pays_survole;
+		document.getElementById(pays_survole).setAttribute("stroke-width", "2");
+		document.getElementById(old_pays_survole).setAttribute("stroke-width", "0.25");
+		afficherFrise(pays_survole);
+	}
 	old_pays_survole=pays_survole;        
 }
-	//function curseurPays(val, box) {var b=document.getElementById('output'+box);val=Math.round(val);
-	//b.value=val;
-	//toggle_layer_number(val);
-//}
 	
-	
+// fonction de mise a jour de la frise pour le pays selectionne	
 function afficherFrise(actuPays){
 	var countrydoesnotexist = 'Country does not exist'
 	if (tab != "") {	
