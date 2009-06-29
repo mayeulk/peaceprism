@@ -28,6 +28,8 @@ namespace :db do
           varr = Hash.new()
           varr['maxi'] = v.maxi
           varr['mini'] = v.mini
+          varr['name'] = v.name
+          varr['name_fr'] = v.name_fr
           varr['long_name'] = v.long_name
           varr['long_name_fr'] = v.long_name_fr
           varr['code_var'] = v.code_var
@@ -38,6 +40,7 @@ namespace :db do
           varr['qualitatif_ordonne'] = v.qualitatif_ordonne
           varr['page'] = v.page
           varr['unit'] = v.unit
+          varr['unit_fr'] = v.unit_fr
           varr['binary_var'] = v.binary_var
           varr['var_id'] = v.var_id
         end        
@@ -57,8 +60,9 @@ namespace :db do
           varr = Hash.new()
           varr['value'] = v.value
           varr['meaning'] = v.meaning
+          varr['meaning_fr'] = v.meaning_fr
           varr['description'] = v.description
-          #varr['dataset_id'] = v.dataset_id
+          varr['description_fr'] = v.description_fr
           varr['var_id'] = v.var_id
         end        
         @new_liste2[@i] = varr

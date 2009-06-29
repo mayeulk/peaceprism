@@ -1,0 +1,18 @@
+data_file_name: Diplomatic_Exchange_2006v1.csv
+data_set_full_name: Diplomatic Exchange
+data_set_short_name: Diplomatic Exchange
+data_set_citation: "Singer and Small 1966, 242. Small and Singer 1973, 589-590"
+unit_of_analysis: country_country_year
+first_year_possible: 1817
+last_year_possible: 2005
+label_line_in_data_file: true
+number_of_variables: 7
+number_of_cases: 310820
+variables:
+ - [ccode1, integer, identifierccode1, none, -9]
+ - [ccode2, integer, identifierccode2, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [DR_at_1, integer, dyadic, none, -9]
+ - [DR_at_2, integer, dyadic, none, -9]
+ - [DE, integer, dyadic, none, -9]
+ - [version, real, identifierversion, none, -9]
