@@ -313,7 +313,7 @@ function initdiscretisation(){
 	}
 	reInit2(annee_en_cours);
 	survol_zone(old_pays_survole);
-	afficherFrise(old_pays_survole);
+	//afficherFrise(old_pays_survole);
 }
 
 function afficherLegendeQual (varQual, tab_couleur, o){
