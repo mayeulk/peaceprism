@@ -1,0 +1,50 @@
+# User data set configuration file for EUGene software
+# Configuration file p4v2004e.edf
+data_file_name: p4v2004e.csv
+data_set_full_name: Polity IV 2004e
+data_set_short_name: Polity IV 2004e
+data_set_citation: "Marshall, Monty G. and Keith Jaggers. 2002. Polity IV Project: Political Regime Characteristics and Transitions, 1800-2002. http://www.cidcm.umd.edu/inscr/polity/index.htm."
+unit_of_analysis: country_year
+first_year_possible: 1800
+last_year_possible: 2004
+label_line_in_data_file: true
+number_of_variables: 37
+number_of_cases: 14980
+variables:
+ - [cyear, integer, monadic, none, -99]
+ - [ccode, integer, identifierccode1, none, -99]
+ - [scode, string, monadic, none, -99]
+ - [country, string, monadic, none, -99]
+ - [year, integer, identifieryear, none, -99]
+ - [flag, integer, monadic, none, -99]
+ - [fragment, integer, monadic, none, -99]
+ - [democ, integer, monadic, none, -99]
+ - [autoc, integer, monadic, none, -99]
+ - [polity, integer, monadic, none, -99]
+ - [polity2, integer, monadic, none, -99]
+ - [durable, integer, monadic, none, -99]
+ - [xrreg, integer, monadic, none, -99]
+ - [xrcomp, integer, monadic, none, -99]
+ - [xropen, integer, monadic, none, -99]
+ - [xconst, integer, monadic, none, -99]
+ - [parreg, integer, monadic, none, -99]
+ - [parcomp, integer, monadic, none, -99]
+ - [exrec, integer, monadic, none, -99]
+ - [exconst, integer, monadic, none, -99]
+ - [polcomp, integer, monadic, none, -99]
+ - [prior, integer, monadic, none, -99]
+ - [emonth, integer, monadic, none, -99]
+ - [eday, integer, monadic, none, -99]
+ - [eyear, integer, monadic, none, -99]
+ - [eprec, integer, monadic, none, -99]
+ - [interim, integer, monadic, none, -99]
+ - [bmonth, integer, monadic, none, -99]
+ - [bday, integer, monadic, none, -99]
+ - [byear, integer, monadic, none, -99]
+ - [bprec, integer, monadic, none, -99]
+ - [post, integer, monadic, none, -99]
+ - [change, integer, monadic, none, -99]
+ - [d4, integer, monadic, none, -99]
+ - [sf, integer, monadic, none, -99]
+ - [regtrans, integer, monadic, none, -99]
+ - [version, real, identifierversion, none, -99]

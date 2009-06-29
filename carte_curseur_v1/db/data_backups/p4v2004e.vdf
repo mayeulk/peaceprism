@@ -1,0 +1,617 @@
+--- 
+var_label: 
+-   
+  meaning: Unregulated
+  var_id: 13
+  description: Changes in chief executive occur through forceful seizures of power. Such caesaristic transfers of power are sometimes legitimized after the fact in noncompetitive elections or by legislative enactment. Despite these "legitimization" techniques, <b>a polity remains unregulated until the de facto leader of the coup has been replaced as head of government either by designative or competitive modes of executive selection.</b> However, unregulated recruitment does not include the occasional forceful ouster of a chief executive if elections are called within a reasonable time and the previous pattern continues.
+  value: 1
+-   
+  meaning: Exact Date
+  var_id: 26
+  description: Used when the exact date of the polity start could be identified.
+  value: 1
+-   
+  meaning: Assigned Date
+  var_id: 26
+  description: Used where more than one event could be attributed to the change leading to polity start, or the event persisted for more than one day, or the Polity coders were uncertain whether or not the particular event identified was indeed the source of the change in political structure identified by earlier versions of the data.
+  value: 2
+-   
+  meaning: Approximate Date
+  var_id: 26
+  description: U"sed if the month of the polity start could be identified, but not a specific day. In these cases, the polity is assumed to start on the 16th day of the month."
+  value: 3
+-   
+  meaning: Missing Date
+  var_id: 26
+  description: Used if the year of the polity start could be identified/were coded in Polity II, but not a specific day and month. In these cases, the polity is assumed to start on July 1 (i.e., 0701)
+  value: 4
+-   
+  meaning: Unknown
+  var_id: 26
+  description: No EPREC code was recorded for dates in 1995-98
+  value: 9
+-   
+  meaning: Interregnum Period
+  var_id: 13
+  description: "A \"-77\" code for the Polity component variables indicates periods of \xE2\x80\x9Cinterregnum,\xE2\x80\x9D during which there is a complete collapse of central political authority. This is most likely to occur during periods of internal war. Lebanon between 1978 and 1986--in which internal factionalism, civil war, and external military intervention has at times reduced the scope of the regime's central authority to a few square blocks of Beirut--is a recent example of an interregnum. During an interregnal period, all variables of authority characteristics are coded \"-77\". Moreover,like the \"-88\" and \"-66\" codes, a \"-77\" is entered for the year in which the interregnum began, regardless of the month of its origin, and for each year prior to the year in which central authority is regained or a new polity is established. Two caveats are associated with the \"-77\" code:   1) If the interregnal period results in the formation of a new polity, and it is less than a year, the period is usually incorporated without separate mention in the \"transition period\" of the next polity.  2) If a country is occupied by foreign powers during wartime, terminating the old polity, then reestablishes a polity after foreign occupation ends, the intervening years are coded as an interregnum if a \"new\" polity is established.  <b>The identification of an \xE2\x80\x9Cinterregnum\xE2\x80\x9D period is especially important in the identification of an abrupt or disruptive regime transition, described below. Interregnal periods are equated with the collapse, or failure, of central state authority, whether or not that failure is followed by a radical transformation, or revolution, in the mode of governance. Such substantial modal transformations may not result in a substantial change in authority characteristics, e.g., Cambodia 1975, Afghanistan 1978, or Iran 1979. </b>\n"
+  value: -77
+-   
+  meaning: Designational/Transitional
+  var_id: 13
+  description: Chief executives are chosen by designation within the political elite, without formal competition (i.e., one-party systems or "rigged" multiparty elections). Also coded here are transitional arrangements intended to regularize future power transitions after an initial unregulated seizure of power (i.e., after constitutional legitimization of military rule or during periods when the leader of the coup steps down as head of state but retains unrivaled power within the political realm as head of the military). This category also includes polities in transition from designative to elective modes of executive selection (i.e., the period of "guided democracy" often exhibited during the transition from military to civilian rule) or vice versa (i.e., regimes ensuring electoral victory through the intimidation of oppositional leaders or the promulgation of a "state of emergency" before executive elections).
+  value: 2
+-   
+  meaning: Transition Period
+  var_id: 13
+  description: |
+    A score of "-88" indicates a period of transition. Some new polities are preceded by a "transition period" during which new institutions are planned, legally constituted, and put into effect. Democratic and quasi-democratic polities are particularly likely to be so established, in a procedure involving constitutional conventions and referenda. During this period of transition, all authority characteristic indicators are scored "-88". Two examples:  1) In Argentina, after 6 years of state terrorism, economic decline and, finally, the humiliating defeat in the Falklands war, the military junta was dissolved in June 1982. Headed by retired General Bignone, the interim government established a dialogue with the major political parties and promised to hold elections in October 1983. Competitive elections were held in October and Raul Alfonsin was inaugurated in December 1983. The transitional period is the period from June, 1982, through October, 1983. However, operationally, only 1982 is coded as the transition period. Constrained by our use of an annual time-series format, transition periods are only coded if the new polity is formally established in a different year than that of the previous polity's demise. A "-88" is entered in the year of the polity's demise rather than the year of its origin, regardless of the month in which either event occurred. 2) Cuba, in the immediate post-revolution years, demonstrates that an individual's attempt to consolidate power can also result in periods of transition. In January 1959 Fidel Castro and his rebel troops captured Santa Clara, Santiago and Havana, forcing Batista to resign and flee the country. Manuel Urrutia was named provisional president by Castro shortly thereafter. It was not until December 1961 that Castro declared himself a Marxist-Leninist and announced the formation of a unified party to bring communism to Cuba. Thus, 1959 and 1960 are coded as transitional years.  When using the "-88" code, the question of whether a substantially new polity has been formed must be decided before dealing with the question of when. The basic criterion for operationally determining a "polity change" is a 3-point change in either the composite DEMOC or AUTOC score. In general, the transition code should be applied sparingly and only in those cases where authority patterns are changing and those changes are not being seriously challenged. These are truly transitional polities where the implementation of generally accepted and substantially altered principles of governance is incomplete and fluid, resulting in mixed patterns that are difficult to define as either those of the old regime or those of the new regime."
+
+  value: -88
+-   
+  meaning: Regulated
+  var_id: 13
+  description: Chief executives are determined by hereditary succession or in competitive elections. Ascriptive/designative and ascriptive/elective selections (i.e., an effective king and premier) are also coded as regulated. The fundamental difference between regulated selection and unregulated recruitment is that regulated structures require the existence of institutionalized modes of executive recruitment, either through constitutional decree or lineage. Moreover, in regulated competitive systems, unlike the designational/transitional mode, the method of future executive selection is not dependent on the particular party or regime currently holding power.
+  value: 3
+-   
+  meaning: Interruption Periods
+  var_id: 13
+  description: |
+    A score of "-66" in variables 2.1-2.8 represents a period of "interruption". Operationally, if a country is occupied by foreign powers during war, terminating the old polity, then reestablishes a polity after foreign occupation ends, Polity codes the intervening years as an interruption until an independent polity is reestablished. If foreign powers intervene during an interregnum period (-77) in order to provide assistance in re-establishing political order within the Polity, the period of the foreign intervention is coded as an interruption until a new Polity emerges and establishes independent authority. Periods of interruption are also coded for the participants involved in short-lived attempts at the creation of ethnic, religious, or regional federations.
+
+  value: -66
+variable: 
+-   
+  long_name_fr: 
+  var_id: 1
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 2
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 3
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 4
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 5
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 6
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 7
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 8
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 9
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 10
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 11
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: "durabilit\xC3\xA9 du r\xC3\xA9gime"
+  var_id: 12
+  mini: 0.0
+  descr_after_fr: ""
+  descr_before_fr: ""
+  code_var: DURABLE
+  long_name: Regime Durability
+  unit: year(s)
+  qualitatif_ordonne: 
+  descr_before: "The number of years since the most recent regime change (defined by a threepoint change in the POLITY score over a period of three years or less) or the end of transition period defined by the lack of stable political institutions (denoted by a standardized authority score). In calculating the DURABLE value, the first year during which a new (post-change) polity is established is coded as the baseline \xE2\x80\x9Cyear zero\xE2\x80\x9D (value = 0) and each subsequent year adds one to the value of the DURABLE variable consecutively until a new regime change or transition period occurs. <b> Values are entered for all years beginning with the first regime change since 1800 or the date of independence if that event occurred after 1800. </b>\r\n"
+  page: 
+  descr_after: ...
+  binary_var: 
+  maxi: 195.0
+-   
+  long_name_fr: "R\xC3\xA9gulation du recrutement du chef de l\xE2\x80\x99ex\xC3\xA9cutif"
+  var_id: 13
+  mini: 1.0
+  descr_after_fr: ...
+  descr_before_fr: "Lorsque l'on consid\xC3\xA8re le recrutement, nous devons d'abord d\xC3\xA9terminer s'il existe au moins une proc\xC3\xA9dure \xC3\xA9tablie de s\xC3\xA9lection des chefs de l'ex\xC3\xA9cutif. Un r\xC3\xA9gime politique est r\xC3\xA9gul\xC3\xA9 dans la mesure o\xC3\xB9 il a des proc\xC3\xA9dures institutionnalis\xC3\xA9es pour transf\xC3\xA9rer le pouvoir ex\xC3\xA9cutif. Trois cat\xC3\xA9gories sont utilis\xC3\xA9es pour diff\xC3\xA9rencier les degr\xC3\xA9s d'institutionnalisation."
+  code_var: XRREG
+  long_name: Regulation of Chief Executive Recruitment
+  unit: 
+  qualitatif_ordonne: 1
+  descr_before: In considering recruitment, we must first determine whether there are any established modes at all by which chief executives are selected. Regulation refers to the extent to which a polity has institutionalized procedures for transferring executive power. Three categories are used to differentiate the extent of institutionalization.
+  page: 24
+  descr_after: ...
+  binary_var: 
+  maxi: 3.0
+-   
+  long_name_fr: 
+  var_id: 14
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 15
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 16
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 17
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 18
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 19
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 20
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 21
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 22
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 23
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 24
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 25
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 26
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: EPREC
+  long_name: End Date Precision
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: Precision level of end date, EDATE,
+  page: 
+  descr_after: desc after
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 27
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 28
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 29
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 30
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 31
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 32
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 33
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 34
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 35
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 36
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 37
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 

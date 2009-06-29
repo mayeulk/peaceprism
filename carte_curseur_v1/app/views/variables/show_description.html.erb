@@ -7,7 +7,10 @@ variable_controller (action 'show_description') et on ajoute le div ci-apres.
 </p>
 <div style="background-color:#FFFFCC; border-style:solid;">
 	<div style="float:left;">
-	<img id="reference" src="/images/icones/reference.png" title="Dataset reference"/>&#160;&#160;
+	<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');"
+		onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');"
+		href="/datasets/show_description/<%= @dataset_choisi%>" id="lien_desc">
+		<img src="/images/icones/reference.png" title="Description"/></a>
 	</div>
 	<%= auto_link(@citation) %>
 </div>
@@ -21,7 +24,11 @@ variable_controller (action 'show_description') et on ajoute le div ci-apres.
   <%=h @variable.name %>
 </p>
 -->
-
+<p>
+<% if @variable.mini != nil and @variable.maxi != nil and @variable.qualitatif_ordonne != 1 %>
+	<b><h3>Unit:</h3></b></br>
+	<%= @variable.unit %>
+<% end %>
 <p>
   <b><h3>Description:</h3></b></br>
   <%= @variable.descr_before %>
