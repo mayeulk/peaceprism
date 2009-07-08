@@ -1,0 +1,61 @@
+data_file_name: IGO_stateunit_v2.1_post46_science.csv
+data_set_full_name: Int'al Gov'al Organizations (science, industry, energy)
+data_set_short_name: IGOscience
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 50
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [AALCO, integer, monadic, none, -9]
+ - [AATA, integer, monadic, none, -9]
+ - [AFRAND, integer, monadic, none, -9]
+ - [AIDC, integer, monadic, none, -9]
+ - [AIDO, integer, monadic, none, -9]
+ - [ALO, integer, monadic, none, -9]
+ - [APPA, integer, monadic, none, -9]
+ - [ARCAL, integer, monadic, none, -9]
+ - [ASCBC, integer, monadic, none, -9]
+ - [BCSC, integer, monadic, none, -9]
+ - [BIONET, integer, monadic, none, -9]
+ - [BIPM, integer, monadic, none, -9]
+ - [CAEC, integer, monadic, none, -9]
+ - [CARII, integer, monadic, none, -9]
+ - [CEEPN, integer, monadic, none, -9]
+ - [CERN, integer, monadic, none, -9]
+ - [ECCPIF, integer, monadic, none, -9]
+ - [EFILWC, integer, monadic, none, -9]
+ - [EMBC, integer, monadic, none, -9]
+ - [EMBL, integer, monadic, none, -9]
+ - [EPA, integer, monadic, none, -9]
+ - [EURATOM, integer, monadic, none, -9]
+ - [EUROMET, integer, monadic, none, -9]
+ - [GOIC, integer, monadic, none, -9]
+ - [IACS, integer, monadic, none, -9]
+ - [IACSS, integer, monadic, none, -9]
+ - [IAEA, integer, monadic, none, -9]
+ - [IBI, integer, monadic, none, -9]
+ - [ICCROM, integer, monadic, none, -9]
+ - [IEA, integer, monadic, none, -9]
+ - [IIF, integer, monadic, none, -9]
+ - [ILO, integer, monadic, none, -9]
+ - [INFOFISH, integer, monadic, none, -9]
+ - [IOATHRE, integer, monadic, none, -9]
+ - [IOLM, integer, monadic, none, -9]
+ - [IOMig, integer, monadic, none, -9]
+ - [JINR, integer, monadic, none, -9]
+ - [LACP, integer, monadic, none, -9]
+ - [LAEO, integer, monadic, none, -9]
+ - [NCTR, integer, monadic, none, -9]
+ - [NERC, integer, monadic, none, -9]
+ - [OAPEC, integer, monadic, none, -9]
+ - [OESAS, integer, monadic, none, -9]
+ - [OPEC, integer, monadic, none, -9]
+ - [PAIGH, integer, monadic, none, -9]
+ - [PIBAC, integer, monadic, none, -9]
+ - [SCAf, integer, monadic, none, -9]
+ - [UNIDO, integer, monadic, none, -9]

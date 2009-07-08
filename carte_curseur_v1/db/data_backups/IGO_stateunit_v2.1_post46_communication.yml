@@ -1,0 +1,59 @@
+data_file_name: IGO_stateunit_v2.1_post46_communication.csv
+data_set_full_name: Int'al Gov'al Organizations (communication, transportation)
+data_set_short_name: IGOcommunication
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 48
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [AFPU, integer, monadic, none, -9]
+ - [AMPTU, integer, monadic, none, -9]
+ - [AOCRS, integer, monadic, none, -9]
+ - [AOPU, integer, monadic, none, -9]
+ - [APIBD, integer, monadic, none, -9]
+ - [APT, integer, monadic, none, -9]
+ - [APTU, integer, monadic, none, -9]
+ - [ARPU, integer, monadic, none, -9]
+ - [ASECNA, integer, monadic, none, -9]
+ - [CAARC, integer, monadic, none, -9]
+ - [CATC, integer, monadic, none, -9]
+ - [CBI, integer, monadic, none, -9]
+ - [COPTAC, integer, monadic, none, -9]
+ - [CPU, integer, monadic, none, -9]
+ - [CTO, integer, monadic, none, -9]
+ - [ECPTA, integer, monadic, none, -9]
+ - [ELDO, integer, monadic, none, -9]
+ - [EPFSC, integer, monadic, none, -9]
+ - [ESA, integer, monadic, none, -9]
+ - [ESRO, integer, monadic, none, -9]
+ - [EUROCONTROL, integer, monadic, none, -9]
+ - [EUROFIMA, integer, monadic, none, -9]
+ - [GCRSNC, integer, monadic, none, -9]
+ - [IARadiO, integer, monadic, none, -9]
+ - [ICAO, integer, monadic, none, -9]
+ - [ICPTU, integer, monadic, none, -9]
+ - [IMSO, integer, monadic, none, -9]
+ - [INTELSAT, integer, monadic, none, -9]
+ - [ITCC, integer, monadic, none, -9]
+ - [ITU, integer, monadic, none, -9]
+ - [ITVRC, integer, monadic, none, -9]
+ - [LACAC, integer, monadic, none, -9]
+ - [MCPTTC, integer, monadic, none, -9]
+ - [NTSC, integer, monadic, none, -9]
+ - [OCR, integer, monadic, none, -9]
+ - [OTIF, integer, monadic, none, -9]
+ - [PAHC, integer, monadic, none, -9]
+ - [PIARC, integer, monadic, none, -9]
+ - [PUASP, integer, monadic, none, -9]
+ - [RASCOM, integer, monadic, none, -9]
+ - [RCC, integer, monadic, none, -9]
+ - [SWAPU, integer, monadic, none, -9]
+ - [UASC, integer, monadic, none, -9]
+ - [UIUCV, integer, monadic, none, -9]
+ - [UPU, integer, monadic, none, -9]
+ - [WMO, integer, monadic, none, -9]

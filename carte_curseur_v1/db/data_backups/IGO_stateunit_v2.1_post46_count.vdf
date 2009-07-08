@@ -1,0 +1,274 @@
+--- 
+var_label: []
+
+variable: 
+-   
+  long_name_fr: 
+  var_id: 1
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: 
+  var_id: 2
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  long_name_fr: Agriculture
+  var_id: 3
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG agriculture
+  code_var: 
+  long_name: agriculture
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of agriculture's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 22
+-   
+  long_name_fr: Communication
+  var_id: 4
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG communication
+  code_var: 
+  long_name: communication
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of communication's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 50
+-   
+  long_name_fr: Culture
+  var_id: 5
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG culturelles
+  code_var: 
+  long_name: culture
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of culture's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 30
+-   
+  long_name_fr: Environnement
+  var_id: 6
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG environnementales
+  code_var: 
+  long_name: environment
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of environment's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 34
+-   
+  long_name_fr: Finances
+  var_id: 7
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG finances
+  code_var: 
+  long_name: finance
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of finance's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 60
+-   
+  long_name_fr: Santé
+  var_id: 8
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG santé
+  code_var: 
+  long_name: health
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of health's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 15
+-   
+  long_name_fr: Propriété Intellectuelle
+  var_id: 9
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG PI
+  code_var: 
+  long_name: intellectual property
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of IP's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 11
+-   
+  long_name_fr: Justice
+  var_id: 10
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG justice
+  code_var: 
+  long_name: law
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of law's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 18
+-   
+  long_name_fr: Polyvalents
+  var_id: 11
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG polyvalentes
+  code_var: 
+  long_name: multi
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of multi IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 40
+-   
+  long_name_fr: Produits
+  var_id: 12
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG produits
+  code_var: 
+  long_name: products
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of products IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 49
+-   
+  long_name_fr: Science
+  var_id: 13
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG scientifiques
+  code_var: 
+  long_name: science
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of science's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 53
+-   
+  long_name_fr: Sécurité
+  var_id: 14
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG sécurité
+  code_var: 
+  long_name: security
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of security's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 24
+-   
+  long_name_fr: Tourisme
+  var_id: 15
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG tourisme
+  code_var: 
+  long_name: tourism
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of tourism's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 4
+-   
+  long_name_fr: Echanges
+  var_id: 16
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG d'échanges
+  code_var: 
+  long_name: trade
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of trade's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 56
+-   
+  long_name_fr: Mer, Rivières
+  var_id: 17
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG maritimes
+  code_var: 
+  long_name: water
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of water's IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 29
+-   
+  long_name_fr: Total
+  var_id: 18
+  mini: 0
+  descr_after_fr: 
+  descr_before_fr: nombre d'appartenances à des OIG
+  code_var: 
+  long_name: total
+  unit: IGO
+  qualitatif_ordonne: 
+  descr_before: number of IGO membership
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 495

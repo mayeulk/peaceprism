@@ -1,0 +1,47 @@
+data_file_name: IGO_stateunit_v2.1_post46_environment.csv
+data_set_full_name: Int'al Gov'al Organizations (environment)
+data_set_short_name: IGOenvironment
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 36
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [APFIC, integer, monadic, none, -9]
+ - [AmCC, integer, monadic, none, -9]
+ - [ArticC, integer, monadic, none, -9]
+ - [BEF, integer, monadic, none, -9]
+ - [BONN, integer, monadic, none, -9]
+ - [CABI, integer, monadic, none, -9]
+ - [CAMRSD, integer, monadic, none, -9]
+ - [COSAVE, integer, monadic, none, -9]
+ - [EMPPO, integer, monadic, none, -9]
+ - [GEF, integer, monadic, none, -9]
+ - [IAPhy, integer, monadic, none, -9]
+ - [IBPMP, integer, monadic, none, -9]
+ - [ICNWAF, integer, monadic, none, -9]
+ - [ICPRP, integer, monadic, none, -9]
+ - [ICRI, integer, monadic, none, -9]
+ - [ICSEAF, integer, monadic, none, -9]
+ - [INFSMK, integer, monadic, none, -9]
+ - [IOPCF, integer, monadic, none, -9]
+ - [IPGRI, integer, monadic, none, -9]
+ - [ISA, integer, monadic, none, -9]
+ - [IUPNVP, integer, monadic, none, -9]
+ - [IWhale, integer, monadic, none, -9]
+ - [LAFDO, integer, monadic, none, -9]
+ - [Montreal, integer, monadic, none, -9]
+ - [NAPPO, integer, monadic, none, -9]
+ - [NEAFC, integer, monadic, none, -9]
+ - [NPAFC, integer, monadic, none, -9]
+ - [OSLO, integer, monadic, none, -9]
+ - [OSPAR, integer, monadic, none, -9]
+ - [PC, integer, monadic, none, -9]
+ - [PCSP, integer, monadic, none, -9]
+ - [RIMMO, integer, monadic, none, -9]
+ - [SACEP, integer, monadic, none, -9]
+ - [VALDIVA, integer, monadic, none, -9]

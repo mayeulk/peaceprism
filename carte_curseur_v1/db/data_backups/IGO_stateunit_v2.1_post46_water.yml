@@ -1,0 +1,36 @@
+data_file_name: IGO_stateunit_v2.1_post46_water.csv
+data_set_full_name: Int'al Gov'al Organizations (seas, rivers)
+data_set_short_name: IGOwater
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 25
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [ACSSRB, integer, monadic, none, -9]
+ - [AralSea, integer, monadic, none, -9]
+ - [CCNR, integer, monadic, none, -9]
+ - [Danube, integer, monadic, none, -9]
+ - [GRBDO, integer, monadic, none, -9]
+ - [ICCILMB, integer, monadic, none, -9]
+ - [ICCSLT, integer, monadic, none, -9]
+ - [ICES, integer, monadic, none, -9]
+ - [ICHRB, integer, monadic, none, -9]
+ - [ICRPBC, integer, monadic, none, -9]
+ - [ICSE, integer, monadic, none, -9]
+ - [IHO, integer, monadic, none, -9]
+ - [IMC, integer, monadic, none, -9]
+ - [IMO, integer, monadic, none, -9]
+ - [IOcC, integer, monadic, none, -9]
+ - [LCBC, integer, monadic, none, -9]
+ - [MCWCASM, integer, monadic, none, -9]
+ - [MWN, integer, monadic, none, -9]
+ - [NRC, integer, monadic, none, -9]
+ - [OMDKR, integer, monadic, none, -9]
+ - [PICES, integer, monadic, none, -9]
+ - [PMAESA, integer, monadic, none, -9]
+ - [SRDO, integer, monadic, none, -9]

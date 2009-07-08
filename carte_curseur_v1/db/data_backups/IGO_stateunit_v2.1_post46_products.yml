@@ -1,0 +1,60 @@
+data_file_name: IGO_stateunit_v2.1_post46_products.csv
+data_set_full_name: Int'al Gov'al Organizations (products)
+data_set_short_name: IGOproducts
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 49
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [AGC, integer, monadic, none, -9]
+ - [AIOEC, integer, monadic, none, -9]
+ - [AMCO, integer, monadic, none, -9]
+ - [AMSC, integer, monadic, none, -9]
+ - [AOMR, integer, monadic, none, -9]
+ - [APCC, integer, monadic, none, -9]
+ - [ASCRubber, integer, monadic, none, -9]
+ - [ATO, integer, monadic, none, -9]
+ - [ATPC, integer, monadic, none, -9]
+ - [AVRDC, integer, monadic, none, -9]
+ - [AfrOPDA, integer, monadic, none, -9]
+ - [CACB, integer, monadic, none, -9]
+ - [CCPA, integer, monadic, none, -9]
+ - [ECSC, integer, monadic, none, -9]
+ - [GLACSEC, integer, monadic, none, -9]
+ - [IAFC, integer, monadic, none, -9]
+ - [IATTC, integer, monadic, none, -9]
+ - [IBA, integer, monadic, none, -9]
+ - [ICAC, integer, monadic, none, -9]
+ - [ICCEC, integer, monadic, none, -9]
+ - [ICCO, integer, monadic, none, -9]
+ - [ICSG, integer, monadic, none, -9]
+ - [ICfO, integer, monadic, none, -9]
+ - [IGC, integer, monadic, none, -9]
+ - [IJO, integer, monadic, none, -9]
+ - [ILZSG, integer, monadic, none, -9]
+ - [INRO, integer, monadic, none, -9]
+ - [INSG, integer, monadic, none, -9]
+ - [IOOC, integer, monadic, none, -9]
+ - [IPC, integer, monadic, none, -9]
+ - [IRC, integer, monadic, none, -9]
+ - [IRSG, integer, monadic, none, -9]
+ - [ISuC, integer, monadic, none, -9]
+ - [ITC, integer, monadic, none, -9]
+ - [ITPA, integer, monadic, none, -9]
+ - [ITTO, integer, monadic, none, -9]
+ - [IVWO, integer, monadic, none, -9]
+ - [IWSG, integer, monadic, none, -9]
+ - [Iocean, integer, monadic, none, -9]
+ - [JNOLCRH, integer, monadic, none, -9]
+ - [NASCO, integer, monadic, none, -9]
+ - [NCRR, integer, monadic, none, -9]
+ - [NPFSC, integer, monadic, none, -9]
+ - [SAMI, integer, monadic, none, -9]
+ - [UBEC, integer, monadic, none, -9]
+ - [UKDWD, integer, monadic, none, -9]
+ - [WARDA, integer, monadic, none, -9]

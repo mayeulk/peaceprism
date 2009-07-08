@@ -1,0 +1,33 @@
+data_file_name: IGO_stateunit_v2.1_post46_security.csv
+data_set_full_name: Int'al Gov'al Organizations (security, defense, peace)
+data_set_short_name: IGOsecurity
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 22
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [ANZUS, integer, monadic, none, -9]
+ - [BALTBAT, integer, monadic, none, -9]
+ - [CENTO, integer, monadic, none, -9]
+ - [CWGC, integer, monadic, none, -9]
+ - [EAPC, integer, monadic, none, -9]
+ - [FEC, integer, monadic, none, -9]
+ - [IADefB, integer, monadic, none, -9]
+ - [IARuhr, integer, monadic, none, -9]
+ - [ICMMP, integer, monadic, none, -9]
+ - [ICivDO, integer, monadic, none, -9]
+ - [MFO, integer, monadic, none, -9]
+ - [NATO, integer, monadic, none, -9]
+ - [OPANAL, integer, monadic, none, -9]
+ - [OSCE, integer, monadic, none, -9]
+ - [PCA, integer, monadic, none, -9]
+ - [SEATO, integer, monadic, none, -9]
+ - [UN, integer, monadic, none, -9]
+ - [WEU, integer, monadic, none, -9]
+ - [WPact, integer, monadic, none, -9]
+ - [Wassen, integer, monadic, none, -9]
