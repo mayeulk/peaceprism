@@ -1,0 +1,2114 @@
+--- 
+var_label: 
+-
+  meaning: No Membership
+  var_id: 3
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 3
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 3
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 3
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 3
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 4
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 4
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 4
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 4
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 4
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 5
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 5
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 5
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 5
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 5
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 6
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 6
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 6
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 6
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 6
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 7
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 7
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 7
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 7
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 7
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 8
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 8
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 8
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 8
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 8
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 9
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 9
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 9
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 9
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 9
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 10
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 10
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 10
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 10
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 10
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 11
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 11
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 11
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 11
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 11
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 12
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 12
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 12
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 12
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 12
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 13
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 13
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 13
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 13
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 13
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 14
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 14
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 14
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 14
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 14
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 15
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 15
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 15
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 15
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 15
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 16
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 16
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 16
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 16
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 16
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 17
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 17
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 17
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 17
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 17
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 18
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 18
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 18
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 18
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 18
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 19
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 19
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 19
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 19
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 19
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 20
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 20
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 20
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 20
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 20
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 21
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 21
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 21
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 21
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 21
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 22
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 22
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 22
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 22
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 22
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 23
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 23
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 23
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 23
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 23
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 24
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 24
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 24
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 24
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 24
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 25
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 25
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 25
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 25
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 25
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 26
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 26
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 26
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 26
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 26
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 27
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 27
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 27
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 27
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 27
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 28
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 28
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 28
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 28
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 28
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 29
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 29
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 29
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 29
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 29
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 30
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 30
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 30
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 30
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 30
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 31
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 31
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 31
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 31
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 31
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 32
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 32
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 32
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 32
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 32
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 33
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 33
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 33
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 33
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 33
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 34
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 34
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 34
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 34
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 34
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 35
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 35
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 35
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 35
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 35
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 36
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 36
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 36
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 36
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 36
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 37
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 37
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 37
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 37
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 37
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 38
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 38
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 38
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 38
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 38
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id: 39
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id: 39
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id: 39
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id: 39
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id: 39
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+
+variable: 
+- 
+  name: ACDT
+  long_name_fr: 
+  var_id: 3
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Am Cmte Dependent Territories"
+  code_var: ACDT
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "American Committee on Dependent Territories"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: ACP
+  long_name_fr: 
+  var_id: 4
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "ACP Group"
+  code_var: ACP
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "African, Caribbean and Pacific Group of States (ACP Group)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: ACS
+  long_name_fr: 
+  var_id: 5
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Association of Caribbean States"
+  code_var: ACS
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Association of Caribbean States (ACS)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: AP
+  long_name_fr: 
+  var_id: 6
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Andean Parliament"
+  code_var: AP
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Andean Parliament"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: ASPAC
+  long_name_fr: 
+  var_id: 7
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Asia & Pacific Council"
+  code_var: ASPAC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Asian and Pacific Council (ASPAC)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: BC
+  long_name_fr: 
+  var_id: 8
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Baltic Council"
+  code_var: BC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Baltic Council"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CAECC
+  long_name_fr: 
+  var_id: 9
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Central Asian Economic Community"
+  code_var: CAECC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Central Asian Economic Community (CAEC)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CBSS
+  long_name_fr: 
+  var_id: 10
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Council of Baltic Sea States"
+  code_var: CBSS
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Council of the Baltic Sea States (CBSS)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CEAO
+  long_name_fr: 
+  var_id: 11
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "West African Economic Community"
+  code_var: CEAO
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "West African Economic Community (CEAO)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CEC
+  long_name_fr: 
+  var_id: 12
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Commonwealth Economic Committee"
+  code_var: CEC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Commonwealth Economic Committee"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CEI
+  long_name_fr: 
+  var_id: 13
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Central European Initiative"
+  code_var: CEI
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Central European Initiative (CEI)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CHSTEA
+  long_name_fr: 
+  var_id: 14
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Conference Heads of State of Equ. Africa"
+  code_var: CHSTEA
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Conference of Heads of State of Equatorial Africa"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CIS
+  long_name_fr: 
+  var_id: 15
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Commonwealth of Independent States"
+  code_var: CIS
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Commonwealth of Independent States (CIS)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CMAEC
+  long_name_fr: 
+  var_id: 16
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Council of Min. Asian Econ. Coop."
+  code_var: CMAEC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Council of Ministers for Asian Economic Cooperation"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CMEA
+  long_name_fr: 
+  var_id: 17
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Council for Mutual Economic Aid"
+  code_var: CMEA
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Council for Mutual Economic Aid (CMEA)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: COLOMBO
+  long_name_fr: 
+  var_id: 18
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Council for Tech Coop in S & SE Asia"
+  code_var: COLOMBO
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Council for Technical Cooperation in South and Southeast Asia (Colombo Plan)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: COrg
+  long_name_fr: 
+  var_id: 19
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Caribbean Organization"
+  code_var: COrg
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Caribbean Organization"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: CTCAf
+  long_name_fr: 
+  var_id: 20
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Comm Tech Cooperation in SSAf"
+  code_var: CTCAf
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Commission for Technical Cooperation in Africa South of the Sahara"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: EU
+  long_name_fr: 
+  var_id: 21
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "European Union"
+  code_var: EU
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "European Union (EU)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: Entente
+  long_name_fr: 
+  var_id: 22
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Entente Council"
+  code_var: Entente
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Council of the Entente/Entente Council"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: IOCom
+  long_name_fr: 
+  var_id: 23
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Indian Ocean Comm"
+  code_var: IOCom
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Indian Ocean Commission (IOC)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: LGIDA
+  long_name_fr: 
+  var_id: 24
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Liptako-Gourma Integrated Dev. Auth."
+  code_var: LGIDA
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Liptako-Gourma Integrated Development Authority (LGA)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: LOAS
+  long_name_fr: 
+  var_id: 25
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "League of Arab States"
+  code_var: LOAS
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "League of Arab States"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: NAM
+  long_name_fr: 
+  var_id: 26
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Non-Aligned Movement"
+  code_var: NAM
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Non-Aligned Movement (NAM)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: NCM
+  long_name_fr: 
+  var_id: 27
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Nordic Council of Ministers"
+  code_var: NCM
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Nordic Council of Ministers"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: NordC
+  long_name_fr: 
+  var_id: 28
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Nordic Council"
+  code_var: NordC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Nordic Council"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: OAS
+  long_name_fr: 
+  var_id: 29
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Pan-Am Union/Org of Am States"
+  code_var: OAS
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Pan American Union (OAS)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: OAU
+  long_name_fr: 
+  var_id: 30
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Org for African Unity"
+  code_var: OAU
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Organization for African Unity"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: OECS
+  long_name_fr: 
+  var_id: 31
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Org. Eastern Caribbean States"
+  code_var: OECS
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Organization of Eastern Caribbean States (OECS)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: OEEC
+  long_name_fr: 
+  var_id: 32
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Org for European Economic Coop"
+  code_var: OEEC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Organization for European Economic Cooperation (Organization for Economic Cooper"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: PIF
+  long_name_fr: 
+  var_id: 33
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Pacific Island Forum"
+  code_var: PIF
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "South Pacific Forum (SPF)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: RIOgroup
+  long_name_fr: 
+  var_id: 34
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Rio Group"
+  code_var: RIOgroup
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Rio Group"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: SADCC
+  long_name_fr: 
+  var_id: 35
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Southern African Dev. Coordination Conf."
+  code_var: SADCC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Southern African Development Coordination Conference (SADCC)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: SELA
+  long_name_fr: 
+  var_id: 36
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Latin American Economic System"
+  code_var: SELA
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Latin American Economic System/SELA"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: SPC
+  long_name_fr: 
+  var_id: 37
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "South Pacific Comm"
+  code_var: SPC
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "South Pacific Commission/Secretariat of the Pacific Commission (SPC)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: UEMOA
+  long_name_fr: 
+  var_id: 38
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "West African Economic & Monetary Union"
+  code_var: UEMOA
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Union conomique et mon taire Ouest africaine (UEMOA)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+- 
+  name: VASAB
+  long_name_fr: 
+  var_id: 39
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name: "Vision & Strategies Around Baltic Sea"
+  code_var: VASAB
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: "Vision and Strategies around the Baltic Sea 2010 (VASAB 2010)"
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+

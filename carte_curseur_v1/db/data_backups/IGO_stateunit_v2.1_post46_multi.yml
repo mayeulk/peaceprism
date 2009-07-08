@@ -1,0 +1,50 @@
+data_file_name: IGO_stateunit_v2.1_post46_multi.csv
+data_set_full_name: Int'al Gov'al Organizations (multi-purpose)
+data_set_short_name: IGOmulti
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 39
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [ACDT, integer, monadic, none, -9]
+ - [ACP, integer, monadic, none, -9]
+ - [ACS, integer, monadic, none, -9]
+ - [AP, integer, monadic, none, -9]
+ - [ASPAC, integer, monadic, none, -9]
+ - [BC, integer, monadic, none, -9]
+ - [CAECC, integer, monadic, none, -9]
+ - [CBSS, integer, monadic, none, -9]
+ - [CEAO, integer, monadic, none, -9]
+ - [CEC, integer, monadic, none, -9]
+ - [CEI, integer, monadic, none, -9]
+ - [CHSTEA, integer, monadic, none, -9]
+ - [CIS, integer, monadic, none, -9]
+ - [CMAEC, integer, monadic, none, -9]
+ - [CMEA, integer, monadic, none, -9]
+ - [COLOMBO, integer, monadic, none, -9]
+ - [COrg, integer, monadic, none, -9]
+ - [CTCAf, integer, monadic, none, -9]
+ - [EU, integer, monadic, none, -9]
+ - [Entente, integer, monadic, none, -9]
+ - [IOCom, integer, monadic, none, -9]
+ - [LGIDA, integer, monadic, none, -9]
+ - [LOAS, integer, monadic, none, -9]
+ - [NAM, integer, monadic, none, -9]
+ - [NCM, integer, monadic, none, -9]
+ - [NordC, integer, monadic, none, -9]
+ - [OAS, integer, monadic, none, -9]
+ - [OAU, integer, monadic, none, -9]
+ - [OECS, integer, monadic, none, -9]
+ - [OEEC, integer, monadic, none, -9]
+ - [PIF, integer, monadic, none, -9]
+ - [RIOgroup, integer, monadic, none, -9]
+ - [SADCC, integer, monadic, none, -9]
+ - [SELA, integer, monadic, none, -9]
+ - [SPC, integer, monadic, none, -9]
+ - [UEMOA, integer, monadic, none, -9]
+ - [VASAB, integer, monadic, none, -9]

@@ -1,0 +1,42 @@
+data_file_name: IGO_stateunit_v2.1_post46_culture.csv
+data_set_full_name: Int'al Gov'al Organizations (culture, education, sport)
+data_set_short_name: IGOculture
+data_set_citation: "Pevehouse, Jon C., Timothy Nordstrom, and Kevin Warnke (2004), 'The COW-2 International Organizations Dataset Version 2.0,' Conflict Management and Peace Science 21(2):101-119. Classification by category according to Kauffmann, Mayeul (2009), Methodes statistiques appliquees aux questions internationales, Paris: L Harmattan, 82-90."
+unit_of_analysis: country_year
+first_year_possible: 1950
+last_year_possible: 2000
+label_line_in_data_file: true
+number_of_variables: 31
+number_of_cases: 6029
+variables:
+ - [ccode, integer, identifierccode1, none, -9]
+ - [year, integer, identifieryear, none, -9]
+ - [ACCT, integer, monadic, none, -9]
+ - [ACI, integer, monadic, none, -9]
+ - [AFTE, integer, monadic, none, -9]
+ - [ASATP, integer, monadic, none, -9]
+ - [ASEF, integer, monadic, none, -9]
+ - [BIISEF, integer, monadic, none, -9]
+ - [CAB, integer, monadic, none, -9]
+ - [CACI, integer, monadic, none, -9]
+ - [CAMES, integer, monadic, none, -9]
+ - [CELC, integer, monadic, none, -9]
+ - [CONFEJES, integer, monadic, none, -9]
+ - [CPSC, integer, monadic, none, -9]
+ - [CXC, integer, monadic, none, -9]
+ - [ComSec, integer, monadic, none, -9]
+ - [EIPA, integer, monadic, none, -9]
+ - [ESO, integer, monadic, none, -9]
+ - [ETF, integer, monadic, none, -9]
+ - [IABE, integer, monadic, none, -9]
+ - [IBE, integer, monadic, none, -9]
+ - [IEXB, integer, monadic, none, -9]
+ - [LAIEC, integer, monadic, none, -9]
+ - [LATIN, integer, monadic, none, -9]
+ - [OIC, integer, monadic, none, -9]
+ - [RCAELA, integer, monadic, none, -9]
+ - [SEAMEO, integer, monadic, none, -9]
+ - [Turksoy, integer, monadic, none, -9]
+ - [UNESCO, integer, monadic, none, -9]
+ - [USP, integer, monadic, none, -9]
+ - [WAEC, integer, monadic, none, -9]

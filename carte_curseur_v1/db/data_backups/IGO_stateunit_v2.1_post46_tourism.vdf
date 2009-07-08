@@ -1,0 +1,119 @@
+--- 
+var_label: 
+-
+  meaning: No Membership
+  var_id:3
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id:3
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id:3
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id:3
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id:3
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+-
+  meaning: No Membership
+  var_id:4
+  updated_at: 
+  value: 0
+  description: The country is not a member of the international governmental organization.
+  created_at: 
+-
+  meaning: Full Membership
+  var_id:4
+  updated_at: 
+  value: 1
+  description: The country is a plain member of the international governmental organization.
+  created_at: 
+-
+  meaning: Associate Membership
+  var_id:4
+  updated_at: 
+  value: 2
+  description: The country is an associate member of the international governmental organization.
+  created_at: 
+-
+  meaning: Observer
+  var_id:4
+  updated_at: 
+  value: 3
+  description: The country is an observer to the international governmental organization.
+  created_at: 
+-
+  meaning: IGO Not In Existence
+  var_id:4
+  updated_at: 
+  value: -1
+  description: The selected international governmental organization does not exist for this year.
+  created_at: 
+
+variable: 
+ - 
+  name: GBACT 
+  long_name_fr: 
+  var_id:  3 
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name:  Group on Balkan Agreem. on Coop. on Tourism  
+  code_var:  GBACT 
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: Group on the Balkan Agreement on Cooperation on Tourism 
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+ - 
+  name: MEMTTA 
+  long_name_fr: 
+  var_id:  4 
+  format: integer
+  updated_at:
+  mini: 
+  kind: monadic
+  reverse: none
+  descr_after_fr: 
+  long_name:  Mideast & Medit. Travel & Tourism Assoc.  
+  code_var:  MEMTTA 
+  descr_before_fr: 
+  unit: 
+  qualitatif_ordonne: 
+  descr_before: Middle East - Mediterranean Travel and Tourism Association (MEMTTA) 
+  descr_after:
+  page: 
+  maxi: 
+  binary_var: 
+  missing: -9
+  created_at:
+

@@ -431,7 +431,7 @@ function chercherIntervals(nb, mini, maxi, disc){
 		var intervals = new Array() ;
 		intervals[0] = mini ;
 		for (var i=1; i<nb; i++){
-			intervals[i] = mini + i * longInterval ;
+			intervals[i] = (Math.round(100 * (mini + i * longInterval))) / 100 ;
 		}
 		intervals[i] = maxi ;				
 	}

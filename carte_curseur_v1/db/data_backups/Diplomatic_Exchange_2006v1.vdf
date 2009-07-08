@@ -8,7 +8,7 @@ var_label:
 -   
   meaning: no exchange
   var_id: 4
-  description: "no evidence of diplomatique exchange"
+  description: "no evidence of diplomatic exchange"
   value: 0
 -   
   meaning: charge d'affaires
@@ -33,7 +33,7 @@ var_label:
 -   
   meaning: no exchange
   var_id: 5
-  description: "no evidence of diplomatique exchange"
+  description: "no evidence of diplomatic exchange"
   value: 0
 -   
   meaning: charge d'affaires
@@ -128,13 +128,13 @@ variable:
   binary_var: 
   maxi: 3
 -   
-  long_name_fr: "Niveau de representation diplomatique du pays 2 dans le pays 1"
+  long_name_fr: "existence de relations diplomatiques entre le pays 1 et le pays 2"
   var_id: 6
   mini: 
   descr_after_fr: ""
   descr_before_fr: ""
   code_var: DE
-  long_name: "Diplomatic representation level of side 2 at side 1"
+  long_name: "Any diplomatic exchange between side 1 and side 2"
   unit: 
   qualitatif_ordonne: 
   descr_before: "This variable captures whether either side had representation. It has two codings:"
