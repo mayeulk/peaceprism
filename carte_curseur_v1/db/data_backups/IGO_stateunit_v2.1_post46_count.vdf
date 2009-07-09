@@ -3,7 +3,9 @@ var_label: []
 
 variable: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: ccode
   var_id: 1
   mini: 
   descr_after_fr: 
@@ -11,6 +13,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -18,7 +21,9 @@ variable:
   binary_var: 
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: year
   var_id: 2
   mini: 
   descr_after_fr: 
@@ -26,6 +31,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -33,242 +39,290 @@ variable:
   binary_var: 
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: Agriculture
+  name: agriculture
   var_id: 3
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG agriculture
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG agriculture"
   code_var: 
   long_name: agriculture
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of agriculture's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 22
+  maxi: 22.0
 -   
+  unit_fr: 
   long_name_fr: Communication
+  name: communication
   var_id: 4
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG communication
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG communication"
   code_var: 
   long_name: communication
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of communication's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 50
+  maxi: 50.0
 -   
+  unit_fr: 
   long_name_fr: Culture
+  name: culture
   var_id: 5
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG culturelles
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG culturelles"
   code_var: 
   long_name: culture
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of culture's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 30
+  maxi: 30.0
 -   
+  unit_fr: 
   long_name_fr: Environnement
+  name: environment
   var_id: 6
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG environnementales
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG environnementales"
   code_var: 
   long_name: environment
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of environment's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 34
+  maxi: 34.0
 -   
+  unit_fr: 
   long_name_fr: Finances
+  name: finance
   var_id: 7
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG finances
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG finances"
   code_var: 
   long_name: finance
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of finance's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 60
+  maxi: 60.0
 -   
-  long_name_fr: Santé
+  unit_fr: 
+  long_name_fr: "Sant\xC3\xA9"
+  name: health
   var_id: 8
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG santé
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG sant\xC3\xA9"
   code_var: 
   long_name: health
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of health's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 15
+  maxi: 15.0
 -   
-  long_name_fr: Propriété Intellectuelle
+  unit_fr: 
+  long_name_fr: "Propri\xC3\xA9t\xC3\xA9 Intellectuelle"
+  name: IP
   var_id: 9
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG PI
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG PI"
   code_var: 
   long_name: intellectual property
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of IP's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 11
+  maxi: 11.0
 -   
+  unit_fr: 
   long_name_fr: Justice
+  name: law
   var_id: 10
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG justice
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG justice"
   code_var: 
   long_name: law
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of law's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 18
+  maxi: 18.0
 -   
+  unit_fr: 
   long_name_fr: Polyvalents
+  name: multi
   var_id: 11
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG polyvalentes
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG polyvalentes"
   code_var: 
   long_name: multi
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of multi IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 40
+  maxi: 40.0
 -   
+  unit_fr: 
   long_name_fr: Produits
+  name: products
   var_id: 12
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG produits
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG produits"
   code_var: 
   long_name: products
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of products IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 49
+  maxi: 49.0
 -   
+  unit_fr: 
   long_name_fr: Science
+  name: science
   var_id: 13
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG scientifiques
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG scientifiques"
   code_var: 
   long_name: science
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of science's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 53
+  maxi: 53.0
 -   
-  long_name_fr: Sécurité
+  unit_fr: 
+  long_name_fr: "S\xC3\xA9curit\xC3\xA9"
+  name: security
   var_id: 14
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG sécurité
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG s\xC3\xA9curit\xC3\xA9"
   code_var: 
   long_name: security
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of security's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 24
+  maxi: 24.0
 -   
+  unit_fr: 
   long_name_fr: Tourisme
+  name: tourism
   var_id: 15
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG tourisme
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG tourisme"
   code_var: 
   long_name: tourism
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of tourism's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 4
+  maxi: 4.0
 -   
+  unit_fr: 
   long_name_fr: Echanges
+  name: trade
   var_id: 16
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG d'échanges
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG d'\xC3\xA9changes"
   code_var: 
   long_name: trade
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of trade's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 56
+  maxi: 56.0
 -   
-  long_name_fr: Mer, Rivières
+  unit_fr: 
+  long_name_fr: "Mer, Rivi\xC3\xA8res"
+  name: water
   var_id: 17
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG maritimes
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG maritimes"
   code_var: 
   long_name: water
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of water's IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 29
+  maxi: 29.0
 -   
+  unit_fr: 
   long_name_fr: Total
+  name: total
   var_id: 18
-  mini: 0
+  mini: 0.0
   descr_after_fr: 
-  descr_before_fr: nombre d'appartenances à des OIG
+  descr_before_fr: "nombre d'appartenances \xC3\xA0 des OIG"
   code_var: 
   long_name: total
-  unit: IGO
+  unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: number of IGO membership
   page: 
   descr_after: 
   binary_var: 
-  maxi: 495
+  maxi: 495.0

@@ -57,11 +57,11 @@ function initdiscretisation(){
 			
 			
 			// lien vers le graphique de cette variable 
-			chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-			'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-			'href="/graph/dis/' + dataset_courant + '/' +
-			variable_courante +
-			'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
+			//chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+			//'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+			//'href="/graph/dis/' + dataset_courant + '/' +
+			//variable_courante +
+			//'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
 			// chaine : la legende en tant que tel est affichee dans un div independant
 			chaine = chaine + '<div id="legende">';
 			
@@ -136,11 +136,11 @@ function initdiscretisation(){
 				'" id="lien_desc"><img src="/images/icones/description.png" title="description"/></a>';
 				
 				// lien vers le graphique de cette variable 
-				chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-				'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-				'href="/graph/dis/' + dataset_courant + '/' +
-				variable_courante +
-				'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
+				//chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+				//'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+				//'href="/graph/dis/' + dataset_courant + '/' +
+				//variable_courante +
+				//'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
 				
 				// chaine : la legende en tant que tel est affichee dans un div independant
 				chaine = chaine + '<div id="legende">';
@@ -199,13 +199,11 @@ function initdiscretisation(){
 					'" id="lien_desc"><img src="/images/icones/description.png" title="Description"/></a>';
 					
 					// lien vers le graphique de cette variable 
-					chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-					'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-										
-					'href="/graph/dis/' + dataset_courant + '/' +
-					variable_courante +
-					
-					'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
+					//chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					//'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					//'href="/graph/dis/' + dataset_courant + '/' +
+					//variable_courante +
+					//'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a>';
 					
 					// chaine : la legende en tant que tel est affichee dans un div independant
 					chaine = chaine + '<div id="legende">';
@@ -274,11 +272,11 @@ function initdiscretisation(){
 					'" id="lien_desc"><img src="/images/icones/description.png" title="Description"/></a> ';
 					
 					// lien vers le graphique de cette variable 
-					chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-					'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
-					'href="/graph/dis/' + dataset_courant + '/' +
-					variable_courante +
-					'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a><br/>';
+					//chaine += '<a onkeypress="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					//'onclick="if (!this.isContentEditable) return !window.open(this.href,\'blank\');" ' +
+					//'href="/graph/dis/' + dataset_courant + '/' +
+					//variable_courante +
+					//'" id="lien_graph"><img src="/images/icones/graphic.png" title="Graph"/></a><br/>';
 					
 					chaine += '<span style="margin-left:10px;"><b> Unit </b></span> = ' + valUnit + '<br/>';
 					// une zone de saisie pour choisir manuellement les intervals

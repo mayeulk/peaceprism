@@ -1,461 +1,463 @@
 --- 
 var_label: 
--
+-   
   meaning: No Membership
   var_id: 3
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 3
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 3
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 3
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 3
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
--
+  value: -1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: No Membership
   var_id: 4
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 4
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 4
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 4
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 4
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
--
+  value: -1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: No Membership
   var_id: 5
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 5
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 5
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 5
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 5
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
--
+  value: -1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: No Membership
   var_id: 6
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 6
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 6
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 6
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 6
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
--
+  value: -1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: No Membership
   var_id: 7
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 7
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 7
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 7
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 7
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
--
+  value: -1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: No Membership
   var_id: 8
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 8
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 8
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 8
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 8
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
--
+  value: -1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: No Membership
   var_id: 9
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 9
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 9
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 9
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 9
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
--
+  value: -1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: No Membership
   var_id: 10
-  updated_at: 
-  value: 0
   description: The country is not a member of the international governmental organization.
-  created_at: 
--
+  value: 0
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Full Membership
   var_id: 10
-  updated_at: 
-  value: 1
   description: The country is a plain member of the international governmental organization.
-  created_at: 
--
+  value: 1
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Associate Membership
   var_id: 10
-  updated_at: 
-  value: 2
   description: The country is an associate member of the international governmental organization.
-  created_at: 
--
+  value: 2
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: Observer
   var_id: 10
-  updated_at: 
-  value: 3
   description: The country is an observer to the international governmental organization.
-  created_at: 
--
+  value: 3
+  meaning_fr: 
+  description_fr: 
+-   
   meaning: IGO Not In Existence
   var_id: 10
-  updated_at: 
-  value: -1
   description: The selected international governmental organization does not exist for this year.
-  created_at: 
-
+  value: -1
+  meaning_fr: 
+  description_fr: 
 variable: 
-- 
+-   
+  unit_fr: 
+  long_name_fr: 
+  name: ccode
+  var_id: 1
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  name_fr: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
+  name: year
+  var_id: 2
+  mini: 
+  descr_after_fr: 
+  descr_before_fr: 
+  code_var: 
+  long_name: 
+  unit: 
+  name_fr: 
+  qualitatif_ordonne: 
+  descr_before: 
+  page: 
+  descr_after: 
+  binary_var: 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
   name: ACML
-  long_name_fr: 
   var_id: 3
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "Arab Center for Medical Lit."
+  descr_before_fr: 
   code_var: ACML
-  descr_before_fr: 
+  long_name: Arab Center for Medical Lit.
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "Arab Centre for Medical Literature (ACML)"
-  descr_after:
+  descr_before: Arab Centre for Medical Literature (ACML)
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-- 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
   name: CMHASG
-  long_name_fr: 
   var_id: 4
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "Council of Min. of Health of Arab Gulf States"
+  descr_before_fr: 
   code_var: CMHASG
-  descr_before_fr: 
+  long_name: Council of Min. of Health of Arab Gulf States
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "Council of Ministers of Health of the Arab States of the Gulf"
-  descr_after:
+  descr_before: Council of Ministers of Health of the Arab States of the Gulf
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-- 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
   name: EUFMD
-  long_name_fr: 
   var_id: 5
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "Euro Comm for Control Foot-Mouth Disease"
+  descr_before_fr: 
   code_var: EUFMD
-  descr_before_fr: 
+  long_name: Euro Comm for Control Foot-Mouth Disease
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "European Commision for the Control of Foot and Mouth Disease"
-  descr_after:
+  descr_before: European Commision for the Control of Foot and Mouth Disease
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-- 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
   name: OCCEDCA
-  long_name_fr: 
   var_id: 6
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "Org. of Coord. for Control of Endemic Diseases in Cent. Afr."
+  descr_before_fr: 
   code_var: OCCEDCA
-  descr_before_fr: 
+  long_name: Org. of Coord. for Control of Endemic Diseases in Cent. Afr.
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "Organization of Coordination for the Control of Endemic Diseases in Central Afri"
-  descr_after:
+  descr_before: Organization of Coordination for the Control of Endemic Diseases in Central Afri
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-- 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
   name: PAHO
-  long_name_fr: 
   var_id: 7
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "Pan-Am Health Org"
+  descr_before_fr: 
   code_var: PAHO
-  descr_before_fr: 
+  long_name: Pan-Am Health Org
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "Pan American Sanitary Bureau (PASOrganization/PAHealthOrganization)"
-  descr_after:
+  descr_before: Pan American Sanitary Bureau (PASOrganization/PAHealthOrganization)
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-- 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
   name: PSNARCO
-  long_name_fr: 
   var_id: 8
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "Perm. Sec. of the S. Am. Agr. on Narcotic Drugs"
+  descr_before_fr: 
   code_var: PSNARCO
-  descr_before_fr: 
+  long_name: Perm. Sec. of the S. Am. Agr. on Narcotic Drugs
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "Permanent Secretariat of the South American Agreement on Narcotic Drugs and Psyc"
-  descr_after:
+  descr_before: Permanent Secretariat of the South American Agreement on Narcotic Drugs and Psyc
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-- 
+  maxi: 
+-   
+  unit_fr: 
+  long_name_fr: 
   name: WAHC
-  long_name_fr: 
   var_id: 9
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "West African Health Community"
+  descr_before_fr: 
   code_var: WAHC
-  descr_before_fr: 
+  long_name: West African Health Community
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "West African Health Community (WAHC)"
-  descr_after:
+  descr_before: West African Health Community (WAHC)
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-- 
-  name: WHO
+  maxi: 
+-   
+  unit_fr: 
   long_name_fr: 
+  name: WHO
   var_id: 10
-  format: integer
-  updated_at:
   mini: 
-  kind: monadic
-  reverse: none
   descr_after_fr: 
-  long_name: "World Health Org"
-  code_var: WHO
   descr_before_fr: 
+  code_var: WHO
+  long_name: World Health Org
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
-  descr_before: "World Health Organization"
-  descr_after:
+  descr_before: World Health Organization
   page: 
-  maxi: 
+  descr_after: 
   binary_var: 
-  missing: -9
-  created_at:
-
+  maxi: 

@@ -8,9 +8,9 @@ class AddColumnsToVariables < ActiveRecord::Migration
   end
 
   def self.down
-     remove_column(:variables, :identifierccode1_var)
-     remove_column(:variables, :identifierccode2_var)
-     remove_column(:variables, :identifieryear_var)
+     remove_column(:variables, :mini)
+     remove_column(:variables, :maxi)
+     remove_column(:variables, :binary_var)
      remove_column(:variables, :qualitatif_ordonne)
   end
 end
