@@ -3,7 +3,9 @@ var_label: []
 
 variable: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: stateabb
   var_id: 1
   mini: 
   descr_after_fr: 
@@ -11,6 +13,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -18,7 +21,9 @@ variable:
   binary_var: 
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: ccode
   var_id: 2
   mini: 
   descr_after_fr: 
@@ -26,6 +31,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -33,7 +39,9 @@ variable:
   binary_var: 
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: year
   var_id: 3
   mini: 
   descr_after_fr: 
@@ -41,6 +49,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -48,7 +57,9 @@ variable:
   binary_var: 
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: ""
+  name: irst
   var_id: 4
   mini: 0.0
   descr_after_fr: ""
@@ -56,6 +67,7 @@ variable:
   code_var: IRST
   long_name: Iron and steel production
   unit: thousand of tons
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: "Iron and Steel Production is one of the two components of the industrial dimension, and one of the six indicators of national power. It reflects all domestically produced pig iron before 1899 and  steel after 1900.  <b>What\xE2\x80\x99s New in Version 3.0</b><br/ > In addition to cleaning and updating the data set through 2001, this version contains two main new features: data quality codes and anomaly codes. <br/ >\r\n\
     <b>Data Acquisition and Generation4</b><br/ >  <br/ >Iron and steel production trends since 1816 involve transitions concerning the categories of iron produced and the types of fuels used in making iron and steel. In general, \xE2\x80\x9Ccast iron\xE2\x80\x9D means all iron, including \xE2\x80\x9Cpig iron\xE2\x80\x9D that has at least 0.3% carbon. Specifically, cast iron includes all iron that has been molded into functional shapes. \xE2\x80\x9CWrought iron\xE2\x80\x9D (\xE2\x80\x9Cpuddle iron\xE2\x80\x9D or \xE2\x80\x9Cbar iron\xE2\x80\x9D) is made from pig iron (except in a small percentage prior to 1850, when it was made directly from ore) in a puddling furnace. It is very pure (containing less than 0.04% carbon) and relatively malleable. Steel has an intermediate carbon content between 0.04 and 2.25%. \r\n <br/ >Until around 1870, cast iron and wrought iron were the principal products. The proportion of the former as a final product steadily decreased until castings, as a proportion of total blast furnace production, amounted to less than 0.1% and wrought iron became the primary metal of construction. \r\n <br/ >By 1880, the Bessemer invention and improvements in coking made wrought iron production obsolete. The use of coke as an inexpensive, non-volatile, and structurally solid fuel allowed the construction of larger blast furnaces. The use of coke combined with the rapid steel production in the Bessemer invention, made steel the primary commercial metal.   <br/ >While wrought iron was of primary importance as a finished good prior to 1870, we did not use it as an indicator because: 1) pig iron data is more readily available; 2) in our judgment, use of the former would underestimate industrial activity in some states, notably the United States; and 3) such use would downplay the importance of cast iron production, especially prior to 1850. Steel production totals were too low in many states to reflect accurately industrial activity in the nineteenth century. Instead, for the years 1816-1899, we estimated iron production from pig iron output. When direct castings output was reported separately from pig iron, we added these totals to the reported pig iron. This reflects our judgment that direct castings are nothing more than \xE2\x80\x9Ccast\xE2\x80\x9D pig iron. Our selection of crude pig iron plus separately reported direct castings is plausible because this output was part of every activity in the iron and steel sectors of the economy. \r\n <br/ >Where iron production appeared in disaggregated form, we summed the appropriate raw figures to form the total pig iron output. This was done most often for Prussian and Austrian data when we had to transform the old Prussian and Austrian centners into tons. \r\n <br/ >By 1900, the preferred product of this economic sector was clearly steel, hence our use of steel output as an indicator. This date is somewhat arbitrary since any year from 1890 to around 1910 could have been chosen for the same reason. It is, however, a reasonable midpoint for our analysis. By 1910, virtually every nation that produced iron in the nineteenth century had matched in the output of steel its previous rank as measured in pig iron. We are confident that the two indicators are roughly equivalent measures of industrial activity at the point of transition.  <b>Data Sources</b><br/ >  <br/ >The approach for refining and updating the data were similar to detective work. In many cases we had the data and a source list but did not know which sources corresponded to which values. As a result, we had to rely on memos from the original COW project at the University of Michigan to put the puzzle together. Hence, most of the sources used were the same as those used by the COW. However, some minor changes were made when extending the data set to 2001.  In some cases, the original COW data set had estimates for which we were unable to identify a source. Since there is no reason to doubt those numbers we retained those estimates. \r\n\
@@ -77,7 +89,9 @@ variable:
   binary_var: 
   maxi: 163000.0
 -   
+  unit_fr: 
   long_name_fr: ""
+  name: milex
   var_id: 5
   mini: 0.0
   descr_after_fr: ""
@@ -85,6 +99,7 @@ variable:
   code_var: MILEX
   long_name: Military Expenditures
   unit: thousands of current yaer US Dollars
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: |
     The second indicator of military capabilities is military expenditures. <br/ ><b>Military expenditure</b><br/ >
@@ -246,7 +261,9 @@ variable:
   binary_var: 
   maxi: 322365000.0
 -   
+  unit_fr: 
   long_name_fr: ""
+  name: milper
   var_id: 6
   mini: 0.0
   descr_after_fr: ""
@@ -254,6 +271,7 @@ variable:
   code_var: MILPER
   long_name: Military Personnel
   unit: thousands
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: " <br/ >The Military Personnel Data Set contains data on the size of state armies (defined below) from 1816 until 2001. <br/ >  \r\n\
     <b>What\xE2\x80\x99s New in Version 3.0</b> <br/ >This version of the data set has undergone three important modifications.  First, whenever possible, researchers have re-documented the source for the data points.  Second, the data were extended from 1991 until 2001.  Third, the data between 1961 and 1999 now comes from the U.S Arms Control and Disarmament Agency (ACDA).  Previous versions used a combination of both ACDA data and data from the International Institute for Strategic Studies (IISS).  Version 3.0 uses ACDA data for all data points where it was available and only supplements with IISS data in cases where ACDA data were not available. <br/ >\r\n\
@@ -266,7 +284,9 @@ variable:
   binary_var: 
   maxi: 12500.0
 -   
+  unit_fr: 
   long_name_fr: ""
+  name: energy
   var_id: 7
   mini: 0.0
   descr_after_fr: ""
@@ -274,6 +294,7 @@ variable:
   code_var: ENERGY
   long_name: Energy Consumption
   unit: thousands of coal-ton equivalents
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: "This section deals with the similarities and differences between this new Primary Energy Consumption (abbreviated PEC) data set and previous versions of this data set6.  Of the six indicators of national capabilities, this data series underwent the most extensive reconstruction and re-evaluation of previous coding rules.  Therefore, this documentation supercedes all previous versions.   \r\n\
     <br/ ><b>What\xE2\x80\x99s New in Version 3.0</b><br/ > The energy values contained in the Version 3.0 data set have been recomputed from raw figures.  There are seven areas where changes or additions have been made in the basic coding rules as compared to previous versions: 1) assumptions of zero values; 2) conversions of energy commodities into one-thousand metric coal ton equivalents; 3) interpolation; 4) bringing technology to bear; 5) data quality codes; 6) data merging methods; and 7)  identifying anomalies.  Quality and anomaly codes will be discussed in a separate section. <br/ >Assumption of Zero Values.  One major difference between previous data sets and version three presented here is a change in coding of developing states.  Previous versions of this data set have almost no values of zero.  If a state had no PEC, it was always assumed to be  missing; for instance, Colombia (COL, 100)7 has missing data values from its founding in 1831 until 1925.  While the data may be missing, it is very possible that there was no industry (and therefore no commercial energy consumption) in this state at that time.  Most Central and South American states were almost exclusively agrarian societies well into the Twentieth Century.  It is quite possible that they did not experience industrialization until very late in the data presented here.  Looking at version 2.1 of this data set as a whole, the extent of this assumption becomes readily apparent.  There are only eight data points out of a possible 11,323 that have a value equal to zero.  On the other hand, there are 2,815 missing data points.  Assuming that these data points are all missing does not account for pre-industrial periods that most states would seem to possess.  It is possible that many states that did not have data available simply did not have industrial energy consumption of any kind.  Therefore, it was deemed necessary to change the coding rule and code a 0 in order to reflect pre-industrial societies.  A list of states where this applies appears in Table One. \r\n\
@@ -333,7 +354,9 @@ variable:
   binary_var: 
   maxi: 3096356.0
 -   
+  unit_fr: 
   long_name_fr: ""
+  name: tpop
   var_id: 8
   mini: 11.0
   descr_after_fr: ""
@@ -341,6 +364,7 @@ variable:
   code_var: TPOP
   long_name: Total Population
   unit: thousands of inhabitants
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: "\tThe total population of a state has been theorized to be one of the major factors in determining the relative strength.  A state with a large population can have a larger army, maintain its home industries during times of war, and absorb losses in wartime easier than a state with a smaller population.<br/ >\r\n \r\n\
     \r\n\
@@ -406,7 +430,9 @@ variable:
   binary_var: 
   maxi: 1277673.0
 -   
+  unit_fr: 
   long_name_fr: ""
+  name: upop
   var_id: 9
   mini: 0.0
   descr_after_fr: ""
@@ -414,6 +440,7 @@ variable:
   code_var: UPOP
   long_name: Urban Population
   unit: thousands of inhabitants
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: "<br/ >Besides sheer numbers of people, it is important to capture other elements of a state\xE2\x80\x99s population.  Factors such as education, societal organization, and social services are not captured by the measure of total population.  In order to capture the net effect of these more abstract and amorphous ideas, this project includes a measure of urban population.  Urbanization is associated with higher education standards and life expectancies, with industrialization and industrial capacity, and with the concentrated availability of citizens who may be mobilized during times of conflict. <br/ >\r\n\
     <b>What\xE2\x80\x99s New in Version 3.0</b>  <br/ >The series was updated through 2001.  Some series were recomputed when new data suggested that reinterpretation or extrapolation was necessary. <br/ >\r\n\
@@ -438,7 +465,9 @@ variable:
   binary_var: 
   maxi: 240091.0
 -   
+  unit_fr: 
   long_name_fr: ""
+  name: cinc
   var_id: 10
   mini: 0.0
   descr_after_fr: ""
@@ -446,6 +475,7 @@ variable:
   code_var: CINC
   long_name: Composite Index of National Capability
   unit: ""
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: ""
   page: 
@@ -453,7 +483,9 @@ variable:
   binary_var: 
   maxi: 0.3838635
 -   
+  unit_fr: 
   long_name_fr: 
+  name: version
   var_id: 11
   mini: 
   descr_after_fr: 
@@ -461,6 +493,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 

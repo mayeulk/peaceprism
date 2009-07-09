@@ -54,7 +54,7 @@ namespace :db do
     # recherche de toutes les variables (on peut rajouter un test pour ne pas tout
     # faire a la fois, ou TO_DO : passer le n° de dataset en parametre
     # et seules les variables affichables nous interessent 
-    @variables = Variable.find(:all, :conditions => "dataset_id = 50 AND kind != 'idenfierccode1'
+    @variables = Variable.find(:all, :conditions => "dataset_id < 20 AND kind != 'idenfierccode1'
       AND kind != 'indentifierccode2' AND kind !='identifieryear'
       AND kind != 'identifierversion'") #id > 104 AND id <= 160") #"kind='monadic' AND format != 'string' 
       # dataset_id = 1 AND var_id=4 and 

@@ -3,57 +3,78 @@ var_label:
 -   
   meaning: other
   var_id: 4
-  description: "interest sections, interests served by another country, address only (without indication whether there was any diplomatic staff occupying it), temporary embassy closings, and consulate-generals. This coding was made when sufficient information was not available to place it in the first three classes following the reglèment of Vienna (1815) and Aix-la-Chapelle (1818) but the available information indicated that there potentially was diplomatic presence."
+  description: "interest sections, interests served by another country, address only (without indication whether there was any diplomatic staff occupying it), temporary embassy closings, and consulate-generals. This coding was made when sufficient information was not available to place it in the first three classes following the regl\xC3\xA8ment of Vienna (1815) and Aix-la-Chapelle (1818) but the available information indicated that there potentially was diplomatic presence."
   value: 9
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: no exchange
   var_id: 4
-  description: "no evidence of diplomatic exchange"
+  description: no evidence of diplomatique exchange
   value: 0
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: charge d'affaires
   var_id: 4
-  description: "chargé d'affaires, counselor, and ambassador expelled, recalled, or withdrawn."
+  description: "charg\xC3\xA9 d'affaires, counselor, and ambassador expelled, recalled, or withdrawn."
   value: 1
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: minister
   var_id: 4
-  description: "minister, minister plenipotentiary, minister resident, and envoy"
+  description: minister, minister plenipotentiary, minister resident, and envoy
   value: 2
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: ambassador
   var_id: 4
-  description: "ambassador, high commissioner, secretary of Libyan People’s bureau and similar labels, high commissioner or ambassador resident elsewhere, and ambassador, high commissioner or secretary vacant."
+  description: "ambassador, high commissioner, secretary of Libyan People\xE2\x80\x99s bureau and similar labels, high commissioner or ambassador resident elsewhere, and ambassador, high commissioner or secretary vacant."
   value: 3
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: other
   var_id: 5
-  description: "interest sections, interests served by another country, address only (without indication whether there was any diplomatic staff occupying it), temporary embassy closings, and consulate-generals. This coding was made when sufficient information was not available to place it in the first three classes following the reglèment of Vienna (1815) and Aix-la-Chapelle (1818) but the available information indicated that there potentially was diplomatic presence."
+  description: "interest sections, interests served by another country, address only (without indication whether there was any diplomatic staff occupying it), temporary embassy closings, and consulate-generals. This coding was made when sufficient information was not available to place it in the first three classes following the regl\xC3\xA8ment of Vienna (1815) and Aix-la-Chapelle (1818) but the available information indicated that there potentially was diplomatic presence."
   value: 9
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: no exchange
   var_id: 5
-  description: "no evidence of diplomatic exchange"
+  description: no evidence of diplomatique exchange
   value: 0
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: charge d'affaires
   var_id: 5
-  description: "chargé d'affaires, counselor, and ambassador expelled, recalled, or withdrawn."
+  description: "charg\xC3\xA9 d'affaires, counselor, and ambassador expelled, recalled, or withdrawn."
   value: 1
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: minister
   var_id: 5
-  description: "minister, minister plenipotentiary, minister resident, and envoy"
+  description: minister, minister plenipotentiary, minister resident, and envoy
   value: 2
+  meaning_fr: 
+  description_fr: 
 -   
   meaning: ambassador
   var_id: 5
-  description: "ambassador, high commissioner, secretary of Libyan People’s bureau and similar labels, high commissioner or ambassador resident elsewhere, and ambassador, high commissioner or secretary vacant."
+  description: "ambassador, high commissioner, secretary of Libyan People\xE2\x80\x99s bureau and similar labels, high commissioner or ambassador resident elsewhere, and ambassador, high commissioner or secretary vacant."
   value: 3
-
+  meaning_fr: 
+  description_fr: 
 variable: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: ccode1
   var_id: 1
   mini: 
   descr_after_fr: 
@@ -61,6 +82,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -68,7 +90,9 @@ variable:
   binary_var: 
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: ccode2
   var_id: 2
   mini: 
   descr_after_fr: 
@@ -76,6 +100,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -83,7 +108,9 @@ variable:
   binary_var: 
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: year
   var_id: 3
   mini: 
   descr_after_fr: 
@@ -91,6 +118,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
@@ -98,44 +126,53 @@ variable:
   binary_var: 
   maxi: 
 -   
-  long_name_fr: "Niveau de representation diplomatique du pays 2 dans le pays 1"
+  unit_fr: 
+  long_name_fr: Niveau de representation diplomatique du pays 2 dans le pays 1
+  name: DR_at_1
   var_id: 4
-  mini: 0
+  mini: 0.0
   descr_after_fr: ""
   descr_before_fr: ""
   code_var: DRAT1
-  long_name: "Diplomatic representation level of side 2 at side 1"
+  long_name: Diplomatic representation level of side 2 at side 1
   unit: 
+  name_fr: 
   qualitatif_ordonne: 1
-  descr_before: "Following Singer and Small’s 1966 article and past data collection efforts, the diplomatic exchange variables (DR_at_1 and DR_at_2) have five possible codings:"
+  descr_before: "Following Singer and Small\xE2\x80\x99s 1966 article and past data collection efforts, the diplomatic exchange variables (DR_at_1 and DR_at_2) have five possible codings:"
   page: 
   descr_after: ...
   binary_var: 
-  maxi: 3
+  maxi: 3.0
 -   
-  long_name_fr: "Niveau de representation diplomatique du pays 1 dans le pays 2"
+  unit_fr: 
+  long_name_fr: Niveau de representation diplomatique du pays 1 dans le pays 2
+  name: DR_at_2
   var_id: 5
-  mini: 0
+  mini: 0.0
   descr_after_fr: ""
   descr_before_fr: ""
   code_var: DRAT2
-  long_name: "Diplomatic representation level of side 1 at side 2"
+  long_name: Diplomatic representation level of side 1 at side 2
   unit: 
+  name_fr: 
   qualitatif_ordonne: 1
-  descr_before: "Following Singer and Small’s 1966 article and past data collection efforts, the diplomatic exchange variables (DR_at_1 and DR_at_2) have five possible codings:"
+  descr_before: "Following Singer and Small\xE2\x80\x99s 1966 article and past data collection efforts, the diplomatic exchange variables (DR_at_1 and DR_at_2) have five possible codings:"
   page: 
   descr_after: ...
   binary_var: 
-  maxi: 3
+  maxi: 3.0
 -   
-  long_name_fr: "existence de relations diplomatiques entre le pays 1 et le pays 2"
+  unit_fr: 
+  long_name_fr: Niveau de representation diplomatique du pays 2 dans le pays 1
+  name: DE
   var_id: 6
   mini: 
   descr_after_fr: ""
   descr_before_fr: ""
   code_var: DE
-  long_name: "Any diplomatic exchange between side 1 and side 2"
+  long_name: Diplomatic representation level of side 2 at side 1
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: "This variable captures whether either side had representation. It has two codings:"
   page: 
@@ -143,7 +180,9 @@ variable:
   binary_var: 1
   maxi: 
 -   
+  unit_fr: 
   long_name_fr: 
+  name: version
   var_id: 7
   mini: 
   descr_after_fr: 
@@ -151,6 +190,7 @@ variable:
   code_var: 
   long_name: 
   unit: 
+  name_fr: 
   qualitatif_ordonne: 
   descr_before: 
   page: 
